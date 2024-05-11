@@ -9,7 +9,7 @@ from common import vcprint, pretty_print, get_sample_data
 from automation_matrix.processing.markdown.organizer import Markdown
 from automation_matrix.processing.processor import ProcessingManager
 
-verbose = True
+verbose = False
 
 
 # Working Processors:
@@ -128,7 +128,7 @@ class AiOutput(ProcessingManager):
                 vcprint(verbose=verbose, data=input_data, title=f"Input Data for '{processor_name}'", color='blue', style='bold')
                 vcprint(verbose=verbose, data=args, title=f"Args for '{processor_name}'", color='blue', style='bold')
 
-                output_data = await processor(input_data, **args) if asyncio.iscoroutinefunction(processor) else processor(input_data, **args)
+                output_data = await processor(input_data, args) if asyncio.iscoroutinefunction(processor) else processor(input_data, args)
 
                 # debug print 4
                 vcprint(verbose=verbose, data=output_data, title=f"Output Data for '{processor_name}'", color='green', style='bold')
@@ -157,16 +157,19 @@ class AiOutput(ProcessingManager):
                 code_snippets.setdefault(language, []).append(code)
         return code_snippets
 
-    async def get_markdown_asterisk_structure(self, content: str, extractors) -> Dict[str, Union[str, List[str]]]:
+    async def get_markdown_asterisk_structure(self, content: str, args=None) -> Dict[str, Union[str, List[str]]]:
         processor = Markdown(style='asterisks')
-        asterisk_structure_results = await processor.process_and_extract(content, extractors)
-        # print(f"-------------- DEBUG: Asterisk Structure Results:--------------------------------")
-        # pretty_print(asterisk_structure_results)
+        asterisk_structure_results = await processor.process_and_extract(content, args)
 
         return asterisk_structure_results
 
     # Creates groups from the data. For example, it can combine every two or three items into a group so they go together.
-    async def data_groups(self, data, parts_count=2):
+    async def data_groups(self, data, args=None):
+        if args:
+            parts_count = args.get('parts_count', 2)
+        else:
+            parts_count = 2
+
         text_value_list = data.get('plain_text', [])
         data_groups = []
         for i in range(0, len(text_value_list), parts_count):
@@ -181,7 +184,7 @@ class AiOutput(ProcessingManager):
         return data_groups
 
     # The purpose of this is to get rid of "text: " or "Headline: " or "Question: " or "Answer: " or "title: " or "description: " etc. at the start of each item.
-    async def clean_groups(self, data):
+    async def clean_groups(self, data, args=None):
         pattern = re.compile(r'^.*?:\s')  # Matches any 'text: ' pattern at the start of a string
         cleaned_pairs = []
         for group in data:
@@ -603,46 +606,6 @@ class AiOutput(ProcessingManager):
         return processed_content
 
 
-async def local_post_processing(sample_content):
-    return_params = {
-        'variable_name': 'SAMPLE_DATA_1001',
-        'processors':
-            [
-                {
-                    'processor': 'get_markdown_asterisk_structure',
-                    'depends_on': 'content',
-                    'args': {
-                        "extraction": [
-                            {
-                                "key_identifier": "nested_structure",
-                                "key_index": 1,
-                                "output_type": "text"
-                            },
-                            # {
-                            #    "key_identifier": "nested_structure",
-                            #    "key_index": "",
-                            #    "output_type": "dict"
-                            # },
-                            # {
-                            #    "key_identifier": "nested_structure",
-                            #    "key_index": 3,
-                            #    "output_type": "dict"
-                            # }
-                        ]
-                    }
-                },
-            ],
-    }
-    processor = AiOutput(sample_content)
-    processed_content = await processor.process_response(return_params)
-    vcprint(verbose=verbose, data=processed_content, title="Processed Content", color='blue', style='bold')
-
-    # if verbose:
-    #    print_initial_and_processed_content(processed_content)
-
-    return processed_content
-
-
 def print_initial_and_processed_content(processed_content):
     print("========================================== Initial Content ==========================================")
     print(processed_content['value'])
@@ -761,7 +724,7 @@ async def sample_processor_structure(sample_content):
                 {
                     'processor': 'get_markdown_asterisk_structure',
                     'depends_on': 'content',
-                    "extraction": [
+                    "extractors": [
                         {
                             "key_identifier": "nested_structure",
                             "key_index": 1,
@@ -787,12 +750,73 @@ async def sample_processor_structure(sample_content):
     pretty_print(processed_content)
 
 
+async def local_post_processing(sample_content):
+    return_params = {
+        'variable_name': 'SAMPLE_DATA_1001',
+        'processors':
+            [
+                {
+                    'processor': 'get_markdown_asterisk_structure',
+                    'depends_on': 'content',
+                    'args': {
+                        "primary_broker": "SAMPLE_DATA_1001",
+                        "extractors": [
+                            {
+                                "name": "access_data_by_reference",
+                                "key_identifier": "nested_structure",
+                                "key_index": 1,
+                                "output_type": "text",
+                                "broker": "BLOG_IDEA_1"
+                            },
+                            {
+                                "name": "access_data_by_reference",
+                                "key_identifier": "nested_structure",
+                                "key_index": 2,
+                                "output_type": "text",
+                                "broker": "BLOG_IDEA_2"
+                            },
+                            {
+                                "name": "access_data_by_reference",
+                                "key_identifier": "nested_structure",
+                                "key_index": 3,
+                                "output_type": "text",
+                                "broker": "BLOG_IDEA_3"
+                            },
+                            #  I have commented out Blog Idea 4 for demonstration purposes as though the request was to get blogs 1, 2, 3, and 5, but NOT 4
+                            {
+                                "name": "access_data_by_reference",
+                                "key_identifier": "nested_structure",
+                                "key_index": 4,
+                                "output_type": "text",
+                                "broker": "BLOG_IDEA_4"
+                            },
+                            {
+                                "name": "access_data_by_reference",
+                                "key_identifier": "nested_structure",
+                                "key_index": 5,
+                                "output_type": "text",
+                                "broker": "BLOG_IDEA_5"
+                            }
+                        ]
+                    }
+                },
+
+            ],
+    }
+
+    processor = AiOutput(sample_content)
+    processed_content = await processor.process_response(return_params)
+    vcprint(verbose=verbose, data=processed_content, title="Processed Content", color='blue', style='bold')
+
+    return processed_content
+
+
 async def main():
-    sample_data = get_sample_data(app_name='automation_matrix', data_name='sample_6_small', sub_app='sample_openai_responses')  # jatin: Changed this to sample_6_small (see note there)
+    sample_data = get_sample_data(app_name='automation_matrix', data_name='sample_6', sub_app='sample_openai_responses')  # jatin: Changed this to sample_6_small (see note there)
     print(f"Sample Data:\n{sample_data}\n")
+
     result = await local_post_processing(sample_data)
-    final_result = await handle_OpenAIWrapperResponse(result)
-    vcprint(verbose=verbose, data=final_result, title="Final Result", color='green', style='bold')
+    vcprint(verbose=True, data=result, title="Final Result", color='green', style='bold')
 
 
 if __name__ == "__main__":

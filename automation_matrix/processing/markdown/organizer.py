@@ -204,13 +204,17 @@ class Markdown(Processor):
             return f"Section number {section_number} is out of range. Please enter a valid section number."
 
     # METHOD 2: This one gets it as a nested structure so it's very easy to target whatever we want!
-    async def process_markdown(self, text: str):
+    async def process_markdown(self, text: str, primary_broker_name=None):
         loop = asyncio.get_running_loop()
+        if not primary_broker_name:
+            primary_broker_name = "PROCESS_MARKDOWN_RESULT_NO_BROKER_SPECIFIED"
+
         try:
             tokens = await loop.run_in_executor(None, self.parse_markdown, text)
             nested_structure = self.build_nested_structure(tokens)
 
             clean_structure = self.clean_up_text_and_organize(nested_structure)
+            primary_result = {primary_broker_name: clean_structure}
 
             plain_text_sections = []
             for section_number in range(1, len(clean_structure) + 1):
@@ -219,7 +223,8 @@ class Markdown(Processor):
 
             return {
                 "nested_structure": clean_structure,
-                "plain_text": plain_text_sections
+                "plain_text": plain_text_sections,
+                "brokers": [primary_result]
             }
         except Exception as e:
             print(f"ERROR during markdown parsing: {str(e)}")
@@ -228,14 +233,116 @@ class Markdown(Processor):
                 "message": f"Markdown parsing error: {str(e)}"
             }
 
-    async def process_and_extract(self, text, extractors):
-        processing_results = await self.process_markdown(text)
+    async def process_and_extract(self, text, args=None):
+        extractors = []
+        primary_broker_name = "PROCESS_MARKDOWN_RESULT_NO_BROKER_SPECIFIED"
 
+        if args:
+            extractors = args.get('extractors')
+            print(f"Extractors: {extractors}")
+            primary_broker_name = args.get('primary_broker')
+
+        processing_results = await self.process_markdown(text, primary_broker_name)
+
+        if extractors:
+            final_results = self.handle_extraction(processing_results, extractors)
+        else:
+            final_results = processing_results
+
+
+        return final_results
+
+    def handle_extraction(self, processing_results, extractors):
+        p_index = 0
+        brokers = []
+
+        for extractor_item in extractors:
+            extractor_name = extractor_item.get('name', '')
+            vcprint(verbose=verbose, data=extractor_item, title="Extractor", color="green")
+
+            if not extractor_name:
+                print(f"No extractor found for '{extractor_name}'")
+                continue
+
+            extractor = getattr(self, extractor_name, None)
+            if extractor is None:
+                print(f"Extractor function '{extractor_name}' not found.")
+                continue
+
+            broker_name = extractor_item.get('broker', f"NO_BROKER_NAME_{p_index}")
+
+            extraction_result = extractor(extractor_item, processing_results)
+            new_entry = {
+                broker_name: extraction_result
+                }
+            processing_results['brokers'].append(new_entry)
+
+            if verbose:
+                print(f"------------------------Adding broker: {broker_name}")
+                print(brokers)
+
+            p_index += 1
+
+        return processing_results
+
+    def access_data_by_reference(self, extraction_map, data_structure):
+        """
+        Access a nested dictionary entry based on a reference dictionary and return it as specified (text or dict).
+
+        :param reference: A dictionary with 'data', 'key', and 'output' where 'data' is the key to the main dictionary,
+                          'key' is the index to access within the nested dictionary (None for entire structure), and
+                          'output' specifies the return format ('text' or 'dict').
+        :param data_structure: The main data structure containing nested dictionaries.
+        :return: The selected entry in the specified format, or a message if not found.
+
+            # Sample entry to get the 3rd key as text
+            reference_text_3rd = {"data": "nested_structure", "key": 1, "output": "text"}
+
+            # Sample entry to get the 2nd key as a dict
+            reference_dict_2nd = {"data": "nested_structure", "key": 1, "output": "dict"}
+
+            # Sample entry to get the entire nested structure as text
+            reference_entire_text = {"data": "nested_structure", "key": None, "output": "text"}
+
+        """
+        nested_key = extraction_map.get('key_identifier')
+        index = extraction_map.get('key_index')
+        output_format = extraction_map.get('output_type', 'text')
+
+        if not index and index != 0:
+            nested_dict = data_structure.get(nested_key, {})
+            if output_format == 'text':
+                result = '\n\n'.join(f"{key}:\n{'\n'.join(value)}" for key, value in nested_dict.items())
+            else:
+                result = nested_dict
+        else:
+            index -= 1  # Adjust for 0-based indexing
+            if nested_key in data_structure:
+                nested_dict = data_structure[nested_key]
+                keys = list(nested_dict.keys())
+                if 0 <= index < len(keys):
+                    selected_key = keys[index]
+                    content = nested_dict[selected_key]
+                    if output_format == 'text':
+                        result = f"{selected_key}:\n{'\n'.join(content)}"
+                    else:
+                        result = {
+                            selected_key: content
+                        }
+                else:
+                    print("Error! Index out of range.")
+                    result = ""
+            else:
+                print("Error! Key not found: ", nested_key)
+                result = ""
+
+        return result
 
 
 async def get_markdown_asterisk_structure(markdown_text):
     processor = Markdown(style='asterisks')
     asterisk_structure_results = await processor.process_markdown(markdown_text)
+
 
     return asterisk_structure_results
 
@@ -409,6 +516,9 @@ def handle_OpenAIWrapperResponse(result):
     return result
 
 
+
+
+
 response_data = {
     "signature": "OpenAIWrapperResponse",
     "processing": "True",
@@ -475,6 +585,69 @@ response_data = {
                     "Headline: \"A Gastroenterologist's Meal Planner: Nourishing Your Gut with Plant-Based Choices\"\n- Overview: Provides a week-long meal plan created by a vegan gastroenterologist focusing on gut health.\n- Target Audience: Anyone looking to transition to a plant-based diet or seeking to incorporate more plant-based meals for better digestion.\n- Unique Angle: Personalized and professional dietary advice directly from a plant-based gastroenterology specialist.\n- Value Proposition: Practical, easy-to-follow meal plans with recipes that promote optimal digestive health.\n- Key Takeaways: Daily meal plans with nutrient-dense recipes, tips for meal prep, and advice on portion control for optimal gut health.\n- Engagement Triggers: Interactive meal plan customization based on readers' dietary restrictions or preferences.\n- SEO Keywords: Vegetarian gastroenterology specialist, plant-based nutrition advising, dietary consultation.\n- Tone and Style: Approachable, encouraging, filled with actionable tips, and visually engaging meal ideas.",
                     "Headline: \"Confronting Digestive Disorders with a Plant-Based Diet: A Gastroenterologist's Healing Journey\"\n- Overview: An in-depth look at how transitioning to a plant-based diet can significantly impact various digestive disorders.\n- Target Audience: Individuals diagnosed with or experiencing symptoms of digestive disorders.\n- Unique Angle: Personal stories of recovery and scientific insights from a gastrointestinal doctor specializing in plant-based diets.\n- Value Proposition: Hope and actionable advice for those struggling with digestive disorders who have not found relief in conventional treatments.\n- Key Takeaways: Understanding common digestive disorders, testimonials of dietary changes leading to improvement, and steps to start a plant-based diet.\n- Engagement Triggers: Invitation to share personal experiences and struggles with digestive health in the comments section.\n- SEO Keywords: Digestive disorders physician, plant-based diet gastroenterologist, gastrointestinal consultant.\n- Tone and Style: Inspiring, compassionate, with a mix of personal narratives and expert advice.",
                     "Headline: \"Beyond Digestion: The Role of a Plant-Based Diet in Holistic Health According to a Gastroenterologist\"\n- Overview: Explores the broader health benefits of a plant-based diet beyond the digestive system, including mental health and chronic disease prevention.\n- Target Audience: Health-conscious individuals seeking a comprehensive approach to well-being.\n- Unique Angle: A holistic view on health from a plant-based gastroenterologist, integrating physical, mental, and emotional health aspects.\n- Value Proposition: A broader understanding of the systemic benefits of a plant-based diet, inspiring readers to consider their overall health.\n- Key Takeaways: Connections between gut health and mental health, the role of diet in managing stress, and preventing chronic diseases with nutrition.\n- Engagement Triggers: Encouragement to reflect on and share their holistic health journeys and dietary habits.\n- SEO Keywords: Holistic health management, plant-based digestive health doctor, dietary consultation.\n- Tone and Style: Comprehensive, engaging, with an emphasis on whole-person wellness and preventive care."
+                ]
+            },
+            "depends_on": "content",
+            "args": {},
+            "extraction": [
+                {
+                    "key_identifier": "nested_structure",
+                    "key_index": 1,
+                    "output_type": "text",
+                    "broker": "BLOG_IDEA_1"
+                },
+                {
+                    "key_identifier": "nested_structure",
+                    "key_index": 2,
+                    "output_type": "text",
+                    "broker": "BLOG_IDEA_2"
+
+                },
+                {
+                    "key_identifier": "nested_structure",
+                    "key_index": 3,
+                    "output_type": "text",
+                    "broker": "BLOG_IDEA_3"
+                },
+                #  I have commented out Blog Idea 4 for demonstration purposes as though the request was to get blogs 1, 2, 3, and 5, but NOT 4
+                # {
+                #    "key_identifier": "nested_structure",
+                #    "key_index": 4,
+                #    "output_type": "text",
+                #    "broker": "BLOG_IDEA_4"
+                # },
+                {
+                    "key_identifier": "nested_structure",
+                    "key_index": 5,
+                    "output_type": "text",
+                    "broker": "BLOG_IDEA_5"
+                }
+            ]
+        }
+    }
+}
+
+response_data_small = {
+    "signature": "OpenAIWrapperResponse",
+    "processing": "True",
+    "variable_name": "FIVE_BLOG_IDEAS_FULL_RESPONSE_1001",
+    "value": "1. **Headline:** \"Unlocking the Power of Plants: A Gastroenterologist's Guide to Transforming Your Digestive Health\"\n   - **Overview:** This post will explain how a plant-based diet influences digestive health from a gastroenterologist's viewpoint.\n   - **Target Audience:** Individuals suffering from digestive issues or anyone interested in understanding the health benefits of a plant-based diet.\n   - **Unique Angle:** Insight from a vegan gastroenterologist combines medical expertise with personal dietary choices.\n   - **Value Proposition:** Readers will gain a clear understanding of how a plant-based diet can prevent and treat common gastrointestinal issues.\n   - **Key Takeaways:** Importance of dietary fiber, ideal plant-based foods for gut health, and real patient success stories.\n   - **Engagement Triggers:** Questions about readers' current dietary habits and their impact on digestive health.\n   - **SEO Keywords:** Vegan gastroenterologist, plant-based digestive health doctor, digestive system diagnostics.\n   - **Tone and Style:** Informative, supportive, and empowering with patient success stories for a personal touch.\n\n2. **Headline:** \"The Science Behind Plant-Based Diets and Gut Health: A Gastroenterologist's Deep Dive\"\n   - **Overview:** An exploration of the scientific principles that make plant-based diets beneficial for the gastrointestinal system.\n   - **Target Audience:** Science-minded individuals and skeptics of plant-based diets.\n   - **Unique Angle:** A deep scientific analysis backed by research and clinical findings from a gastroenterology expert.\n   - **Value Proposition:** The reader will obtain a detailed understanding of the gut microbiome's response to plant-based diets.\n   - **Key Takeaways:** How plant-based diets influence gut flora, the science of digestion and absorption in context, and preventive aspects against chronic diseases.\n   - **Engagement Triggers:** Scientific evidence and case studies that debunk common myths about plant-based diets.\n   - **SEO Keywords:** Plant-based diet gastroenterologist, gastrointestinal health screening, digestive system diagnostics.\n   - **Tone and Style:** Analytical, detailed, with a focus on breaking down complex scientific concepts into accessible insights.\n\n3. **Headline:** \"A Gastroenterologist's Meal Planner: Nourishing Your Gut with Plant-Based Choices\"\n   - **Overview:** Provides a week-long meal plan created by a vegan gastroenterologist focusing on gut health.\n   - **Target Audience:** Anyone looking to transition to a plant-based diet or seeking to incorporate more plant-based meals for better digestion.\n   - **Unique Angle:** Personalized and professional dietary advice directly from a plant-based gastroenterology specialist.\n   - **Value Proposition:** Practical, easy-to-follow meal plans with recipes that promote optimal digestive health.\n   - **Key Takeaways:** Daily meal plans with nutrient-dense recipes, tips for meal prep, and advice on portion control for optimal gut health.\n   - **Engagement Triggers:** Interactive meal plan customization based on readers' dietary restrictions or preferences.\n   - **SEO Keywords:** Vegetarian gastroenterology specialist, plant-based nutrition advising, dietary consultation.\n   - **Tone and Style:** Approachable, encouraging, filled with actionable tips, and visually engaging meal ideas.\n\n4. **Headline:** \"Confronting Digestive Disorders with a Plant-Based Diet: A Gastroenterologist's Healing Journey\"\n   - **Overview:** An in-depth look at how transitioning to a plant-based diet can significantly impact various digestive disorders.\n   - **Target Audience:** Individuals diagnosed with or experiencing symptoms of digestive disorders.\n   - **Unique Angle:** Personal stories of recovery and scientific insights from a gastrointestinal doctor specializing in plant-based diets.\n   - **Value Proposition:** Hope and actionable advice for those struggling with digestive disorders who have not found relief in conventional treatments.\n   - **Key Takeaways:** Understanding common digestive disorders, testimonials of dietary changes leading to improvement, and steps to start a plant-based diet.\n   - **Engagement Triggers:** Invitation to share personal experiences and struggles with digestive health in the comments section.\n   - **SEO Keywords:** Digestive disorders physician, plant-based diet gastroenterologist, gastrointestinal consultant.\n   - **Tone and Style:** Inspiring, compassionate, with a mix of personal narratives and expert advice.\n\n5. **Headline:** \"Beyond Digestion: The Role of a Plant-Based Diet in Holistic Health According to a Gastroenterologist\"\n   - **Overview:** Explores the broader health benefits of a plant-based diet beyond the digestive system, including mental health and chronic disease prevention.\n   - **Target Audience:** Health-conscious individuals seeking a comprehensive approach to well-being.\n   - **Unique Angle:** A holistic view on health from a plant-based gastroenterologist, integrating physical, mental, and emotional health aspects.\n   - **Value Proposition:** A broader understanding of the systemic benefits of a plant-based diet, inspiring readers to consider their overall health.\n   - **Key Takeaways:** Connections between gut health and mental health, the role of diet in managing stress, and preventing chronic diseases with nutrition.\n   - **Engagement Triggers:** Encouragement to reflect on and share their holistic health journeys and dietary habits.\n   - **SEO Keywords:** Holistic health management, plant-based digestive health doctor, dietary consultation.\n   - **Tone and Style:** Comprehensive, engaging, with an emphasis on whole-person wellness and preventive care.",
+    "processed_values": {
+        "get_markdown_asterisk_structure": {
+            "value": {
+                "nested_structure": {
+                    "Headline: \"Unlocking the Power of Plants: A Gastroenterologist's Guide to Transforming Your Digestive Health\"": [
+                        "Overview: This post will explain how a plant-based diet influences digestive health from a gastroenterologist's viewpoint.",
+                        "Target Audience: Individuals suffering from digestive issues or anyone interested in understanding the health benefits of a plant-based diet.",
+                    ],
+                    "Headline: \"The Science Behind Plant-Based Diets and Gut Health: A Gastroenterologist's Deep Dive\"": [
+                        "Overview: An exploration of the scientific principles that make plant-based diets beneficial for the gastrointestinal system.",
+                        "Target Audience: Science-minded individuals and skeptics of plant-based diets.",
+                    ],
+                },
+                "plain_text": [
+                    "Headline: \"Unlocking the Power of Plants: A Gastroenterologist's Guide to Transforming Your Digestive Health\"\n- Overview: This post will ",
+                    "Headline: \"The Science Behind Plant-Based Diets and Gut Health: A Gastroenterologist's Deep Dive\"\n- Overview: An exploration of the scientific",
                 ]
             },
             "depends_on": "content",
