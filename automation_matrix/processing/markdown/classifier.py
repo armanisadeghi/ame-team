@@ -5,7 +5,7 @@ import tempfile
 import time
 from common import pretty_print, get_sample_data
 from ame_team.settings.base import BASE_DIR, TEMP_DIR
-from automation_matrix import Processor
+from automation_matrix.processing.processor import Processor
 
 
 class OutputClassifier(Processor):

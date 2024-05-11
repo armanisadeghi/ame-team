@@ -344,6 +344,23 @@ sample_6 = """
 - But we also need some bullet points.
 - So, we can test the formatting.
 """
+
+# Jatin: I created a smaller version for testing. This allows you to quickly see what's going on.
+sample_6_small = """
+**Question 1:** A patient presents with a (item 1) ?
+
+**Answer 1:** To determine the involvement:
+1. Correlate the sensory (this is the item #1 under Answer 1).
+2. Identify any motor (this is the item #2 under Answer 1).
+
+**Question 2:** A patient exhibits loss of (item 2).
+
+**Answer 2:** For a patient with:
+1. Confirm the sensory (this is the item #1 under Answer 2).
+2. Determine the key (this is the item #2 under Answer 2).
+"""
+
+
 sample_7 = """
 1. **Headline:** "Revolutionizing Chic: How The Mini Dress Redefined Modern Elegance"
    - **Overview:** This post delves into the intriguing evolution of the mini dress, unpacking its pivotal role in shaping contemporary fashion landscapes.

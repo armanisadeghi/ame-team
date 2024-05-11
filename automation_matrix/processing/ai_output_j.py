@@ -639,7 +639,7 @@ async def local_post_processing(sample_content):
                     'processor': 'get_classified_markdown',
                     'depends_on': 'content',
                     "extraction": [],
-                    'args' : {}
+                    'args' :  {}
                 },
                 {
                     'processor': 'get_items_from_classified_markdown_sections',

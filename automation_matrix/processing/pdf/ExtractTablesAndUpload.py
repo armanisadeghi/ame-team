@@ -12,6 +12,7 @@ os.environ["PATH"] = f"{java_home}\\bin;{os.environ['PATH']}"
 output_dir = "table_output"
 os.makedirs(output_dir, exist_ok=True)
 
+
 def extract_tables_to_csv(filepath):
     try:
         # Output CSV files will be saved in the specified directory with the same base name as the PDF
@@ -29,10 +30,11 @@ def handle_destination(filepath, destination_type, destination_folder=None):
     filename = os.path.basename(filepath).replace(' ', '_')
 
     if destination_type == "bucket":
-        with open(filepath, 'rb') as file:
-            # Make sure the bucket name is correct and does not include 'gs://' prefix
-            upload_content_to_bucket(file, "ai-matrix-engine-text", f"table_output/{filename}", content_type='text/plain')
-            print(f"Uploaded {filename} to Firebase")
+        pass  # Disabled for this purpose.
+        # with open(filepath, 'rb') as file:
+        # Make sure the bucket name is correct and does not include 'gs://' prefix
+        # upload_content_to_bucket(file, "ai-matrix-engine-text", f"table_output/{filename}", content_type='text/plain')
+        # print(f"Uploaded {filename} to Firebase")
     elif destination_type == "local_folder" and destination_folder is not None:
         local_path = os.path.join(destination_folder, filename)
         os.makedirs(os.path.dirname(local_path), exist_ok=True)  # Ensure the destination folder exists
@@ -48,6 +50,7 @@ def process_pdf_for_tables(filepath, destination_type, destination_folder=None):
     for csv_file in csv_files:
         handle_destination(csv_file, destination_type, destination_folder)
 
+
 if __name__ == "__main__":
     pdf_paths = [
         r"D:\OneDrive\Downloads\PD Rating Schedule.pdf",  # Example path
@@ -57,6 +60,5 @@ if __name__ == "__main__":
 
     for pdf_path in pdf_paths:
         process_pdf_for_tables(pdf_path, "local_folder", destination_folder)  # Change "local_folder" to "bucket" to upload to Firebase
-
 
 # vasaro account: https://chat.openai.com/share/e/5ec5788d-8151-4c7e-ab1e-68d84a80b79f (But not that good)

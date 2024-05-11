@@ -9,7 +9,7 @@ from common import vcprint, pretty_print, get_sample_data
 from automation_matrix.processing.markdown.organizer import Markdown
 from automation_matrix.processing.processor import ProcessingManager
 
-verbose = False
+verbose = True
 
 
 # Working Processors:
@@ -32,6 +32,9 @@ class AiOutput(ProcessingManager):
             self.return_params = {}
         else:
             self.return_params = return_params
+
+        # Debug Print 1
+        vcprint(verbose=verbose, data=self.return_params, title="Return Params")
 
         self.source_info = self.return_params.get('source_info', '')
         self.variable_name = self.return_params.get('variable_name', '')
@@ -98,6 +101,8 @@ class AiOutput(ProcessingManager):
             print("\n[Warning!] Unable to resolve all dependencies without circular references.\n")
             ordered_processors.extend(unprocessed_processors)
 
+        # Debug Print 2:
+        vcprint(verbose=verbose, data=ordered_processors, title="Ordered Processors", color='yellow', style='bold')
         return ordered_processors
 
     async def process_processors(self, processors):
@@ -119,7 +124,15 @@ class AiOutput(ProcessingManager):
                 continue
 
             try:
+                # debug print 3
+                vcprint(verbose=verbose, data=input_data, title=f"Input Data for '{processor_name}'", color='blue', style='bold')
+                vcprint(verbose=verbose, data=args, title=f"Args for '{processor_name}'", color='blue', style='bold')
+
                 output_data = await processor(input_data, **args) if asyncio.iscoroutinefunction(processor) else processor(input_data, **args)
+
+                # debug print 4
+                vcprint(verbose=verbose, data=output_data, title=f"Output Data for '{processor_name}'", color='green', style='bold')
+
             except Exception as e:
                 print(f"Error processing '{processor_name}': {e}")
                 output_data = "error"
@@ -127,7 +140,7 @@ class AiOutput(ProcessingManager):
             self.processed_content['processed_values'][processor_name] = {
                 'value': output_data,
                 'depends_on': depends_on,
-                'args': args
+                'args': args,
             }
             processed_names[processor_name] = output_data
 
@@ -144,9 +157,9 @@ class AiOutput(ProcessingManager):
                 code_snippets.setdefault(language, []).append(code)
         return code_snippets
 
-    async def get_markdown_asterisk_structure(self, content: str) -> Dict[str, Union[str, List[str]]]:
+    async def get_markdown_asterisk_structure(self, content: str, extractors) -> Dict[str, Union[str, List[str]]]:
         processor = Markdown(style='asterisks')
-        asterisk_structure_results = await processor.process_markdown(content)
+        asterisk_structure_results = await processor.process_and_extract(content, extractors)
         # print(f"-------------- DEBUG: Asterisk Structure Results:--------------------------------")
         # pretty_print(asterisk_structure_results)
 
@@ -598,29 +611,39 @@ async def local_post_processing(sample_content):
                 {
                     'processor': 'get_markdown_asterisk_structure',
                     'depends_on': 'content',
-                    "extraction": [
-                        {
-                            "key_identifier": "nested_structure",
-                            "key_index": 1,
-                            "output_type": "text"
-                        },
-                        {
-                            "key_identifier": "nested_structure",
-                            "key_index": "",
-                            "output_type": "dict"
-                        },
-                        {
-                            "key_identifier": "nested_structure",
-                            "key_index": 3,
-                            "output_type": "dict"
-                        }
-                    ]
+                    'args': {
+                        "extraction": [
+                            {
+                                "key_identifier": "nested_structure",
+                                "key_index": 1,
+                                "output_type": "text"
+                            },
+                            # {
+                            #    "key_identifier": "nested_structure",
+                            #    "key_index": "",
+                            #    "output_type": "dict"
+                            # },
+                            # {
+                            #    "key_identifier": "nested_structure",
+                            #    "key_index": 3,
+                            #    "output_type": "dict"
+                            # }
+                        ]
+                    }
                 },
             ],
     }
     processor = AiOutput(sample_content)
     processed_content = await processor.process_response(return_params)
-    pretty_print(processed_content)
+    vcprint(verbose=verbose, data=processed_content, title="Processed Content", color='blue', style='bold')
+
+    # if verbose:
+    #    print_initial_and_processed_content(processed_content)
+
+    return processed_content
+
+
+def print_initial_and_processed_content(processed_content):
     print("========================================== Initial Content ==========================================")
     print(processed_content['value'])
     print(processed_content['processed_values'])
@@ -647,8 +670,6 @@ async def local_post_processing(sample_content):
         print("-" * 25)
         print("\nDepends on:", step_data['depends_on'])
         print("\nArgs:", step_data['args'])
-
-    return processed_content
 
 
 async def access_data_by_reference(reference, data_structure):
@@ -767,10 +788,11 @@ async def sample_processor_structure(sample_content):
 
 
 async def main():
-    sample_data = get_sample_data(app_name='automation_matrix', data_name='sample_6', sub_app='sample_openai_responses')
+    sample_data = get_sample_data(app_name='automation_matrix', data_name='sample_6_small', sub_app='sample_openai_responses')  # jatin: Changed this to sample_6_small (see note there)
     print(f"Sample Data:\n{sample_data}\n")
     result = await local_post_processing(sample_data)
-    # await handle_OpenAIWrapperResponse(result)
+    final_result = await handle_OpenAIWrapperResponse(result)
+    vcprint(verbose=verbose, data=final_result, title="Final Result", color='green', style='bold')
 
 
 if __name__ == "__main__":

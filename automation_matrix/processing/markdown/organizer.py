@@ -4,7 +4,7 @@ from markdown_it.token import Token
 import aiofiles
 import json
 from common import vcprint, pretty_print, get_sample_data
-from automation_matrix import Processor
+from automation_matrix.processing.processor import Processor
 from mdit_py_plugins.front_matter import front_matter_plugin
 from mdit_py_plugins.footnote import footnote_plugin
 
@@ -227,6 +227,10 @@ class Markdown(Processor):
                 "error": True,
                 "message": f"Markdown parsing error: {str(e)}"
             }
+
+    async def process_and_extract(self, text, extractors):
+        processing_results = await self.process_markdown(text)
+
 
 
 async def get_markdown_asterisk_structure(markdown_text):
