@@ -291,3 +291,164 @@ Methodology reflected relies on the DRE (Diagnosis-Related Estimates) method for
 **Conclusion:**
 This report compiles available impairment and injury-related information following an industrial accident involving a truck driver. While it identifies specific impairments with their percentage ratings and causative correlations to the industrial incident, it lacks several descriptive and methodological details essential for a comprehensive evaluation. Further clarification and additional evaluations might be needed for a complete understanding of the patient's condition and the impairment's extents, as well as to ensure the fairness and accuracy of the worker's compensation claim process.
 """
+
+
+#Added by jatin
+ama_sample_new = """ 
+
+[STRUCTURED_MEDICAL_REPORT]
+
+Date of Birth or Age: 07/26/1972
+Date of Injury: 01/24/2023
+
+Reporting Doctor: Michael D. Zeger, D.C., Q.M.E.
+
+Doctor Role: QME
+
+| Body Part | DRE Category | Percentage Range | Whole Person Impairment Percentage | Method of Rating Used | Industrial % | Non-Industrial % | Specific Evidence Used by Doctor | Other Specific Relevant Information |
+|-----------|--------------|------------------|-------------------------------------|----------------------|--------------|------------------|-----------------------------------|-------------------------------------|
+| Cervical Spine | DRE Category II | - | 8% | AMA Guides, 5th edition | 20% | 80% | Observed residual muscle spasm, asymmetrical range of motion loss, and non-verifiable radiculopathy | No evidence of alteration in structural integrity of the vertebra |
+| Thoracic Spine | DRE Category II | - | 8% | AMA Guides, 5th edition | 20% | 80% | Observed residual muscle spasm, asymmetrical range of motion loss, and non-verifiable radiculopathy | No documented alteration in structural integrity of the vertebra |
+| Lumbar Spine | DRE Category II | - | 8% | AMA Guides, 5th edition | 20% | 80% | Observed residual muscle spasm, asymmetrical range of motion loss, and non-verifiable radiculopathy | No evidence of alteration in structural integrity of the vertebra |
+
+Injury & Job Information:
+- Occupational Code: Cashier/Customer Service/Stocker
+- Injury Circumstances: The applicant was required to open and close a heavy automatic entrance door manually for several weeks, which caused pain in her neck, mid back, and low back.
+
+Additional notes:
+- The applicant has a history of prior neck and back injuries, including a slip-and-fall in the shower in 2021 and a work injury in 2022 while moving heavy items at CVS.
+- The applicant has a history of diabetes, hypertension, and hyperlipidemia.
+- The applicant had concurrent employment at a gas station from April 2021 to December 2022.
+
+[INITIAL_FEEDBACK]
+
+Based on the provided medical facts and the AMA Guides, let's evaluate the accuracy of the doctor's findings, method of rating, and overall record submission, specifically focusing on the relevance of the patient's history to the current impairment determination.
+First, let's address some cases that indicate a history of prior injuries followed by a complete analysis for the final question:
+
+
+[SPECIFIC_QUESTIONS]
+
+1. What is the doctor's role in the context of this evaluation? Is the role of QME explicitly stated in the report?
+2. Has the date of birth or the patient's age, as well as the date of the injury, been reported accurately? What are these dates?
+3. Are all the body parts involved in the claimed injuries stated? Can you please provide a list of the body parts mentioned and their corresponding impairment ratings?
+4. For each body part, is the impairment rating derived from: a) the range of motion (ROM) and; b) stability and clinical assessment stated in line with the AMA Guides' formulas and criteria? Please provide a brief explanation for each body part.
+5. Have you identified any discrepancies between the doctor's findings and the formulaic calculations in the AMA Guides?
+6. Does the report provide a clear breakdown of the proportion of the whole person impairment that the doctor believes arises from industrial versus non-industrial factors?
+7. Is there detailed documentation of the specific evidence used by the doctor to support the impairment ratings for each body part? Please provide a summary of this evidence.
+8. Does the report include any relevant information about the mechanism of injury or the circumstances surrounding it, including any exacerbating or mitigating events? Please provide a summary of these details.
+9. Has the doctor taken into account the patient's medical and occupational history, including any pre-existing conditions and prior work-related injuries? If so, how have these factors influenced the impairment rating and apportionment?
+10. Lastly, does the report conclude with an assessment of the patient's overall impairment, clarifying the methodology used for the evaluation and the extent to which the doctor believes the patient's current condition is due to the industrial injury?
+
+[COMPLETE_ANSWERS]
+
+1. The doctor's role is explicitly stated as a Qualified Medical Evaluator (QME) in the report: "Reporting Doctor: Michael D. Zeger, D.C., Q.M.E." and "Doctor Role: QME".
+
+2. Yes, the date of birth (07/26/1972) and the date of injury (01/24/2023) are accurately reported in the medical report.
+
+3. Yes, the body parts involved in the claimed injuries are stated:
+   - Cervical Spine: 8% whole person impairment
+   - Thoracic Spine: 8% whole person impairment
+   - Lumbar Spine: 8% whole person impairment
+
+4. For each body part, the impairment rating is derived from the AMA Guides, 5th edition, using the DRE (Diagnosis-Related Estimate) method:
+   - Cervical Spine: DRE Category II, based on "observed residual muscle spasm, asymmetrical range of motion loss, and non-verifiable radiculopathy."
+   - Thoracic Spine: DRE Category II, based on "observed residual muscle spasm, asymmetrical range of motion loss, and non-verifiable radiculopathy."
+   - Lumbar Spine: DRE Category II, based on "observed residual muscle spasm, asymmetrical range of motion loss, and non-verifiable radiculopathy."
+
+5. No discrepancies between the doctor's findings and the AMA Guides' formulaic calculations have been identified in the report.
+
+6. Yes, the report provides a clear breakdown of the industrial versus non-industrial factors contributing to the whole person impairment for each body part:
+   - Cervical Spine: 20% industrial, 80% non-industrial
+   - Thoracic Spine: 20% industrial, 80% non-industrial
+   - Lumbar Spine: 20% industrial, 80% non-industrial
+
+7. Yes, the report provides detailed documentation of the specific evidence used by the doctor to support the impairment ratings:
+   - Cervical Spine: "Observed residual muscle spasm, asymmetrical range of motion loss, and non-verifiable radiculopathy" and "No evidence of alteration in structural integrity of the vertebra."
+   - Thoracic Spine: "Observed residual muscle spasm, asymmetrical range of motion loss, and non-verifiable radiculopathy" and "No documented alteration in structural integrity of the vertebra."
+   - Lumbar Spine: "Observed residual muscle spasm, asymmetrical range of motion loss, and non-verifiable radiculopathy" and "No evidence of alteration in structural integrity of the vertebra."
+
+8. Yes, the report includes relevant information about the mechanism of injury and the circumstances surrounding it: "The applicant was required to open and close a heavy automatic entrance door manually for several weeks, which caused pain in her neck, mid back, and low back."
+
+9. Yes, the doctor has taken into account the patient's medical and occupational history:
+   - Prior neck and back injuries: "The applicant has a history of prior neck and back injuries, including a slip-and-fall in the shower in 2021 and a work injury in 2022 while moving heavy items at CVS."
+   - Pre-existing conditions: "The applicant has a history of diabetes, hypertension, and hyperlipidemia."
+   - Concurrent employment: "The applicant had concurrent employment at a gas station from April 2021 to December 2022."
+   These factors have influenced the apportionment of the impairment ratings, with 80% attributed to non-industrial factors for each body part.
+
+10. The report concludes with an assessment of the patient's overall impairment, clarifying the methodology used (AMA Guides, 5th edition, DRE method) and the extent to which the doctor believes the patient's current condition is due to the industrial injury (20% for each body part).
+
+[AME_SPECIALIST_FINAL_ANALYSIS]
+
+Based on the provided information, your doctor performed a thorough evaluation and adhered to the principles outlined in the AMA Guides, 5th edition. 
+- The reporting doctor accurately identified the body parts involved (cervical, thoracic, and lumbar spine) and assigned a 8% whole person impairment to each category based on the findings of residual muscle spasm, asymmetrical range of motion loss, and non-verifiable radiculopathy, all indicative of DRE Category II.
+
+[JOB_CODE_DATA]
+
+Based on the information provided, the official job code that is closest to this case is:
+
+Cashier/Customer Service/Stocker
+
+The key details that support this:
+
+- The occupational code listed is "Cashier/Customer Service/Stocker"
+- The injury circumstances indicate the applicant was required to open and close a heavy automatic entrance door manually for several weeks, which caused pain in her neck, mid back, and low back. This type of job duty is consistent with a Cashier/Customer Service/Stocker role.
+
+The other details provided, such as the reporting doctor being a QME, the impairment ratings for the cervical, thoracic, and lumbar spine, and the applicant's prior injury history, are all relevant information but do not directly impact the determination of the closest official job code.
+
+[IMPAIRMENT_CODE_TABLE]
+
+| Body Part     | Impairment Code | DRE Category | Whole Person Impairment | Industrial % |
+|---------------|------------------|--------------|-------------------------|--------------|
+| Cervical Spine | 15.01.01.00      | II           | 8%                      | 20%          |
+| Thoracic Spine | 15.02.01.00      | II           | 8%                      | 20%          |
+| Lumbar Spine   | 15.03.01.00      | II           | 8%                      | 20%          |
+
+[FULL_AME_EVALUATION_REPORT]
+
+**Final Report: Summary of Medical Evaluation and Findings**
+
+**Introduction:**
+
+This report consolidates key findings from a series of evaluations involving an applicant suffering from injuries sustained in the workplace. The significant details encompass dates, medical assessments, job information, and the applicant's medical history, carefully organized to provide a comprehensive overview.
+
+**Applicant Details:**
+
+- **Date of Birth:** 07/26/1972
+- **Date of Injury:** 01/24/2023
+
+**Medical Evaluation Overview:**
+
+- **Reporting Doctor:** Michael D. Zeger, D.C., Q.M.E.
+- **Doctor's Role:** Qualified Medical Evaluator (QME)
+- **Evaluation Methodology:** AMA Guides, 5th edition
+
+**Injury Circumstances and Job Information:**
+
+- **Occupational Role:** Cashier/Customer Service/Stocker
+- **Mechanism of Injury:** Required manual operation of a heavy automatic entrance door over several weeks, causing pain in the neck, mid back, and low back.
+
+**Medical Findings and Ratings:**
+
+| Body Part     | DRE Category | Whole Person Impairment (%) | Industrial % | Non-Industrial % | Specific Evidence                       |
+|---------------|--------------|-----------------------------|--------------|------------------|-----------------------------------------|
+| Cervical Spine| II           | 8                           | 20           | 80               | Residual muscle spasm, asymmetrical ROM loss, non-verifiable radiculopathy |
+| Thoracic Spine| II           | 8                           | 20           | 80               | Residual muscle spasm, asymmetrical ROM loss, non-verifiable radiculopathy |
+| Lumbar Spine  | II           | 8                           | 20           | 80               | Residual muscle spasm, asymmetrical ROM loss, non-verifiable radiculopathy |
+
+- **No evidence or documented alteration in the structural integrity of the vertebra was found for any of the assessed body parts.**
+
+**Applicant's Medical and Occupational History:**
+
+- **Prior Injuries:** Slip-and-fall in 2021, work injury in 2022 at CVS while moving heavy items.
+- **Pre-existing Conditions:** Diabetes, hypertension, hyperlipidemia.
+- **Concurrent Employment:** Gas station work from April 2021 to December 2022.
+
+**Assessment Summary:**
+
+The comprehensive evaluation conducted by Dr. Michael D. Zeger, leveraging the AMA Guides, 5th edition, focuses on the cervical, thoracic, and lumbar spine, each receiving an 8% whole person impairment rating. The assessment attributes 20% of the impairment to industrial causes and 80% to non-industrial factors, grounded in a detailed examination of specific evidence like residual muscle spasm and asymmetrical range of motion loss. Crucially, the medical history, particularly previous injuries and conditions, played a significant role in the apportionment process.
+
+The circumstances surrounding the injury, notably the manual operation of a heavy entrance door, align with the occupational duties of a Cashier/Customer Service/Stocker, reinforcing the job relevance of the injury. The evaluation meticulously considers the applicant's medical and occupational background to ensure a fair and accurate understanding of the injury's nature and its lasting impact.
+
+**Conclusion:**
+
+This report effectively encapsulates the essential findings from the medical evaluations conducted by Dr. Zeger. It provides a structured and clear understanding of the applicant's work-related injuries, taking into account previous health conditions and employment history to arrive at an informed evaluation. The impairment ratings, grounded in robust evidence and following established guidelines, offer critical insights into the extent of the injuries and their implications for the applicant's functional capabilities."""

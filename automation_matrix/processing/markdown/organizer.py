@@ -7,6 +7,8 @@ from common import vcprint, pretty_print, get_sample_data
 from automation_matrix.processing.processor import Processor
 from mdit_py_plugins.front_matter import front_matter_plugin
 from mdit_py_plugins.footnote import footnote_plugin
+import re
+from datetime import datetime
 
 from markdown_it.tree import SyntaxTreeNode  # Currently not using this but should
 
@@ -252,6 +254,7 @@ class Markdown(Processor):
 
         return final_results
 
+
     def handle_extraction(self, processing_results, extractors):
         p_index = 0
         brokers = []
@@ -338,6 +341,117 @@ class Markdown(Processor):
 
         return result
 
+    def get_items_from_classified_markdown_sections(self,extraction_map, data_structure):
+        classifier_type = extraction_map.get('classified_line_type')
+        query = extraction_map.get('search')
+
+        filtered_sections = []
+        for sec in data_structure.get('sections'):
+            if sec[0] == classifier_type:  # Since 0th index of each section is the classifier or item_type
+                # Once we know the classified type eg. table or other_section_type or entries_and_values
+                # We will now search for the contain keyword in the section parts if specified
+                for subpart in sec[1]:  # sec[1] since item at 1st index is a classification list of each line in the section
+                    if query is not None and isinstance(query, str):
+                        if query.upper() in subpart[1].upper():  # subpart[1] since , the 0 the item is the classification type of the line,we want to search for the line not the classification type
+                            filtered_sections.append(sec)
+                    else:
+                        filtered_sections.append(sec)
+
+        values = []
+
+        for item in filtered_sections:
+            for part in item[1]:
+                type_ = part[0]
+                value_ = part[1]
+                values.append(value_)
+
+        return values
+
+    def extract_list_table(self, extraction_map, data_structure):
+
+        table =  data_structure.get('brokers')[0].get('IMPAIRMENT_TABLE_RAW') # I think this can be changed absolutely when we change the brokers to dict format
+        column_index = extraction_map.get('column_index')
+        row_index_start = extraction_map.get('row_index_start')
+
+        # Split the first row to get the column names
+        columns = [col.strip() for col in table[column_index].split('|')[1:-1]]
+
+        # Initialize an empty list to store the dictionaries
+        table_dicts = []
+
+        # Iterate over the rest of the rows in the table
+        for row in table[row_index_start:]:
+            # Split the row into values
+            values = [val.strip() for val in row.split('|')[1:-1]]
+
+            # Create a dictionary for this row
+            row_dict = {columns[i]: values[i] for i in range(len(columns))}
+
+            # Add the dictionary to the list
+            table_dicts.append(row_dict)
+
+        return table_dicts
+
+    def match_dates_from_string(self, string: str):
+        #Sample formats
+        date_formats = [
+            "%d-%m-%Y",  # DD-MM-YYYY
+            "%m-%d-%Y",  # MM-DD-YYYY
+            "%Y-%m-%d",  # YYYY-MM-DD
+            "%d/%m/%Y",  # DD/MM/YYYY
+            "%m/%d/%Y",  # MM/DD/YYYY
+            "%Y/%m/%d",  # YYYY/MM/DD
+            "%d.%m.%Y",  # DD.MM.YYYY
+            "%m.%d.%Y",  # MM.DD.YYYY
+            "%Y.%m.%d"  # YYYY.MM.DD
+        ]
+
+        date_pattern = re.compile(
+            r'\b(\d{1,2}[-/\.]\d{1,2}[-/\.]\d{4}|\d{4}[-/\.]\d{1,2}[-/\.]\d{1,2})\b')  # Pattern generated from copilot. Tested many times
+        matches = date_pattern.findall(string)
+
+        dates = []
+        for match in matches:
+            for fmt in date_formats:
+                try:
+                    date = datetime.strptime(match, fmt)
+                    dates.append(date)
+                    break
+                except ValueError:
+                    pass
+        return dates
+
+    def find_dates_in_string(self, extraction_map, data_structure):
+        # This is a extractor specific for one processor.
+        input_string_1 = data_structure.get('brokers')[1]['DATES_RAW'][0] # I think this can be changed absolutely when we change the brokers to dict format
+        input_string_2 = data_structure.get('brokers')[1]['DATES_RAW'][1]
+        extraction_map
+        dates = []
+
+        dates.extend(self.match_dates_from_string(input_string_1))
+        dates.extend(self.match_dates_from_string(input_string_2))
+
+        return dates
+
+    def get_dictionary_from_string(self, string, separator=":"):
+
+        '''
+        :return:[{item1 : something here}]
+        The default separator is :
+        it arranges them as {item1: value, item2: value}
+        '''
+
+        if separator in string:
+            list_ = [item.strip() for item in string.split(separator)]
+            if len(list_) == 2:
+                return {list_[0]:list_[1]}
+
+        return {}
+
+    def extract_dict_from_string(self, extraction_map, data_structure):
+        raw_str = data_structure.get('brokers')[2]['OCCUPATION_RAW'][1]
+        dict_ = self.get_dictionary_from_string(raw_str)
+        return dict_
 
 async def get_markdown_asterisk_structure(markdown_text):
     processor = Markdown(style='asterisks')
