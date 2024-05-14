@@ -223,6 +223,11 @@ async def classify_markdown_content(text_data):
 
     return classified_content
 
+async def get_classify_markdown_section_list(text_data):
+    classifiers = OutputClassifier()
+    classified_sections = classifiers.classify_output_details(text_data)
+
+    return classified_sections
 
 async def main(text_data):
     classifiers = OutputClassifier()

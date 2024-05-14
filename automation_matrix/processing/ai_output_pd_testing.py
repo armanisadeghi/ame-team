@@ -8,7 +8,7 @@ import asyncio
 from common import vcprint, pretty_print, get_sample_data
 from automation_matrix.processing.markdown.organizer import Markdown
 from automation_matrix.processing.processor import ProcessingManager
-from automation_matrix.processing.markdown.classifier import get_classify_markdown_section_list
+
 verbose = False
 
 
@@ -32,6 +32,9 @@ class AiOutput(ProcessingManager):
             self.return_params = {}
         else:
             self.return_params = return_params
+
+        # Debug Print 1
+        # vcprint(verbose=verbose, data=self.return_params, title="Return Params")
 
         self.source_info = self.return_params.get('source_info', '')
         self.variable_name = self.return_params.get('variable_name', '')
@@ -98,6 +101,8 @@ class AiOutput(ProcessingManager):
             print("\n[Warning!] Unable to resolve all dependencies without circular references.\n")
             ordered_processors.extend(unprocessed_processors)
 
+        # Debug Print 2:
+        vcprint(verbose=verbose, data=ordered_processors, title="Ordered Processors", color='yellow', style='bold')
         return ordered_processors
 
     async def process_processors(self, processors):
@@ -119,7 +124,15 @@ class AiOutput(ProcessingManager):
                 continue
 
             try:
-                output_data = await processor(input_data, **args) if asyncio.iscoroutinefunction(processor) else processor(input_data, **args)
+                # debug print 3
+                vcprint(verbose=verbose, data=input_data, title=f"Input Data for '{processor_name}'", color='blue', style='bold')
+                vcprint(verbose=verbose, data=args, title=f"Args for '{processor_name}'", color='blue', style='bold')
+
+                output_data = await processor(input_data, args) if asyncio.iscoroutinefunction(processor) else processor(input_data, args)
+
+                # debug print 4
+                vcprint(verbose=verbose, data=output_data, title=f"Output Data for '{processor_name}'", color='green', style='bold')
+
             except Exception as e:
                 print(f"Error processing '{processor_name}': {e}")
                 output_data = "error"
@@ -127,7 +140,7 @@ class AiOutput(ProcessingManager):
             self.processed_content['processed_values'][processor_name] = {
                 'value': output_data,
                 'depends_on': depends_on,
-                'args': args
+                'args': args,
             }
             processed_names[processor_name] = output_data
 
@@ -144,16 +157,19 @@ class AiOutput(ProcessingManager):
                 code_snippets.setdefault(language, []).append(code)
         return code_snippets
 
-    async def get_markdown_asterisk_structure(self, content: str) -> Dict[str, Union[str, List[str]]]:
+    async def get_markdown_asterisk_structure(self, content: str, args=None) -> Dict[str, Union[str, List[str]]]:
         processor = Markdown(style='asterisks')
-        asterisk_structure_results = await processor.process_markdown(content)
-        # print(f"-------------- DEBUG: Asterisk Structure Results:--------------------------------")
-        # pretty_print(asterisk_structure_results)
+        asterisk_structure_results = await processor.process_and_extract(content, args)
 
         return asterisk_structure_results
 
     # Creates groups from the data. For example, it can combine every two or three items into a group so they go together.
-    async def data_groups(self, data, parts_count=2):
+    async def data_groups(self, data, args=None):
+        if args:
+            parts_count = args.get('parts_count', 2)
+        else:
+            parts_count = 2
+
         text_value_list = data.get('plain_text', [])
         data_groups = []
         for i in range(0, len(text_value_list), parts_count):
@@ -168,7 +184,7 @@ class AiOutput(ProcessingManager):
         return data_groups
 
     # The purpose of this is to get rid of "text: " or "Headline: " or "Question: " or "Answer: " or "title: " or "description: " etc. at the start of each item.
-    async def clean_groups(self, data):
+    async def clean_groups(self, data, args=None):
         pattern = re.compile(r'^.*?:\s')  # Matches any 'text: ' pattern at the start of a string
         cleaned_pairs = []
         for group in data:
@@ -589,101 +605,59 @@ class AiOutput(ProcessingManager):
 
         return processed_content
 
-    async def get_classified_markdown(self, markdown):
+
+    async def get_classified_markdown(self, content, args):
         from automation_matrix.processing.markdown.classifier import get_classify_markdown_section_list
-        sections = await get_classify_markdown_section_list(markdown)
-        return sections
-
-    async def get_items_from_classified_markdown_sections(self, sections, **kwargs):
-        filtered_sections = []
-        for sec in sections:
-            for classifier_type, query in kwargs.items():
-
-                if sec[0] == classifier_type: # Since 0th index of each section is the classifier or item_type
-                    # Once we know the classified type eg. table or other_section_type or entries_and_values
-                    # We will now search for the contain keyword in the section parts if specified
-                    for subpart in sec[1]: # sec[1] since item at 1st index is a classification list of each line in the section
-                        if query is not None and isinstance(query,str):
-                            if query.upper() in subpart[1].upper(): #subpart[1] since , the 0 the item is the classification type of the line,we want to search for the line not the classification type
-                                filtered_sections.append(sec)
-                        else:
-                            filtered_sections.append(sec)
-
-        output_format = {
-            "nested_structure": {},
-            "plain_text": {}
+        sections = await get_classify_markdown_section_list(content)
+        print("got section")
+        structure = {
+            "sections" : sections,
+            "brokers" : []
         }
+        processor = Markdown(style='asterisks')
+        results =  processor.handle_extraction( structure, args.get('extractors') )
+        return results
 
-        for item in filtered_sections:
-            for part in item[1]:
-                type_ = part[0]
-                value_ = part[1]
-                if isinstance(output_format['nested_structure'].get(type_), list):
-                    output_format['nested_structure'].get(type_).append(value_)
+    async def get_final_data(self, content, args):
+        from automation_matrix.processing.markdown.classifier import get_classify_markdown_section_list
+        sections = await get_classify_markdown_section_list(content)
+        print("got section")
+        structure = {
+            "sections" : sections,
+            "brokers" : []
+        }
+        processor = Markdown(style='asterisks')
+        results =  processor.handle_extraction( structure, args.get('extractors') )
+        return results
+
+
+def print_initial_and_processed_content(processed_content):
+    print("========================================== Initial Content ==========================================")
+    print(processed_content['value'])
+    print(processed_content['processed_values'])
+    print("\nProcessed Steps:")
+
+    for step_name, step_data in processed_content['processed_values'].items():
+        print(f"\n========================================== {step_name} ==========================================\n")
+
+        output = step_data['value']
+        if isinstance(output, dict):
+            for key, value in output.items():
+                print(f"--------- {key}: ---------")
+                if isinstance(value, list):
+                    for item in value:
+                        print(f"\n{item}")
                 else:
-                    output_format['nested_structure'][type_]  = []
-                    output_format['nested_structure'].get(type_).append(value_)
+                    print(f"\n{value}")
+        elif isinstance(output, list):
+            for item in output:
+                print(f"  - {item}")
+        else:
+            print(f"  {output}")
 
-        return output_format
-
-
-async def local_post_processing(sample_content):
-
-    return_params = {
-        'variable_name': 'SAMPLE_DATA_1001',
-        'processors':
-            [
-                {
-                    'processor': 'get_classified_markdown',
-                    'depends_on': 'content',
-                    "extraction": [],
-                    'args' :  {}
-                },
-                {
-                    'processor': 'get_items_from_classified_markdown_sections',
-                    'depends_on': 'get_classified_markdown',
-                    "extraction": [{
-                            "key_identifier": "nested_structure",
-                            "key_index": "1",
-                            "output_type": "text",
-                        }],
-                    'args': {'table': "Impairment Code", 'entries_and_values':'Date of birth',
-                             'header_with_bullets': "Occupational Code"}
-                }
-            ],
-    }
-
-
-    processor = AiOutput(sample_content)
-    processed_content = await processor.process_response(return_params)
-    # print("========================================== Initial Content ==========================================")
-    # print(processed_content['value'])
-    # print(processed_content['processed_values'])
-    # print("\nProcessed Steps:")
-    #
-    # for step_name, step_data in processed_content['processed_values'].items():
-    #     print(f"\n========================================== {step_name} ==========================================\n")
-    #
-    #     output = step_data['value']
-    #     if isinstance(output, dict):
-    #         for key, value in output.items():
-    #             print(f"--------- {key}: ---------")
-    #             if isinstance(value, list):
-    #                 for item in value:
-    #                     print(f"\n{item}")
-    #             else:
-    #                 print(f"\n{value}")
-    #     elif isinstance(output, list):
-    #         for item in output:
-    #             print(f"  - {item}")
-    #     else:
-    #         print(f"  {output}")
-    #
-    #     print("-" * 25)
-    #     print("\nDepends on:", step_data['depends_on'])
-    #     print("\nArgs:", step_data['args'])
-
-    return processed_content
+        print("-" * 25)
+        print("\nDepends on:", step_data['depends_on'])
+        print("\nArgs:", step_data['args'])
 
 
 async def access_data_by_reference(reference, data_structure):
@@ -740,7 +714,6 @@ async def access_data_by_reference(reference, data_structure):
 
 
 async def handle_OpenAIWrapperResponse(result):
-    pretty_print(result)
     core_variable_name = result.get('variable_name', '')
     processed_values = result.get('processed_values', {})
     p_index = 0
@@ -752,10 +725,7 @@ async def handle_OpenAIWrapperResponse(result):
             e_index = 0
             method_name = f"handle_{processor}"
             processor_value = processor_data.get('value', {})
-
-            print(processor_data.get('extraction'))
             if 'extraction' in processor_data:
-                print('found')
                 for extraction_map in processor_data['extraction']:  # Adjusted to iterate over a list
                     print(f"-------------Processing {core_variable_name} with {method_name}...")
                     e_index += 1
@@ -779,7 +749,7 @@ async def sample_processor_structure(sample_content):
                 {
                     'processor': 'get_markdown_asterisk_structure',
                     'depends_on': 'content',
-                    "extraction": [
+                    "extractors": [
                         {
                             "key_identifier": "nested_structure",
                             "key_index": 1,
@@ -805,11 +775,69 @@ async def sample_processor_structure(sample_content):
     pretty_print(processed_content)
 
 
+async def local_post_processing(sample_content):
+    return_params = {
+        'variable_name': 'SAMPLE_DATA_1001',
+        'processors':
+            [
+                {
+                    'processor': 'get_classified_markdown',
+                    'depends_on': 'content',
+                    'args': {
+                        "primary_broker": "SAMPLE_DATA_1001",
+                        "extractors": [
+                            {
+                                "name": "get_items_from_classified_markdown_sections",
+                                "broker": "IMPAIRMENT_TABLE_RAW",
+                                "classified_line_type" : "table",
+                                "search" : "Impairment Code"
+                            },
+                            {
+                                "name": "get_items_from_classified_markdown_sections",
+                                "broker": "DATES_RAW",
+                                "classified_line_type": "entries_and_values",
+                                "search": "Date of birth"
+                            },
+                            {
+                                "name": "get_items_from_classified_markdown_sections",
+                                "broker": "OCCUPATION_RAW",
+                                "classified_line_type": "header_with_bullets",
+                                "search": "Occupational Code"
+                            },
+                            {
+                                "name": "extract_list_table",
+                                "broker": "IMPAIRMENTS_TABLE_CLEANED",
+                                "column_index": 0,
+                                "row_index_start": 2,
+                            },
+                            {
+                                "name": "find_dates_in_string",
+                                "broker": "DATES_CLEANED",
+                            },
+                            {
+                                "name": "extract_dict_from_string",
+                                "broker": "OCCUPATION_CLEANED",
+                            },
+                        ]
+                    }
+                },
+
+            ],
+    }
+
+    processor = AiOutput(sample_content)
+    processed_content = await processor.process_response(return_params)
+    vcprint(verbose=verbose, data=processed_content, title="Processed Content", color='blue', style='bold')
+
+    return processed_content
+
+
 async def main():
-    sample_data = get_sample_data(app_name='automation_matrix', data_name='ama_example_new', sub_app='ama_ai_output_samples')
+    sample_data = get_sample_data(app_name='automation_matrix', data_name='ama_sample_new', sub_app='ama_ai_output_samples')
     # print(f"Sample Data:\n{sample_data}\n")
+
     result = await local_post_processing(sample_data)
-    await handle_OpenAIWrapperResponse(result)
+    vcprint(verbose=True, data=result, title="Final Result", color='green', style='bold')
 
 
 if __name__ == "__main__":
