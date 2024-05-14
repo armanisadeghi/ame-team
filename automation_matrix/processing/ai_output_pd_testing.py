@@ -618,18 +618,6 @@ class AiOutput(ProcessingManager):
         results =  processor.handle_extraction( structure, args.get('extractors') )
         return results
 
-    async def get_final_data(self, content, args):
-        from automation_matrix.processing.markdown.classifier import get_classify_markdown_section_list
-        sections = await get_classify_markdown_section_list(content)
-        print("got section")
-        structure = {
-            "sections" : sections,
-            "brokers" : []
-        }
-        processor = Markdown(style='asterisks')
-        results =  processor.handle_extraction( structure, args.get('extractors') )
-        return results
-
 
 def print_initial_and_processed_content(processed_content):
     print("========================================== Initial Content ==========================================")
@@ -821,6 +809,55 @@ async def local_post_processing(sample_content):
                         ]
                     }
                 },
+                {
+                    'processor': 'get_classified_markdown',
+                    'depends_on': 'content',
+                    'args': {
+                        "primary_broker": "SAMPLE_DATA_1001",
+                        "extractors": [
+                            {
+                                "name": "get_items_from_classified_markdown_sections",
+                                "broker": "IMPAIRMENT_TABLE_RAW",
+                                "classified_line_type": "table",
+                                "search": "Impairment Code"
+                            },
+                            {
+                                "name": "get_items_from_classified_markdown_sections",
+                                "broker": "DATES_RAW",
+                                "classified_line_type": "entries_and_values",
+                                "search": "Date of birth"
+                            },
+                            {
+                                "name": "get_items_from_classified_markdown_sections",
+                                "broker": "OCCUPATION_RAW",
+                                "classified_line_type": "header_with_bullets",
+                                "search": "Occupational Code"
+                            },
+                            {
+                                "name": "extract_list_table",
+                                "broker": "IMPAIRMENTS_TABLE_CLEANED",
+                                "column_index": 0,
+                                "row_index_start": 2,
+                            },
+                            {
+                                "name": "extract_dict_from_string",
+                                "broker": "OCCUPATION_CLEANED",
+                            },
+                            {
+                                'name' : 'extract_impairment_number_dict',
+                                'broker' : 'IMPAIRMENT_NUMBERS'
+                            },
+                            {
+                                'name': 'extract_age_dob_doi_for_pd_rating_calc',
+                                'broker': 'AGE_DOB_DOI'
+                            },
+                            {
+                                'name': 'extract_occupation_for_pd_calc',
+                                'broker': 'OCCUPATION_CODE'
+                            }
+                        ]
+                    }
+                },
 
             ],
     }
@@ -831,14 +868,91 @@ async def local_post_processing(sample_content):
 
     return processed_content
 
+# Helper function to extract brokers from the processed data and simulate what the workflow would do.
+def extract_brokers(processed_content):
+    def recurse_brokers(values):
+        if isinstance(values, dict):
+            for key, value in values.items():
+                if key == 'brokers':
+                    for broker_list in value:
+                        for broker_name, broker_data in broker_list.items():
+                            if broker_name not in brokers:
+                                brokers[broker_name] = []
+                            if isinstance(broker_data, list):
+                                brokers[broker_name].extend(broker_data)
+                            else:
+                                brokers[broker_name].append(broker_data)
+                else:
+                    recurse_brokers(value)
+        elif isinstance(values, list):
+            for item in values:
+                recurse_brokers(item)
+
+    brokers = {}
+    if 'processed_values' in processed_content:
+        for processor_name, processor_data in processed_content['processed_values'].items():
+            recurse_brokers(processor_data)
+
+    brokers_and_values = brokers
+    return brokers_and_values
+
+def filter_and_rename_brokers(brokers, broker_arg_mappings):
+    # Create a dictionary to easily look up arg names by broker name
+    arg_lookup = {list(b.keys())[0]: list(b.values())[0] for b in broker_arg_mappings}
+
+    # Filter and rename the brokers based on the provided mappings
+    filtered_brokers = {}
+    for broker_name, broker_data in brokers.items():
+        if broker_name in arg_lookup:
+            arg_name = arg_lookup[broker_name]
+            filtered_brokers[arg_name] = broker_data
+
+    return filtered_brokers
+
+
+def simulate_actual_function_call(args_structure):
+    adjusted_brokers = {k: v[0] if isinstance(v, list) and len(v) == 1 else v for k, v in args_structure.items()}
+    print(adjusted_brokers)
+    from knowledge.experts.ama.pd_ratings.pd_rating_calculator import pd_rating_orchestrator
+
+    # Now make the function call using the ** syntax to unpack keyword arguments
+    result = pd_rating_orchestrator(**adjusted_brokers)
+    return result
+
 
 async def main():
     sample_data = get_sample_data(app_name='automation_matrix', data_name='ama_sample_new', sub_app='ama_ai_output_samples')
     # print(f"Sample Data:\n{sample_data}\n")
 
-    result = await local_post_processing(sample_data)
-    vcprint(verbose=True, data=result, title="Final Result", color='green', style='bold')
+    processed_content = await local_post_processing(sample_data)
+    vcprint(verbose=True, data=processed_content, title="Final Result", color='green', style='bold')
+
+    brokers_and_values = extract_brokers(processed_content)
+    vcprint(verbose=True, data=brokers_and_values, title="Brokers & Values", color='green', style='bold')
+
+    return brokers_and_values
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    broker_and_values = asyncio.run(main())
+
+    broker_arg_mappings = [
+        # This is a sample of what you might try to extract from the processed content to have args associated with values. Match the broker name to the arg name you need.
+        {
+            "IMPAIRMENT_NUMBERS": "impairment_numbers"
+        },
+        {
+            "AGE_DOB_DOI": "age_details"
+        },
+        {
+            'OCCUPATION_CODE' : 'occupation_code'
+        }
+    ]
+
+    args_structure = filter_and_rename_brokers(broker_and_values, broker_arg_mappings)
+    vcprint(verbose=True, data=args_structure, title="Final Args for Function Call", color='blue', style='bold')
+
+    final_result = simulate_actual_function_call(args_structure)
+    vcprint(verbose=True, data=final_result, title="Final Result", color='cyan', style='bold')
+
+

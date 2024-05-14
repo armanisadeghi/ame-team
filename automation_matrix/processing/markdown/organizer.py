@@ -415,11 +415,20 @@ class Markdown(Processor):
             for fmt in date_formats:
                 try:
                     date = datetime.strptime(match, fmt)
-                    dates.append(date)
+                    dates.append(str(date.strftime("%Y-%m-%d")))
                     break
                 except ValueError:
                     pass
         return dates
+
+    def match_integers_from_string(self, string: str):
+        # Find all integer values in the string using regular expressions
+        integers = re.findall(r'\b\d+\b', string)
+
+        # Convert the strings to integers
+        integers = [int(i) for i in integers]
+
+        return integers
 
     def find_dates_in_string(self, extraction_map, data_structure):
         # This is a extractor specific for one processor.
@@ -452,6 +461,63 @@ class Markdown(Processor):
         raw_str = data_structure.get('brokers')[2]['OCCUPATION_RAW'][1]
         dict_ = self.get_dictionary_from_string(raw_str)
         return dict_
+    def extract_impairment_number_dict(self, extraction_map, data_structure):
+        impairments_table_dict = data_structure.get('brokers')[3]['IMPAIRMENTS_TABLE_CLEANED']
+
+        impairment_numbers_dict = {}
+        for index, imp in enumerate(impairments_table_dict):
+
+            # we need to have the values here, so please update the table in the
+            impairment_number = imp['Impairment Code']
+            wpi = imp['Whole Person Impairment']
+            industrial_percentage = imp['Industrial %']
+            pain_percentage = imp.get('Pain %', 0)
+            side = imp.get('Side')
+            ue = imp.get('UE', None)
+            le = imp.get('LE', None)
+
+            if '%' in wpi:
+                wpi = wpi.replace('%', '')
+                wpi = int(wpi)
+            if '%' in industrial_percentage:
+                industrial_percentage = industrial_percentage.replace('%','')
+                industrial_percentage = int(industrial_percentage)
+
+            impairment_numbers_dict[index] = {'impairment_number': impairment_number, 'side': side.capitalize() if side is not None else None, 'ue': ue, 'wpi': wpi, 'digit': None, 'le': le, 'industrial': industrial_percentage, 'pain': pain_percentage}
+
+        return impairment_numbers_dict
+    def extract_age_dob_doi_for_pd_rating_calc(self, extraction_map , data_structure):
+        age = None
+        dob = None
+        doi = None
+
+        dob_or_age = data_structure.get('brokers')[1].get('DATES_RAW')[0] # the first item in the DATES_RAW list is dob or age
+        result = self.match_dates_from_string(dob_or_age)
+        if not result: # This means the item is not a date as we received an empty list
+            possible_age = self.match_integers_from_string(dob_or_age)
+            age = possible_age[0]
+        else:
+            dob = result[0]
+
+
+        doi_string = data_structure.get('brokers')[1].get('DATES_RAW')[1] # the second item in the DATES_RAW list is doi
+        result = self.match_dates_from_string(doi_string)
+        if result:
+            doi = result[0]
+
+        return age, dob, doi
+    def extract_occupation_for_pd_calc(self, extraction_map, data_structure):
+        occupation = data_structure.get('brokers')[4]['OCCUPATION_CLEANED']
+        occupation_code = None
+        for _,v in occupation.items():
+            occupation_code = v
+            try:
+                occupation_code = int(occupation_code)
+            except:
+                occupation_code = None
+
+        return occupation_code
+
 
 async def get_markdown_asterisk_structure(markdown_text):
     processor = Markdown(style='asterisks')

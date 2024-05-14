@@ -1,11 +1,11 @@
-from knowledgebase.experts.ama_expert.pd_ratings.utils import determine_occupational_variant
+from knowledge.experts.ama.pd_ratings.utils import determine_occupational_variant
 
-from adjustments import (adjust_for_fec,
+from .adjustments import (adjust_for_fec,
                          adjust_for_occupation,
                          adjust_for_age,
                          default_fec)
 
-from data import default_fec_valid_from
+from .data import default_fec_valid_from
 
 
 def get_single_impairment_rating(

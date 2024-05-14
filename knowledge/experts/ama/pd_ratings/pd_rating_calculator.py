@@ -1,18 +1,19 @@
-from data import (
+from .data import (
     impairments_data,
     max_weekly_earnings,
+    default_occupation_code_if_not_supplied
 )
 
-from conversions import (hand_impairment_to_ue,
+from .conversions import (hand_impairment_to_ue,
                          finger_impairment_to_hand,
                          upper_extremity_to_wpi,
                          lower_extremity_to_wpi)
 
-from knowledgebase.experts.ama_expert.pd_ratings.utils import (combine_pd_ratings,
+from knowledge.experts.ama.pd_ratings.utils import (combine_pd_ratings,
                     handle_age, determine_occupational_variant,
                     calc_money_chart)
 
-from calculate_single_injury import get_single_impairment_rating
+from .calculate_single_injury import get_single_impairment_rating
 from pprint import pprint
 from common import vcprint, pretty_print, cool_print
 
@@ -150,15 +151,18 @@ def find_errors_for_occupation_code(impairment_numbers: dict, occupation_code: s
 
 
 def pd_rating_orchestrator(impairment_numbers: dict,
-                           age,
-                           date_of_birth,
-                           date_of_injury,
+                           age_details,
                            occupation_code,
                            weekly_earnings=max_weekly_earnings):
     errors = []
+    general_warnings = []
+
+    if occupation_code ==  None:
+        occupation_code = default_occupation_code_if_not_supplied
+        general_warnings.append(f"Occupation code was not supplied, taking default code {occupation_code}")
 
     # Validating age related things
-
+    age, date_of_birth, date_of_injury = age_details
     try:
         dob, doi, age = handle_age(date_of_birth, date_of_injury, age)
     except Exception as e:
@@ -202,6 +206,7 @@ def pd_rating_orchestrator(impairment_numbers: dict,
 
     return {
         "status": True,
+        "warnings": general_warnings,
         "detailed_view": combined_results,
         "combined_view": final_output,
         "compensation": compensation
@@ -230,8 +235,8 @@ if __name__ == '__main__':
 
     results = pd_rating_orchestrator(
         impairment_numbers=impairments_numbers_2,
-        age=25,
-        date_of_birth=None,
+        age=None,
+        date_of_birth='1972-01-01',
         date_of_injury='2023-01-01',
         occupation_code='310',
         weekly_earnings=500

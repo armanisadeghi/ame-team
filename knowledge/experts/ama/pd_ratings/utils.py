@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta, date
-from data import (variant_table,
+from .data import (variant_table,
                   money_chart)
 
 

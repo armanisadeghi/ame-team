@@ -10,7 +10,7 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 TEMP_DIR = os.path.join(BASE_DIR, 'temp')
-SECRET_KEY = config('DJANGO_SECRET_KEY')
+# SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 GOOGLE_APPLICATION_CREDENTIALS = os.getenv('GOOGLE_APPLICATION_CREDENTIALS', os.path.join(BASE_DIR.parent, 'sec', 'serviceAccountKeys.json'))
 

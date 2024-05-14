@@ -1,4 +1,4 @@
-from data import (
+from .data import (
                   thumb_impairment_to_hands_impairment,
                   ring_or_little_finger_impairment_to_hand_impairment,
                   index_or_middle_finger_impairment_to_hand_impairment,

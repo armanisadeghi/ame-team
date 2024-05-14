@@ -1,4 +1,4 @@
-from data import age_adjustment_table, occupation_adjustment_table, default_fec
+from .data import age_adjustment_table, occupation_adjustment_table, default_fec
 
 
 # Adjustments Section ----------------------------------------
