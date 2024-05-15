@@ -341,6 +341,13 @@ class Markdown(Processor):
 
         return result
 
+    def get_key_pair_from_string(self, string , separator=":"):
+        if separator in string and string is not None:
+            chunks = string.split(separator)
+
+            if len(chunks) == 2:
+                return {chunks[0]:chunks[1]}
+
     def get_items_from_classified_markdown_sections(self,extraction_map, data_structure):
         classifier_type = extraction_map.get('classified_line_type')
         query = extraction_map.get('search')
@@ -392,7 +399,22 @@ class Markdown(Processor):
 
         return table_dicts
 
-    def match_dates_from_string(self, string: str):
+    def match_dates_from_string(self, extraction_map, data_structure):
+
+        string = extraction_map.get('value_to_be_processed')
+        result_type = extraction_map.get('result_type')
+
+        if extraction_map.get('args'):
+            target_broker_index_or_name = extraction_map.get('args').get('target_index_or_name_in_broker')
+            if extraction_map.get('args').get('broker') and extraction_map.get('args').get('broker_name'):
+                for item in data_structure.get('brokers'):
+                    for name, value in item.items():
+                        if name == extraction_map.get('args').get('broker_name'):
+                            if isinstance(value, list):
+                                string = value[target_broker_index_or_name]
+                            if isinstance(value, dict):
+                                string = value[target_broker_index_or_name]
+
         #Sample formats
         date_formats = [
             "%d-%m-%Y",  # DD-MM-YYYY
@@ -407,7 +429,7 @@ class Markdown(Processor):
         ]
 
         date_pattern = re.compile(
-            r'\b(\d{1,2}[-/\.]\d{1,2}[-/\.]\d{4}|\d{4}[-/\.]\d{1,2}[-/\.]\d{1,2})\b')  # Pattern generated from copilot. Tested many times
+            r'\b(\d{1,2}[-/\.]\d{1,2}[-/\.]\d{4}|\d{4}[-/\.]\d{1,2}[-/\.]\d{1,2})\b')
         matches = date_pattern.findall(string)
 
         dates = []
@@ -419,7 +441,13 @@ class Markdown(Processor):
                     break
                 except ValueError:
                     pass
-        return dates
+        if not dates:
+            return None
+        else:
+            if result_type == 'single':
+                return dates[0]
+            else:
+                return dates
 
     def match_integers_from_string(self, string: str):
         # Find all integer values in the string using regular expressions
@@ -430,93 +458,119 @@ class Markdown(Processor):
 
         return integers
 
-    def find_dates_in_string(self, extraction_map, data_structure):
-        # This is a extractor specific for one processor.
-        input_string_1 = data_structure.get('brokers')[1]['DATES_RAW'][0] # I think this can be changed absolutely when we change the brokers to dict format
-        input_string_2 = data_structure.get('brokers')[1]['DATES_RAW'][1]
-        extraction_map
-        dates = []
+    def transform_table_data_format(self, extraction_map, data_structure):
+        """Transforms the format of the given input data based on the provided field mappings and default values.
+        This function iterates over each item in the input data, maps the fields of each item to new fields 
+        as specified in the field_mappings dictionary, and fills in any missing fields with the default values 
+        specified in the default_values dictionary. The transformed data is returned in a new format.
+    
+        Parameters:
+        input_data (list of dict): The input data to be transformed. Each item is a dictionary representing a data record.
+        field_mappings (dict): A dictionary mapping the old field names in the input data to new field names.
+        default_values (dict): A dictionary specifying the default values for any fields that are missing in the input data.
+        field_type_conversion(dict) : A dictionary for extracting the specified data type from the field value.
+        Returns:
+        dict: A dictionary containing the transformed data. The key is the index and the value is a mapped table fields in form of dictionary,
+        """
+        table = extraction_map.get('table')
 
-        dates.extend(self.match_dates_from_string(input_string_1))
-        dates.extend(self.match_dates_from_string(input_string_2))
+        if extraction_map.get('args'):
+            if extraction_map.get('args').get('broker') and extraction_map.get('args').get('broker_name'):
+                for item in data_structure.get('brokers'):
+                    for name, value in item.items():
+                        if name == extraction_map.get('args').get('broker_name'):
+                            table = value
 
-        return dates
+        field_mappings = extraction_map.get('field_mappings')
+        default_values = extraction_map.get('default_values')
+        field_type_conversion  = extraction_map.get('field_type_conversion')
 
-    def get_dictionary_from_string(self, string, separator=":"):
+        output_data = {}
+        for i, item in enumerate(table):
+            new_item = {}
+            for key, value in item.items():
+                if key in field_mappings:
+                    new_item[field_mappings[key]] = value
+            for key, value in default_values.items():
+                if key not in new_item:
+                    new_item[key] = value
+            output_data[i] = new_item
 
-        '''
-        :return:[{item1 : something here}]
-        The default separator is :
-        it arranges them as {item1: value, item2: value}
-        '''
+        for index, val in output_data.items():
+            for field_name, field_value in val.items():
+                if field_name in field_type_conversion:
+                    convert_to_type = field_type_conversion[field_name]
+                    if convert_to_type == int:
+                        results = self.match_integers_from_string(field_value)
+                        if results:
+                            val[field_name] = results[0]
 
-        if separator in string:
-            list_ = [item.strip() for item in string.split(separator)]
-            if len(list_) == 2:
-                return {list_[0]:list_[1]}
+        return output_data
 
-        return {}
+    def extract_integers_from_string(self, extraction_map, data_structure):
 
-    def extract_dict_from_string(self, extraction_map, data_structure):
-        raw_str = data_structure.get('brokers')[2]['OCCUPATION_RAW'][1]
-        dict_ = self.get_dictionary_from_string(raw_str)
-        return dict_
-    def extract_impairment_number_dict(self, extraction_map, data_structure):
-        impairments_table_dict = data_structure.get('brokers')[3]['IMPAIRMENTS_TABLE_CLEANED']
+        result_type = extraction_map.get('result_type')
+        to_be_processed = extraction_map.get('value_to_be_processed')
+        args = extraction_map.get('args')
+        broker_needed = False
 
-        impairment_numbers_dict = {}
-        for index, imp in enumerate(impairments_table_dict):
+        if args:
+            broker_needed = args.get('broker')
 
-            # we need to have the values here, so please update the table in the
-            impairment_number = imp['Impairment Code']
-            wpi = imp['Whole Person Impairment']
-            industrial_percentage = imp['Industrial %']
-            pain_percentage = imp.get('Pain %', 0)
-            side = imp.get('Side')
-            ue = imp.get('UE', None)
-            le = imp.get('LE', None)
+        if broker_needed:
+            broker_name = args.get('broker_name')
+            target_broker_index_or_name = args.get('target_index_or_name_in_broker')
 
-            if '%' in wpi:
-                wpi = wpi.replace('%', '')
-                wpi = int(wpi)
-            if '%' in industrial_percentage:
-                industrial_percentage = industrial_percentage.replace('%','')
-                industrial_percentage = int(industrial_percentage)
+            for item in data_structure.get('brokers'):
+                for name, val in item.items():
+                    if name == broker_name:
+                        if isinstance(val, list):
+                            to_be_processed = val[target_broker_index_or_name]
+                        if isinstance(val, dict):
+                            to_be_processed = val[target_broker_index_or_name]
 
-            impairment_numbers_dict[index] = {'impairment_number': impairment_number, 'side': side.capitalize() if side is not None else None, 'ue': ue, 'wpi': wpi, 'digit': None, 'le': le, 'industrial': industrial_percentage, 'pain': pain_percentage}
+        results = self.match_integers_from_string(str(to_be_processed))
 
-        return impairment_numbers_dict
-    def extract_age_dob_doi_for_pd_rating_calc(self, extraction_map , data_structure):
-        age = None
-        dob = None
-        doi = None
-
-        dob_or_age = data_structure.get('brokers')[1].get('DATES_RAW')[0] # the first item in the DATES_RAW list is dob or age
-        result = self.match_dates_from_string(dob_or_age)
-        if not result: # This means the item is not a date as we received an empty list
-            possible_age = self.match_integers_from_string(dob_or_age)
-            age = possible_age[0]
+        if not results:
+            return None
         else:
-            dob = result[0]
+            if result_type == 'single':
+                return results[0]
+            else:
+                return results
 
+    def extract_key_pair_from_string(self, extraction_map, data_structure):
 
-        doi_string = data_structure.get('brokers')[1].get('DATES_RAW')[1] # the second item in the DATES_RAW list is doi
-        result = self.match_dates_from_string(doi_string)
-        if result:
-            doi = result[0]
+        datatype = extraction_map.get('result_datatype')
+        to_be_processed = extraction_map.get('value_to_be_processed')
+        args = extraction_map.get('args')
+        broker_needed = False
 
-        return age, dob, doi
-    def extract_occupation_for_pd_calc(self, extraction_map, data_structure):
-        occupation = data_structure.get('brokers')[4]['OCCUPATION_CLEANED']
-        occupation_code = None
-        for _,v in occupation.items():
-            occupation_code = v
+        if args:
+            broker_needed = args.get('broker')
+
+        if broker_needed:
+            broker_name = args.get('broker_name')
+            target_broker_index_or_name = args.get('target_index_or_name_in_broker')
+
+            for item in data_structure.get('brokers'):
+                for name, val in item.items():
+                    if name == broker_name:
+                        if isinstance(val, list):
+                            to_be_processed = val[target_broker_index_or_name]
+                        if isinstance(val, dict):
+                            to_be_processed = val[target_broker_index_or_name]
+        print(to_be_processed)
+        results = self.get_key_pair_from_string(str(to_be_processed))
+
+        if datatype:
             try:
-                occupation_code = int(occupation_code)
+                return datatype(results.values()[0])
             except:
-                occupation_code = None
+                return None
+        else:
+            return results
 
-        return occupation_code
 
 
 async def get_markdown_asterisk_structure(markdown_text):

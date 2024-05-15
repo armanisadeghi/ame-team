@@ -151,7 +151,9 @@ def find_errors_for_occupation_code(impairment_numbers: dict, occupation_code: s
 
 
 def pd_rating_orchestrator(impairment_numbers: dict,
-                           age_details,
+                           age,
+                           date_of_birth,
+                           date_of_injury,
                            occupation_code,
                            weekly_earnings=max_weekly_earnings):
     errors = []
@@ -162,7 +164,7 @@ def pd_rating_orchestrator(impairment_numbers: dict,
         general_warnings.append(f"Occupation code was not supplied, taking default code {occupation_code}")
 
     # Validating age related things
-    age, date_of_birth, date_of_injury = age_details
+
     try:
         dob, doi, age = handle_age(date_of_birth, date_of_injury, age)
     except Exception as e:

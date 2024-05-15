@@ -134,6 +134,8 @@ class AiOutput(ProcessingManager):
                 vcprint(verbose=verbose, data=output_data, title=f"Output Data for '{processor_name}'", color='green', style='bold')
 
             except Exception as e:
+                import traceback
+                traceback.print_exc()
                 print(f"Error processing '{processor_name}': {e}")
                 output_data = "error"
 
@@ -777,47 +779,6 @@ async def local_post_processing(sample_content):
                             {
                                 "name": "get_items_from_classified_markdown_sections",
                                 "broker": "IMPAIRMENT_TABLE_RAW",
-                                "classified_line_type" : "table",
-                                "search" : "Impairment Code"
-                            },
-                            {
-                                "name": "get_items_from_classified_markdown_sections",
-                                "broker": "DATES_RAW",
-                                "classified_line_type": "entries_and_values",
-                                "search": "Date of birth"
-                            },
-                            {
-                                "name": "get_items_from_classified_markdown_sections",
-                                "broker": "OCCUPATION_RAW",
-                                "classified_line_type": "header_with_bullets",
-                                "search": "Occupational Code"
-                            },
-                            {
-                                "name": "extract_list_table",
-                                "broker": "IMPAIRMENTS_TABLE_CLEANED",
-                                "column_index": 0,
-                                "row_index_start": 2,
-                            },
-                            {
-                                "name": "find_dates_in_string",
-                                "broker": "DATES_CLEANED",
-                            },
-                            {
-                                "name": "extract_dict_from_string",
-                                "broker": "OCCUPATION_CLEANED",
-                            },
-                        ]
-                    }
-                },
-                {
-                    'processor': 'get_classified_markdown',
-                    'depends_on': 'content',
-                    'args': {
-                        "primary_broker": "SAMPLE_DATA_1001",
-                        "extractors": [
-                            {
-                                "name": "get_items_from_classified_markdown_sections",
-                                "broker": "IMPAIRMENT_TABLE_RAW",
                                 "classified_line_type": "table",
                                 "search": "Impairment Code"
                             },
@@ -840,20 +801,41 @@ async def local_post_processing(sample_content):
                                 "row_index_start": 2,
                             },
                             {
-                                "name": "extract_dict_from_string",
-                                "broker": "OCCUPATION_CLEANED",
+                                "name": "extract_integers_from_string",
+                                "broker": "OCCUPATION_CODE",
+                                "args" : {"broker": True, "broker_name": "OCCUPATION_RAW", 'target_index_or_name_in_broker': 1},
+                                "value_to_be_processed" : None,
+                                "result_type": 'single'
                             },
                             {
-                                'name' : 'extract_impairment_number_dict',
-                                'broker' : 'IMPAIRMENT_NUMBERS'
+                                'name' : 'transform_table_data_format',
+                                'broker' : 'IMPAIRMENT_NUMBERS',
+                                'args': {"broker": True, "broker_name": "IMPAIRMENTS_TABLE_CLEANED"},
+                                'table' : None,
+                                'field_mappings' : {"Impairment Code": "impairment_number","Whole Person Impairment": "wpi","Industrial %": "industrial"},
+                                'default_values': {"side": None,"ue": None,"digit": None,"le": None,"pain": 0},
+                                'field_type_conversion' : {'wpi': int, "industrial": int} # This is for extracting the specified data type from the field value
                             },
                             {
-                                'name': 'extract_age_dob_doi_for_pd_rating_calc',
-                                'broker': 'AGE_DOB_DOI'
+                                "name": "extract_key_pair_from_string",
+                                "broker": "AGE",
+                                "args": {"broker": True, "broker_name": "DATES_RAW",
+                                         'target_index_or_name_in_broker': 0},
+                                "value_to_be_processed": None,
+                                "result_datatype": int
                             },
                             {
-                                'name': 'extract_occupation_for_pd_calc',
-                                'broker': 'OCCUPATION_CODE'
+                                'name': 'match_dates_from_string',
+                                'broker': 'DOB',
+                                'args': {"broker": True, "broker_name": "DATES_RAW", 'target_index_or_name_in_broker': 0},
+                                "result_type": 'single',
+
+                            },
+                            {
+                                'name': 'match_dates_from_string',
+                                'broker': 'DOI',
+                                'args': {"broker": True, "broker_name": "DATES_RAW", 'target_index_or_name_in_broker': 1},
+                                "result_type": 'single'
                             }
                         ]
                     }
@@ -942,11 +924,18 @@ if __name__ == "__main__":
             "IMPAIRMENT_NUMBERS": "impairment_numbers"
         },
         {
-            "AGE_DOB_DOI": "age_details"
+            "AGE": "age"
         },
         {
             'OCCUPATION_CODE' : 'occupation_code'
-        }
+        },
+        {
+            'DOB': 'date_of_birth'
+        },
+        {
+            'DOI': 'date_of_injury'
+        },
+
     ]
 
     args_structure = filter_and_rename_brokers(broker_and_values, broker_arg_mappings)
