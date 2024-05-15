@@ -1,17 +1,17 @@
 from .data import (
     impairments_data,
     max_weekly_earnings,
-    default_occupation_code_if_not_supplied
+    default_occupation_code_if_not_supplied, default_digit_impairment_if_not_supplied, default_wpi_if_not_supplied
 )
 
 from .conversions import (hand_impairment_to_ue,
                          finger_impairment_to_hand,
-                         upper_extremity_to_wpi,
-                         lower_extremity_to_wpi)
+                         upper_extremity_to_wpi, wpi_to_upper_extremity,
+                         lower_extremity_to_wpi, wpi_to_lower_extremity)
 
 from knowledge.experts.ama.pd_ratings.utils import (combine_pd_ratings,
                     handle_age, determine_occupational_variant,
-                    calc_money_chart)
+                    calc_money_chart, get_impairment_config)
 
 from .calculate_single_injury import get_single_impairment_rating
 from pprint import pprint
@@ -149,6 +149,46 @@ def find_errors_for_occupation_code(impairment_numbers: dict, occupation_code: s
         else:
             impairment_config['occupation_variant'] = variant
 
+def adjust_incorrect_impairment_config(impairment_numbers: dict, warnings: list):
+
+    for index, impairment_config in impairment_numbers.items():
+        impairment_number = impairment_config.get('impairment_number')
+        impairment_requirements = get_impairment_config(impairment_number)
+        if impairment_requirements is not None:
+            impairment_inputs = impairment_requirements[2]  # Since 3rd item is the inputs config
+
+            # Adjusting if WPI is not present when required
+            if impairment_inputs.get('wpi'):
+                if impairment_config.get('wpi') is None:  # Say for any case wpi is None, we will set a default value here
+                    # not a very ideal case but still to avoid errors
+                    impairment_numbers[index]['wpi'] = default_wpi_if_not_supplied
+
+                    # If UE or LE is present in this case , and wpi is not supplied for that reason the default wpi value won't affect further calculation
+                    # this only affects the calculation where LE and UE are required
+
+            # Adjusting if UE is not present when required
+            if impairment_inputs.get('ue'):
+                if impairment_config.get('ue') is None and impairment_config.get('wpi'):
+                    impairment_numbers[index]['ue'] = wpi_to_upper_extremity(impairment_config.get('wpi'))
+
+            # Adjusting if LE is not present when required
+            if impairment_inputs.get('le'):
+                if impairment_config.get('le') is None and impairment_config.get('wpi'):
+                    impairment_numbers[index]['le'] = wpi_to_lower_extremity(impairment_config.get('wpi'))
+
+            # Adjusting if Side is not present when required
+            if impairment_inputs.get('side'):
+                if impairment_config.get('side') is None or impairment_config.get('side') not in ['Right', 'Left']:
+                    impairment_numbers[index]['side'] = 'Right'  # Defaulting the side to right since there are only sides
+                    warnings.append(f'Side not supplied for {impairment_number} , taking default value: Right')
+
+            # Adjusting digit impairment if not present when required
+            if impairment_inputs.get('digit'):
+                if impairment_config.get('digit') is None:
+                    impairment_numbers[index]['digit'] = default_digit_impairment_if_not_supplied
+                    warnings.append(f'Digit impairment not supplied for {impairment_number} ,taking default value :{default_digit_impairment_if_not_supplied}')
+
+
 
 def pd_rating_orchestrator(impairment_numbers: dict,
                            age,
@@ -159,7 +199,10 @@ def pd_rating_orchestrator(impairment_numbers: dict,
     errors = []
     general_warnings = []
 
-    if occupation_code ==  None:
+    # adjusting impairment input factors if values are missing
+    adjust_incorrect_impairment_config(impairment_numbers, general_warnings)
+
+    if occupation_code is None:
         occupation_code = default_occupation_code_if_not_supplied
         general_warnings.append(f"Occupation code was not supplied, taking default code {occupation_code}")
 

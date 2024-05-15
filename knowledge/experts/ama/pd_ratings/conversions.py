@@ -1,8 +1,9 @@
 from .data import (
-                  thumb_impairment_to_hands_impairment,
-                  ring_or_little_finger_impairment_to_hand_impairment,
-                  index_or_middle_finger_impairment_to_hand_impairment,
-                  hand_impairment_to_upper_extremity)
+    thumb_impairment_to_hands_impairment,
+    ring_or_little_finger_impairment_to_hand_impairment,
+    index_or_middle_finger_impairment_to_hand_impairment,
+    hand_impairment_to_upper_extremity)
+
 
 # Conversion Section ------------------------------------
 
@@ -16,6 +17,15 @@ def lower_extremity_to_wpi(le: int):
     return round(le * 0.4)
 
 
+# Wpi to lower extremity
+
+def wpi_to_lower_extremity(wpi: int):
+    if wpi >= 40:
+        return 100
+
+    return round(wpi / 0.4)
+
+
 # Upper Extremity to WPI %
 
 def upper_extremity_to_wpi(ue: int):
@@ -23,6 +33,14 @@ def upper_extremity_to_wpi(ue: int):
         return round(100 * 0.6)
 
     return round(ue * 0.6)
+
+
+# Wpi to Upper Extremity
+def wpi_to_upper_extremity(wpi: int):
+    if wpi >= 60:
+        return 100
+
+    return round(wpi / 0.6)
 
 
 # Hand impairment to Upper Extremity
