@@ -29,6 +29,7 @@ class AiOutput(ProcessingManager):
         self.source_info = {}
         super().__init__()
 
+
     async def process_response(self, return_params):
         if not isinstance(return_params, dict):
             self.return_params = {}
@@ -44,7 +45,7 @@ class AiOutput(ProcessingManager):
             self.variable_name = str(self.variable_name)
 
         self.processed_content = {
-            'signature': 'OpenAIWrapperResponse',
+            'signature': 'AiWrapperResponse',
             'processing': True,
             "variable_name": self.variable_name,
             'source_info': self.source_info,
@@ -740,6 +741,20 @@ async def local_post_processing(sample_api_response, sample_return_params):
     vcprint(verbose=True, data=processed_content, title="Processed Content", color='blue', style='bold')
 
     return processed_content
+
+
+# I added this as a way to simulate the AI Wrapper response. This is a way to test the processing without having to run the AI Wrapper.
+# Use this if you want to just get basic content and call the system. All it does is put "content" into the "value" key of the response.
+# This, plus the return_params is all you need to test the processing. (But if the content is already formatted like this, you don't need it.)
+def format_non_formatted_data(content):
+    simulated_ai_wrapper_response = {
+        'signature': 'AIWrapperResponse',
+        'processing': False,
+        'value': content,
+        'processed_values': {}
+    }
+
+    return simulated_ai_wrapper_response
 
 
 if __name__ == "__main__":

@@ -1878,6 +1878,22 @@ files = [
 cli = ["click (>=5.0)"]
 
 [[package]]
+name = "python-pptx"
+version = "0.6.23"
+description = "Generate and manipulate Open XML PowerPoint (.pptx) files"
+optional = false
+python-versions = "*"
+files = [
+    {file = "python-pptx-0.6.23.tar.gz", hash = "sha256:587497ff28e779ab18dbb074f6d4052893c85dedc95ed75df319364f331fedee"},
+    {file = "python_pptx-0.6.23-py3-none-any.whl", hash = "sha256:dd0527194627a2b7cc05f3ba23ecaa2d9a0d5ac9b6193a28ed1b7a716f4217d4"},
+]
+
+[package.dependencies]
+lxml = ">=3.1.0"
+Pillow = ">=3.3.2"
+XlsxWriter = ">=0.5.7"
+
+[[package]]
 name = "queuelib"
 version = "1.7.0"
 description = "Collection of persistent (disk-based) and non-persistent (memory-based) queues"
@@ -2347,6 +2363,17 @@ files = [
 h11 = ">=0.9.0,<1"
 
 [[package]]
+name = "xlsxwriter"
+version = "3.2.0"
+description = "A Python module for creating Excel XLSX files."
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "XlsxWriter-3.2.0-py3-none-any.whl", hash = "sha256:ecfd5405b3e0e228219bcaf24c2ca0915e012ca9464a14048021d21a995d490e"},
+    {file = "XlsxWriter-3.2.0.tar.gz", hash = "sha256:9977d0c661a72866a61f9f7a809e25ebbb0fb7036baa3b9fe74afcfca6b3cb8c"},
+]
+
+[[package]]
 name = "yarl"
 version = "1.9.4"
 description = "Yet another URL library"
@@ -2534,4 +2561,4 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "cbb5aaf1b1245db1f68089e04dc4a8e75e5826c8f2fa2e451b5901c34a26dd8b"
+content-hash = "3dcdd5c0b8d3b5e9e8e80b49c490c070f77f776a66208bdc209bad7bc47edb2e"
