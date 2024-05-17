@@ -605,6 +605,18 @@ class AiOutput(ProcessingManager):
 
         return processed_content
 
+    async def get_classified_markdown(self, content, args):
+        from automation_matrix.processing.markdown.classifier import get_classify_markdown_section_list
+        sections = await get_classify_markdown_section_list(content)
+        print("got section")
+        structure = {
+            "sections" : sections,
+            "brokers" : []
+        }
+        processor = Markdown(style='asterisks')
+        results =  processor.handle_extraction( structure, args.get('extractors') )
+        return results
+
 
 def print_initial_and_processed_content(processed_content):
     print("========================================== Initial Content ==========================================")
@@ -751,52 +763,134 @@ async def sample_processor_structure(sample_content):
 
 
 async def local_post_processing(sample_content):
+    # return_params = {
+    #     'variable_name': 'SAMPLE_DATA_1001',
+    #     'processors':
+    #         [
+    #             {
+    #                 'processor': 'get_markdown_asterisk_structure',
+    #                 'depends_on': 'content',
+    #                 'args': {
+    #                     "primary_broker": "SAMPLE_DATA_1001",
+    #                     "extractors": [
+    #                         {
+    #                             "name": "access_data_by_reference",
+    #                             "broker": "BLOG_IDEA_1",
+    #                             "key_identifier": "nested_structure",
+    #                             "key_index": 1,
+    #                             "output_type": "text",
+    #                         },
+    #                         {
+    #                             "name": "access_data_by_reference",
+    #                             "key_identifier": "nested_structure",
+    #                             "key_index": 2,
+    #                             "output_type": "text",
+    #                             "broker": "BLOG_IDEA_2",
+    #                         },
+    #                         {
+    #                             "name": "access_data_by_reference",
+    #                             "key_identifier": "nested_structure",
+    #                             "key_index": 3,
+    #                             "output_type": "text",
+    #                             "broker": "BLOG_IDEA_3",
+    #                         },
+    #                         #  I have commented out Blog Idea 4 for demonstration purposes as though the request was to get blogs 1, 2, 3, and 5, but NOT 4
+    #                         {
+    #                             "name": "access_data_by_reference",
+    #                             "broker": "BLOG_IDEA_4",
+    #                             "key_identifier": "nested_structure",
+    #                             "key_index": 4,
+    #                             "output_type": "text",
+    #
+    #                         },
+    #                         {
+    #                             "name": "access_data_by_reference",
+    #                             "broker": "BLOG_IDEA_5",
+    #                             "key_identifier": "nested_structure",
+    #                             "key_index": 5,
+    #                             "output_type": "text",
+    #                         }
+    #                     ]
+    #                 }
+    #             },
+    #
+    #         ],
+    # }
     return_params = {
         'variable_name': 'SAMPLE_DATA_1001',
         'processors':
             [
                 {
-                    'processor': 'get_markdown_asterisk_structure',
+                    'processor': 'get_classified_markdown',
                     'depends_on': 'content',
                     'args': {
                         "primary_broker": "SAMPLE_DATA_1001",
                         "extractors": [
                             {
-                                "name": "access_data_by_reference",
-                                "broker": "BLOG_IDEA_1",
-                                "key_identifier": "nested_structure",
-                                "key_index": 1,
-                                "output_type": "text",
+                                "name": "get_items_from_classified_markdown_sections",
+                                "broker": "IMPAIRMENT_TABLE_RAW",
+                                "classified_line_type": "table",
+                                "search": "Impairment Code"
                             },
                             {
-                                "name": "access_data_by_reference",
-                                "key_identifier": "nested_structure",
-                                "key_index": 2,
-                                "output_type": "text",
-                                "broker": "BLOG_IDEA_2",
+                                "name": "get_items_from_classified_markdown_sections",
+                                "broker": "DATES_RAW",
+                                "classified_line_type": "entries_and_values",
+                                "search": "Date of birth"
                             },
                             {
-                                "name": "access_data_by_reference",
-                                "key_identifier": "nested_structure",
-                                "key_index": 3,
-                                "output_type": "text",
-                                "broker": "BLOG_IDEA_3",
+                                "name": "get_items_from_classified_markdown_sections",
+                                "broker": "OCCUPATION_RAW",
+                                "classified_line_type": "header_with_bullets",
+                                "search": "Occupational Code"
                             },
-                            #  I have commented out Blog Idea 4 for demonstration purposes as though the request was to get blogs 1, 2, 3, and 5, but NOT 4
                             {
-                                "name": "access_data_by_reference",
-                                "broker": "BLOG_IDEA_4",
-                                "key_identifier": "nested_structure",
-                                "key_index": 4,
-                                "output_type": "text",
+                                "name": "extract_list_table",
+                                "broker": "IMPAIRMENTS_TABLE_CLEANED",
+                                "column_index": 0,
+                                "row_index_start": 2,
+                            },
+                            {
+                                "name": "extract_integers_from_string",
+                                "broker": "OCCUPATION_CODE",
+                                "args": {"broker": True, "broker_name": "OCCUPATION_RAW",
+                                         'target_index_or_name_in_broker': 1},
+                                "value_to_be_processed": None,
+                                "result_type": 'single'
+                            },
+                            {
+                                'name': 'transform_table_data_format',
+                                'broker': 'IMPAIRMENT_NUMBERS',
+                                'args': {"broker": True, "broker_name": "IMPAIRMENTS_TABLE_CLEANED"},
+                                'table': None,
+                                'field_mappings': {"Impairment Code": "impairment_number",
+                                                   "Whole Person Impairment": "wpi", "Industrial %": "industrial"},
+                                'default_values': {"side": None, "ue": None, "digit": None, "le": None, "pain": 0},
+                                'field_type_conversion': {'wpi': int, "industrial": int}
+                                # This is for extracting the specified data type from the field value
+                            },
+                            {
+                                "name": "extract_key_pair_from_string",
+                                "broker": "AGE",
+                                "args": {"broker": True, "broker_name": "DATES_RAW",
+                                         'target_index_or_name_in_broker': 0},
+                                "value_to_be_processed": None,
+                                "result_datatype": int
+                            },
+                            {
+                                'name': 'match_dates_from_string',
+                                'broker': 'DOB',
+                                'args': {"broker": True, "broker_name": "DATES_RAW",
+                                         'target_index_or_name_in_broker': 0},
+                                "result_type": 'single',
 
                             },
                             {
-                                "name": "access_data_by_reference",
-                                "broker": "BLOG_IDEA_5",
-                                "key_identifier": "nested_structure",
-                                "key_index": 5,
-                                "output_type": "text",
+                                'name': 'match_dates_from_string',
+                                'broker': 'DOI',
+                                'args': {"broker": True, "broker_name": "DATES_RAW",
+                                         'target_index_or_name_in_broker': 1},
+                                "result_type": 'single'
                             }
                         ]
                     }
@@ -871,7 +965,9 @@ def sample_actual_function_process_blog_content(topic, concept):
 
 
 async def main():
-    sample_data = get_sample_data(app_name='automation_matrix', data_name='sample_6_small', sub_app='sample_openai_responses')  # jatin: Changed this to sample_6_small (see note there)
+    # sample_data = get_sample_data(app_name='automation_matrix', data_name='sample_6_small', sub_app='sample_openai_responses')  # jatin: Changed this to sample_6_small (see note there)
+
+    sample_data = get_sample_data(app_name='automation_matrix', data_name='ama_medical_report_sample', sub_app='ama_ai_output_samples')
     print(f"Sample Data:\n{sample_data}\n")
 
     processed_content = await local_post_processing(sample_data)
@@ -890,6 +986,15 @@ def simulate_actual_function_call(args_structure):
     result = sample_actual_function_process_blog_content(**adjusted_brokers)
     return result
 
+def simulate_actual_function_call_2(args_structure):
+    adjusted_brokers = {k: v[0] if isinstance(v, list) and len(v) == 1 else v for k, v in args_structure.items()}
+    print(adjusted_brokers)
+    from knowledge.experts.ama.pd_ratings.pd_rating_calculator import pd_rating_orchestrator
+    # Now make the function call using the ** syntax to unpack keyword arguments
+    result = pd_rating_orchestrator(**adjusted_brokers)
+    return result
+
+
 if __name__ == "__main__":
     brokers_and_values = asyncio.run(main())
     # Manually call the function to test if it will work within the workflow. You can extract brokers by name and assign them t
@@ -903,8 +1008,27 @@ if __name__ == "__main__":
             }
     ]
 
-    args_structure = filter_and_rename_brokers(brokers_and_values, broker_arg_mappings)
+    broker_arg_mappings_2 = [
+        {
+            "IMPAIRMENT_NUMBERS": "impairment_numbers"
+        },
+        {
+            "AGE": "age"
+        },
+        {
+            'OCCUPATION_CODE': 'occupation_code'
+        },
+        {
+            'DOB': 'date_of_birth'
+        },
+        {
+            'DOI': 'date_of_injury'
+        },
+
+    ]
+
+    args_structure = filter_and_rename_brokers(brokers_and_values, broker_arg_mappings_2)
     vcprint(verbose=True, data=args_structure, title="Final Args for Function Call", color='blue', style='bold')
 
-    final_result = simulate_actual_function_call(args_structure)
+    final_result = simulate_actual_function_call_2(args_structure)
     vcprint(verbose=True, data=final_result, title="Final Result", color='cyan', style='bold')
