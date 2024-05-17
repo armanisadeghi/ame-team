@@ -114,6 +114,7 @@ class AiOutput(ProcessingManager):
             depends_on = step.get('depends_on') or 'content'
             count += 1
 
+            # TODO: Change print statements like this to vcprint please so they don't print in the workflow processing, unless it's something that's needed for debugging.
             print(f"[processing data {count}] Processor:'{processor_name}' with dependency on: '{depends_on}'")
 
             input_data = self.content if depends_on in ['content', 'raw_api_response'] else processed_names.get(depends_on)
@@ -814,7 +815,7 @@ async def local_post_processing(sample_content):
                                 'table' : None,
                                 'field_mappings' : {"Impairment Code": "impairment_number","Whole Person Impairment": "wpi","Industrial %": "industrial"},
                                 'default_values': {"side": None,"ue": None,"digit": None,"le": None,"pain": 0},
-                                'field_type_conversion' : {'wpi': int, "industrial": int} # This is for extracting the specified data type from the field value
+                                'field_type_conversion' : {'wpi': int, "industrial": int}  # This is for extracting the specified data type from the field value
                             },
                             {
                                 "name": "extract_key_pair_from_string",

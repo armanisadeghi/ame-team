@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta, date
 from .data import (variant_table,
-                  money_chart)
+                  money_chart, impairments_data)
 
 
 # Combining multiple ratings
@@ -120,3 +120,9 @@ def calc_money_chart(pd_percentage: int, year: int, earnings: int):
             "compensation": f"${compensation:,.2f}"
         }
     }
+
+def get_impairment_config(impairment_number: str):
+    config = impairments_data.get(impairment_number)
+
+    if config is not None:
+        return config

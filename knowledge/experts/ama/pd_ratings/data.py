@@ -1,4 +1,7 @@
 default_occupation_code_if_not_supplied = '310'
+default_digit_impairment_if_not_supplied = 20
+default_wpi_if_not_supplied = 8
+
 
 # The first index of the list is the FEC rank list[0], the second is the short description [1], the third is a dict to determine the inputs [2]
 impairments_data = \

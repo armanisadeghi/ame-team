@@ -5,6 +5,8 @@ from typing import Dict
 from collections import defaultdict
 from typing import List, Union
 import asyncio
+
+from automation_matrix.processing._dev_simulation import simulate_workflow_after_processing
 from common import vcprint, pretty_print, get_sample_data
 from automation_matrix.processing.markdown.organizer import Markdown
 from automation_matrix.processing.processor import ProcessingManager
@@ -635,6 +637,8 @@ def print_initial_and_processed_content(processed_content):
         print("\nArgs:", step_data['args'])
 
 
+# TODO: Jatin, I need you to fine out if this is actually an extractor that is misplaced or if it's some sort of duplicate code. Please put it in the right place.
+# Ask me if you can't figure it out. Basically, if it's necessary for returning the proper final structure, then it's an extractor and needs to be properly placed.
 async def access_data_by_reference(reference, data_structure):
     """
     Access a nested dictionary entry based on a reference dictionary and return it as specified (text or dict).
@@ -688,6 +692,7 @@ async def access_data_by_reference(reference, data_structure):
     return result
 
 
+# TODO: This is another one that I'm not sure actually belongs here or if it's just leftover test code. If it isn't real code that we need for processing or extracting, then it needs to be removed.
 async def handle_OpenAIWrapperResponse(result):
     core_variable_name = result.get('variable_name', '')
     processed_values = result.get('processed_values', {})
@@ -716,195 +721,23 @@ async def handle_OpenAIWrapperResponse(result):
                         print(f"Error processing {variable_name} with {method_name}: {ex}")
 
 
-async def sample_processor_structure(sample_content):
-    return_params = {
-        'variable_name': 'SAMPLE_DATA_1001',
-        'processors':
-            [
-                {
-                    'processor': 'get_markdown_asterisk_structure',
-                    'depends_on': 'content',
-                    "extractors": [
-                        {
-                            "key_identifier": "nested_structure",
-                            "key_index": 1,
-                            "output_type": "text"
-                        },
-                        {
-                            "key_identifier": "nested_structure",
-                            "key_index": "",
-                            "output_type": "dict"
-                        },
-                        {
-                            "key_identifier": "nested_structure",
-                            "key_index": 3,
-                            "output_type": "dict"
-                        }
-                    ]
-                },
-            ],
-    }
+async def local_post_processing(sample_api_response, sample_return_params):
+    processor = AiOutput(sample_api_response)  # This needs to be the sample content from the API response (Not just plain content, but processed content. I can get more examples, if needed.)
+    processed_content = await processor.process_response(sample_return_params)  # This is the end result of all of the processing steps.
 
-    processor = AiOutput(sample_content)
-    processed_content = await processor.process_response(return_params)
-    pretty_print(processed_content)
-
-
-async def local_post_processing(sample_content):
-    return_params = {
-        'variable_name': 'SAMPLE_DATA_1001',
-        'processors':
-            [
-                {
-                    'processor': 'get_markdown_asterisk_structure',
-                    'depends_on': 'content',
-                    'args': {
-                        "primary_broker": "SAMPLE_DATA_1001",
-                        "extractors": [
-                            {
-                                "name": "access_data_by_reference",
-                                "broker": "BLOG_IDEA_1",
-                                "key_identifier": "nested_structure",
-                                "key_index": 1,
-                                "output_type": "text",
-                            },
-                            {
-                                "name": "access_data_by_reference",
-                                "key_identifier": "nested_structure",
-                                "key_index": 2,
-                                "output_type": "text",
-                                "broker": "BLOG_IDEA_2",
-                            },
-                            {
-                                "name": "access_data_by_reference",
-                                "key_identifier": "nested_structure",
-                                "key_index": 3,
-                                "output_type": "text",
-                                "broker": "BLOG_IDEA_3",
-                            },
-                            #  I have commented out Blog Idea 4 for demonstration purposes as though the request was to get blogs 1, 2, 3, and 5, but NOT 4
-                            {
-                                "name": "access_data_by_reference",
-                                "broker": "BLOG_IDEA_4",
-                                "key_identifier": "nested_structure",
-                                "key_index": 4,
-                                "output_type": "text",
-
-                            },
-                            {
-                                "name": "access_data_by_reference",
-                                "broker": "BLOG_IDEA_5",
-                                "key_identifier": "nested_structure",
-                                "key_index": 5,
-                                "output_type": "text",
-                            }
-                        ]
-                    }
-                },
-
-            ],
-    }
-
-    processor = AiOutput(sample_content)
-    processed_content = await processor.process_response(return_params)
-    vcprint(verbose=verbose, data=processed_content, title="Processed Content", color='blue', style='bold')
+    vcprint(verbose=True, data=processed_content, title="Processed Content", color='blue', style='bold')
 
     return processed_content
 
 
-# Helper function to extract brokers from the processed data and simulate what the workflow would do.
-def extract_brokers(processed_content):
-    def recurse_brokers(values):
-        if isinstance(values, dict):
-            for key, value in values.items():
-                if key == 'brokers':
-                    for broker_list in value:
-                        for broker_name, broker_data in broker_list.items():
-                            if broker_name not in brokers:
-                                brokers[broker_name] = []
-                            if isinstance(broker_data, list):
-                                brokers[broker_name].extend(broker_data)
-                            else:
-                                brokers[broker_name].append(broker_data)
-                else:
-                    recurse_brokers(value)
-        elif isinstance(values, list):
-            for item in values:
-                recurse_brokers(item)
-
-    brokers = {}
-    if 'processed_values' in processed_content:
-        for processor_name, processor_data in processed_content['processed_values'].items():
-            recurse_brokers(processor_data)
-
-    brokers_and_values = brokers
-    return brokers_and_values
-
-
-# Associates brokers with args so they can be easily and directly used for a function call.
-def filter_and_rename_brokers(brokers, broker_arg_mappings):
-    # Create a dictionary to easily look up arg names by broker name
-    arg_lookup = {list(b.keys())[0]: list(b.values())[0] for b in broker_arg_mappings}
-
-    # Filter and rename the brokers based on the provided mappings
-    filtered_brokers = {}
-    for broker_name, broker_data in brokers.items():
-        if broker_name in arg_lookup:
-            arg_name = arg_lookup[broker_name]
-            filtered_brokers[arg_name] = broker_data
-
-    return filtered_brokers
-
-
-# This represents the actual function you are calling with the extracted brokers and values.
-def sample_actual_function_process_blog_content(topic, concept):
-    print("\n\n")
-    print("-" * 50)
-    print("Topic:", topic)
-    print("Concept:", concept)
-    print("-" * 50)
-
-    some_function_result = "Function call successful!"
-
-    return some_function_result
-
-
-
-async def main():
-    sample_data = get_sample_data(app_name='automation_matrix', data_name='sample_6_small', sub_app='sample_openai_responses')  # jatin: Changed this to sample_6_small (see note there)
-    print(f"Sample Data:\n{sample_data}\n")
-
-    processed_content = await local_post_processing(sample_data)
-    vcprint(verbose=True, data=processed_content, title="Processed Content", color='yellow', style='bold')
-
-    brokers_and_values = extract_brokers(processed_content)
-    vcprint(verbose=True, data=brokers_and_values, title="Brokers & Values", color='green', style='bold')
-
-    return brokers_and_values
-
-# This can unpack the args and make the call.
-def simulate_actual_function_call(args_structure):
-    adjusted_brokers = {k: v[0] if isinstance(v, list) and len(v) == 1 else v for k, v in args_structure.items()}
-
-    # Now make the function call using the ** syntax to unpack keyword arguments
-    result = sample_actual_function_process_blog_content(**adjusted_brokers)
-    return result
-
 if __name__ == "__main__":
-    brokers_and_values = asyncio.run(main())
-    # Manually call the function to test if it will work within the workflow. You can extract brokers by name and assign them t
+    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='ama_sample_new', sub_app='ama_ai_output_samples') # Get sample API response
+    sample_return_params = get_sample_data(app_name='automation_matrix', data_name='blog_processing_asterisk_sample', sub_app='processor_settings_samples')  # Get sample return params structure
 
-    broker_arg_mappings = [  # This is a sample of what you might try to extract from the processed content to have args associated with values. Match the broker name to the arg name you need.
-        {
-            "BLOG_IDEA_1": "topic"
-            },
-        {
-            "SAMPLE_DATA_1001": "concept"
-            }
-    ]
+    # This is the final results from all processors and all extractors used.
+    processing_and_extraction_results = asyncio.run(local_post_processing(sample_api_response, sample_return_params))
 
-    args_structure = filter_and_rename_brokers(brokers_and_values, broker_arg_mappings)
-    vcprint(verbose=True, data=args_structure, title="Final Args for Function Call", color='blue', style='bold')
-
-    final_result = simulate_actual_function_call(args_structure)
-    vcprint(verbose=True, data=final_result, title="Final Result", color='cyan', style='bold')
+    # This is where the processor is done, but to simulate the next steps, I've created some functions that mimic what the workflow does with the data.
+    # But in reality, as long as your brokers are EXACTLY where they're supposed to be, there is nothing else to do.
+    wf_simulation_results = simulate_workflow_after_processing(processing_and_extraction_results)
+    pretty_print(wf_simulation_results)
