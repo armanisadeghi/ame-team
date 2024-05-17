@@ -70,14 +70,23 @@ def simulate_actual_function_call(args_structure):
     return result
 
 
-def simulate_workflow_after_processing(processor_results):
+def simulate_actual_function_call_2(args_structure):
+    adjusted_brokers = {k: v[0] if isinstance(v, list) and len(v) == 1 else v for k, v in args_structure.items()}
+    print(adjusted_brokers)
+    from knowledge.experts.ama.pd_ratings.pd_rating_calculator import pd_rating_orchestrator
+    # Now make the function call using the ** syntax to unpack keyword arguments
+    result = pd_rating_orchestrator(**adjusted_brokers)
+    return result
 
+
+def simulate_workflow_after_processing(processor_results):
     # Right now, this is missing a step where you would get the
 
     brokers_and_values = extract_brokers(processor_results)
     vcprint(verbose=True, data=brokers_and_values, title="Brokers & Values", color='green', style='bold')
 
-    broker_arg_mappings = [  # This is a sample of what you might try to extract from the processed content to have args associated with values. Match the broker name to the arg name you need.
+    broker_arg_mappings = [
+        # This is a sample of what you might try to extract from the processed content to have args associated with values. Match the broker name to the arg name you need.
         {
             "BLOG_IDEA_1": "topic"
         },
@@ -86,10 +95,29 @@ def simulate_workflow_after_processing(processor_results):
         }
     ]
 
-    args_structure = filter_and_rename_brokers(brokers_and_values, broker_arg_mappings)
+    broker_arg_mappings_2 = [
+        {
+            "IMPAIRMENT_NUMBERS": "impairment_numbers"
+        },
+        {
+            "AGE": "age"
+        },
+        {
+            'OCCUPATION_CODE': 'occupation_code'
+        },
+        {
+            'DOB': 'date_of_birth'
+        },
+        {
+            'DOI': 'date_of_injury'
+        },
+
+    ]
+
+    args_structure = filter_and_rename_brokers(brokers_and_values, broker_arg_mappings_2)
     vcprint(verbose=True, data=args_structure, title="Final Args for Function Call", color='blue', style='bold')
 
-    wf_simulation_results = simulate_actual_function_call(args_structure)
+    wf_simulation_results = simulate_actual_function_call_2(args_structure)
     vcprint(verbose=True, data=wf_simulation_results, title="Final Result", color='cyan', style='bold')
 
     return wf_simulation_results

@@ -607,6 +607,18 @@ class AiOutput(ProcessingManager):
 
         return processed_content
 
+    async def get_classified_markdown(self, content, args):
+        from automation_matrix.processing.markdown.classifier import get_classify_markdown_section_list
+        sections = await get_classify_markdown_section_list(content)
+        print("got section")
+        structure = {
+            "sections" : sections,
+            "brokers" : []
+        }
+        processor = Markdown(style='asterisks')
+        results =  processor.handle_extraction( structure, args.get('extractors') )
+        return results
+
 
 def print_initial_and_processed_content(processed_content):
     print("========================================== Initial Content ==========================================")
@@ -731,8 +743,9 @@ async def local_post_processing(sample_api_response, sample_return_params):
 
 
 if __name__ == "__main__":
-    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='ama_sample_new', sub_app='ama_ai_output_samples') # Get sample API response
-    sample_return_params = get_sample_data(app_name='automation_matrix', data_name='blog_processing_asterisk_sample', sub_app='processor_settings_samples')  # Get sample return params structure
+    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='ama_medical_report_sample', sub_app='ama_ai_output_samples') # Get sample API response
+    # sample_return_params = get_sample_data(app_name='automation_matrix', data_name='blog_processing_asterisk_sample', sub_app='processor_settings_samples')  # Get sample return params structure
+    sample_return_params = get_sample_data(app_name='automation_matrix', data_name='ama_medical_processing_sample', sub_app='processor_settings_samples')  # Get sample return params structure
 
     # This is the final results from all processors and all extractors used.
     processing_and_extraction_results = asyncio.run(local_post_processing(sample_api_response, sample_return_params))

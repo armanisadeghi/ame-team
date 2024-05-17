@@ -79,3 +79,86 @@ asterisk_processing_nested_key_extraction = {
             },
         ],
 }
+
+ama_medical_processing_sample = {
+        'variable_name': 'SAMPLE_DATA_1001',
+        'processors':
+            [
+                {
+                    'processor': 'get_classified_markdown',
+                    'depends_on': 'content',
+                    'args': {
+                        "primary_broker": "SAMPLE_DATA_1001",
+                        "extractors": [
+                            {
+                                "name": "get_items_from_classified_markdown_sections",
+                                "broker": "IMPAIRMENT_TABLE_RAW",
+                                "classified_line_type": "table",
+                                "search": "Impairment Code"
+                            },
+                            {
+                                "name": "get_items_from_classified_markdown_sections",
+                                "broker": "DATES_RAW",
+                                "classified_line_type": "entries_and_values",
+                                "search": "Date of birth"
+                            },
+                            {
+                                "name": "get_items_from_classified_markdown_sections",
+                                "broker": "OCCUPATION_RAW",
+                                "classified_line_type": "header_with_bullets",
+                                "search": "Occupational Code"
+                            },
+                            {
+                                "name": "extract_list_table",
+                                "broker": "IMPAIRMENTS_TABLE_CLEANED",
+                                "column_index": 0,
+                                "row_index_start": 2,
+                            },
+                            {
+                                "name": "extract_integers_from_string",
+                                "broker": "OCCUPATION_CODE",
+                                "args": {"broker": True, "broker_name": "OCCUPATION_RAW",
+                                         'target_index_or_name_in_broker': 1},
+                                "value_to_be_processed": None,
+                                "result_type": 'single'
+                            },
+                            {
+                                'name': 'transform_table_data_format',
+                                'broker': 'IMPAIRMENT_NUMBERS',
+                                'args': {"broker": True, "broker_name": "IMPAIRMENTS_TABLE_CLEANED"},
+                                'table': None,
+                                'field_mappings': {"Impairment Code": "impairment_number",
+                                                   "Whole Person Impairment": "wpi", "Industrial %": "industrial"},
+                                'default_values': {"side": None, "ue": None, "digit": None, "le": None, "pain": 0},
+                                'field_type_conversion': {'wpi': int, "industrial": int}
+                                # This is for extracting the specified data type from the field value
+                            },
+                            {
+                                "name": "extract_key_pair_from_string",
+                                "broker": "AGE",
+                                "args": {"broker": True, "broker_name": "DATES_RAW",
+                                         'target_index_or_name_in_broker': 0},
+                                "value_to_be_processed": None,
+                                "result_datatype": int
+                            },
+                            {
+                                'name': 'match_dates_from_string',
+                                'broker': 'DOB',
+                                'args': {"broker": True, "broker_name": "DATES_RAW",
+                                         'target_index_or_name_in_broker': 0},
+                                "result_type": 'single',
+
+                            },
+                            {
+                                'name': 'match_dates_from_string',
+                                'broker': 'DOI',
+                                'args': {"broker": True, "broker_name": "DATES_RAW",
+                                         'target_index_or_name_in_broker': 1},
+                                "result_type": 'single'
+                            }
+                        ]
+                    }
+                },
+
+            ],
+    }

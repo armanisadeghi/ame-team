@@ -5,13 +5,13 @@ from .data import (
 )
 
 from .conversions import (hand_impairment_to_ue,
-                         finger_impairment_to_hand,
-                         upper_extremity_to_wpi, wpi_to_upper_extremity,
-                         lower_extremity_to_wpi, wpi_to_lower_extremity)
+                          finger_impairment_to_hand,
+                          upper_extremity_to_wpi, wpi_to_upper_extremity,
+                          lower_extremity_to_wpi, wpi_to_lower_extremity)
 
 from knowledge.experts.ama.pd_ratings.utils import (combine_pd_ratings,
-                    handle_age, determine_occupational_variant,
-                    calc_money_chart, get_impairment_config)
+                                                    handle_age, determine_occupational_variant,
+                                                    calc_money_chart, get_impairment_config)
 
 from .calculate_single_injury import get_single_impairment_rating
 from pprint import pprint
@@ -25,7 +25,8 @@ def sort_impairments(factors, config, categories, index):
         side = "Default"
 
     if factors['digit'] and side in ["Right", "Left"]:  # Now ensuring side is either Right or Left for digits
-        categories['digit'][side].append((config['impairment_number'], config.get('digit'), factors.get('digit')[1], index))
+        categories['digit'][side].append(
+            (config['impairment_number'], config.get('digit'), factors.get('digit')[1], index))
 
     elif factors['ue']:
         categories['ue'][side].append((config['impairment_number'], config.get('ue'), index))
@@ -149,8 +150,8 @@ def find_errors_for_occupation_code(impairment_numbers: dict, occupation_code: s
         else:
             impairment_config['occupation_variant'] = variant
 
-def adjust_incorrect_impairment_config(impairment_numbers: dict, warnings: list):
 
+def adjust_incorrect_impairment_config(impairment_numbers: dict, warnings: list):
     for index, impairment_config in impairment_numbers.items():
         impairment_number = impairment_config.get('impairment_number')
         impairment_requirements = get_impairment_config(impairment_number)
@@ -159,7 +160,8 @@ def adjust_incorrect_impairment_config(impairment_numbers: dict, warnings: list)
 
             # Adjusting if WPI is not present when required
             if impairment_inputs.get('wpi'):
-                if impairment_config.get('wpi') is None:  # Say for any case wpi is None, we will set a default value here
+                if impairment_config.get(
+                        'wpi') is None:  # Say for any case wpi is None, we will set a default value here
                     # not a very ideal case but still to avoid errors
                     impairment_numbers[index]['wpi'] = default_wpi_if_not_supplied
 
@@ -179,15 +181,16 @@ def adjust_incorrect_impairment_config(impairment_numbers: dict, warnings: list)
             # Adjusting if Side is not present when required
             if impairment_inputs.get('side'):
                 if impairment_config.get('side') is None or impairment_config.get('side') not in ['Right', 'Left']:
-                    impairment_numbers[index]['side'] = 'Right'  # Defaulting the side to right since there are only sides
+                    impairment_numbers[index][
+                        'side'] = 'Right'  # Defaulting the side to right since there are only sides
                     warnings.append(f'Side not supplied for {impairment_number} , taking default value: Right')
 
             # Adjusting digit impairment if not present when required
             if impairment_inputs.get('digit'):
                 if impairment_config.get('digit') is None:
                     impairment_numbers[index]['digit'] = default_digit_impairment_if_not_supplied
-                    warnings.append(f'Digit impairment not supplied for {impairment_number} ,taking default value :{default_digit_impairment_if_not_supplied}')
-
+                    warnings.append(
+                        f'Digit impairment not supplied for {impairment_number} ,taking default value :{default_digit_impairment_if_not_supplied}')
 
 
 def pd_rating_orchestrator(impairment_numbers: dict,
@@ -261,22 +264,26 @@ def pd_rating_orchestrator(impairment_numbers: dict,
 if __name__ == '__main__':
     # Sample input values
     impairments_numbers = {0: {
-            'impairment_number': '16.01.02.04',
-            'side': 'Right',
-            'ue': None,
-            'wpi': 9,
-            'digit': None,
-            'le': None,
-            'industrial': 89,
-            'pain': 50}, }
+        'impairment_number': '16.01.02.04',
+        'side': 'Right',
+        'ue': None,
+        'wpi': 9,
+        'digit': None,
+        'le': None,
+        'industrial': 89,
+        'pain': 50}, }
 
     impairments_numbers_2 = {
-        0: {'impairment_number': '15.01.01.00', 'side': False, 'ue': False, 'wpi': 16, 'digit': False, 'le': False, 'industrial': 69, 'pain': 0},
-        1: {'impairment_number': '15.02.01.00', 'side': False, 'ue': False, 'wpi': 8, 'digit': False, 'le': False, 'industrial': 100, 'pain': 3},
-        2: {'impairment_number': '15.03.01.00', 'side': False, 'ue': False, 'wpi': 13, 'digit': False, 'le': False, 'industrial': 62, 'pain': 0},
-        3: {'impairment_number': '17.05.03.00', 'side': 'Left', 'ue': False, 'wpi': 3, 'digit': False, 'le': 8, 'industrial': 70, 'pain': 0},
-        4: {'impairment_number': '17.05.03.00', 'side': 'Right', 'ue': False, 'wpi': 3, 'digit': False, 'le': 8, 'industrial': 70, 'pain': 0}}
-
+        0: {'impairment_number': '15.01.01.00', 'side': False, 'ue': False, 'wpi': 16, 'digit': False, 'le': False,
+            'industrial': 69, 'pain': 0},
+        1: {'impairment_number': '15.02.01.00', 'side': False, 'ue': False, 'wpi': 8, 'digit': False, 'le': False,
+            'industrial': 100, 'pain': 3},
+        2: {'impairment_number': '15.03.01.00', 'side': False, 'ue': False, 'wpi': 13, 'digit': False, 'le': False,
+            'industrial': 62, 'pain': 0},
+        3: {'impairment_number': '17.05.03.00', 'side': 'Left', 'ue': False, 'wpi': 3, 'digit': False, 'le': 8,
+            'industrial': 70, 'pain': 0},
+        4: {'impairment_number': '17.05.03.00', 'side': 'Right', 'ue': False, 'wpi': 3, 'digit': False, 'le': 8,
+            'industrial': 70, 'pain': 0}}
 
     results = pd_rating_orchestrator(
         impairment_numbers=impairments_numbers_2,

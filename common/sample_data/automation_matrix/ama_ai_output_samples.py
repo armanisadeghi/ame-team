@@ -294,7 +294,7 @@ This report compiles available impairment and injury-related information followi
 
 
 #Added by jatin
-ama_sample_new = """ 
+ama_medical_report_sample = """ 
 
 [STRUCTURED_MEDICAL_REPORT]
 
