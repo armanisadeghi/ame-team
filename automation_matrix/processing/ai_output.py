@@ -29,7 +29,6 @@ class AiOutput(ProcessingManager):
         self.source_info = {}
         super().__init__()
 
-
     async def process_response(self, return_params):
         if not isinstance(return_params, dict):
             self.return_params = {}
@@ -271,14 +270,28 @@ class AiOutput(ProcessingManager):
             return re.findall(url_pattern, text)
 
     async def parse_table(self, text: str, *args) -> List[dict]:
-        table_pattern = '\\+-[+-]+\\+\\n(?:\\|.*\\|\\n)+\\+-[+-]+\\+'
-        match = re.search(table_pattern, text)
-        if not match:
-            return []
-        table = match.group().split('\n')[1:-1]
-        headers = [header.strip() for header in table[0].split('|')[1:-1]]
-        rows = [dict(zip(headers, [cell.strip() for cell in row.split('|')[1:-1]])) for row in table[1:]]
-        return rows
+        tables = text.strip().split('\n\n')
+        all_tables = []
+
+        for table in tables:
+            lines = table.strip().split('\n')
+            header_line_index = next((i for i, line in enumerate(lines) if '|' in line), None)
+
+            if header_line_index is None:
+                continue
+
+            headers = [header.strip() for header in lines[header_line_index].split('|')[1:-1]]
+
+            rows = []
+            for line in lines[header_line_index + 2:]:
+                if '|' in line:
+                    cells = [cell.strip() for cell in line.split('|')[1:-1]]
+                    if cells:
+                        rows.append(dict(zip(headers, cells)))
+
+            all_tables.append(rows)
+
+        return all_tables
 
     async def identify_python_dictionaries(self, text: str, *args) -> List[dict]:
         """
@@ -613,11 +626,11 @@ class AiOutput(ProcessingManager):
         sections = await get_classify_markdown_section_list(content)
         print("got section")
         structure = {
-            "sections" : sections,
-            "brokers" : []
+            "sections": sections,
+            "brokers": []
         }
         processor = Markdown(style='asterisks')
-        results =  processor.handle_extraction( structure, args.get('extractors') )
+        results = processor.handle_extraction(structure, args.get('extractors'))
         return results
 
 
@@ -735,6 +748,8 @@ async def handle_OpenAIWrapperResponse(result):
 
 
 async def local_post_processing(sample_api_response, sample_return_params):
+    pretty_print(sample_api_response)
+    print('==========' * 10)
     processor = AiOutput(sample_api_response)  # This needs to be the sample content from the API response (Not just plain content, but processed content. I can get more examples, if needed.)
     processed_content = await processor.process_response(sample_return_params)  # This is the end result of all of the processing steps.
 
@@ -753,12 +768,11 @@ def format_non_formatted_data(content):
         'value': content,
         'processed_values': {}
     }
-
     return simulated_ai_wrapper_response
 
 
 if __name__ == "__main__":
-    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='ama_medical_report_sample', sub_app='ama_ai_output_samples') # Get sample API response
+    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='ama_medical_report_sample', sub_app='ama_ai_output_samples')  # Get sample API response
     # sample_return_params = get_sample_data(app_name='automation_matrix', data_name='blog_processing_asterisk_sample', sub_app='processor_settings_samples')  # Get sample return params structure
     sample_return_params = get_sample_data(app_name='automation_matrix', data_name='ama_medical_processing_sample', sub_app='processor_settings_samples')  # Get sample return params structure
 

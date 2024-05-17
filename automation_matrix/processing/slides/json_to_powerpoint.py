@@ -12,7 +12,7 @@ output_dir = os.path.join(BASE_DIR, output_temp_dir)
 short_uuid_part = lambda: str(uuid.uuid4())[:8]
 
 
-def json_to_presentation(json_data, file_name_root='output', output_dir='.'):
+def json_to_presentation(json_data, file_name_root='output'):
     """A simple slide creator that expects the json_data to be a list of dictionaries with 'title' and 'points' keys."""
     prs = Presentation()
 
@@ -56,7 +56,7 @@ def json_to_presentation(json_data, file_name_root='output', output_dir='.'):
 
 if __name__ == '__main__':
     # sample_slide_content_json
-    sample_json = get_sample_data(app_name='automation_matrix', data_name='small_2_slide_sample', sub_app='slide_source_samples')  # Get sample API response
+    sample_json = get_sample_data(app_name='automation_matrix', data_name='title_three_bullets_sample_json', sub_app='slide_source_samples')  # Get sample API response
     pretty_print(sample_json)
 
     save_path = json_to_presentation(sample_json)

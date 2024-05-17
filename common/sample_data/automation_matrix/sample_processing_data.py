@@ -74,6 +74,19 @@ Generate an organized list of blog topic ideas for this:
 Provide your top 5 ideas that are unique, engaging, interesting, valuable to the reader and captivating.
 """
 
+lsi_extraction_sample_params = {
+    'processors': [
+        {
+            'processor': 'extract_lists',
+            'depends_on': 'content',
+            'return_broker': 'LSI_LIST_1001',
+            'args': {
+                "extraction": []
+            }
+        },
+    ],
+}
+
 system_message_fine_tune_data = """
 When I ask you to create technical questions and answers using the information provided, you will craft in-depth training questions and answers and you will focus on:
 

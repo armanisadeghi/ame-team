@@ -274,6 +274,13 @@ ama_sample_7 = """# Full AMA Medical Report Analysis
 - **Cervical and Lumbar Spine Impairments:** 85% attributed to the industrial injury, with the remaining 15% considered non-industrial based on unspecified factors.
 - **Shoulder Impairments:** 100% attributed to the industrial injury.
 
++-----+--------+-------+
+| ID  | Name   | Age   |
++-----+--------+-------+
+| 1   | Alice  | 30    |
+| 2   | Bob    | 25    |
++-----+--------+-------+
+
 Methodology reflected relies on the DRE (Diagnosis-Related Estimates) method for spinal impairments and range of motion assessments for shoulder impairments. However, specifics such as the edition of the AMA Guides used for evaluation, detailed ranges of motion, specific nerves affected by radicular complaints, or a thorough narrative on establishing impairments are not provided within the summary.
 
 **Observations and Missing Information:**
