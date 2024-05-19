@@ -262,14 +262,24 @@ class AiOutput(ProcessingManager):
 
         return training_data
 
-    async def process_urls(self, text: str, *args, remove_values: bool = True) -> Union[List[str], str]:
-        url_pattern = r'\b(?:https?://)?(?:www\.)?[a-zA-Z0-9-]+(?:\.[a-zA-Z]{2,})+\b'
-        if remove_values:
-            return re.sub(url_pattern, '', text)
-        else:
-            return re.findall(url_pattern, text)
+    async def extract_urls(self, content: str):
+        """This extracts normal urls, those include custom protocols too"""
+        from urlextract import URLExtract # Please add this library (pip install urlextract)
+        extractor = URLExtract()
+        urls = extractor.find_urls(content)
+        return urls
 
-    async def parse_table(self, text: str, *args) -> List[dict]:
+    async def extract_mailto_links(self, content: str):
+        pattern = re.compile(r'mailto:[^\s<>]+\b')
+        matches = pattern.findall(content)
+        return matches
+
+    async def extract_telephone_links(self, content: str):
+        pattern = re.compile(r'tel:\+?\d+[\d-]*')
+        matches = pattern.findall(content)
+        return matches
+
+    async def extract_tables(self, text: str) -> List[dict]:
         tables = text.strip().split('\n\n')
         all_tables = []
 
@@ -293,27 +303,46 @@ class AiOutput(ProcessingManager):
 
         return all_tables
 
-    async def identify_python_dictionaries(self, text: str) -> List[dict]:
-        """
-        Searches for and interprets Python dictionary structures.
+    async def extract_python_dicts(self, content: str):
+        if not isinstance(content, str):
+            content = str(content)
 
-        :param text: String containing the text to be processed.
-        :return: List of Python dictionaries extracted from the text.
-        """
-        dict_pattern = '\\{(?:[^{}]|(?:\\{.*?\\}))*\\}'
-        matches = re.findall(dict_pattern, text)
-        dictionaries = []
-        for match in matches:
-            try:
-                dictionary = ast.literal_eval(match)
-                if isinstance(dictionary, dict):
-                    dictionaries.append(dictionary)
-            except (SyntaxError, ValueError):
+        dicts = [] # return object
+        check_after_index = 0
+
+        for index, char in enumerate(content):
+            # this step is important because check_after_index
+            # tells us at what index to continue looking for a dictionary
+            if not index >= check_after_index:
                 continue
-        print(f"Python Dictionaries:\n{dictionaries}\n")
-        return dictionaries
 
-    async def extract_lists(self, text: str, *args) -> List[List[str]]:
+            # Possible Dict start detected at this point
+            if char == "{":
+                index_ = index  # create a copy of original index
+
+                for char_ in content[index:]:  # start to check chars after {
+
+                    index_ += 1
+                    if char_ == "}":  # check for possible end
+
+                        # Possible end reached
+                        try:
+                            # Try by evaluating the Possible dict
+                            dict_ = ast.literal_eval(content[index:index_].strip())
+                            # Checks if the dict is not empty and is a dict not a set
+                            if isinstance(dict_, dict) and dict_:
+                                dicts.append(dict_)
+                            # After a dict is completely detected whether it be a nested one or a normal one
+                            # Now we have to update check_after_index here so in the next iterations we ignore the already detected dict.
+
+                            check_after_index = int(index_)
+                        except Exception:
+                            pass
+
+        return dicts
+
+    #Pending, to be updated soon
+    async def extract_lists(self, text: str) -> List[List[str]]:
         """
         Identifies both bullet-point and numbered lists and extracts them.
 
@@ -332,18 +361,76 @@ class AiOutput(ProcessingManager):
         print(f"Lists:\n{lists}\n")
         return lists
 
-    async def parse_html_content(self, text: str, *args) -> List[str]:
-        """
-        Extracts HTML content sections as they are from the text.
+    async def extract_html_snippet(self, content: str):
+        if not isinstance(content, str):
+            content = str(content)
 
-        :param text: String containing the text with HTML.
-        :return: List of HTML content sections.
-        """
-        html_pattern = '<[^>]+>.*?</[^>]+>'
-        html_sections = re.findall(html_pattern, text, re.DOTALL)
-        print(f"HTML Sections:\n{html_sections}\n")
-        return html_sections
+        # Getting possible snippets
+        possible_snippets = await self.extract_code_snippets(content)
 
+        if possible_snippets.get('html'):
+            return possible_snippets.get('html')
+
+    async def extract_html_from_text(self, content: str):
+
+        from html.parser import HTMLParser
+        class HTMLValidator(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.open_tags = []
+
+            def handle_starttag(self, tag, attrs):
+                # Keep track of open tags
+                self.open_tags.append(tag)
+
+            def handle_endtag(self, tag):
+                # Remove corresponding open tag
+                if self.open_tags and self.open_tags[-1] == tag:
+                    self.open_tags.pop()
+                else:
+                    # If there's no corresponding open tag, HTML is invalid
+                    self.error(f"Closing tag '{tag}' found without corresponding opening tag.")
+
+            def error(self, message):
+                # Reset the list of open tags on error
+                self.open_tags = []
+
+        # initialize empty return list
+        html = []
+        check_after_index = 0
+        if not isinstance(content, str):
+            content = str(content)
+
+        for index, char in enumerate(content):
+            # this step is important because check_after_index
+            # tells us at what index to continue looking for a html
+            if not index >= check_after_index:
+                continue
+
+                # Possible html/element start detected at this point
+            if char == "<":
+                index_ = index  # create a copy of original index
+                for char_ in content[index:]:  # start to check chars after <
+                    index_ += 1
+                    if char_ == ">":  # check for possible end
+                        # Possible end reached
+                        try:
+                            parser = HTMLValidator()
+                            parser.feed(content[index:index_].strip())
+                            if not parser.open_tags:
+                                html.append(content[index:index_])  # Append the HTML snippet to the list
+                                check_after_index = int(index_)
+                                break  # Exit the inner loop once HTML is found
+                            # After a html is completely detected
+                            # Now we have to update check_after_index here so in the next iterations we ignore the already detected html.
+                        except Exception:
+                            pass
+
+        html_snippets =  html
+
+        return html_snippets
+
+    # Pending, to be updated soon
     async def extract_markdown_entries(self, text):
         entries = {}
         current_key = None
@@ -384,7 +471,8 @@ class AiOutput(ProcessingManager):
         extracted_markdown_entries = entries
         return extracted_markdown_entries
 
-    async def extract_nested_markdown_entries(selv, text: str) -> Dict[str, List[str]]:
+    # Pending, to be updated soon
+    async def extract_nested_markdown_entries(self, text: str) -> Dict[str, List[str]]:
         entries = {}
         current_main_key = None
         buffer = ""
@@ -425,6 +513,7 @@ class AiOutput(ProcessingManager):
         # pretty_print(nested_markdown_entries)
         return nested_markdown_entries
 
+    # Pending, to be updated soon
     async def parse_markdown_content(self, text: str, *args) -> List[str]:
         # TODO not sure exactly what markdown content should include but it's including LSIs, but maybe that makes sense
         # If that makes sense, we should make this like a "parent" function that feeds others like extract_lists
@@ -439,6 +528,7 @@ class AiOutput(ProcessingManager):
         pretty_print(markdown_sections)
         return markdown_sections
 
+    # Pending, to be updated soon
     async def extract_latex_equations(self, text: str, *args) -> List[str]:
         """
         Searches for LaTeX equation patterns (both inline and display mode) and extracts them.
@@ -451,6 +541,7 @@ class AiOutput(ProcessingManager):
         print(f"LaTeX Equations:\n{latext_quotations}\n")
         return latext_quotations
 
+    # Pending, to be updated soon
     async def extract_plain_text(self, text: str, *args) -> str:
         """
         Extracts plain text content, filtering out any special formatting or structured content.
@@ -470,6 +561,7 @@ class AiOutput(ProcessingManager):
         print(f"Plain Text:\n{final_text}\n")
         return final_text
 
+    # Pending, to be updated soon
     async def identify_fill_in_blanks(self, text: str, *args) -> List[str]:
         """
         Identifies sentences with fill-in-the-blank structures.
@@ -482,6 +574,7 @@ class AiOutput(ProcessingManager):
         print(f"Fill-in-the-Blanks:\n{final_pattern}\n")
         return final_pattern
 
+    # Pending, to be updated soon
     async def parse_multiple_choice_questions(self, text: str, *args) -> List[str]:
         """
         Identifies and extracts multiple-choice questions.
@@ -494,6 +587,7 @@ class AiOutput(ProcessingManager):
         print(f"Multiple-Choice Questions:\n{final_pattern}\n")
         return final_pattern
 
+    # Pending, to be updated soon
     async def extract_paragraphs(self, text: str, *args) -> List[str]:
         """
         Extracts paragraph-style text content.
@@ -507,6 +601,7 @@ class AiOutput(ProcessingManager):
         print(f"Paragraphs:\n{extracted_paragraphs}\n")
         return extracted_paragraphs
 
+    # Pending, to be updated soon
     async def identify_html_markdown_structured_text(self, text: str, *args) -> Dict[str, List[str]]:
         """
         Specifically looks for and extracts structured text marked as HTML or Markdown.
@@ -530,6 +625,7 @@ class AiOutput(ProcessingManager):
         print(f"Structured Content:\n{structured_content}\n")
         return structured_content
 
+    # Pending, to be updated soon
     async def extract_prompts_questions(self, text: str, *args) -> List[str]:
         """
         Extracts prompts and questions designed for user interaction.
@@ -542,6 +638,7 @@ class AiOutput(ProcessingManager):
         print(f"Prompts and Questions:\n{final_pattern}\n")
         return final_pattern
 
+    # Pending, to be updated soon
     async def find_words_after_triple_quotes(self, text: str, *args) -> Dict[str, int]:
         pattern = re.compile("\\'\\'\\'(\\w+)")
         matches = re.findall(pattern, text)
@@ -551,38 +648,47 @@ class AiOutput(ProcessingManager):
         print(f"Words After Triple Quotes:\n{word_count}\n")
         return word_count
 
+    # Pending, to be updated soon
     async def extract_markdown(self, text: str, *args):
         # Implement markdown extraction logic
         pass
 
+    # Pending, to be updated soon
     async def extract_json(self, text: str, *args):
         # Implement JSON extraction logic
         pass
 
+    # Pending, to be updated soon
     async def extract_code(self, text: str, *args):
         # Implement code extraction logic
         pass
 
+    # Pending, to be updated soon
     async def extract_python_code(self, text: str, *args):
         # Implement Python code extraction logic
         pass
 
+    # Pending, to be updated soon
     async def extract_code_remove_comments(self, text: str, *args):
         # Implement logic to remove comments from code
         pass
 
+    # Pending, to be updated soon
     async def extract_from_json_by_key(self, text: str, *args):
         # Implement extraction from JSON by key
         pass
 
+    # Pending, to be updated soon
     async def extract_from_outline_by_numbers(self, text: str, *args):
         # Implement extraction from an outline by numbers
         pass
 
+    # Pending, to be updated soon
     async def new_method(self, text: str, *args):
         # Implement the logic here
         pass
 
+    # Pending, to be updated soon
     async def remove_first_and_last_paragraph(self, text: str, *args):
         # Implement the logic here
         pass
