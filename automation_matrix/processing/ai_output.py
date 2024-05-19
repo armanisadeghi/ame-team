@@ -1,3 +1,4 @@
+import json
 import re
 import ast
 from bs4 import BeautifulSoup
@@ -341,7 +342,7 @@ class AiOutput(ProcessingManager):
 
         return dicts
 
-    #Pending, to be updated soon
+    #Asked in doc
     async def extract_lists(self, text: str) -> List[List[str]]:
         """
         Identifies both bullet-point and numbered lists and extracts them.
@@ -430,7 +431,7 @@ class AiOutput(ProcessingManager):
 
         return html_snippets
 
-    # Pending, to be updated soon
+    # Asked in doc
     async def extract_markdown_entries(self, text):
         entries = {}
         current_key = None
@@ -471,7 +472,7 @@ class AiOutput(ProcessingManager):
         extracted_markdown_entries = entries
         return extracted_markdown_entries
 
-    # Pending, to be updated soon
+    # Asked in doc
     async def extract_nested_markdown_entries(self, text: str) -> Dict[str, List[str]]:
         entries = {}
         current_main_key = None
@@ -513,7 +514,7 @@ class AiOutput(ProcessingManager):
         # pretty_print(nested_markdown_entries)
         return nested_markdown_entries
 
-    # Pending, to be updated soon
+    # Asked in doc
     async def parse_markdown_content(self, text: str, *args) -> List[str]:
         # TODO not sure exactly what markdown content should include but it's including LSIs, but maybe that makes sense
         # If that makes sense, we should make this like a "parent" function that feeds others like extract_lists
@@ -528,7 +529,6 @@ class AiOutput(ProcessingManager):
         pretty_print(markdown_sections)
         return markdown_sections
 
-    # Pending, to be updated soon
     async def extract_latex_equations(self, text: str, *args) -> List[str]:
         """
         Searches for LaTeX equation patterns (both inline and display mode) and extracts them.
@@ -541,7 +541,7 @@ class AiOutput(ProcessingManager):
         print(f"LaTeX Equations:\n{latext_quotations}\n")
         return latext_quotations
 
-    # Pending, to be updated soon
+    # Asked in doc
     async def extract_plain_text(self, text: str, *args) -> str:
         """
         Extracts plain text content, filtering out any special formatting or structured content.
@@ -561,8 +561,7 @@ class AiOutput(ProcessingManager):
         print(f"Plain Text:\n{final_text}\n")
         return final_text
 
-    # Pending, to be updated soon
-    async def identify_fill_in_blanks(self, text: str, *args) -> List[str]:
+    async def extract_fill_in_blanks(self, text: str, *args) -> List[str]:
         """
         Identifies sentences with fill-in-the-blank structures.
 
@@ -571,11 +570,9 @@ class AiOutput(ProcessingManager):
         """
         blank_pattern = '[^\\.\\?\\!]*__+[^\\.\\?\\!]*[\\.|\\?|\\!]'
         final_pattern = re.findall(blank_pattern, text)
-        print(f"Fill-in-the-Blanks:\n{final_pattern}\n")
         return final_pattern
 
-    # Pending, to be updated soon
-    async def parse_multiple_choice_questions(self, text: str, *args) -> List[str]:
+    async def extract_multiple_choice_questions(self, text: str, *args) -> List[str]:
         """
         Identifies and extracts multiple-choice questions.
 
@@ -584,10 +581,9 @@ class AiOutput(ProcessingManager):
         """
         mcq_pattern = '(?:\\n|^).*\\?\\n(?:\\s*[a-zA-Z]\\)\\s.*\\n)+'
         final_pattern = [mcq.strip() for mcq in re.findall(mcq_pattern, text, re.MULTILINE)]
-        print(f"Multiple-Choice Questions:\n{final_pattern}\n")
         return final_pattern
 
-    # Pending, to be updated soon
+    # Asked in doc
     async def extract_paragraphs(self, text: str, *args) -> List[str]:
         """
         Extracts paragraph-style text content.
@@ -595,26 +591,25 @@ class AiOutput(ProcessingManager):
         :param text: String containing the text to be processed.
         :return: List of paragraphs.
         """
-        # TODO Not working as intended because it's pulling the list of LSIs, which is definitely not a paragraph. We need to be clear what a paragraph is
+        # TODO Not working as intended because it's pulling the list of LSIs, which is definitely not a paragraph.
+        #  We need to be clear what a paragraph is
         paragraphs = re.split('\\n{2,}', text)
         extracted_paragraphs = [paragraph.strip() for paragraph in paragraphs if paragraph.strip()]
         print(f"Paragraphs:\n{extracted_paragraphs}\n")
         return extracted_paragraphs
 
-    # Pending, to be updated soon
-    async def identify_html_markdown_structured_text(self, text: str, *args) -> Dict[str, List[str]]:
+    async def extract_html_markdown_structured_text(self, text: str, *args) -> Dict[str, List[str]]:
         """
         Specifically looks for and extracts structured text marked as HTML or Markdown.
 
         :param text: String containing the text to be processed.
         :return: Dictionary with HTML and Markdown content categorized.
         """
-        # TODO Even through it actually returned empty results, they still printed, which might be a debugging print, but these should return nothing if they're empty
-        # By providing resopnses with empty dictionaries, we're creating a lot more work for later, unless that was the intention - Need to review
         structured_content = {
             'html': [],
             'markdown': []
         }
+
         html_pattern = '```html\\n([\\s\\S]*?)\\n```'
         markdown_pattern = '```markdown\\n([\\s\\S]*?)\\n```'
         html_matches = re.findall(html_pattern, text)
@@ -625,7 +620,7 @@ class AiOutput(ProcessingManager):
         print(f"Structured Content:\n{structured_content}\n")
         return structured_content
 
-    # Pending, to be updated soon
+    # Asked in doc
     async def extract_prompts_questions(self, text: str, *args) -> List[str]:
         """
         Extracts prompts and questions designed for user interaction.
@@ -638,28 +633,71 @@ class AiOutput(ProcessingManager):
         print(f"Prompts and Questions:\n{final_pattern}\n")
         return final_pattern
 
-    # Pending, to be updated soon
     async def find_words_after_triple_quotes(self, text: str, *args) -> Dict[str, int]:
         pattern = re.compile("\\'\\'\\'(\\w+)")
         matches = re.findall(pattern, text)
         word_count = defaultdict(int)
         for word in matches:
             word_count[word] += 1
-        print(f"Words After Triple Quotes:\n{word_count}\n")
         return word_count
 
-    # Pending, to be updated soon
+    # Not sure what to do
     async def extract_markdown(self, text: str, *args):
         # Implement markdown extraction logic
         pass
 
-    # Pending, to be updated soon
-    async def extract_json(self, text: str, *args):
+    async def extract_json_from_text(self, content: str, *args):
+        """
+        So the logic here will be to find valid json objects directly from raw plain text.
+        """
         # Implement JSON extraction logic
-        pass
+        char_map = {'{': '}', '[': ']'}
+        if not isinstance(content, str):
+            content = str(content)
 
-    # Pending, to be updated soon
+        valid_json_objs = []  # return object
+        check_after_index = 0
+
+        for index, char in enumerate(content):
+            # this step is important because check_after_index
+            # tells us at what index to continue looking for a JSON
+            if not index >= check_after_index:
+                continue
+
+            # Possible Json start detected at this point
+            if char == "{" or char == "[":
+                end_brac = char_map[char]
+                index_ = index  # create a copy of original index
+
+                for char_ in content[index:]:  # start to check chars after { or [
+                    index_ += 1
+                    if char_ == end_brac:  # check for possible end
+
+                        # Possible end reached
+                        try:
+                            # Try by evaluating the Possible JSON
+                            json_ = json.loads(content[index:index_].strip())
+                            valid_json_objs.append(json_)
+                            # Now we have to update check_after_index here so in the next iterations we ignore the already detected Json/dict item.
+                            check_after_index = int(index_)
+
+                        except Exception:
+                            pass
+
+        return valid_json_objs
+
+    async def extract_json_snippet(self, content: str, *args):
+        snippets = await self.extract_code_snippets(content)
+        if snippets.get('json'):
+            return snippets.get('json')
+
+
+    # Answer in docstring please
     async def extract_code(self, text: str, *args):
+        """
+        What to do here exactly? Is the language name be going to be specified in the args, or we have to extract direct from ai's response
+        if we need to extract from AI response that is already implemented
+        """
         # Implement code extraction logic
         pass
 
@@ -668,29 +706,37 @@ class AiOutput(ProcessingManager):
         # Implement Python code extraction logic
         pass
 
-    # Pending, to be updated soon
+    # Answer in docstring
     async def extract_code_remove_comments(self, text: str, *args):
-        # Implement logic to remove comments from code
+        """
+        What to do here exactly? Is the language name be going to be specified in the args
+        Do we create regex patterns for all possible comment patterns or what ?
+
+        """
         pass
 
-    # Pending, to be updated soon
+    # Answer in docstring
     async def extract_from_json_by_key(self, text: str, *args):
+        """
+        What to do here exactly . Extract json from either AI response or from raw text and then find the key
+        Please clarify here. (Json from text and snippet is already implemented)
+        """
         # Implement extraction from JSON by key
         pass
 
-    # Pending, to be updated soon
+    # Answer in docstring
     async def extract_from_outline_by_numbers(self, text: str, *args):
+        """
+        what to do here exactly ? Please try to give an example here
+        """
         # Implement extraction from an outline by numbers
         pass
 
-    # Pending, to be updated soon
-    async def new_method(self, text: str, *args):
-        # Implement the logic here
-        pass
-
-    # Pending, to be updated soon
+    # Answer in docstring
     async def remove_first_and_last_paragraph(self, text: str, *args):
-        # Implement the logic here
+        """
+        What's a paragraph exactly?  Are there any rules to check for. Try to give examples of input and output
+        """
         pass
 
     async def local_sample_data_processing(self, sample_content, return_params=None):
@@ -730,7 +776,6 @@ class AiOutput(ProcessingManager):
     async def get_classified_markdown(self, content, args):
         from automation_matrix.processing.markdown.classifier import get_classify_markdown_section_list
         sections = await get_classify_markdown_section_list(content)
-        print("got section")
         structure = {
             "sections": sections,
             "brokers": []
@@ -768,89 +813,6 @@ def print_initial_and_processed_content(processed_content):
         print("\nDepends on:", step_data['depends_on'])
         print("\nArgs:", step_data['args'])
 
-
-# TODO: Jatin, I need you to fine out if this is actually an extractor that is misplaced or if it's some sort of duplicate code. Please put it in the right place.
-# Ask me if you can't figure it out. Basically, if it's necessary for returning the proper final structure, then it's an extractor and needs to be properly placed.
-async def access_data_by_reference(reference, data_structure):
-    """
-    Access a nested dictionary entry based on a reference dictionary and return it as specified (text or dict).
-
-    :param reference: A dictionary with 'data', 'key', and 'output' where 'data' is the key to the main dictionary,
-                      'key' is the index to access within the nested dictionary (None for entire structure), and
-                      'output' specifies the return format ('text' or 'dict').
-    :param data_structure: The main data structure containing nested dictionaries.
-    :return: The selected entry in the specified format, or a message if not found.
-
-        # Sample entry to get the 3rd key as text
-        reference_text_3rd = {"data": "nested_structure", "key": 1, "output": "text"}
-
-        # Sample entry to get the 2nd key as a dict
-        reference_dict_2nd = {"data": "nested_structure", "key": 1, "output": "dict"}
-
-        # Sample entry to get the entire nested structure as text
-        reference_entire_text = {"data": "nested_structure", "key": None, "output": "text"}
-
-    """
-
-    nested_key = reference.get('key_identifier')
-    index = reference.get('key_index')
-    output_format = reference.get('output_type', 'dict')  # Default to 'dict' if not specified
-    pretty_print(reference)
-    if not index and index != 0:
-        nested_dict = data_structure.get(nested_key, {})
-        if output_format == 'text':
-            result = '\n\n'.join(f'{key}:\n{'\n'.join(value)}' for key, value in nested_dict.items())
-        else:
-            result = nested_dict
-    else:
-        index -= 1  # Adjust for 0-based indexing
-        if nested_key in data_structure:
-            nested_dict = data_structure[nested_key]
-            keys = list(nested_dict.keys())
-            if 0 <= index < len(keys):
-                selected_key = keys[index]
-                content = nested_dict[selected_key]
-                if output_format == 'text':
-                    result = f"{selected_key}:\n{'\n'.join(content)}"
-                else:
-                    result = {
-                        selected_key: content
-                    }
-            else:
-                result = "The specified entry was not found."
-        else:
-            result = "The specified entry was not found."
-
-    return result
-
-
-# TODO: This is another one that I'm not sure actually belongs here or if it's just leftover test code. If it isn't real code that we need for processing or extracting, then it needs to be removed.
-async def handle_OpenAIWrapperResponse(result):
-    core_variable_name = result.get('variable_name', '')
-    processed_values = result.get('processed_values', {})
-    p_index = 0
-    print(f"Processing {core_variable_name}...")
-    if result.get('processing'):
-        print("Processing is still in progress.")
-        for processor, processor_data in processed_values.items():
-            p_index += 1
-            e_index = 0
-            method_name = f"handle_{processor}"
-            processor_value = processor_data.get('value', {})
-            if 'extraction' in processor_data:
-                for extraction_map in processor_data['extraction']:  # Adjusted to iterate over a list
-                    print(f"-------------Processing {core_variable_name} with {method_name}...")
-                    e_index += 1
-                    variable_name = f"{p_index}_{e_index}_{core_variable_name}"
-                    print(f"Processing {variable_name}")
-
-                    try:
-                        extraction_result = await access_data_by_reference(extraction_map, processor_value)  # Changed variable name from 'result' to 'extraction_result' to avoid overshadowing
-                        pretty_print(extraction_result)
-                        print(f"==================================================")
-                    except Exception as ex:
-                        # Log the error and continue with the next extraction_map
-                        print(f"Error processing {variable_name} with {method_name}: {ex}")
 
 
 async def local_post_processing(sample_api_response, sample_return_params):
