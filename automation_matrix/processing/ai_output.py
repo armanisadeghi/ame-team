@@ -293,7 +293,7 @@ class AiOutput(ProcessingManager):
 
         return all_tables
 
-    async def identify_python_dictionaries(self, text: str, *args) -> List[dict]:
+    async def identify_python_dictionaries(self, text: str) -> List[dict]:
         """
         Searches for and interprets Python dictionary structures.
 
