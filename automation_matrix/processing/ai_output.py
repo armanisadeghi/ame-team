@@ -68,15 +68,19 @@ class AiOutput(ProcessingManager):
                 processor['depends_on'] = 'content'
 
             # Setting the dependency to 'content' -  'content' Is the raw data.
-            elif processor['depends_on'] not in processor_names and processor['depends_on'] not in ['content', 'raw_api_response']:
-                vcprint(verbose=True, data=f"\n[Warning!] '{processor}' has an invalid dependency on '{processor['depends_on']}'. Changing to 'content'.\n", color='red', style='bold')
+            elif processor['depends_on'] not in processor_names and processor['depends_on'] not in ['content',
+                                                                                                    'raw_api_response']:
+                vcprint(verbose=True,
+                        data=f"\n[Warning!] '{processor}' has an invalid dependency on '{processor['depends_on']}'. Changing to 'content'.\n",
+                        color='red', style='bold')
                 processor['depends_on'] = 'content'
 
         # ------- Get the processors in teh right order, regardless of what order they were provided in. -------
         # This is a good example of how I like to code. It's MY job to fix a mistake that the other programmer or the user made, if it doesn't hurt anything.
         # Order the processors based on their dependencies - Don't want to run something, before the dependencies are met.
         def add_processor_if_dependency_met(processor, ordered, unprocessed):
-            if processor['depends_on'] == 'content' or any(dep['processor'] == processor['depends_on'] for dep in ordered):
+            if processor['depends_on'] == 'content' or any(
+                    dep['processor'] == processor['depends_on'] for dep in ordered):
                 ordered.append(processor)
                 unprocessed.remove(processor)
                 return True
@@ -119,7 +123,8 @@ class AiOutput(ProcessingManager):
 
             print(f"[processing data {count}] Processor:'{processor_name}' with dependency on: '{depends_on}'")
 
-            input_data = self.content if depends_on in ['content', 'raw_api_response'] else processed_names.get(depends_on)
+            input_data = self.content if depends_on in ['content', 'raw_api_response'] else processed_names.get(
+                depends_on)
 
             processor = getattr(self, processor_name, None)
             if not processor:
@@ -128,13 +133,16 @@ class AiOutput(ProcessingManager):
 
             try:
                 # debug print 3
-                vcprint(verbose=verbose, data=input_data, title=f"Input Data for '{processor_name}'", color='blue', style='bold')
+                vcprint(verbose=verbose, data=input_data, title=f"Input Data for '{processor_name}'", color='blue',
+                        style='bold')
                 vcprint(verbose=verbose, data=args, title=f"Args for '{processor_name}'", color='blue', style='bold')
 
-                output_data = await processor(input_data, args) if asyncio.iscoroutinefunction(processor) else processor(input_data, args)
+                output_data = await processor(input_data, args) if asyncio.iscoroutinefunction(
+                    processor) else processor(input_data, args)
 
                 # debug print 4
-                vcprint(verbose=verbose, data=output_data, title=f"Output Data for '{processor_name}'", color='green', style='bold')
+                vcprint(verbose=verbose, data=output_data, title=f"Output Data for '{processor_name}'", color='green',
+                        style='bold')
 
             except Exception as e:
                 print(f"Error processing '{processor_name}': {e}")
@@ -265,7 +273,7 @@ class AiOutput(ProcessingManager):
 
     async def extract_urls(self, content: str):
         """This extracts normal urls, those include custom protocols too"""
-        from urlextract import URLExtract # Please add this library (pip install urlextract)
+        from urlextract import URLExtract  # Please add this library (pip install urlextract)
         extractor = URLExtract()
         urls = extractor.find_urls(content)
         return urls
@@ -308,7 +316,7 @@ class AiOutput(ProcessingManager):
         if not isinstance(content, str):
             content = str(content)
 
-        dicts = [] # return object
+        dicts = []  # return object
         check_after_index = 0
 
         for index, char in enumerate(content):
@@ -342,7 +350,7 @@ class AiOutput(ProcessingManager):
 
         return dicts
 
-    #Asked in doc
+    # Asked in doc
     async def extract_lists(self, text: str) -> List[List[str]]:
         """
         Identifies both bullet-point and numbered lists and extracts them.
@@ -427,7 +435,7 @@ class AiOutput(ProcessingManager):
                         except Exception:
                             pass
 
-        html_snippets =  html
+        html_snippets = html
 
         return html_snippets
 
@@ -691,38 +699,180 @@ class AiOutput(ProcessingManager):
         if snippets.get('json'):
             return snippets.get('json')
 
-
     # Answer in docstring please
     async def extract_code(self, text: str, *args):
         """
-        What to do here exactly? Is the language name be going to be specified in the args, or we have to extract direct from ai's response
+        What to do here exactly? Is the language name be going to be specified in the args, or we have to extract direct from AI's response
         if we need to extract from AI response that is already implemented
         """
         # Implement code extraction logic
         pass
 
-    # Pending, to be updated soon
-    async def extract_python_code(self, text: str, *args):
-        # Implement Python code extraction logic
-        pass
+    async def extract_python_code_snippet(self, text: str, *args):
+        """
+        This currently looks for snippets that are identified as python snippets
+        """
+        python_code_list = []
+        # 1 st checkpoint: checks for if there are snippets that can be directly detected as python code
+        snippets = await self.extract_code_snippets(text)
+        if snippets.get('python'):
+            python_code_list.extend(python_code_list)
+
+        return python_code_list
+
+    # Answer in docstring please
+    async def extract_python_code_from_text(self, text: str, *args):
+        """
+        We can identify python code from raw text also , but this doesn't include incomplete code or code with syntax erros
+        Please leave your suggestions here
+        """
+        if not isinstance(text, str):
+            text = str(text)
+
+        python_code_list = []
+        # Going to check for valid python code in the given string here
+        # One way is to go through from the start of the text block and other is to use regex
+        # to identify possible python code starting points
+
+        for index, chars in enumerate(text):
+            pass
+
 
     # Answer in docstring
-    async def extract_code_remove_comments(self, text: str, *args):
+    async def extract_code_remove_comments(self, code: str, **kwargs):
         """
         What to do here exactly? Is the language name be going to be specified in the args
         Do we create regex patterns for all possible comment patterns or what ?
-
+        I still wrote the function , please recommend if this needs improvement. This function supports the function just below this
         """
-        pass
+
+        alt_names = {
+            "python": ['py', 'python', 'python3'],
+            "javascript": ['js'],
+            "java": ['java'],
+            "go": ['go', 'golang'],
+            "c": ['c'],
+            "cpp": ['c++', 'cpp', 'cplusplus'],
+            "csharp": ['c#', 'csharp'],
+            "php": ['php'],
+            "ruby": ['ruby'],
+            "swift": ['swift'],
+            "kotlin": ['kotlin'],
+            "rust": ['rust'],
+            "typescript": ['ts', 'typescript'],
+            "perl": ['perl'],
+            "scala": ['scala'],
+            "bash": ['bash', 'shell', 'sh'],
+            'r': ['r'],
+            'matlab': ['matlab'],
+            'sql': ['sql'],
+            'dart': ['dart'],
+        }
+
+        comment_patterns = {
+            "python": re.compile(r'#.*|\'\'\'[\s\S]*?\'\'\'|\"\"\"[\s\S]*?\"\"\"'),
+            "javascript": re.compile(r'//.*|/\*[\s\S]*?\*/'),
+            "java": re.compile(r'//.*|/\*[\s\S]*?\*/'),
+            "c": re.compile(r'//.*|/\*[\s\S]*?\*/'),
+            "cpp": re.compile(r'//.*|/\*[\s\S]*?\*/'),
+            "csharp": re.compile(r'//.*|/\*[\s\S]*?\*/'),
+            "php": re.compile(r'//.*|#.*|/\*[\s\S]*?\*/'),
+            "ruby": re.compile(r'#.*|=begin[\s\S]*?=end'),
+            "swift": re.compile(r'//.*|/\*[\s\S]*?\*/'),
+            "kotlin": re.compile(r'//.*|/\*[\s\S]*?\*/'),
+            "rust": re.compile(r'//.*|/\*[\s\S]*?\*/'),
+            "typescript": re.compile(r'//.*|/\*[\s\S]*?\*/'),
+            "perl": re.compile(r'#.*|=begin[\s\S]*?=cut'),
+            "scala": re.compile(r'//.*|/\*[\s\S]*?\*/'),
+            "bash": re.compile(r'#.*|:\s*\'.*?\''),  # Bash multi-line comments with : '
+            "r": re.compile(r'#.*'),  # R only has single-line comments
+            "matlab": re.compile(r'%.*|%\{[\s\S]*?%\}'),
+            "sql": re.compile(r'--.*|/\*[\s\S]*?\*/'),
+            "dart": re.compile(r'//.*|/\*[\s\S]*?\*/'),
+            "_general": re.compile(r'//.*|/\*[\s\S]*?\*/'),  # General pattern for unrecognized languages
+        }
+
+        language = kwargs.get('lang')
+
+        if language is not None:
+            language = language.lower()
+            if language not in alt_names.keys():
+                # finding the key incase not found
+                for lang, alt_name in alt_names.items():
+                    if language in alt_name:
+                        language = lang
+                        break
+
+        if language is not None:
+            pattern = comment_patterns.get('_general')
+        else:
+            pattern = comment_patterns.get(language)
+
+        result_code = pattern.sub("", code)
+
+        return result_code.strip()
+
+    async def extract_code_remove_comments_from_snippets(self, text: str):
+        """
+        :param text: Direct code from AI response. The language is auto-detected and comments are removed
+        :return: returns a dict of various languages, values are list of code (after removing comments)
+        """
+        snippets = await self.extract_code_snippets(text)
+        output = defaultdict(list)
+
+        for lang, code_list in snippets.items():
+            kwargs = {'lang': lang}
+            for code in code_list:
+                code_without_comments = await self.extract_code_remove_comments(code, **kwargs)
+                output[lang].append(code_without_comments)
+
+        return output
 
     # Answer in docstring
-    async def extract_from_json_by_key(self, text: str, *args):
+    async def extract_from_json_by_key(self, text: str, **kwargs):
         """
         What to do here exactly . Extract json from either AI response or from raw text and then find the key
         Please clarify here. (Json from text and snippet is already implemented)
+        I still wrote the function , Please make recommendations for this
         """
-        # Implement extraction from JSON by key
-        pass
+        json_snippets = []
+        key = kwargs.get('key')
+
+        if key is None:
+            return []
+
+        # 1 st checkpoint: Checked whether we can get any json by extracting code snippets
+        snippets = await self.extract_code_snippets(text)
+        if snippets.get('json') is not None:
+            json_snippets.extend(snippets.get('json'))
+
+        # 2 nd checkpoint: Tries to load JSON by text , if json is not a snippet
+        text_parsed_json_snippets = await self.extract_json_from_text(text)
+        if snippets:
+            json_snippets.extend(text_parsed_json_snippets)
+
+        # 3 rd part , here the actual search happens tries to get results by the key
+        results = []
+
+        def _search_key(obj):
+            if isinstance(obj, dict):
+                for k, v in obj.items():
+                    if k == key:
+                        results.append(v)
+                    elif isinstance(v, (dict, list)):
+                        _search_key(v)
+            elif isinstance(obj, list):
+                for item in obj:
+                    _search_key(item)
+
+        for snippet in json_snippets:
+            try:
+                snippet_dict = json.loads(snippet)
+                _search_key(snippet_dict)
+            except json.JSONDecodeError:
+                pass
+
+        return results
 
     # Answer in docstring
     async def extract_from_outline_by_numbers(self, text: str, *args):
@@ -814,12 +964,13 @@ def print_initial_and_processed_content(processed_content):
         print("\nArgs:", step_data['args'])
 
 
-
 async def local_post_processing(sample_api_response, sample_return_params):
     pretty_print(sample_api_response)
     print('==========' * 10)
-    processor = AiOutput(sample_api_response)  # This needs to be the sample content from the API response (Not just plain content, but processed content. I can get more examples, if needed.)
-    processed_content = await processor.process_response(sample_return_params)  # This is the end result of all of the processing steps.
+    processor = AiOutput(
+        sample_api_response)  # This needs to be the sample content from the API response (Not just plain content, but processed content. I can get more examples, if needed.)
+    processed_content = await processor.process_response(
+        sample_return_params)  # This is the end result of all of the processing steps.
 
     vcprint(verbose=True, data=processed_content, title="Processed Content", color='blue', style='bold')
 
@@ -840,9 +991,11 @@ def format_non_formatted_data(content):
 
 
 if __name__ == "__main__":
-    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='ama_medical_report_sample', sub_app='ama_ai_output_samples')  # Get sample API response
+    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='ama_medical_report_sample',
+                                          sub_app='ama_ai_output_samples')  # Get sample API response
     # sample_return_params = get_sample_data(app_name='automation_matrix', data_name='blog_processing_asterisk_sample', sub_app='processor_settings_samples')  # Get sample return params structure
-    sample_return_params = get_sample_data(app_name='automation_matrix', data_name='ama_medical_processing_sample', sub_app='processor_settings_samples')  # Get sample return params structure
+    sample_return_params = get_sample_data(app_name='automation_matrix', data_name='ama_medical_processing_sample',
+                                           sub_app='processor_settings_samples')  # Get sample return params structure
 
     # This is the final results from all processors and all extractors used.
     processing_and_extraction_results = asyncio.run(local_post_processing(sample_api_response, sample_return_params))
