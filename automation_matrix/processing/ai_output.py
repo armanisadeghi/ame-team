@@ -624,8 +624,6 @@ class AiOutput(ProcessingManager):
         structured_content['html'].extend(html_matches)
         markdown_matches = re.findall(markdown_pattern, text)
         structured_content['markdown'].extend(markdown_matches)
-
-        print(f"Structured Content:\n{structured_content}\n")
         return structured_content
 
     # Asked in doc
@@ -726,17 +724,20 @@ class AiOutput(ProcessingManager):
         We can identify python code from raw text also , but this doesn't include incomplete code or code with syntax erros
         Please leave your suggestions here
         """
-        if not isinstance(text, str):
-            text = str(text)
+        # Please make sure that the escape characters are unescaped, otherwise may lead to errors in final code
 
-        python_code_list = []
-        # Going to check for valid python code in the given string here
-        # One way is to go through from the start of the text block and other is to use regex
-        # to identify possible python code starting points
+        import parso  # Needs parso library (pip install parso)
+        final_code = ""
+        parsed = parso.parse(text)
+        for module in parsed.children:
 
-        for index, chars in enumerate(text):
-            pass
+            error_lines_identifier = ['error_node', 'error_leaf']
+            if str(module.type) in error_lines_identifier:
+                continue
 
+            final_code = final_code + module.get_code()
+
+        return final_code
 
     # Answer in docstring
     async def extract_code_remove_comments(self, code: str, **kwargs):
