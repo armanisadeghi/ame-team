@@ -992,16 +992,25 @@ def format_non_formatted_data(content):
 
 
 if __name__ == "__main__":
-    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='ama_medical_report_sample',
-                                          sub_app='ama_ai_output_samples')  # Get sample API response
-    # sample_return_params = get_sample_data(app_name='automation_matrix', data_name='blog_processing_asterisk_sample', sub_app='processor_settings_samples')  # Get sample return params structure
-    sample_return_params = get_sample_data(app_name='automation_matrix', data_name='ama_medical_processing_sample',
-                                           sub_app='processor_settings_samples')  # Get sample return params structure
+    # sample_api_response = get_sample_data(app_name='automation_matrix', data_name='ama_medical_report_sample',
+    #                                       sub_app='ama_ai_output_samples')  # Get sample API response
+    # # sample_return_params = get_sample_data(app_name='automation_matrix', data_name='blog_processing_asterisk_sample', sub_app='processor_settings_samples')  # Get sample return params structure
+    # sample_return_params = get_sample_data(app_name='automation_matrix', data_name='ama_medical_processing_sample',
+    #                                        sub_app='processor_settings_samples')  # Get sample return params structure
+    #
+    # # This is the final results from all processors and all extractors used.
+    # processing_and_extraction_results = asyncio.run(local_post_processing(sample_api_response, sample_return_params))
+    #
+    # # This is where the processor is done, but to simulate the next steps, I've created some functions that mimic what the workflow does with the data.
+    # # But in reality, as long as your brokers are EXACTLY where they're supposed to be, there is nothing else to do.
+    # wf_simulation_results = simulate_workflow_after_processing(processing_and_extraction_results)
+    # pretty_print(wf_simulation_results)
 
-    # This is the final results from all processors and all extractors used.
-    processing_and_extraction_results = asyncio.run(local_post_processing(sample_api_response, sample_return_params))
 
-    # This is where the processor is done, but to simulate the next steps, I've created some functions that mimic what the workflow does with the data.
-    # But in reality, as long as your brokers are EXACTLY where they're supposed to be, there is nothing else to do.
-    wf_simulation_results = simulate_workflow_after_processing(processing_and_extraction_results)
-    pretty_print(wf_simulation_results)
+    #Testing extractors section
+    from automation_matrix.processing.markdown import classifier
+    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='sample_8',sub_app='sample_openai_responses')
+    obj = classifier.OutputClassifier()
+    data =obj.classify_output_details(sample_api_response)
+    pretty_print(data)
+

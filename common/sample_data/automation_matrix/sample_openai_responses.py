@@ -441,6 +441,67 @@ Feel free to explore further or ask if you need any clarification!
 """
 
 
+sample_8 = """Artificial Intelligence (AI) is a multifaceted field that encompasses a wide range of technologies and applications aimed at creating machines capable of performing tasks that typically require human intelligence. Here, we delve into the various aspects of AI, covering its definitions, types, applications, techniques, challenges, and future prospects.
+
+### 1. Definition and Scope of AI
+
+AI refers to the simulation of human intelligence in machines that are programmed to think like humans and mimic their actions. The term can also be applied to any machine that exhibits traits associated with a human mind such as learning and problem-solving. AI can be categorized broadly into narrow AI and general AI:
+
+- **Narrow AI (Weak AI):** Designed to perform a narrow task (e.g., facial recognition, internet searches, or driving a car).
+- **General AI (Strong AI):** Has the ability to perform any intellectual task that a human being can do, with understanding, reasoning, and learning capabilities akin to a human.
+
+### 2. Types of AI
+
+AI can be classified into various types based on capabilities and functionalities:
+
+- **Reactive Machines:** Basic AI systems that perceive the world and act on what they see. They do not store memories or past experiences. (e.g., IBM’s Deep Blue chess-playing computer).
+- **Limited Memory:** These AI systems can use past experiences to inform future decisions. (e.g., self-driving cars).
+- **Theory of Mind:** Still theoretical, these AI systems would understand emotions, beliefs, and expectations.
+- **Self-Aware:** This type, which doesn't yet exist, would have consciousness and self-awareness akin to human beings.
+
+### 3. Techniques and Technologies
+
+Several core techniques underpin AI:
+
+- **Machine Learning (ML):** A subset of AI that involves training algorithms to learn from and make predictions based on data. Key techniques include supervised learning, unsupervised learning, and reinforcement learning.
+- **Deep Learning:** A subset of ML involving neural networks with many layers (deep neural networks) that can model complex patterns in large datasets.
+- **Natural Language Processing (NLP):** Enables machines to understand and respond to text or voice data in a human-like manner (e.g., chatbots, translation services).
+- **Computer Vision:** Allows machines to interpret and make decisions based on visual inputs from the world (e.g., image and video analysis).
+- **Robotics:** The integration of AI in physical robots to perform tasks autonomously or semi-autonomously.
+
+### 4. Applications of AI
+
+AI's applications span across various industries, transforming traditional processes and creating new opportunities:
+
+- **Healthcare:** AI assists in diagnosing diseases, personalized treatment plans, and robotic surgeries.
+- **Finance:** Used for fraud detection, automated trading, and personalized financial advice.
+- **Transportation:** AI powers self-driving cars, traffic management systems, and logistic optimization.
+- **Customer Service:** Chatbots and virtual assistants improve customer interaction and service efficiency.
+- **Entertainment:** AI recommends content on streaming services and enhances user experiences in gaming.
+
+### 5. Ethical and Societal Challenges
+
+The rapid advancement of AI poses several ethical and societal challenges:
+
+- **Bias and Fairness:** AI systems can inherit biases present in training data, leading to unfair treatment of certain groups.
+- **Privacy:** The extensive data collection required for AI can infringe on personal privacy.
+- **Job Displacement:** Automation powered by AI can lead to job loss in certain sectors, necessitating a shift in workforce skills.
+- **Security:** AI systems can be vulnerable to hacking and other security threats.
+- **Ethical Decision-Making:** Ensuring AI systems make decisions that align with human values and ethics is a significant challenge.
+
+### 6. Future of AI
+
+The future of AI holds vast potential and numerous advancements:
+
+- **Human-AI Collaboration:** Enhanced tools and systems that improve human capabilities and productivity.
+- **Autonomous Systems:** Further development of self-driving cars, drones, and robots in various domains.
+- **AI in Science and Research:** Accelerating discoveries in fields like pharmaceuticals, material science, and climate modeling.
+- **Personalized AI:** More individualized services in healthcare, education, and entertainment tailored to personal preferences and needs.
+- **Ethical AI Development:** Greater emphasis on creating transparent, fair, and accountable AI systems.
+
+### Conclusion
+
+AI is an evolving field with significant impact on multiple facets of life and industry. Understanding its various aspects helps in harnessing its potential while addressing the accompanying challenges. As AI continues to develop, it promises to bring about profound changes, making it a pivotal technology of the 21st century."""
 
 def get_sample_fine_tuning_response():
     data = {
