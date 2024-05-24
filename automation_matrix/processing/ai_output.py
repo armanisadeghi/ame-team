@@ -312,6 +312,7 @@ class AiOutput(ProcessingManager):
 
         return all_tables
 
+    # Review Needed: Extracts dictionaries from raw text
     async def extract_python_dicts(self, content: str):
         if not isinstance(content, str):
             content = str(content)
@@ -350,7 +351,7 @@ class AiOutput(ProcessingManager):
 
         return dicts
 
-    # Asked in doc
+    # Needs working on
     async def extract_lists(self, text: str) -> List[List[str]]:
         """
         Identifies both bullet-point and numbered lists and extracts them.
@@ -380,6 +381,7 @@ class AiOutput(ProcessingManager):
         if possible_snippets.get('html'):
             return possible_snippets.get('html')
 
+    # Review Needed : Extracts HTML from raw text, with great accuracy
     async def extract_html_from_text(self, content: str):
 
         from html.parser import HTMLParser
@@ -439,7 +441,6 @@ class AiOutput(ProcessingManager):
 
         return html_snippets
 
-    # Asked in doc
     async def extract_markdown_entries(self, text):
         entries = {}
         current_key = None
@@ -478,9 +479,9 @@ class AiOutput(ProcessingManager):
                 entries[current_key] = ['\n'.join(current_value).strip()]
 
         extracted_markdown_entries = entries
+        pretty_print(extracted_markdown_entries)
         return extracted_markdown_entries
 
-    # Asked in doc
     async def extract_nested_markdown_entries(self, text: str) -> Dict[str, List[str]]:
         entries = {}
         current_main_key = None
@@ -519,21 +520,21 @@ class AiOutput(ProcessingManager):
             entries[current_main_key][-1] += buffer
 
         nested_markdown_entries = entries
-        # pretty_print(nested_markdown_entries)
+        pretty_print(nested_markdown_entries)
         return nested_markdown_entries
 
-    # Asked in doc
+    # Need to have discussion
     async def parse_markdown_content(self, text: str, *args) -> List[str]:
         # TODO not sure exactly what markdown content should include but it's including LSIs, but maybe that makes sense
         # If that makes sense, we should make this like a "parent" function that feeds others like extract_lists
         # For a blog section example, it returned the title for each section, but not the heading, which was interesting.
-        # Again, useful, but in this case, it would be highly sepcific to the use case
+        # Again, useful, but in this case, it would be highly specific to the use case
         markdown_pattern = (
             '(?:\\n|^)(?:\\#{1,6}\\s.*|[-*]\\s.*|\\d+\\.\\s.*|\\>\\s.*|```[\\s\\S]*?```)'
         )
         markdown_sections = re.findall(markdown_pattern, text, re.MULTILINE)
-        print(f"Before Processing:\n{text}\n\n")
-        print(f"Markdown Sections:\n{markdown_sections}\n")
+        # print(f"Before Processing:\n{text}\n\n")
+        # print(f"Markdown Sections:\n{markdown_sections}\n")
         pretty_print(markdown_sections)
         return markdown_sections
 
@@ -549,7 +550,7 @@ class AiOutput(ProcessingManager):
         print(f"LaTeX Equations:\n{latext_quotations}\n")
         return latext_quotations
 
-    # Asked in doc
+    # Review Needed : Needs further development. Read Docstrings (your comments on docs)
     async def extract_plain_text(self, text: str, *args) -> str:
         """
         Extracts plain text content, filtering out any special formatting or structured content.
@@ -557,6 +558,19 @@ class AiOutput(ProcessingManager):
         :param text: String containing the text to be processed.
         :return: Plain text content.
         """
+        '''
+        Your comment for this:
+        For plain text, I think we need to create something very similar to the markdown classifier, but set it up from the ground up to work with text instead. It's something that we can use directly as well as within workflows. 
+        I have some individual functions I created that do a lot of this type of processing, but they are not organized and they will take you a few days to really go through and put into a single class. You'll definitely need my involvement. If you can get the other stuff done, let's do this next. I'll have to share the code with you.
+        The goal is to have a class where we can do everything with text. Not just for AI responses but all text:
+        - Break text apart without messing up the flow of content (hard to do)
+        - Break text apart using specific patterns that are dynamic.
+        - pull out a line of text based on (1. starts with, 2. contains, 3. ends with.)
+        - Pull out text that comes between a starting marker and an ending marker.
+        - Pull out a certain number of worlds (or characters) after a given marker. (By the way, when I say marker, I mean some string or pattern)
+        - There is a lot more. 
+        For this, and all other things, make sure that when you come back to me, you copy this comment so I remember what we're talking about. If you come to me tomorrow and tell me about processing text, I will not remember this and you'll get the wrong guidance.
+        '''
         # TODO Considering it pulled a list of LSIs as "plain text", I'm not sure this is working as intended
         # I think we need a set of initial checks that essentially breaks up the content into "major cateogries" without any overlap, or very little overlap
         # Then we can have a set of functions that are more specific to each category
@@ -591,7 +605,7 @@ class AiOutput(ProcessingManager):
         final_pattern = [mcq.strip() for mcq in re.findall(mcq_pattern, text, re.MULTILINE)]
         return final_pattern
 
-    # Asked in doc
+    # Question pending to be answered
     async def extract_paragraphs(self, text: str, *args) -> List[str]:
         """
         Extracts paragraph-style text content.
@@ -603,7 +617,6 @@ class AiOutput(ProcessingManager):
         #  We need to be clear what a paragraph is
         paragraphs = re.split('\\n{2,}', text)
         extracted_paragraphs = [paragraph.strip() for paragraph in paragraphs if paragraph.strip()]
-        print(f"Paragraphs:\n{extracted_paragraphs}\n")
         return extracted_paragraphs
 
     async def extract_html_markdown_structured_text(self, text: str, *args) -> Dict[str, List[str]]:
@@ -626,7 +639,7 @@ class AiOutput(ProcessingManager):
         structured_content['markdown'].extend(markdown_matches)
         return structured_content
 
-    # Asked in doc
+    # Review Needed : Needs to be removed according to your comments on the doc
     async def extract_prompts_questions(self, text: str, *args) -> List[str]:
         """
         Extracts prompts and questions designed for user interaction.
@@ -636,7 +649,6 @@ class AiOutput(ProcessingManager):
         """
         prompt_question_pattern = '[^\\.\\?\\!]*\\?\\s*(?:\\n|$)'
         final_pattern = re.findall(prompt_question_pattern, text)
-        print(f"Prompts and Questions:\n{final_pattern}\n")
         return final_pattern
 
     async def find_words_after_triple_quotes(self, text: str, *args) -> Dict[str, int]:
@@ -647,11 +659,12 @@ class AiOutput(ProcessingManager):
             word_count[word] += 1
         return word_count
 
-    # Not sure what to do
+    # Have to work on this.
     async def extract_markdown(self, text: str, *args):
         # Implement markdown extraction logic
         pass
 
+    # Extracts json even from raw text
     async def extract_json_from_text(self, content: str, *args):
         """
         So the logic here will be to find valid json objects directly from raw plain text.
@@ -697,11 +710,10 @@ class AiOutput(ProcessingManager):
         if snippets.get('json'):
             return snippets.get('json')
 
-    # Answer in docstring please
+    # Review Needed : Needs to be removed, what I think it's a duplicate of
+    # extract_code_snippets
     async def extract_code(self, text: str, *args):
         """
-        What to do here exactly? Is the language name be going to be specified in the args, or we have to extract direct from AI's response
-        if we need to extract from AI response that is already implemented
         """
         # Implement code extraction logic
         pass
@@ -709,6 +721,7 @@ class AiOutput(ProcessingManager):
     async def extract_python_code_snippet(self, text: str, *args):
         """
         This currently looks for snippets that are identified as python snippets
+        from Ai response.
         """
         python_code_list = []
         # 1 st checkpoint: checks for if there are snippets that can be directly detected as python code
@@ -718,13 +731,18 @@ class AiOutput(ProcessingManager):
 
         return python_code_list
 
-    # Answer in docstring please
+    # Review Needed : Read Docstrings
     async def extract_python_code_from_text(self, text: str, *args):
         """
-        We can identify python code from raw text also , but this doesn't include incomplete code or code with syntax erros
-        Please leave your suggestions here
+        I Have worked on it , and have a better method to extract valid
+        python code , do let me know when to work on this one. The library
+        used in the function below has bad documentation.
+        I've found other libraries that can be used for valid code extraction
+        in most language. Please let me know if
+        need to continue on this or not
         """
-        # Please make sure that the escape characters are unescaped, otherwise may lead to errors in final code
+        # Please make sure that the escape characters are unescaped,
+        # otherwise may lead to errors in final code
 
         import parso  # Needs parso library (pip install parso)
         final_code = ""
@@ -739,12 +757,9 @@ class AiOutput(ProcessingManager):
 
         return final_code
 
-    # Answer in docstring
+    # Review needed : Further used in next function too
     async def extract_code_remove_comments(self, code: str, **kwargs):
         """
-        What to do here exactly? Is the language name be going to be specified in the args
-        Do we create regex patterns for all possible comment patterns or what ?
-        I still wrote the function , please recommend if this needs improvement. This function supports the function just below this
         """
 
         alt_names = {
@@ -829,7 +844,7 @@ class AiOutput(ProcessingManager):
 
         return output
 
-    # Answer in docstring
+    # Review needed : Check if the function does exactly what the name suggests
     async def extract_from_json_by_key(self, text: str, **kwargs):
         """
         What to do here exactly . Extract json from either AI response or from raw text and then find the key
@@ -875,15 +890,88 @@ class AiOutput(ProcessingManager):
 
         return results
 
-    # Answer in docstring
-    async def extract_from_outline_by_numbers(self, text: str, *args):
+    # Review needed : What the function does mismatches from what it does
+    async def extract_from_outline_by_numbers(self, text: str, **kwargs):
         """
-        what to do here exactly ? Please try to give an example here
-        """
-        # Implement extraction from an outline by numbers
-        pass
+        text: str | Markdown Content
+        kwargs: [sections:list[str], sub_type:list[str]
+        ]
 
-    # Answer in docstring
+        >> Section Sub Types Eg:
+        "bullet", "sub_bullet",
+        "sub_bullet","sub_bullet",
+        "table","divider",
+        "section_break",
+        "section_break",
+        "header", "bold_text",
+        "italic_text","quote","link","image",
+        Supply an empty list when extraction from all sections is needed
+
+        >> Section Type Eg:
+
+        'code_block', 'table' , 'entries_and_values',
+        'header_with_bullets', 'header_with_numbered_list'
+        'header_with_text', 'bold_text_with_sub_bullets'
+        'plain_text' and  'other_section_type'
+        """
+
+        """
+        This is your comment:
+        I assume this is now easy with the classifier, but you should test it.
+
+        If we have markdown content that is like this:
+        
+        1. Shopping
+        a. groceries
+        i. apples
+        i. pears
+        b. clothing
+        2. Fun Things to Do
+        a. swimming
+        
+        Would we be able to extract "pears" or "apples" or "groceries" or whatever else, 
+        based on where they are, not the actual words? If the answer is yes, 
+        which I think it is, then we have already accomplished this.
+        
+        The only big thing that remains is what happens if we have content 
+        that is "like markdown" but not officially markdown. 
+        We need to confirm that our classifier will still work. 
+        If not, then we might need to create a processor that can convert 
+        random text that is like markdown into markdown 
+        and then feed it to the classifier.
+        """
+        section_type = []
+        section_sub_type = []
+
+        if kwargs:
+            section_type = kwargs.get('sections', [])
+            section_sub_type = kwargs.get('sub_type', [])
+
+        from automation_matrix.processing.markdown.classifier import get_classify_markdown_section_list
+        sections = await get_classify_markdown_section_list(text)
+
+        # Filtering starts here
+        results = defaultdict(list)
+
+        for sec in sections:
+            sec_type = sec[0]  # This is the name/type of the section
+            sec_parts = sec[1]  # This is the parts within the section divided into sub category
+
+            if sec_type in section_type or not section_type:
+
+                # Iterating over the parts
+                for part in sec_parts:
+                    sub_cat_name = part[0]  # This is the type of the part in the section
+                    part_content = part[1]  # This is the content of the part
+
+                    if sub_cat_name in section_sub_type or not section_sub_type:
+                        results[sec_type].append({"sub_category": sub_cat_name,
+                                                  "content": part_content})
+
+        pretty_print(results)
+        return results
+
+    # Answer needed
     async def remove_first_and_last_paragraph(self, text: str, *args):
         """
         What's a paragraph exactly?  Are there any rules to check for. Try to give examples of input and output
@@ -1009,8 +1097,8 @@ if __name__ == "__main__":
 
     #Testing extractors section
     from automation_matrix.processing.markdown import classifier
-    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='sample_8',sub_app='sample_openai_responses')
-    obj = classifier.OutputClassifier()
-    data =obj.classify_output_details(sample_api_response)
-    pretty_print(data)
+    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='ama_sample_6',sub_app='ama_ai_output_samples')
+    obj = AiOutput(None)
+
+    asyncio.run(obj.extract_nested_markdown_entries(sample_api_response))
 
