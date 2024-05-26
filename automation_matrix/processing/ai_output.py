@@ -971,7 +971,6 @@ class AiOutput(ProcessingManager):
                         results[sec_type].append({"sub_category": sub_cat_name,
                                                   "content": part_content})
 
-        pretty_print(results)
         return results
 
     # Answer needed
@@ -1217,14 +1216,34 @@ class TableProcessor(AiOutput):
             return parsed_tables
 
         for table in parsed_tables:
-            df = pd.DataFrame.from_dict(table)
+            df = self.table_to_dataframe(table)
             filtered_df = self.get_table_entries_by_query(df, query)
             if filtered_df.to_dict(orient='records'):
                 results.append(filtered_df.to_dict(orient='records'))
         return results
 
-class ListProcessor(AiOutput):
-    pass
+
+
+class ListProcessors(AiOutput):
+
+    async def get_bullet_points_by_query(self, content, query):
+        kwargs = {'sub_type': ['bullet', 'sub_bullet']}
+        resp = await self.extract_from_outline_by_numbers(text=content, **kwargs)
+
+        results = []
+        for k , v in resp.items():
+            for items in v:
+                content = items.get('content')
+                if query is None:
+                    results.append(content)
+                else:
+                    if str(query).lower() in content.lower():
+                        results.append(content)
+        pretty_print(results)
+        return results
+
+
+
 
 def print_initial_and_processed_content(processed_content):
     print("========================================== Initial Content ==========================================")
@@ -1298,12 +1317,11 @@ if __name__ == "__main__":
 
 
     #Testing extractors section
-    from automation_matrix.processing.markdown.classifier import OutputClassifier
-    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='ama_sample_6',sub_app='ama_ai_output_samples')
-    classifiers = OutputClassifier()
-    classified_sections = classifiers.classify_output_details(sample_api_response)
-    pretty_print(classified_sections)
+    # from automation_matrix.processing.markdown.classifier import OutputClassifier
+    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='sample_9',sub_app='sample_openai_responses')
+    # classifiers = OutputClassifier()
+    # classified_sections = classifiers.classify_output_details(sample_api_response)
 
-
-
+    obj = ListProcessors(None)
+    asyncio.run(obj.get_bullet_points_by_query(sample_api_response, "Advanced"))
 

@@ -503,6 +503,210 @@ The future of AI holds vast potential and numerous advancements:
 
 AI is an evolving field with significant impact on multiple facets of life and industry. Understanding its various aspects helps in harnessing its potential while addressing the accompanying challenges. As AI continues to develop, it promises to bring about profound changes, making it a pivotal technology of the 21st century."""
 
+
+sample_9 = """Sure! Here are five blog ideas focusing on learning Next.js and related latest technologies, each with structured guidance to help you write exceptional content.
+
+### 1. Getting Started with Next.js 14: A Comprehensive Guide for Beginners
+
+**Target Audience:**
+- **Level:** Beginners
+- **Background:** Developers with basic JavaScript and React knowledge.
+
+**Structured Guidance:**
+
+**Introduction:**
+- Briefly introduce Next.js 14 and its significance in modern web development.
+- Highlight what’s new in Next.js 14 compared to previous versions.
+
+**1. What is Next.js?**
+- Explain the core concepts of Next.js (server-side rendering, static site generation, etc.).
+- Discuss why it’s a powerful framework for React developers.
+
+**2. Setting Up Your First Next.js 14 Project:**
+- Provide a step-by-step guide on setting up a Next.js 14 project from scratch.
+- Include code snippets for initializing a project, installing dependencies, and running a development server.
+
+**3. Exploring New Features in Next.js 14:**
+- Deep dive into new features introduced in Next.js 14 (e.g., improved routing, new data fetching methods).
+- Explain how these features enhance developer experience and performance.
+
+**4. Building Your First Page:**
+- Guide readers through creating their first page in Next.js 14.
+- Cover concepts like page-based routing and dynamic routing.
+
+**5. Deploying Your Next.js 14 Application:**
+- Provide a simple tutorial on deploying a Next.js 14 app using Vercel.
+- Include tips on optimizing the deployment for performance.
+
+**6. Conclusion:**
+- Summarize the key takeaways.
+- Encourage readers to explore further with additional resources and next steps.
+
+### 2. Mastering Vercel: The Ultimate Deployment Guide for Next.js Developers
+
+**Target Audience:**
+- **Level:** Intermediate
+- **Background:** Developers with experience in React and basic Next.js knowledge.
+
+**Structured Guidance:**
+
+**Introduction:**
+- Introduce Vercel as the optimal platform for deploying Next.js applications.
+- Highlight the benefits of using Vercel (ease of use, performance, seamless integration with Next.js).
+
+**1. What is Vercel?**
+- Provide an overview of Vercel and its key features.
+- Explain why it’s a preferred choice for Next.js deployments.
+
+**2. Setting Up Your Vercel Account:**
+- Guide readers through the process of creating a Vercel account.
+- Include screenshots and detailed steps.
+
+**3. Deploying Your First Next.js Application on Vercel:**
+- Provide a step-by-step tutorial on deploying a Next.js app.
+- Cover connecting GitHub/GitLab repositories, setting up deployment configurations, and deploying the app.
+
+**4. Advanced Deployment Configurations:**
+- Explain advanced settings such as environment variables, custom domains, and DNS configurations.
+- Include tips on optimizing build and deployment processes.
+
+**5. Leveraging Vercel Features:**
+- Discuss features like automatic deployments, serverless functions, and analytics.
+- Provide examples and use cases for each feature.
+
+**6. Troubleshooting Common Issues:**
+- Offer solutions to common deployment problems.
+- Include a FAQ section based on common queries from developers.
+
+**7. Conclusion:**
+- Recap the benefits of using Vercel for Next.js deployments.
+- Encourage readers to experiment with Vercel’s advanced features and provide links to further reading.
+
+### 3. Navigating the App Router in Next.js: Best Practices and Tips
+
+**Target Audience:**
+- **Level:** Advanced
+- **Background:** Experienced Next.js developers looking to enhance their routing skills.
+
+**Structured Guidance:**
+
+**Introduction:**
+- Briefly introduce the app router concept in Next.js.
+- Explain why effective routing is crucial for scalable applications.
+
+**1. Understanding the App Router:**
+- Define what the app router is and how it differs from traditional routing methods in Next.js.
+- Discuss the architectural benefits of using the app router.
+
+**2. Setting Up the App Router:**
+- Provide a detailed guide on setting up the app router in a Next.js project.
+- Include code examples and configurations.
+
+**3. Advanced Routing Techniques:**
+- Cover advanced routing techniques such as nested routes, dynamic routes, and route guards.
+- Provide practical examples and use cases for each technique.
+
+**4. Integrating Middleware:**
+- Explain how to use middleware with the app router for tasks like authentication and logging.
+- Include code snippets and best practices.
+
+**5. Optimizing Routing Performance:**
+- Offer tips on optimizing routing performance, including lazy loading and prefetching.
+- Discuss how to handle large-scale applications with complex routing needs.
+
+**6. Debugging and Troubleshooting:**
+- Provide strategies for debugging routing issues.
+- Include common pitfalls and how to avoid them.
+
+**7. Conclusion:**
+- Summarize the key points covered.
+- Encourage readers to implement advanced routing in their projects and explore further with additional resources.
+
+### 4. Building a Real-Time Chat Application with Next.js and WebSockets
+
+**Target Audience:**
+- **Level:** Intermediate to Advanced
+- **Background:** Developers with a solid understanding of Next.js and experience with real-time applications.
+
+**Structured Guidance:**
+
+**Introduction:**
+- Introduce the concept of real-time applications and their importance.
+- Briefly explain how Next.js and WebSockets can be used together to build such applications.
+
+**1. Setting Up the Project:**
+- Guide readers through setting up a new Next.js project.
+- Include steps for installing necessary dependencies (e.g., WebSocket libraries).
+
+**2. Understanding WebSockets:**
+- Provide a brief overview of WebSockets and how they enable real-time communication.
+- Discuss the benefits of using WebSockets over traditional HTTP for real-time applications.
+
+**3. Implementing the WebSocket Server:**
+- Provide a step-by-step guide on setting up a WebSocket server.
+- Include code examples and configurations.
+
+**4. Integrating WebSockets with Next.js:**
+- Explain how to integrate WebSockets into a Next.js application.
+- Provide code snippets for establishing WebSocket connections and handling real-time events.
+
+**5. Building the Chat Interface:**
+- Guide readers through creating a simple chat interface with React components.
+- Include UI/UX best practices for real-time applications.
+
+**6. Handling Real-Time Data:**
+- Explain how to manage real-time data updates in the chat application.
+- Provide examples of handling user messages, notifications, and presence indicators.
+
+**7. Testing and Debugging:**
+- Offer strategies for testing real-time functionalities.
+- Include common debugging techniques for WebSocket-related issues.
+
+**8. Conclusion:**
+- Summarize the key takeaways.
+- Encourage readers to expand the chat application with additional features and provide links to further reading.
+
+### 5. Leveraging Serverless Functions in Next.js for Scalable Applications
+
+**Target Audience:**
+- **Level:** Intermediate
+- **Background:** Developers familiar with Next.js and interested in serverless architecture.
+
+**Structured Guidance:**
+
+**Introduction:**
+- Introduce the concept of serverless computing and its benefits.
+- Explain how Next.js integrates with serverless functions to enhance scalability and performance.
+
+**1. What are Serverless Functions?**
+- Provide an overview of serverless functions and their advantages over traditional server setups.
+- Discuss common use cases for serverless functions in web applications.
+
+**2. Setting Up Serverless Functions in Next.js:**
+- Guide readers through the process of setting up serverless functions in a Next.js project.
+- Include code examples and configurations.
+
+**3. Creating and Deploying Serverless Functions:**
+- Provide a step-by-step tutorial on creating and deploying serverless functions using Next.js API routes.
+- Include practical examples such as handling form submissions and integrating with third-party APIs.
+
+**4. Optimizing Serverless Functions:**
+- Offer tips on optimizing serverless functions for performance and cost-efficiency.
+- Discuss best practices for monitoring and scaling serverless functions.
+
+**5. Integrating with Databases and Third-Party Services:**
+- Explain how to integrate serverless functions with databases (e.g., MongoDB, Firebase) and third-party services (e.g., Stripe, Twilio).
+- Provide code snippets and practical examples.
+
+**6. Security and Authentication:**
+- Discuss security best practices for serverless functions.
+- Include strategies for implementing authentication and authorization in serverless environments.
+
+**7. Conclusion:**
+- Recap the benefits of using serverless functions in Next.js applications.
+- Encourage readers to explore more advanced use cases and provide links to further resources.
+
+By following this structured guidance, you can create comprehensive, engaging, and informative blog posts that cater to developers at different levels of expertise, helping them master Next.js and related technologies."""
 def get_sample_fine_tuning_response():
     data = {
         "value": "**Question 1:** A patient sustains a cervical spine injury resulting in isolated bladder dysfunction but no direct corticospinal damage. Which chapters should be consulted for impairment ratings, and how should these ratings be combined?\n\n**Answer 1:** For a patient with a cervical spine injury that leads to isolated bladder dysfunction without corticospinal damage, the physician should refer to Chapters 6 (Gastrointestinal System) and 7 (Urology) for obtaining appropriate estimates for bladder dysfunction. These estimates should then be combined with the applicable Diagnostic Related Estimate (DRE) cervical spine category, ranging from DRE I to V as listed in Table 15-5. This combination approach ensures a comprehensive impairment rating that accurately reflects the patient's condition and the impacts on their daily living activities.\n\n**Question 2:** How should a physician determine the neurologic level of involvement for a cervical spine problem?\n\n**Answer 2:** The neurologic level of involvement for cervical spine issues is determined by identifying the lowest normally functioning nerve root. This can be done by referring to Figure 15-5, which illustrates the relationship of nerve roots to the vertebral level. Understanding the level at which nerve roots exit the spine relative to the vertebrae is crucial in accurately determining the neurologic level of involvement and, therefore, in providing an accurate impairment rating.\n\n**Question 3:** In the case of spinal cord injuries involving bilateral upper extremity impairments, which resources or chapters should be reviewed for an accurate impairment rating according to the AMA Guides?\n\n**Answer 3:** For bilateral upper extremity impairments resulting from spinal cord injury, it is recommended to consult Chapter 13, The Central and Peripheral Nervous System, for guidance. Additionally, Table 15-6 should be used to determine the appropriate impairment rating for one or both upper extremities. This case may also require a consultation with a spinal cord injury specialist to ensure a comprehensive and accurate assessment, especially considering the complexity of spinal cord injuries and their impact on bodily functions.\n\n**Question 4:** What is the process for expressing a whole person spine impairment as a regional spine impairment in the AMA Guides?\n\n**Answer 4:** Expressing a whole person spine impairment as a regional spine impairment involves a specific process detailed in Section 15.13 of the AMA Guides. This section outlines how to translate whole person impairment estimates, which are the global assessments of impairment, into focused, region-specific impairment values. This translation is crucial in cases like workers' compensation, where specific regional impairments may need to be precisely quantified for legal or insurance purposes. The section provides clear guidelines for accurately interpreting and applying the whole person impairments to the regional context, ensuring practitioners can provide detailed, legally, and medically relevant assessments.\n\n**Question 5:** When evaluating spinal cord injuries, what changes were made in the current edition of the AMA Guides regarding the rating approach?\n\n**Answer 5:** The current edition of the AMA Guides introduced a significant change in the approach to rating spinal cord injuries. Instead of relying on a combination of DRE categories or solely the nervous system chapter, as in prior editions, the current approach mandates evaluating spinal cord injuries based on criteria specified in the nervous system chapter (Chapter 13). This change underscores the complex nature of spinal cord injuries and the necessity for detailed, nuanced assessments. By focusing the evaluation criteria within the nervous system chapter and emphasizing the use of specific tables like Table 15-6 for upper and lower extremities impairment and additional dysfunctions, the Guides enhance the accuracy and comprehensiveness of spinal cord injury impairment ratings.",
