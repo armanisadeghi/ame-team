@@ -6,6 +6,7 @@ from typing import Dict
 from collections import defaultdict
 from typing import List, Union
 import asyncio
+import pandas as pd
 
 from automation_matrix.processing._dev_simulation import simulate_workflow_after_processing
 from common import vcprint, pretty_print, get_sample_data
@@ -710,6 +711,8 @@ class AiOutput(ProcessingManager):
         if snippets.get('json'):
             return snippets.get('json')
 
+        return []
+
     # Review Needed : Needs to be removed, what I think it's a duplicate of
     # extract_code_snippets
     async def extract_code(self, text: str, *args):
@@ -1024,6 +1027,205 @@ class AiOutput(ProcessingManager):
         return results
 
 
+
+class TableProcessor(AiOutput):
+
+    def get_table_entries_by_query(self, dataframe: pd.DataFrame, query: str):
+        """
+        Search the rows of a DataFrame for the presence of a query.
+        Parameters:
+        - dataframe (pd.DataFrame): The DataFrame to search.
+        - query (str): The query string to search for.
+        Returns:
+        - pd.DataFrame: Filtered DataFrame containing rows where the query is present.
+        """
+
+        filtered_dataframe = dataframe[dataframe.apply(lambda row: any(map(lambda cell: query in str(cell), row)), axis=1)]
+        return filtered_dataframe
+
+    def sort_table_by_column_name(self, tables: List[pd.DataFrame], columns: List[str]) -> List[pd.DataFrame]:
+        """
+        Filter the list of DataFrames to prioritize those with the most column matches.
+
+        Parameters:
+        - tables (List[pd.DataFrame]): The list of DataFrames to filter.
+        - columns (List[str]): The list of column names to match against.
+
+        Returns:
+        - List[pd.DataFrame]: The list of DataFrames sorted by the number of matching columns in descending order.
+        """
+
+        # Function to count matching columns in a DataFrame
+        def count_matches(dataframe: pd.DataFrame, columns: List[str]) -> int:
+            df_columns = self.get_table_columns(dataframe)
+            return sum(1 for col in columns if col in df_columns)
+
+        # Sort tables by the number of column matches
+        sorted_tables = sorted(tables, key=lambda df: count_matches(df, columns), reverse=True)
+
+        return sorted_tables
+
+    def get_table_columns(self, dataframe: pd.DataFrame) -> list:
+        """
+        Retrieve the names of the columns in a DataFrame.
+
+        Parameters:
+        - dataframe (pd.DataFrame): The DataFrame to extract column names from.
+
+        Returns:
+        - list: A list containing the names of the columns.
+        """
+        return list(dataframe.columns)
+
+    def rename_table_columns(self, df: pd.DataFrame, columns: dict) -> list:
+        """
+        Rename the columns of a DataFrame.
+
+        Parameters:
+        - df (pd.DataFrame): The DataFrame whose columns are to be renamed.
+        - columns (dict): A dictionary where keys are the current column names
+                          and values are the new column names.
+
+        Returns:
+        - pd.DataFrame: DataFrame with renamed columns.
+        """
+        renamed_df = df.rename(columns=columns)
+        return renamed_df
+
+    def join_tables(self, tables: list[pd.DataFrame]) -> list[dict]:
+        """
+        Join multiple tables (DataFrames) into a single DataFrame.
+
+        Parameters:
+        - tables (list[pd.DataFrame]): A list of DataFrames to be joined.
+
+        Returns:
+        - pd.DataFrame: DataFrame resulting from joining all tables.
+        """
+        # Concatenate the list of DataFrames along rows (axis=0)
+        merged_df = pd.concat(tables, axis=0, ignore_index=True)
+
+        return merged_df
+
+    def table_to_dataframe(self, table):
+        return pd.DataFrame.from_dict(table)
+
+    def change_table_datatype(self, table: pd.DataFrame, columns: dict) -> pd.DataFrame:
+        """
+        Change the data types of specified columns in a DataFrame.
+
+        :param table: DataFrame table
+        :param columns: Dictionary with column names as keys and desired data types as values
+        :return: DataFrame with updated data types
+        """
+
+        def extract_number(value: str):
+
+            # Remove any character that is not a digit or a decimal point
+            cleaned_value = re.sub(r'[^\d.]', '', value)
+
+            # Convert the cleaned value to float
+
+            extracted_number = float(cleaned_value)
+
+            return extracted_number
+
+
+        for column, dtype in columns.items():
+            if dtype == int:
+                try:
+                    table[column] = table[column].astype(int)
+                except:
+                    table[column] = table[column].apply(lambda x: int(extract_number(x)))
+
+            elif dtype == float:
+                try:
+                    table[column] = table[column].astype(float)
+                except:
+                    table[column] = table[column].apply(lambda x: int(extract_number(x)))
+
+            elif dtype == str:
+                table[column] = table[column].astype(str)
+
+        return table
+
+    def transform_table_data(self, table: pd.DataFrame, formats: list[dict]):
+        """
+        formats : [ {"format" : "json" , "kwargs" : {"orient": "index", "index" = True},
+                    {"format" : "markdown" , "kwargs" : None }
+
+        Please make sure the kwargs are pandas compatible
+
+        File Output tables: Not Implemented
+
+        Graphical Outputs : Not Implemented
+
+        Raw formats (json, dict, markdown):
+        """
+
+        output = defaultdict()
+
+        for format in formats:
+            format_name = format.get('format')
+            kwargs = format.get('kwargs')
+
+            err = False
+
+            if format_name == "json":
+                if kwargs is not None:
+                    try:
+                        resp = table.to_json(**kwargs)
+                    except Exception as e:
+                        err = e
+                        resp = table.to_json()
+                else:
+                    resp = table.to_json()
+
+                output['json'] = {"data": resp, "error": err}
+
+            elif format_name == "dict":
+                if kwargs is not None:
+                    try:
+                        resp = table.to_dict(**kwargs)
+                    except Exception as e:
+                        err = e
+                        resp = table.to_dict()
+                else:
+                    resp = table.to_dict()
+
+                output['dict'] = {"data": resp, "error": err}
+
+            elif format_name == "markdown":
+                if kwargs is not None:
+                    try:
+                        resp = table.to_markdown(**kwargs)
+                    except Exception as e:
+                        err = e
+                        resp = table.to_markdown()
+                else:
+                    resp = table.to_markdown()
+
+                output['markdown'] = {"data": resp, "error": err}
+
+        return output
+
+    async def extract_table_with_search(self, content, query):
+
+        parsed_tables = await self.extract_tables(content)
+        results = []
+        if query is None:
+            return parsed_tables
+
+        for table in parsed_tables:
+            df = pd.DataFrame.from_dict(table)
+            filtered_df = self.get_table_entries_by_query(df, query)
+            if filtered_df.to_dict(orient='records'):
+                results.append(filtered_df.to_dict(orient='records'))
+        return results
+
+class ListProcessor(AiOutput):
+    pass
+
 def print_initial_and_processed_content(processed_content):
     print("========================================== Initial Content ==========================================")
     print(processed_content['value'])
@@ -1096,9 +1298,12 @@ if __name__ == "__main__":
 
 
     #Testing extractors section
-    from automation_matrix.processing.markdown import classifier
+    from automation_matrix.processing.markdown.classifier import OutputClassifier
     sample_api_response = get_sample_data(app_name='automation_matrix', data_name='ama_sample_6',sub_app='ama_ai_output_samples')
-    obj = AiOutput(None)
+    classifiers = OutputClassifier()
+    classified_sections = classifiers.classify_output_details(sample_api_response)
+    pretty_print(classified_sections)
 
-    asyncio.run(obj.extract_nested_markdown_entries(sample_api_response))
+
+
 
