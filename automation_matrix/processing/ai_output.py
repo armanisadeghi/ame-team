@@ -12,7 +12,7 @@ from automation_matrix.processing._dev_simulation import simulate_workflow_after
 from common import vcprint, pretty_print, get_sample_data
 from automation_matrix.processing.markdown.organizer import Markdown
 from automation_matrix.processing.processor import ProcessingManager
-
+from markdown_it import MarkdownIt
 verbose = False
 
 
@@ -1209,7 +1209,7 @@ class TableProcessor(AiOutput):
         return output
 
     async def extract_table_with_search(self, content, query):
-
+        "This function can work directly with markdown"
         parsed_tables = await self.extract_tables(content)
         results = []
         if query is None:
@@ -1223,25 +1223,66 @@ class TableProcessor(AiOutput):
         return results
 
 
+class ListOperations:
+    '''
+    The primary purpose of this class is to target
+    bullet lists and numbered ones
+    '''
+    def __init__(self, content: str):
+        obj = MarkdownIt()
+        self.markdown = content
+        self.html_content = obj.render(content)
+        self.soup = BeautifulSoup(self.html_content, 'html.parser')
 
-class ListProcessors(AiOutput):
+    def parse_list(self, element):
+        items = []
+        for li in element.find_all('li', recursive=False):
+            text = li.get_text()
+            # if '\n\n' in text: # This gets little tricky here
+            #     text = ""
+            if text is not None:
+                text = text.strip()
 
-    async def get_bullet_points_by_query(self, content, query):
-        kwargs = {'sub_type': ['bullet', 'sub_bullet']}
-        resp = await self.extract_from_outline_by_numbers(text=content, **kwargs)
+            item = {'text': text}
 
-        results = []
-        for k , v in resp.items():
-            for items in v:
-                content = items.get('content')
-                if query is None:
-                    results.append(content)
+            nested_list = li.find(['ul', 'ol'])
+            if nested_list:
+                item['children'] = self.parse_list(nested_list)
+                nested_list_heading = nested_list.find_previous_sibling(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
+
+                nested_list_text = None
+                if nested_list_heading is not None:
+                    nested_list_text = nested_list_heading.get_text()
+
+                item['parent_text'] = nested_list_text
+            items.append(item)
+        return items
+
+    def extract_lists(self):
+        soup = self.soup
+        result = []
+        for element in soup.find_all(recursive=False):
+            if element.name in ['ul', 'ol']:
+
+                parent_content = element.find_previous_sibling(['p', 'strong'])
+                parent_text = None
+                if parent_content is not None:
+                    parent_text = parent_content.get_text()
+
+                section_heading = element.find_previous_sibling(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
+
+                section_text = None
+                if section_heading is not None:
+                    section_text = section_heading.get_text()
+
+                resp = self.parse_list(element)
+                if element.name == "ul":
+                    list_type = "bullet"
                 else:
-                    if str(query).lower() in content.lower():
-                        results.append(content)
-        pretty_print(results)
-        return results
-
+                    list_type = "number"
+                result.append(
+                    {'parent_text': parent_text, "type": list_type, "lists": resp, 'section_heading': section_text})
+        return result
 
 
 
@@ -1318,10 +1359,11 @@ if __name__ == "__main__":
 
     #Testing extractors section
     # from automation_matrix.processing.markdown.classifier import OutputClassifier
-    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='sample_9',sub_app='sample_openai_responses')
+    sample_api_response = get_sample_data(app_name='automation_matrix', data_name='sample_10', sub_app='sample_openai_responses')
     # classifiers = OutputClassifier()
     # classified_sections = classifiers.classify_output_details(sample_api_response)
 
-    obj = ListProcessors(None)
-    asyncio.run(obj.get_bullet_points_by_query(sample_api_response, "Advanced"))
+    obj = ListOperations(sample_api_response)
+    pretty_print(obj.extract_lists())
+
 

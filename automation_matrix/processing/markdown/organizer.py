@@ -205,7 +205,7 @@ class Markdown(Processor):
         except IndexError:
             return f"Section number {section_number} is out of range. Please enter a valid section number."
 
-    # METHOD 2: This one gets it as a nested structure so it's very easy to target whatever we want!
+    # METHOD 2: This one gets it as a nested structure, so it's very easy to target whatever we want!
     async def process_markdown(self, text: str, primary_broker_name=None):
         loop = asyncio.get_running_loop()
         if not primary_broker_name:

@@ -707,6 +707,240 @@ sample_9 = """Sure! Here are five blog ideas focusing on learning Next.js and re
 - Encourage readers to explore more advanced use cases and provide links to further resources.
 
 By following this structured guidance, you can create comprehensive, engaging, and informative blog posts that cater to developers at different levels of expertise, helping them master Next.js and related technologies."""
+
+sample_10 = """### Blog Idea 1: Getting Started with Next.js 14: A Comprehensive Guide
+
+**Target Audience:**
+- **Primary:** Beginner to intermediate JavaScript and React developers.
+- **Secondary:** Developers with experience in other frameworks looking to switch to or understand Next.js.
+
+**Content Structure:**
+
+1. **Introduction**
+   - Brief overview of Next.js and its popularity in modern web development.
+   - Highlight the new features and improvements in Next.js 14.
+
+2. **Setting Up the Development Environment**
+   - Required tools and installations (Node.js, npm, VS Code, etc.).
+   - Step-by-step guide to creating a new Next.js 14 project.
+
+3. **Core Concepts and Features**
+   - File-based routing.
+   - Server-side rendering (SSR) and static site generation (SSG).
+   - API routes and middleware.
+   - Built-in CSS and Sass support.
+
+4. **Building Your First Next.js App**
+   - Create a simple blog application.
+   - Implement pages and navigation.
+   - Fetch data using getStaticProps and getServerSideProps.
+
+5. **Advanced Features**
+   - Image optimization.
+   - Incremental Static Regeneration (ISR).
+   - Internationalization (i18n).
+
+6. **Deploying Your Next.js App**
+   - Options for deploying Next.js apps.
+   - Quick deployment on Vercel.
+   
+7. **Conclusion**
+   - Recap of the benefits of using Next.js 14.
+   - Encouragement to explore further and build more complex applications.
+
+**Tips for Amazing Content:**
+- Include plenty of code examples and screenshots.
+- Link to official Next.js documentation for further reading.
+- Share personal insights or experiences to make the guide more relatable.
+
+### Blog Idea 2: Mastering Vercel: Deploy and Scale Your Next.js Apps
+
+**Target Audience:**
+- **Primary:** Frontend developers familiar with Next.js or other React-based frameworks.
+- **Secondary:** Backend developers transitioning to full-stack development.
+
+**Content Structure:**
+
+1. **Introduction to Vercel**
+   - What is Vercel and why it's a preferred choice for deploying Next.js applications.
+   - Brief history and core features of Vercel.
+
+2. **Setting Up Vercel**
+   - Creating an account on Vercel.
+   - Connecting your GitHub/GitLab/Bitbucket repository.
+   - Initial deployment of a Next.js app.
+
+3. **Optimizing for Performance**
+   - Automatic performance optimizations by Vercel.
+   - Understanding Vercel's edge network and CDN.
+
+4. **Advanced Deployment Techniques**
+   - Environment variables and secrets management.
+   - Custom domains and SSL setup.
+   - Integrating with other services (e.g., databases, third-party APIs).
+
+5. **Monitoring and Analytics**
+   - Using Vercel's built-in analytics tools.
+   - Setting up custom logging and monitoring.
+
+6. **Scaling and Serverless Functions**
+   - Introduction to Vercel Functions.
+   - Examples of serverless functions with Next.js API routes.
+   - Scaling considerations and best practices.
+
+7. **Case Studies and Real-World Examples**
+   - Success stories of popular apps deployed on Vercel.
+   - Lessons learned and best practices from the field.
+
+8. **Conclusion**
+   - Recap of key points.
+   - Encouragement to leverage Vercel's capabilities to the fullest.
+
+**Tips for Amazing Content:**
+- Use real-world examples and case studies to illustrate points.
+- Provide detailed, step-by-step instructions with screenshots.
+- Include troubleshooting tips and common pitfalls.
+
+### Blog Idea 3: Exploring the Next.js App Router: Building Dynamic and Scalable Applications
+
+**Target Audience:**
+- **Primary:** Intermediate to advanced Next.js developers.
+- **Secondary:** Developers familiar with React Router or other routing libraries looking to adopt Next.js.
+
+**Content Structure:**
+
+1. **Introduction to the App Router**
+   - Overview of the Next.js App Router.
+   - Key differences between the App Router and traditional file-based routing.
+
+2. **Setting Up a Project with App Router**
+   - Initial project setup and configuration.
+   - Creating dynamic routes using the App Router.
+
+3. **Advanced Routing Techniques**
+   - Nested routes and layouts.
+   - Dynamic route matching and URL parameters.
+   - Route guards and redirects.
+
+4. **Data Fetching with App Router**
+   - Implementing getStaticProps, getServerSideProps, and getInitialProps.
+   - Client-side data fetching and caching strategies.
+
+5. **State Management and Context**
+   - Using React Context with the App Router.
+   - Managing global state across routes.
+
+6. **Optimizing for SEO and Performance**
+   - Techniques for improving SEO with dynamic routing.
+   - Performance considerations and optimizations.
+
+7. **Real-World Examples and Best Practices**
+   - Building a multi-level blog application.
+   - Implementing authentication and user-specific routes.
+
+8. **Conclusion**
+   - Summary of the benefits of using the App Router.
+   - Encouragement to experiment and build complex routing structures.
+
+**Tips for Amazing Content:**
+- Include comprehensive code snippets and examples.
+- Highlight common use cases and scenarios.
+- Provide visual aids like diagrams to explain routing concepts.
+
+### Blog Idea 4: Integrating Next.js with Modern Frontend Technologies: A Hands-On Guide
+
+**Target Audience:**
+- **Primary:** Intermediate to advanced frontend developers.
+- **Secondary:** Full-stack developers interested in enhancing the frontend of their applications.
+
+**Content Structure:**
+
+1. **Introduction**
+   - Overview of modern frontend technologies and their benefits.
+   - Why Next.js is a great choice for integration.
+
+2. **Using TypeScript with Next.js**
+   - Setting up TypeScript in a Next.js project.
+   - Benefits of using TypeScript and common patterns.
+
+3. **Styling with Tailwind CSS**
+   - Integrating Tailwind CSS with Next.js.
+   - Customizing the design and responsive layouts.
+
+4. **State Management with Redux Toolkit**
+   - Setting up Redux Toolkit in a Next.js project.
+   - Managing global state and best practices.
+
+5. **GraphQL Integration**
+   - Setting up Apollo Client with Next.js.
+   - Fetching data from a GraphQL API and managing local state.
+
+6. **Animations with Framer Motion**
+   - Adding Framer Motion to a Next.js project.
+   - Creating complex animations and interactions.
+
+7. **Testing with Jest and React Testing Library**
+   - Setting up testing frameworks.
+   - Writing unit and integration tests for Next.js components.
+
+8. **Conclusion**
+   - Recap of the technologies covered.
+   - Encouragement to continue exploring and integrating new tools.
+
+**Tips for Amazing Content:**
+- Provide detailed setup guides for each technology.
+- Include practical examples and use cases.
+- Share best practices and performance tips.
+
+### Blog Idea 5: Building a Full-Stack Application with Next.js and Prisma
+
+**Target Audience:**
+- **Primary:** Full-stack developers and backend developers transitioning to full-stack.
+- **Secondary:** Frontend developers looking to expand their backend skills.
+
+**Content Structure:**
+
+1. **Introduction**
+   - Overview of full-stack development with Next.js.
+   - Introduction to Prisma and its benefits for database management.
+
+2. **Setting Up the Development Environment**
+   - Tools and installations needed (Node.js, npm, Prisma CLI, etc.).
+   - Creating a new Next.js project and setting up Prisma.
+
+3. **Database Schema and Migrations**
+   - Defining the database schema with Prisma.
+   - Running migrations and seeding the database.
+
+4. **Building the Backend with Next.js API Routes**
+   - Creating API routes for CRUD operations.
+   - Using Prisma Client to interact with the database.
+
+5. **Building the Frontend**
+   - Fetching data from the API routes.
+   - Displaying data in the UI and handling user interactions.
+
+6. **Authentication and Authorization**
+   - Implementing user authentication (e.g., with NextAuth.js).
+   - Managing protected routes and user roles.
+
+7. **Deploying the Application**
+   - Deploying the full-stack application on Vercel.
+   - Setting up environment variables and database connections in production.
+
+8. **Conclusion**
+   - Recap of building a full-stack application with Next.js and Prisma.
+   - Encouragement to expand the application and explore more features.
+
+**Tips for Amazing Content:**
+- Include detailed, step-by-step guides with code examples.
+- Highlight common challenges and how to overcome them.
+- Provide insights into best practices for full-stack development.
+
+---
+
+These blog ideas and structured outlines should provide a solid foundation for writing engaging and informative content that will help developers at various stages of their learning journey with Next.js and related technologies."""
+
 def get_sample_fine_tuning_response():
     data = {
         "value": "**Question 1:** A patient sustains a cervical spine injury resulting in isolated bladder dysfunction but no direct corticospinal damage. Which chapters should be consulted for impairment ratings, and how should these ratings be combined?\n\n**Answer 1:** For a patient with a cervical spine injury that leads to isolated bladder dysfunction without corticospinal damage, the physician should refer to Chapters 6 (Gastrointestinal System) and 7 (Urology) for obtaining appropriate estimates for bladder dysfunction. These estimates should then be combined with the applicable Diagnostic Related Estimate (DRE) cervical spine category, ranging from DRE I to V as listed in Table 15-5. This combination approach ensures a comprehensive impairment rating that accurately reflects the patient's condition and the impacts on their daily living activities.\n\n**Question 2:** How should a physician determine the neurologic level of involvement for a cervical spine problem?\n\n**Answer 2:** The neurologic level of involvement for cervical spine issues is determined by identifying the lowest normally functioning nerve root. This can be done by referring to Figure 15-5, which illustrates the relationship of nerve roots to the vertebral level. Understanding the level at which nerve roots exit the spine relative to the vertebrae is crucial in accurately determining the neurologic level of involvement and, therefore, in providing an accurate impairment rating.\n\n**Question 3:** In the case of spinal cord injuries involving bilateral upper extremity impairments, which resources or chapters should be reviewed for an accurate impairment rating according to the AMA Guides?\n\n**Answer 3:** For bilateral upper extremity impairments resulting from spinal cord injury, it is recommended to consult Chapter 13, The Central and Peripheral Nervous System, for guidance. Additionally, Table 15-6 should be used to determine the appropriate impairment rating for one or both upper extremities. This case may also require a consultation with a spinal cord injury specialist to ensure a comprehensive and accurate assessment, especially considering the complexity of spinal cord injuries and their impact on bodily functions.\n\n**Question 4:** What is the process for expressing a whole person spine impairment as a regional spine impairment in the AMA Guides?\n\n**Answer 4:** Expressing a whole person spine impairment as a regional spine impairment involves a specific process detailed in Section 15.13 of the AMA Guides. This section outlines how to translate whole person impairment estimates, which are the global assessments of impairment, into focused, region-specific impairment values. This translation is crucial in cases like workers' compensation, where specific regional impairments may need to be precisely quantified for legal or insurance purposes. The section provides clear guidelines for accurately interpreting and applying the whole person impairments to the regional context, ensuring practitioners can provide detailed, legally, and medically relevant assessments.\n\n**Question 5:** When evaluating spinal cord injuries, what changes were made in the current edition of the AMA Guides regarding the rating approach?\n\n**Answer 5:** The current edition of the AMA Guides introduced a significant change in the approach to rating spinal cord injuries. Instead of relying on a combination of DRE categories or solely the nervous system chapter, as in prior editions, the current approach mandates evaluating spinal cord injuries based on criteria specified in the nervous system chapter (Chapter 13). This change underscores the complex nature of spinal cord injuries and the necessity for detailed, nuanced assessments. By focusing the evaluation criteria within the nervous system chapter and emphasizing the use of specific tables like Table 15-6 for upper and lower extremities impairment and additional dysfunctions, the Guides enhance the accuracy and comprehensiveness of spinal cord injury impairment ratings.",
