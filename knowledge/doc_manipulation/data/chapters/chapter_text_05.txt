@@ -1,0 +1,261 @@
+================================================================================
+
+Chapter 5:
+-----------------------------------------------------------------
+The Respiratory System
+5.1 Principles of Assessment
+5.2 Symptoms Associated With Respiratory Disease
+5.3 Tobacco Use and Environmental Exposure Associated With Respiratory Disease
+5.4 Examinations, Clinical Studies, and Other Tests for Evaluating Respiratory Disease
+5.5 Asthma
+5.6 Obstructive Sleep Apnea
+5.7 Hypersensitivity Pneumonitis
+5.8 Pneumoconiosis
+5.9 Lung Cancer
+5.10 Permanent Impairment Due to Respiratory Disorders
+5.11 Respiratory Impairment Evaluation Summary
+-------INTRODUCTION START -------
+Introduction
+This chapter provides criteria for evaluating permanent impairment of the respiratory system as it affects overall lung function and the ability to per-
+form the activities of daily living. The respiratory system includes the tracheobronchial tree, pulmonary parenchyma, and ribcage.
+
+The following sections have been revised for the fifth edition: (1) criteria for asthma impairment were updated to incorporate guidelines recently published by the American Thoracic Society (ATS)1; (2) respiratory impairment criteria now incorporate the lower limits of normal2 for forced vital capacity (FVC), forced expiratory volume in the first second (FEV1), and diffusing capacity for carbon monoxide (DCO); and (3) the section on sleep apnea has been updated to reflect current assessment and practice.
+5.1 Principles of Assessment
+Before using the information in this chapter, the Guides user should become familiar with Chapters 1 and 2 and the Glossary. Chapters 1 and 2 discuss the Guides’ purpose, applications, and methods for performing and reporting impairment evaluations. The Glossary provides definitions of common terms used by many specialties in impairment evaluations.
+
+The purpose of respiratory impairment assessment is to determine if a permanent respiratory impairment exists, quantify its severity, assess its impact on the ability to perform activities of daily living, and, if possible, identify the cause of the abnormality and recommend measures to prevent further impairment and ensure optimum function.
+
+An impairment, as stated in Chapter 1, is “a loss, loss of use, or derangement of any body part, organ system, or organ function” (Table 1-1). Not all impairments result in a functional loss or affect the ability to perform activities of daily living. Respiratory impairments that produce a decrement of lung function and affect the ability to perform activities of daily living are assigned an impairment rating. For example, an anatomic change such as a circumscribed pleural plaque would be an impairment based on an abnormality in anatomic structure. However, if there were no abnormality in lung function and no decrease in the ability to perform activities of daily living, the individual would be assigned a 0% impairment rating.
+
+Changes in organ function are the primary criteria for determining the impairment class. To establish the specific impairment percentage, consider both the severity and prognosis of the condition and how the impairment affects the individual’s ability to perform the activities of daily living listed in Table 1-2. Table 5-13 is provided at the end of the chapter to ensure all pertinent information is included in the respiratory assessment.
+-- chars 3395 --
+Begin the evaluation with an inquiry into specific symptoms and their severity, duration, and manner of onset. Since environmental exposure frequently leads to symptomatic complaints, it is important to determine if the individual’s personal habits or surroundings, such as cigarette smoking and workplace exposures, explain or contribute to the symptoms. A thorough history enables the examiner to direct the physical examination to areas of concern and then identify the most useful diagnostic and evaluative studies. For instance, structural and movement disorders of the chest wall or diaphragm found on physical examination would prompt different investigations than an observation of wheezing. Radiographic techniques such as chest roentgenograms or computed tomography (CT) scans help elucidate anatomic abnormalities that are sometimes diagnostic of specific disease processes. To assess impairment, weigh both subjective and objective information derived from thorough history-taking, physical examination, imaging and laboratory studies, and pulmonary function tests. These complementary evaluation techniques enable the examiner to obtain an accurate and thorough view of the impairment’s nature, as well as the individual’s limitations and ability to perform activities of daily living.
+
+5.1 a Interpretation of Symptoms and Signs Symptomatic assessment of individuals with respiratory disease is diagnostically useful, but it provides limited quantitative information and should not serve as the sole criterion upon which to make decisions about impairment. Rather, the examiner should obtain objective data about the extent of the limitation and integrate those findings with the subjective data to estimate the degree of permanent impairment.
+
+5.1 b Description of Clinical Studies Clinical studies used to assess pulmonary impairment include radiographs; other imaging studies, including CT scans and MR images; pulmonary function tests; and exercise testing. Pulmonary function tests are the most useful in assessing functional changes.
+
+5.2 Symptoms Associated With Respiratory Disease
+The major symptoms of pulmonary disease include dyspnea; cough, sputum production, and hemoptysis; wheezing; and chest pain or tightness. The examiner needs to document these symptoms and their course over time, and correlate the symptoms with objective studies to assess their importance and implications. The significance of respiratory symptoms is better understood when integrated with findings from more objective measures such as the physical examination, radiography, lung function, and laboratory studies.
+
+5.2 a Dyspnea
+Dyspnea is the most common symptom noted on initial examination of individuals with any type of pulmonary impairment. Despite its importance, dyspnea is nonspecific; it is often caused by cardiac, hematologic, metabolic, or neurologic disease, or by anxiety or physical deconditioning.
+
+Dyspnea can be evaluated and quantitated using several systems. The most widely used classification system, developed with the ATS, (Table 5-1), is based on the American Thoracic Society/Division of Lung Diseases Respiratory Symptom questionnaire.3 The ATS classification is best used in conjunction with more objective respiratory function measurements. If a disparity is found between subjective complaints of dyspnea and findings on respiratory testing, consider a nonrespiratory dyspnea component.4
+-- chars 3464 --
+5.2
+b Cough, Sputum Production, and Hemoptysis
+Coughing can be an important indicator of respiratory tract disease, although it is difficult to quantify and not easily measured. Document its presence or absence, whether it is productive or nonproductive of sputum, its relationship to work or other activities, its duration, its association with hemoptysis, and whether further investigation is warranted.
+
+An acute, self-limited cough is most commonly due to infection or irritation. A subacute or recurrent, nonproductive cough may be a manifestation of asthma and should be investigated with pulmonary function testing. A chronic, productive cough may indicate bronchitis. According to ATS criteria, the term chronic bronchitis may be used to describe a sputum-producing cough that occurs on most days for at least 3 consecutive months a year for at least 2 consecutive years.4
+
+Hemoptysis frequently accompanies bronchitis and pneumonia, usually as blood-streaked sputum.
+Serious conditions that often manifest with hemoptysis include bronchogenic carcinoma, pulmonary emboli, bronchiectasis, tuberculosis, aspergilloma, and arteriovenous malformations. At a minimum, hemoptysis requires radiologic evaluation that may uncover respiratory or other impairment-producing types of diseases.
+
+5.2 c Wheezing
+Subjects with partial airway obstruction often report high-pitched, musical sounds, or wheezing. These sounds can be generated at any point along the respiratory tract from the glottis to the bronchioles.
+Inspiratory wheezing, or stridor, suggests laryngeal disease; expiratory wheezing indicates bronchospasm or localized bronchial narrowing.
+Information about seasonal wheezing is also diagnostically significant. Wheezing and/or cough occurring primarily in the workplace or having a definite temporal relationship to work suggests occupational asthma; wheezing that follows several minutes of exercise suggests exercise-induced asthma; and wheezing that usually accompanies respiratory tract infections is classified as asthmatic bronchitis. While these different varieties of asthma are commonly described as separate entities, there is substantial overlap among the syndromes. This is due to the underlying commonalities of airway hyperresponsiveness in all types of asthma.
+
+5.2 d Thoracic Cage Abnormalities
+Osseous spine abnormalities may produce respiratory impairment due to mechanical factors involving the size of the chest cavity and restriction of rib motion. Kyphoscoliosis, the most common of these abnormalities, is characterized by curvature of the vertebral column from side to side in the frontal plane (scoliosis) and from the dorsal to the ventral aspect of the sagittal plane (kyphosis). The Cobb method is the most common measurement tool for curvature severity. With this method, posteroanterior and lateral spinal radiographs measure the curvature angles. Only severe curvature angles—that is, Cobb angles that are greater than 100°—are likely to lead to respiratory failure. Even when there are severe spinal deformities, respiratory decompensation usually does not occur until middle age or later.
+-- chars 3166 --
+With severe spinal abnormalities, respiratory compromise is produced by the combined effects of restricted lung volume, decreased cross-sectional area of the vascular bed, and age-related decrease in chest wall compliance. Progressive stiffness of the chest wall with advancing age increases the work of breathing and leads to hypoventilation, which produces hypoxia and hypercapnia. Hypoxia is a powerful pulmonary vasoconstrictor and further decreases the vascular cross-sectional area, eventually leading to cor pulmonale. Judge the severity of respiratory impairment on the criteria described in the sections on forced respiratory maneuvers (5.4d), diffusing capacity for carbon monoxide (5.4e), and the criteria for rating impairment due to respiratory disease (5.4g) in this chapter.
+
+5.3 Tobacco Use and Environmental Exposure Associated With Respiratory Disease
+5.3 a Tobacco Use
+Exposure to tobacco smoke is a common cause of respiratory impairment. Although susceptibility to the adverse effects of cigarette smoke varies, there is a discernible dose-response relationship. The examiner
+
+should ask the individual’s current age; the age at which he or she started smoking; the average number of packs smoked per day if the smoking has continued; and, if the person quit smoking at any time, the age and date he or she quit smoking.
+
+Multiply the number of years of smoking by the number of packs smoked per day to produce the standard measure of pack-years of cigarette smoking. Use this information to assess the impact of personal habits on respiratory impairment. Cigarette smoking is the most frequent causative factor in the development of chronic bronchitis, emphysema, and lung cancer, and it can exacerbate asthma. Chronic exposure to environmental tobacco smoke may also be a factor in the origin of lung cancer, and it can also exacerbate asthma. Smoking cessation should be noted since it often benefits respiratory status.
+Although the anatomic abnormalities of emphysema are irreversible, both bronchospasm and productive cough can be favorably affected by the discontinuation of cigarette use. In addition, risk of bronchogenic carcinoma decreases progressively in the first 10 to 15 years after quitting smoking. After that time, the risk stabilizes at a point slightly higher than that of someone who has never smoked.5
+
+5.3 b Environmental Exposure Environmental exposures in the workplace often are cited as causative or contributory factors in the development of respiratory impairment. It is impor-
+tant to obtain a complete occupational history from the individual to evaluate the possible effect of these exposures. A chief component of the history contains a chronological description of work activities beginning with the first year of employment and includes names of employers, the specific types of work performed, the materials used by the person, and the potentially toxic materials present in the workplace. Employers are required to maintain a list (made available to the employee and the treating physician in the form of Material Safety Data Sheets) of potentially toxic materials used in the workplace, their chemical descriptions, and their physical and health hazards. This information can be quite helpful to the examiner to direct the diagnostic and evaluative process. To assess its significance, ask the individual to estimate the frequency and intensity of exposure to each substance, as well as information about the use of respiratory protective devices.
+-- chars 3539 --
+Respiratory injuries in the workplace can occur in several different patterns, depending on the nature of the inhaled material and the circumstances of exposure. Acute lung injury may be the result of inhalation of a highly irritative gas, fume, mist, or vapor that results in noncardiogenic pulmonary edema or acute respiratory distress syndrome. If the individual survives the acute lung injury, the healing process may produce diffuse pulmonary fibrosis or obliterative bronchiolitis, which may lead to functional impairment. Depending on the nature, duration, and intensity of exposure, inhalation of irritative substances can cause subsequent persistent problems such as chronic bronchitis and airway hyperreactivity. Allergic pulmonary reactions can result from inhalation of organic material or certain types of reactive chemical molecules, causing asthma or hypersensitivity pneumonitis. Inhalation of fibrogenic dust can cause pneumoconiosis over a prolonged period. Workplace exposures can also exacerbate underlying conditions such as asthma, chronic bronchitis, or emphysema.
+
+In addition to information on workplace exposure, inquire about home and environmental exposure (including hobbies or leisure time activities) to organic and inorganic agents such as allergens, bioaerosols, paints, glues, or pesticides. In the home, exposure to pets and use of cool-mist vaporizers, humidifiers, and indoor hot tubs also may be associated with respiratory disease.
+
+5.4 Examinations, Clinical Studies, and Other Tests for Evaluating Respiratory Disease
+5.4 a Physical Examination
+Although a thorough physical examination is mandatory to reach valid conclusions about an individual’s impairment, certain portions of the examination are particularly pertinent in evaluating the respiratory system. Observe and record respiratory rate, use of accessory muscles, and body habitus. Noisy breath sounds are a physical finding that may indicate
+
+airflow obstruction. A breathing pattern characterized by pursed lip breathing during expiration suggests chronic obstructive pulmonary disease (COPD). Inspect the thoracic cage for vertebral or rib cage deformity and movement of the ribs with inspiration and expiration. A barrel-shaped chest may indicate hyperinflation. Percuss the chest to ascertain hyperresonance or consolidation and assess diaphragmatic motion.
+
+Chest auscultation detects decreased breath sounds, crackles, wheezes, or rhonchi. Describe the intensity, quality, and location of these, as well as whether they are heard during inspiration, expiration, or both.
+Inspiratory crackles, heard in two thirds of people with chronic interstitial lung disease, may be associated with restrictive respiratory impairment. Wheezes and rhonchi are indicative of bronchial abnormalities and are often accompanied by obstructive airway disease. Auscultate during both quiet breathing and forced expiration before excluding wheezing.
+Diffuse, bilateral, expiratory wheezing indicates generalized bronchospasm, while unilateral or localized wheezing may be caused by partial bronchial obstruction due to an endobronchial tumor or mucus plugging. Early inspiratory crackles or opening snaps may be heard in diseases of airflow obstruction and particularly in bronchiolitis obliterans.
+-- chars 3307 --
+Cyanosis, indicated by a bluish tint of the lips and nail beds, is a striking but unreliable indicator of severe pulmonary impairment. Poor lighting in the examination room, anemia, and skin pigmentation can interfere with assessment of severity. Suspicion of cyanosis calls for pulse oximetry or arterial blood gas analysis.
+
+Digital clubbing is characterized by loss of the angle at the junction of the cuticle and the nail, softening of the nail bed, increased curvature of the nails, and widening of the distal portions of the fingers and toes. Chest diseases associated with clubbing include pulmonary fibrosis, bronchiectasis, bronchogenic carcinoma, pleural tumors, lung abscess, empyema, and cyanotic congenital heart disease.
+
+5.4 b Chest Roentgenograms
+The initial radiographic examination should include posteroanterior and lateral views of the chest taken in full inspiration. Chest radiographic findings often correlate poorly with physiologic findings in diseases with airflow limitation, such as asthma and emphysema. Chronic radiographic abnormalities of the chest may be classified as parenchymal, bronchovascular, cardiovascular, pleural, or osseous. Mediastinal or tracheal changes may be observed. Terms used to describe parenchymal changes can be classified as hyperinflation, fibrosis, cavitary, or cystic.
+
+Hyperinflation is characteristic of airway obstruction. Radiographic findings of hyperinflation are seen in airway obstruction, while volume restriction is associated with fibrosis, loss of chest wall compliance, or severe neuromuscular weakness. Severe chronic obstructive pulmonary disease is manifested radiographically by diaphragm flattening, attenuation of pulmonary vasculature within the parenchyma, increased anteroposterior diameter of the chest, and increased retrosternal air space. An individual with an acute asthmatic attack can have radiographic evidence of hyperinflation without parenchymal vascular attenuation; when the asthmatic attack dissipates, the radiographic appearance reverts to normal.
+
+Diffuse fibrotic changes in the pulmonary parenchyma may appear linear (streaky) and/or nodular (rounded). Specific diagnostic information is obtained by noting both the type and the predominant location of fibrotic changes and whether they are focal or diffuse. For example, silicosis is manifested by nodular opacities that predominate in the upper portions of the chest, while asbestosis is manifested by linear opacities that typically are most marked in lower portions of the lungs. Pleural changes such as pleural plaques may also be present in individuals with asbestosis or may be the sole manifestation of past asbestos exposure.
+
+The International Labor Organization (ILO) adopted a standardized method of classifying radiographic abnormalities associated with fibrotic changes caused by pneumoconiosis.6 The National Institute for Occupational Safety and Health (NIOSH) regularly administers a course and examination to certify knowledge and proficiency in the use of this method. Information on courses and programs can be obtained from the NIOSH Division of Respiratory Disease Studies, Morgantown, WVa, or by calling 800 35-NIOSH.
+-- chars 3203 --
+Evidence of cardiovascular abnormalities associated with chronic pulmonary disease is suggested when chest films show evidence of pulmonary hypertension and/or cor pulmonale. Pulmonary hypertension is indicated by enlargement of pulmonary arteries in the hila and rapid tapering of the peripheral vessels. Cor pulmonale presents as an enlargement of the right ventricle and the radiographic indicators of pulmonary hypertension. The presence of pulmonary hypertension and/or cor pulmonale and the severity of those processes may need to be confirmed by additional clinical and laboratory tests.
+
+5.4c Computed Tomography
+Computed tomography (CT) and high-resolution computed tomography (HRCT) are radiographic techniques than can augment the standard chest radiograph and are more sensitive in evaluating certain pulmonary diseases such as asbestosis. Conventional CT is obtained using 10-mm-thick slices through various lung fields. This technique is good for evaluating nodules with high radiographic attenuation.
+The HRCT, which consists of 1to 2-mm thick slices every 10 mm, is useful for evaluating changes with low radiographic attenuation such as early interstitial lung disease. The standard CT and/or HRCT can provide greater accuracy as part of a thorough assessment of the pulmonary parenchyma. It should be noted that, in general, the HRCT delivers significantly less whole body effective dose radiation than the standard CT.
+
+With regard to airway disease, HRCT can detect early changes in the lung consistent with focal emphysema; regional air trapping associated with small airway disease, such as obliterative bronchiolitis; and large airway abnormalities, such as bronchiectasis. For example, air trapping of the type seen with obliterative bronchiolitis is best demonstrated by comparing full inspiratory and full expiratory scans. Prone and supine position scans also are helpful in distinguishing hydrostatic changes related to blood volume that are transient and can occur in the dependent position of the lungs from fixed parenchymal abnormalities.7,8
+
+5.4d Forced Expiratory Maneuvers (Simple Spirometry)
+Pulmonary function tests, performed on standardized equipment with validated administration techniques, provide the framework for evaluation of respiratory system impairment. Spirometric testing equipment, calibration, and administration techniques must conform to the guidelines of the 1994 ATS Statement on Standardization of Spirometry.9–15
+
+If tolerated by the individual, remove pulmonary medications up to 24 hours before spirometry or methacholine challenge testing to assess pulmonary function without the effects of medication.
+
+Forced expiratory maneuver measurements are made from at least three acceptable spirometric tracings that demonstrate uniformity pertaining to both the
+
+expiratory flow pattern and concordance of at least two of the test results within 5% of each other.
+Measurements include the following: forced vital capacity (FVC), forced expiratory volume in the first second (FEV1), and the ratio of these measurements (FEV1/FVC). Use the tracings with the highest FVC and FEV1 to calculate the FEV1/FVC ratio, even if these measurements occur on different expiratory efforts.12-14,16
+-- chars 3261 --
+Repeat spirometry after bronchodilator administration if FEV1/FVC is below 0.70 or if there is wheezing on physical examination. Use the spirogram indicating the best effort, before or after administration of a bronchodilator, to determine FVC and FEV1 for impairment assessment. Postbronchodilator FEV1 and FVC are important in understanding potential medication responsiveness and prognosis.12,14,17,18
+
+IC = inspiratory capacity; VC = vital capacity; TLC = total lung capacity; RV = residual volume; ERV = expiratory reserve volume.
+
+To use pulmonary function measures, obtain measurements of the FVC, FEV, and DCO and compare these to the predicted normal values as presented in Tables 5-2a through 5-7a. For the average or mean predicted normal value, find the individual’s age in the left-hand column and height along the top row; the predicted value lies at the intersection of the appropriate row and column. In addition, identify the lower limit of normal for the measure of interest by using Tables 5-2b through 5-7b. The lower limit of normal has been calculated based upon the standard convention of the lower limit of normal lying at the fifth percentile, below the upper 95% of the reference population, according to recommendations from the ATS.13,14 The lower limits of normal are used to distinguish between class 1 and class 2 respiratory impairment in Table 5-12.
+
+North American whites have larger spirometric values for a given age, height, and gender than North American blacks, with a similar tendency noted for Hispanics, Native Americans, and Asians. Population values of normal lung function have been identified for blacks. The ATS Task Force for Interpretation of Pulmonary Function recommends an adjustment on a population basis for predicted lung function in blacks. Multiply values for predicted normal FVC (Tables
+5-2a and 5-3a) by 0.88; for predicted normal FEV1 (Tables 5-4a and 5-5a) by 0.88; and for normal single-breath DCO (Tables 5-6a and 5-7a) by 0.93. In cases where the correction value may not apply, the examiner may choose not to use this correction and instead may provide an explanation why it is inappropriate. Reliable population data are not yet available for other ethnic groups, such as Hispanics, Native Americans, and Asians. For these ethnic groups, the values for North American whites may be used.16,19–21
+
+The FEV1/FVC ratio helps diagnose obstructive airway disease. However, according to the most recent ATS statement on pulmonary function testing interpretation, the absolute volume or the percentage of predicted value of FEV1 is the primary parameter for assessing severity of obstruction, although the FEV1/FVC may be helpful.13 Rather, judge severity on the absolute value or the percentage of predicted value of FEV1.
+
+5.4e Diffusing Capacity for Carbon Monoxide (DCO)
+Use single-breath DCO to evaluate all levels of impairment. The single-breath DCO testing method is described in a 1995 ATS statement.14,22 The DCO
+-- chars 3004 --
+measurement provides information about gas transfer efficiency across the lungs.23 Several physiologic factors affect the gas transfer process, including alveolar-capillary membrane thickness, available gas exchange surface area, gas solubility, pulmonary capillary blood volume, hematocrit, test gas concentration gradient across the alveolar-capillary membrane, and hemoglobin-binding site availability.
+
+Mechanical factors that affect DCO results include test gas inhalation speed, inspiration depth, period of breath holding, and expiration speed. While mechanical factors generally are controlled by DCO test automation, extrapulmonary factors are important to ascertain proper interpretation. For example, cigarette smoking can elevate the blood’s carbon monoxide levels, causing as much as 10% to 12% hemoglobin saturation and decreasing DCO. Instruct the individual not to smoke for at least 8 hours before the test.
+
+See Tables 5-6a and 5-7a for reference values for population-based predicted normal diffusing capacity. Use these tables in a manner similar to the spirometry tables. A laboratory that tests DCO under conditions or with procedures different than that recommended by the ATS should either develop and verify its own prediction equations or use an accepted and verified equation.
+
+See Table 5-12 for classification of respiratory impairment based on the testing results of FVC, FEV1, FEV1/FVC, and DCO. Also consider the possible contribution of extrapulmonary factors to respiratory system impairment. For example, morbid obesity may decrease FVC, and anemia may decrease DCO. Evaluate other organ system impairments according to the criteria given in other Guides chapters and combine those impairment ratings with the respiratory system impairment rating (see the Combined Values Chart, p. 604).
+
+Table 5-7b Predicted Lower Limit of Normal Diffusing Capacity for Carbon Monoxide (DCO) for Women*
+
+5.4f Cardiopulmonary Exercise Testing Cardiopulmonary exercise testing is sometimes useful in assessing whether an individual’s complaint of dyspnea (see Table 5-1) is a result of respiratory or other conditions. A person’s cardiac and conditioning status must be considered in performing the test and in interpreting the results.
+
+The cardiopulmonary exercise gas-exchange measurement can be an additional means of assessing the severity and cause of exercise intolerance.
+Simultaneous measurement of carbon dioxide (CO2) production, minute ventilation, and heart rate allows determination of whether exercise capacity limitation is due to cardiac, pulmonary, or coexisting impairments. When properly performed and interpreted, these tests can help differentiate pulmonary impairment from cardiac impairment or physical deconditioning effects.24
+
+Exercise capacity is measured by oxygen consumption per unit time (V?O2) in milliliters per kilogram multiplied by minutes (mL/[kg•min]) or in metabolic equivalents (METS), a unit of expended energy equal to 3.5 mL/(kg•min) oxygen consumption. MET is discussed in Chapter 3 in the sections on the heart and aorta. Generally, an individual can sustain a work level equal to 40% of his or her measured maximum V?O2 for an 8-hour period.25 Table 5-8 shows the relationship between work intensity and oxygen consumption.
+-- chars 3299 --
+Use cardiopulmonary exercise testing judiciously since these studies can be difficult to perform, are more expensive, and are sometimes more invasive than conventional tests. Ordinarily, exercise capacity measurements are not used to study individuals with normal results on routine pulmonary function tests. However, they can be helpful when the results of pulmonary function tests do not correlate with the
+
+individual’s symptoms or when additional information is needed to clarify the nature and severity of an impairment.27 Do not use exercise capacity measurements to study individuals with medical contraindications such as unstable cardiac disease.
+
+Arterial Blood Gas Analysis
+Because of its invasive nature, use arterial blood gas analysis only when necessary to evaluate pulmonary impairment. Arterial blood gas analysis results may be outside the normal range for reasons other than pulmonary disease. For most individuals with obstructive lung disease, exercise capacity correlates better with FEV1 than arterial partial pressure of oxygen (PO2). For purposes of evaluating permanent impairment, hypoxia must be measured on two separate occasions at least 4 weeks apart.
+
+Pulse oximetry, which is less invasive than arterial blood gas, often provides an adequate estimate of hypoxia. Arterial blood gases, although more invasive, provide a more accurate measurement of hypoxia. Physicians should use their clinical judgment as to which measurement is needed, based on individual assessment.
+
+An arterial blood gas determination may indicate the presence of severe impairment even when a person’s condition is stable and he or she is receiving optimal therapy. An arterial PO2 of less than 55 mm Hg is evidence of severe impairment when an individual is examined at rest while breathing room air at sea level. Severe impairment may also be diagnosed with an arterial PO2 of less than 60 mm Hg if the person also has one or more of the following conditions: pulmonary hypertension, cor pulmonale, increasingly severe hypoxia during exercise testing, or erythrocytosis.
+
+5.4g Criteria for Rating Impairment Due to Respiratory Disease
+Table 5-12 presents criteria for estimating the permanent impairment rating for different respiratory conditions, discussed below. Perform spirometry and DCO on each person being evaluated.3 V?O2max may provide additional information in selected individuals when indicated. The person must meet all of the listed criteria except for V?O2max in order to be considered nonimpaired. At least one of the listed criteria must be fulfilled to place an individual in any class with an impairment rating. As discussed in Chapter 1, in individuals where the preinjury or preillness values differ from the population-listed values, the examiner
+
+may depart from the population-listed normal values for determining an impairment rating, using the preinjury and preillness “normal” value, and explain the reason for the departure.
+
+5.5  Asthma
+Asthma is an airway inflammatory disease characterized by episodic and variable airflow limitation and airway hyperresponsiveness. A diagnosis of asthma requires relevant symptoms (eg, cough, sputum, wheeze, chest tightness, or breathlessness) and either evidence of airflow obstruction that is partially or completely reversible (either spontaneously or after treatment) or airway reactivity to methacholine or histamine in the absence of airflow limitation.10
+-- chars 3458 --
+Variable airflow obstruction can be detected with pulmonary function testing, which shows a reversible obstructive airway pattern. Airway hyperresponsiveness is detected by bronchial challenge testing with methacholine or histamine.28 Airway hyperresponsiveness is defined as a positive methacholine or histamine challenge, as reflected by a decrease in FEV1 of 20% (PC20) from baseline, upon provocation with less than or equal to 8 mg/mL of methacholine or histamine using the tidal breathing method or its equivalent.1,18 The results from methacholine testing should be expressed as the provocation concentration to cause a fall in FEV1 of 20% (PC20).
+While different varieties of asthma exist, they all share an underlying commonality of airway hyperresponsiveness. Occupational asthma represents a special subset of asthma subjects. This abnormality has now surpassed pneumoconiosis as the most commonly reported occupational lung disease linked to a particular occupational environment or agent. Besides directly causing occupational asthma, work exposures can acutely exacerbate an underlying asthmatic condition, which can subsequently return to preexposure baseline status with removal from exposure. Work exposures can also cause a more permanent change in an underlying asthmatic condition, which can persist even after removal from exposure. If an individual’s asthma is worsening at work, it is important to remove the individual from exposure or, at a minimum, reduce exposure and reevaluate his or her condition when it has
+
+stabilized. Although prevention is optimal, medication can substantially modify symptoms and the clinical course of asthma.
+
+Occupational asthma can be caused by sensitizers or irritants. Sensitizers are classified as either high molecular weight or low molecular weight. High-molecularweight sensitizers of animal or plant origin include animal dander or grain dust. Low-molecular-weight sensitizers, typically organic or inorganic chemicals, include diisocyanates. Sensitizers generally require a latency period for the development of immunologic responsiveness. This latency period may last from a few weeks to several years after first exposure.29
+
+In the case of sensitizer-induced asthma (such as toluene diisocyanate or latex), there is a potential for severe exacerbation or fatality upon reexposure.
+Although many individuals with occupational asthma improve after removal from exposure to either low-molecular-weight or high-molecularweight sensitizers, more than half fail to recover completely, even after 2 or more years since the last exposure. Those who are sensitized to occupational agents ideally should discontinue further exposure. Both the individual and his or her physician need to monitor the course of asthmatic symptoms, especially if ongoing exposure occurs. Many can be identified as having a particular type of asthma. For those who have allergic asthma, exercise-induced and irritant-induced components may be identified as well.
+-- chars 3001 --
+Irritant-induced asthma, known as reactive airways dysfunction syndrome (RADS), may result from a single high-level exposure to a highly irritating gas, fume, mist, or vapor. The diagnosis of RADS requires (1) inhalation exposure to an acutely irritating concentration of a substance, (2) onset of symptoms (cough, wheezing cough, or dyspnea) within 24 hours after exposure with persistent respiratory symptoms, and (3) functional abnormalities (airway hyperresponsiveness) for more than 3 months, with no preexisting respiratory disease.30
+
+Irritant-induced asthma often improves with time; some people may resume their former employment. However, some individuals experience persistent respiratory impairment. Individual assessment is important because reducing the degree and duration of exposure may control symptoms in some people, but complete removal from exposure may be necessary to control symptoms in others.
+
+Occupational and nonoccupational asthma impairment evaluations follow the same guidelines. Both require a thorough review of current occupational and home environments and the likelihood of similar exposures in subsequent workplaces. When assessing impairment due to asthma, information is needed from both clinical and physiologic parameters. The AMA recommends that the examiner follow ATS guidelines when assessing asthma impairment and include measurements of pulmonary mechanics, airway hyperresponsiveness, and medication requirements.1 Table 5-9 lists the criteria for impairment evaluation for asthma severity. The examiner evaluates the indices listed, including the minimum medication needed to control the individual’s asthma.
+
+Before performing an impairment rating for asthma, the examiner needs to determine that the pattern of asthma is clinically stable and well treated, based upon fulfilling the objectives of treatment as detailed by the expert panel report of the National Asthma Education Program.18,31 The objectives of treatment are: (1) to achieve control or the best overall results (least symptoms, least need for ß-adrenergic agonists when taken only if required, best expiratory flow rates, least diurnal variation of flow rates, and least side effects from medication); (2) to use the minimum amount of medication to maintain control or the best overall results; and (3) to treat exacerbations early to prevent them from becoming severe.
+
+In 1993, the ATS developed guidelines for the evaluation of impairment and/or disability in individuals with asthma.1 According to the ATS statement, asthma necessitated special guidelines because of its distinct features, including: (1) variable airflow obstruction and change in clinical status over time;
+(2) partial or complete reversibility of airflow obstruction with therapy; (3) nonspecific airway hyperresponsiveness to irritants such as dusts, gases, fumes, or smoke; and (4) sensitization to occupational agents producing airway inflammation that with repeated exposure may become chronic and irreversible.
+-- chars 3008 --
+In assessing an individual with suspected asthma, if the prebronchodilator FEV1 is above the lower limit of normal, use methacholine challenge to assess airway responsiveness. The degree of airway hyperresponsiveness and scoring are illustrated in Table
+5-9. If the prebronchodilator FEV1 is below the lower limit of normal, the degree of reversibility is assessed with inhaled bronchodilators (see Table 5-9 for scoring).
+
+To perform the evaluation at a state of maximal medical improvement, choose the optimal drug treatment to minimize symptoms. The type and extent of necessary medication is one measure of impairment severity (see Table 5-9 for scoring). Use of medication, as a score for impairment, is only used in individuals who have a diagnosis of asthma.
+
+The scores for postbronchodilator FEV1, reversibility of FEV1 (or PC20), and medication use are added to obtain a summary score for respiratory impairment (see Table 5-10). ATS criteria do not assign impairment percentages. If an impairment percentage is needed, refer to Table 5-10, which assigns impairment classes and percentages to an asthma score. The authors of this chapter have assigned these impairment percentages according to the ATS criteria, based on their clinical judgment. In determining the percent impairment for a particular class, the examiner needs to consider how the person’s asthma affects the ability to perform activities of daily living.
+
+†When FEV1 is greater than the lower limit of normal, PC20 should be determined and used for rating of impairment; when FEV1 is less than 70% of the predicted, the degree of reversibility should be used; and when FEV1 is between 70% of the predicted and the lower limit of normal, either reversibility or PC20 can be used. The score for minimum medication use is added to the appropriate measurement criteria outlined above.
+
+‡Need for minimum medication should be demonstrated by the treating physician, for example, through previous records of exacerbation when medications have been reduced. Adapted from ATS guidelines.1
+
+5.6 Obstructive Sleep Apnea
+Individuals with obstructive sleep apnea experience intermittent, repetitive occlusions of the upper airway during sleep, when the pharyngeal muscles are relaxed. These occlusion periods produce airflow cessation at the nose and mouth that leads to progressive hypoxia, which then causes arousal from sleep. The affected person awakens briefly and reestablishes airway patency, resuming airflow with a loud snore or snorting sound. Because of recurrent awakenings during the night, there is disrupted sleep architecture, without restful sleep. Symptoms of sleep apnea include a history of loud snoring, unsatisfactory sleep pattern, daytime somnolence, cognitive dysfunction, and hypertension. Between 60% and 90% are obese and may have a large neck circumference. When the disorder is severe, erythrocytosis, pulmonary hypertension, and cor pulmonale may result.
+
+Even if total occlusion of the upper airway does not occur during sleep, partial obstruction can lead to significant reduction in airflow and produce obstructive hypopnea, which causes oxyhemoglobin saturation reduction and similar clinical and physiologic abnormalities as seen in obstructive sleep apnea.
+-- chars 3280 --
+A variant of obstructive sleep apnea is the obesity hypoventilation syndrome. The weight of the chest wall in morbidly obese individuals may limit respiratory movements during sleep and wakefulness. As a result, both hypoxia and hypercapnia persist throughout the day as well as during sleep. The same physiologic consequences occur in these individuals as in those with obstructive sleep apnea. In fact, obstructive sleep apnea and obesity hypoventilation syndrome may coexist in the same person.
+
+People affected by obstructive sleep apnea are at significantly increased risk of being involved in motor vehicle collisions. Severe daytime somnolence may prevent them from functioning adequately. Subtle changes in neuropsychological function include memory abnormalities and worsened motor coordination and mood that may affect the person’s daily life.
+
+A diagnosis of obstructive sleep apnea is confirmed by nocturnal polysomnography in an accredited sleep laboratory. Once the diagnosis has been established, prescribe continuous positive airway pressure (CPAP) through a nasal device for use during sleep to maintain upper airway patency. Weight loss is the most effective means of long-term management and a possible cure for obstructive sleep apnea if a lower body mass index can be maintained.32
+
+Grading obstructive sleep apnea severity depends on the number of apnea/hypopnea episodes observed in polysomnography and the severity of hypoxia caused by these episodes. There are no standard, welldocumented criteria for determining the level of impairment based on the results of polysomnography. For purposes of impairment rating as discussed in this chapter, refer to the judgment of a sleep specialist.
+
+5.7 Hypersensitivity Pneumonitis
+
+Hypersensitivity pneumonitis, also known as extrinsic allergic alveolitis, is a granulomatous interstitial and bronchiolar lung disease caused by immune sensitization to organic dusts and some low-molecularweight chemical antigens. A wide variety of antigenic substances are known to cause this disease. The acute disease is characterized by the onset of respiratory and constitutional symptoms beginning
+4 to 8 hours after exposure to the offending material. Symptoms include chest tightness, cough, dyspnea, fever, chills, malaise, and myalgias. Pulmonary function tests in the acute phase of the disease show volume restriction and decreased diffusing capacity.
+Hypoxia may be demonstrated by pulse oximetry or arterial blood gas testing. Chest radiographs may be normal but often show diffuse micronodular changes in the pulmonary parenchyma. When the person is removed from exposure, the symptoms, physiologic changes, and chest radiographic abnormalities begin to resolve within 1 to 2 days, although they may take 4 to 6 weeks for complete resolution.
+
+In the subacute and chronic presentations of hypersensitivity pneumonitis, the predominant symptoms include exertional dyspnea and cough; some report sputum production, anorexia, fatigue, and weight loss. Pulmonary function studies often show mixed restriction and obstruction with isolated obstructive changes in some individuals. With repeated exposures, pulmonary fibrotic changes may occur as the abnormalities become chronic and irreversible.33
+-- chars 3279 --
+Permanently restrict individuals with hypersensitivity pneumonitis from exposure to the sensitizing agent. If pulmonary fibrosis has not supervened, normal pulmonary function may be reestablished.
+However, the onset of pulmonary fibrosis is likely to produce respiratory impairment and may limit other types of employment. Once the acute episode has resolved and the condition is stable, the examiner may rate the degree of permanent impairment according to the criteria given in Table 5-12.
+
+Asthma, pneumoconiosis, and hypersensitivity pneumonitis may require that the person refrain from working in a specific occupational setting where he or she is exposed to the offending agent. If reassigned where no ongoing exposure occurs, the individual may not have a permanent respiratory impairment.
+
+5.9 Lung Cancer
+All persons with lung cancer are severely impaired at diagnosis. At reevaluation 1 year after the diagnosis is established, if the person is found to be free of all evidence of tumor recurrence, then he or she is evaluated according to criteria listed in Table 5-12. If there is still evidence of tumor, the he or she is considered to be severely impaired (class 4 impairment); if the tumor recurs, the person will also be considered to be severely impaired (class 4 impairment).
+Table 5-11 (the Karnofsky scale), specifically developed to describe the capabilities of individuals with cancer, may be used to further describe the capabilities of a person with lung cancer and enable categorization within a particular class.
+
+5.8 Pneumoconiosis
+Pneumoconiosis is a term used to describe diseases resulting from the inhalation of mineral dusts such as silica, coal, and asbestos, and metals such as cobalt and beryllium. The radiologic and pathologic patterns of pneumoconiosis from these dusts are usually quite distinct and beyond the scope of this chapter.
+Latency between exposure to these dusts and development of disease varies, but disease can occur anywhere from 10 up to 30 years after initial exposure.34
+
+The severity of impairment related to pneumoconiosis depends on the characteristics of the specific dust inhaled, the dust burden retained in the lungs, the susceptibility of the individual, and the length of time since first exposure. Under some circumstances, the parenchymal changes on chest radiograph may be progressive even after removal from exposure and may or may not be associated with physiologic impairment. Persons who develop pneumoconiosis should limit further exposure to the offending agent, particularly if radiographic changes have occurred at a relatively young age or if there is associated physiologic impairment. However, these individuals may be capable of working at other jobs where the offending dust is not present. See Table 5-12 for criteria for assessment of impairment due to pneumoconiosis.
+
+Adapted from Moossa et al.35
+
+5.10 Permanent
+Impairment Due to Respiratory Disorders
+Table 5-12 lists criteria for estimating the permanent impairment rating due to respiratory disorders, using pulmonary function and exercise test results.
+-- chars 3125 --
+Perform spirometry and DCO on each person being evaluated.3 V?O2max may provide additional information in selected individuals when indicated.
+Determine the predicted values for FVC, FEV1, and DCO using Tables 5-2a through 5-7a, and calculate the percent predicted (observed/predicted value).
+Determine the lower limit of normal for FVC, FEV1, and DCO using Tables 5-2b through 5-7b. The person must meet all of the listed criteria except for V?O2max in order to be considered nonimpaired. At least one of the listed criteria must be fulfilled to place an individual in any class with an impairment rating. As discussed in Chapter 1, in individuals where the preinjury or preillness values differ from the population-listed values, the examiner may depart from the
+
+population-listed normal values for determining an impairment rating, using the preinjury and preillness “normal” value, and explain the reason for the departure.
+
+The classification system in Table 5-12 considers only pulmonary function measurements for an impairment rating. It is recognized that pulmonary impairment can occur that does not significantly impact pulmonary function and exercise test results but that does impact the ability to perform activities of daily living, such as with bronchiectasis.
+
+In these limited cases, the physician may assign an impairment rating based on the extent and severity of pulmonary dysfunction and the inability to perform activities of daily living (see Table 1-2). Measured losses of pulmonary function, and corresponding impairment classes, result in a loss in the ability to perform some activities of daily living. The physician can use these associations as a reference. A detailed description with supporting, objective documentation of the type of pulmonary impairment and its impact on the ability to perform activities of daily living is required.
+
+†Refer to Crapo RO, Morris AH, Gardner RM for the lower limit of normal for FEV1 / FVC.2
+
+5.11 Respiratory Impairment Evaluation
+
+Summary
+See Table 5–13 for an evaluation summary for the assessment of permanent impairment due to repiratory disorders.

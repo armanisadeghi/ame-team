@@ -1,0 +1,211 @@
+================================================================================
+
+Chapter 11:
+-----------------------------------------------------------------
+Ear, Nose,  Throat, and Related Structures
+11.1 Principles of Assessment
+11.2 The Ear
+11.3 The Face
+11.4 The Nose, Throat, and Related Structures
+11.5 Ear, Nose, Throat, and Related Structures Impairment Evaluation Summary
+-------INTRODUCTION START -------
+Introduction
+This chapter provides criteria for evaluating permanent impairments resulting from principal dysfunction of the ear, nose, throat, and related structures. Assess permanent impairment ratings of these structures by evaluating losses in structure or the following functions: hearing; equilibrium; respiration; mastication, olfaction, and taste; speech
+and voice; and the effect of these losses on the ability to perform activities of daily living. Impairment criteria, listed in earlier editions of the Guides,
+were adapted from the American Academy of Otolaryngology–Head and Neck Surgery.1 Abbreviations and their definitions are listed in the Glossary.
+
+The following sections have been revised for the fifth edition: a new section has been added on the evaluation of voice impairment, facial disorders and disfigurements have been combined, and case examples have been added to the impairment classes.
+11.1 Principles of Assessment
+Before using the information in this chapter, the Guides user should become familiar with Chapters 1 and 2 and the Glossary. Chapters 1 and 2 discuss the Guides’ purpose, applications, and methods for performing and reporting impairment evaluations. The Glossary provides definitions of common terms used by many specialties in impairment evaluations.
+
+Assistive devices must not be used during the determination of a hearing impairment rating. The use of such devices might give a false impression of a subject’s sensitivity and distort the need to take hearing conservation or other indicated measures. As stated in Chapter 1, report measured hearing with and without an assistive device. However, only the measurement without the assistive device should be used to determine the impairment rating.
+
+11.1 a Interpretation of Symptoms and Signs
+Begin the evaluation with an inquiry into specific symptoms and their severity, duration, and manner of onset. The history, physical examination, and diagnostic studies may enable identification of the diagnosis, a management plan, and prognosis. Since the ear, nose, throat, and related structures have distinct functions, disorders of each system will be covered separately in this chapter. Permanent impairments of each system with nonoverlapping functional losses are evaluated separately and then combined.
+
+Some impairment classes refer to limitations in the ability to perform daily activities. When this information is subjective and possibly misinterpreted, it should not serve as the sole criterion upon which decisions about impairment are made. Rather, obtain objective data about the severity of the findings and the limitations and integrate the findings with the subjective data to estimate the degree of permanent impairment.
+-- chars 3172 --
+11.1 b Description of Clinical Studies Multiple and diverse tests are used to investigate the ear, nose, throat, and related structures. Some of these tests are discussed in the relevant organ system section and summarized in Table 11-10.
+
+11.2 The Ear
+The ear consists of the auricle, the external canal, the tympanic membrane, the ossicles, the middle ear, the eustachian tube, the mastoid, and the internal ear.
+The auditory and vestibular systems include the ear and central nervous system pathways.
+
+The ear provides sensorineural input critical to the senses of hearing and balance. Hearing enables contact with environmental cues (eg, those that alert) and enables us to communicate socially. Balance contributes to maintenance of equilibrium in relation to the environment. Balance function is mediated by dynamically monitoring information about the position of the head, eyes, trunk, and joints at rest and with activity. Although hearing and balance disturbances can be objectively measured, other conditions, such as chronic otorrhea, otalgia, and tinnitus,2 are subjective, should be noted, but cannot be measured independently of the individual’s self-reports.
+
+Permanent hearing impairment is a permanently reduced hearing sensitivity, outside the range of normal for the individual or based on population normal values.3 Hearing should be evaluated after maximum rehabilitation has been achieved and when the impairment is no longer accelerating beyond an ageappropriate rate.4 Evaluate hearing impairment based upon the individual’s binaural hearing, determined from the pure-tone audiogram.
+
+11.2 a Criteria for Rating Impairment Due to Hearing Loss
+Criteria for evaluating hearing impairment are established through hearing threshold testing, which serves as the most reproducible of the measures of hearing. Therefore, estimate an impairment percentage based on the severity of the hearing loss, which accounts for changes in the ability to perform activities of daily living. Tinnitus in the presence of unilateral or bilateral hearing impairment may impair speech discrimination. Therefore, add up to 5% for tinnitus in the presence of measurable hearing loss if the tinnitus impacts the ability to perform activities of daily living.
+
+In the calculation of a hearing impairment rating, no correction for presbycusis should be made because:
+(1) the method below calculates the degree of hearing and assigns a rating, regardless of cause (eg, age, injury, or noise exposure); (2) age correction would result in a reduced binaural impairment score that would thus underestimate the true magnitude of the hearing impairment; and (3) estimation of the relative contributions of various causes of binaural hearing impairment is a clinical process (apportionment or allocation) that is separate from the calculation of binaural hearing impairment.
+
+Hearing impairment is measured by evaluating hearing in each ear separately and both ears together, based on audiometric measurements. Hearing impairment is reported in each ear separately and both ears together.
+-- chars 3109 --
+Audiometric Measurements to Determine Hearing Impairment
+In determining impairments, the following steps should be taken.
+1. Test each ear separately with a pure-tone audiometer and record the hearing levels at 500, 1000, 2000, and 3000 Hz. It is necessary that the hearing level for each frequency be determined in every subject. The following rules apply for extreme values:
+a. If the hearing level at a given frequency is greater than 100 dB or is beyond the range of the audiometer, the level should be taken as 100 dB.
+b. If the hearing level for a given frequency has a negative value (eg, –5 dB), the level should be taken as 0 dB.
+2. Add the four hearing levels (dB) for each ear separately. Hearing levels are determined according to ANSI Standard S3.6-1996.4
+3. Consult Table 11-1 to determine the percentages of monaural hearing impairment for each ear.
+4. Consult Table 11-2 to convert the monaural hearing impairment percentages to a binaural hearing impairment rating.
+5. Consult Table 11-3 to determine the impairment of the whole person.
+
+†Decibel sum of the hearing threshold levels at 500, 1000, 2000, and 3000 Hz.
+
+Evaluation of Monaural Hearing Impairment If the average of the hearing levels at 500, 1000, 2000, and 3000 Hz is 25 dB or less, according to 1996 American National Standards Institute (ANSI) audiometric standards,4 no impairment rating is assigned since there is no change in the ability to hear everyday sounds under everyday listening conditions (Table 11-1). At the other extreme, if the average of the hearing levels at 500, 1000, 2000, and 3000 Hz is more than 91.7 dB, the binaural hearing impairment rating is 100% since the individual has lost the ability to perform an activity of daily living—the ability to hear everyday speech.1
+
+The data from which this formula1 was developed indicate that the ability to hear everyday sounds under everyday listening conditions is not impaired when the average of the hearing levels at 500, 1000, 2000, and 3000 Hz is 25 dB or less. The 25-dB “fence” represents this finding; it is not a compensatory adjustment for presbycusis, the hearing loss that occurs with age.
+
+This method of evaluating hearing impairment should be applied only to adults who have acquired language skills. Evidence suggests that language acquisition by children who do not have language skills may be delayed when the average hearing level is in the range of 15 to 25 dB.
+
+According to the above standards for monaural hearing impairment, for every decibel that the average hearing level or loss for speech exceeds 25 dB, 1.5% of monaural impairment is assigned. Thus, with an average hearing level loss of 67 dB above 25 dB, monaural impairment is 100% (Table 11-1).
+
+Evaluation of Binaural Hearing Impairment Hearing impairment of both ears, referred to as binaural impairment, indicates a loss of hearing of greater than 25 dB in both ears at frequencies of 500, 1000, 2000, and/or 3000 Hz.
+-- chars 3004 --
+Binaural impairment is determined by the following formula:
+
+naural hearing impairment (%) = [5 x (% hearing impairment better ear)
++ (% hearing impairment poorer ear)] 6
+To calculate binaural impairment when only one ear exhibits hearing impairment, use the above formula, allowing 0% impairment for the unimpaired ear (the ear with the better hearing).
+
+Alternatively, use Table 11-2, which is derived from the formula given above, to calculate the value for binaural hearing impairment. Then apply the value for binaural hearing impairment to Table 11-3, which converts binaural hearing impairment to impairment of the whole person.
+
+11.2 b Equilibrium
+Equilibrium, or orientation in space, is maintained by the visual, kinesthetic, and vestibular mechanisms.
+When impairments of equilibrium are predominantly due to or have effects on other organ systems, the impairment should be evaluated in the relevant organ system, eg, disorders of the nervous system (Chapter 13), cardiovascular system (Chapters 3 and 4), and visual system (Chapter 12).
+
+Disturbances of equilibrium may be classified as follows: (1) vertigo, a sensation of rotation of the subject or of objects about the subject in any plane;
+(2) giddiness or lightheadedness, distinguished from vertigo by the absence of feelings of movement2; and
+(3) abnormalities of postural stability and/or standing balance with or without vertigo. Vertigo may be produced by disorders of the vestibular mechanism and its central nervous system components, including the cerebral cortex, cerebellum, and brain stem, and by eye movements.
+
+Permanent impairment may result from any disorder causing vertigo or disorientation in space. Three regulatory systems—vestibular, ocular (visual), and kinesthetic (proprioceptive)—are related to the vestibulo-ocular reflex. The evaluation of impairments of equilibrium may include consideration of one or more of these mechanisms.5,6 This chapter addresses only disturbances in equilibrium due to vestibular disorders.
+
+Clinical evaluations may include electronystagmography,2 caloric irrigation, positional and rotatory tests, dynamic posturography, Romberg and tandem Romberg tests, and radiological brain imaging studies. The results of these laboratory tests should be correlated with validated clinical measures of balance and ambulation to determine the true state of equilibratory dysfunction. For other causes of disequilibrium, see the relevant chapter, such as the neurologic system (Chapter 13), for central nervous system disorders.
+
+Vestibular System
+Permanent impairment can result from defects of the vestibular (labyrinthine) mechanism and its central connections. The defects are evidenced by loss of equilibrium produced by disturbance or loss of vestibular function.
+
+Complete loss of vestibular function may be unilateral or bilateral. When the loss is unilateral, adequate central nervous system compensation may or may not occur. With total bilateral loss of vestibular function, equilibrium is totally dependent on the kinesthetic and visual systems, which usually are unable to compensate fully for movement or ambulation.
+-- chars 3150 --
+Depending on the ability to perform activities of daily living, the percentage of permanent impairment of the whole person may range from 0% to 95%.
+
+Disturbances of vestibular function are evidenced by vertigo (vestibular dysequilibrium) as defined above. Lightheadedness and abnormalities of gait not associated with vertigo are not defined here as being disturbances of vestibular function.
+
+Vertigo may be accompanied by varying degrees of nausea, vomiting, headache, immobility, ataxia, and nystagmus. Movement may increase the vertigo and the accompanying signs and symptoms. Peripheral vestibular (labyrinthine) disorders are often associated with hearing loss and tinnitus. Vestibular disorders may result in temporary or permanent impairments. Evaluation of vestibular impairment should be performed when the condition is stable and maximum adjustment has been achieved, which generally is considered to occur months after resolution of the disease or injury.5,6
+
+The classification in Table 11-4 has been developed for evaluation of those individuals with permanent disturbances of the vestibular mechanism. The impairment ratings reflect the severity of the permanent impairment and the ability of the individual to perform activities of daily living. Since vestibular disorders are dynamic, assessment of permanent impairment should be based on determination of the person’s condition after it is stable. Although symptoms may be intermittent, the examiner needs to gauge functioning during episodes with exacerbations. Vestibular impairment as defined here is rated similarly in Chapter 13.
+
+11.3  The Face
+The face, its parts, and its structural components serve multiple functions: protection of underlying structures and organs (such as the eyes), portals of entry for deglutition and respiration, and communication through expression and speech.
+
+The skin covers the body, acts as a physical barrier to underlying structures, provides sensory perception, regulates temperature and body fluids, and resists trauma. See Chapter 8 for primary skin impairments.
+
+The portal for deglutition is the mouth and lips. Disturbances in function can result in drooling or inability to keep food or liquid in the mouth while eating. The lips and mouth also serve in vocal articulation, adding intelligibility to speech. The nose and mouth are the portals of entry for respiration.
+Impairment may be a result of neurologic disorders, such as partial or complete paralysis of the lips; scar formation and contracture of the lips; or loss of tissue.
+
+The face plays a unique role in communication. No other part of the body serves as specific a function for personal identity and for the expression of thought and emotion. Facial expressions are an integral part of normal living postures. A degree of normalcy is needed for effective verbal and nonverbal communication. Facial anatomy contributes to identity, expression, and normal functioning, and to the appearance of the forehead and cheeks; eyes, eyelids, and eyebrows; lips and mouth; nose; and chin and neck. The face is such a prominent feature that it plays a critical role in the individual’s physical, psychological, and emotional makeup. Facial disfigurement can affect all of these components and can result in social and vocational handicaps and even psychiatric impairment.
+-- chars 3351 --
+11.3
+a Criteria for Rating Impairment Due to Facial Disorders and/or Disfigurement To evaluate permanent impairment due to a disorder or disfigurement of the face, consider changes in anatomy and function and the effect of the impairment on the ability to perform activities of daily living. This section deals with permanent impairment as it relates mainly to the face’s structural integrity. For loss of function involving other aspects of the functioning of the face, refer to the specific organ system involved and combine the structural integrity loss with the relevant loss of function. Loss of structural integrity can result from cutaneous disfigurement, such as that due to abnormal pigmentation or scars, or from loss of supporting structures, such as soft tissue, bone, or cartilage of the facial skeleton. Other information on cutaneous disfigurement appears in Chapter 8 (The Skin).
+Disfigurement of the face can result from many causes, particularly burns, traumatic injury, surgery, infections, or dysplasia. Effects on individuals can vary tremendously, as can remaining function. Total disfigurement of the face after treatment should be deemed a 16% to 50% impairment of the whole person, dependent also upon the degree of functional loss. For the assessment of psychosocial impairment due to disfigurement, refer to Chapter 14 on mental and behavioral disorders.
+
+Facial disfigurement may be considered total if it is severe and grossly deforming of the face and features. Such disfigurement must involve at least the entire area between the brow line and the upper lip on both sides. Severe disfigurement above the brow line should be deemed to be, at a maximum, 1% impairment of the whole person. If disfigurement is severe below the upper lip, it may be deemed to be 8% impairment of the whole person. Specific, prominent facial disfigurements are estimated as shown in Table 11-5.
+
+Comment: No loss of nasal function or nasal bone structural integrity. Appearance of nose did not change. Scar falls in skinfold line and is barely visible.
+
+The functions of these structures, and the order in which they will be discussed, are as follows: (1) respiration, (2) mastication and deglutition, (3) olfaction and taste, and (4) speech. Permanent impairment may result from a deviation from normal in any of the above functions, and, because of their close relationship, more than one structure may be involved.
+
+11.4a Respiration
+Respiration may be defined as the act or function of breathing, that is, the act by which air is inspired and expired from the lungs. The respiratory mechanism includes the lungs and the air passages; the latter includes the nares, nasal cavities, mouth, pharynx, larynx, trachea, and bronchi.
+
+In this chapter, discussion of permanent impairments related to respiration is limited to defects of the air passages. Refer to Chapter 5 on the respiratory system for a discussion of impairments of the lower airways and lung parenchyma.
+
+-- chars 3000 --
+The most commonly encountered defect of the air passages is obstruction, which may be partial, as with stenosis, or complete, as with occlusion.
+Obstructions and other air passage defects are evidenced primarily by dyspnea or so-called unusual breathlessness. Sleep apnea, which is covered in Chapter 5, may be related to functional upper-airway obstruction.
+
+Dyspnea is a cardinal factor that contributes to an individual’s diminished capacity to carry out activities of daily living and to permanent impairment.
+This subjective complaint or symptom, which indicates an awareness of respiratory distress, usually is noted first and is most severe during exercise. When dyspnea occurs at rest, respiratory dysfunction probably is severe. Dyspnea may or may not be accompanied by related signs or symptoms.
+
+Individuals with air passage defects may be evaluated in accordance with the classification in Table 11-6. Permanent impairments involving obstructive sleep apnea should be evaluated with the respiratory system criteria described in Chapter 5.
+
+Note: Individuals with successful permanent tracheostomy or stoma should be rated at 25% impairment of the whole person.
+
+11.4 b Mastication and Deglutition
+The act of eating includes mastication and deglutition. Numerous conditions of nongastrointestinal origin, singly or in combination, may interfere with these functions.
+
+Dysfunction of the temporomandibular joint may impede mastication, affect speech, cause lower facial deformity, and produce pain.7,8 In this section, the effect of temporomandibular joint dysfunction on eating is considered; other effects may be considered in conjunction with parts of the Guides that deal with the nervous system or pain.
+
+In accordance with the philosophy of the Guides, when mastication and deglutition are evaluated, the ability to eat should be stable and maximal rehabilitation should have been achieved. When mastication or deglutition is impaired, the imposition of dietary restrictions usually results. Such restrictions are the most objective criteria by which to evaluate permanent impairment of these functions.9-14 The relationship of the restrictions to impairments of mastication and deglutition are shown in Table 11-7.
+
+11.4c Olfaction and Taste
+Only rarely does complete loss of the closely related senses of olfaction and taste seriously affect an individual’s performance of the usual activities of daily living. For this reason, a value of 1% to 5% impairment of the whole person is suggested for use in cases involving partial or complete bilateral loss of either sense due to peripheral lesions. This value is to be combined with any other impairment of the individual (see the Combined Values Chart, p. 604).
+
+11.4d Speech
+In this chapter, speech is defined as the capacity to produce vocal signals that can be heard, understood, and sustained over a useful period of time. Speech ought to allow effective communication in the activities of daily living.
+-- chars 3005 --
+This chapter does not consider the causes and characteristics of abnormal speech. Rather, it considers how an impairment relates to the individual’s ability or efficiency in using speech to make himself or herself understood in activities of daily living. It is assumed that speech evaluation pertains to the production of voice and articulate speech and not to the language content or structure of the individual’s communication. On the basis of these assumptions, the primary problem is estimating proficiency in the use of oral language or measuring the utility of speech as defined above. This section also considers esophageal speech.
+
+At this time there is no single, acceptable, proven test that will measure objectively the degrees of impairment due to the many varieties of speech disorders. Therefore, it is recommended that speech impairment be evaluated by examining the audibility, intelligibility, and functional efficiency of speech.
+• Audibility is based on the ability to speak at a level sufficient to be heard.
+• Intelligibility is based on the ability to articulate and to link phonetic units of speech with sufficient accuracy to be understood.
+• Functional efficiency is based on the ability to produce a satisfactorily rapid rate of speaking and to sustain this rate over a useful period of time.
+
+Other definable attributes of speech–such as voice quality, pitch, and melodic variation–are evaluated only when they affect one of the three primary characteristics noted above.
+
+The classification chart, oral reading paragraph, and examining procedure used in estimating speech impairment are described below.
+
+Classification Chart
+Judgments as to the amount of impairment should be made with reference to the classes, percentages, and examples provided in the classification chart (Table 11-8). The 15 categories in the chart suggest
+activities or situations with different levels of impairment. Data gathered from direct observation of the individual or from interviews should be compared with these categories, and values should be assigned on the basis of the specific impairments that are present.
+
+Oral Reading Paragraph
+The following paragraph, entitled “The Smith House,” is composed of 100 words and 10 sentences. It provides a uniform means of comparing a speech sample of the person being evaluated with the speech of normal speakers. The phonetic elements of the paragraph are selected particularly for their relevance to the intelligibility of the person’s speech.
+The Smith House
+Larry and Ruth Smith have been married nearly 14
+years. They have a small place near Long Lake. Both of them think there’s nothing like the country for health. Their two boys would rather live here than any other place. Larry likes to keep some saddle horses close to the house. These make it easy to keep his sons amused. If they wish, the boys can go fishing along the shore. When it rains, they usually want to watch television. Ruth has a cherry tree on each side of the kitchen door. In June they enjoy the juice and jelly.
+-- chars 3047 --
+Examining Procedure
+General Orientation
+The examiner should have normal hearing as defined in the earlier section in this chapter on hearing. The setting of the examination should be a reasonably quiet room that approximates the noise levels of everyday living.
+
+The examiner should base judgments of impairment on two kinds of evidence: (1) attention to and observation of the individual’s speech in the office—for example, during conversation, during the interview, and while reading and counting aloud—and (2) reports pertaining to the individual’s performance in everyday living situations. The reports or the evidence should be supplied by reliable observers who know the person well. The standard of evaluation is an average speaker’s performance in average situations of everyday living. It is assumed in this context that an average speaker can usually perform according to the following criteria:
+
+• Talk in a loud voice when the occasion demands it.
+• Sustain phonation for at least 10 seconds after one breath.
+• Complete at least a 10-word sentence in one breath.
+• Form all of the phonetic units of American speech and join them intelligibly.
+• Maintain a speech rate of at least 75 to 100 words per minute and sustain a flow of speech for a reasonable length of time. A speech rate of 125 words per minute enables a speaker to read approximately one 81/2 x 11-inch page of double-spaced text in 2 minutes.
+
+Specific Instructions
+1. Place the individual approximately 8 ft from the examiner.
+2. Interview the individual. This will permit observation of his or her speech in ordinary conversation while pertinent historical information is obtained.
+3. Have the individual’s back toward the examiner and keep a separation of 8 ft between the examiner and the examinee. Instruct the person as follows: “You are to read this passage so I can hear you plainly. Be sure to speak so I can understand you.” Then ask him or her to read aloud the short paragraph, “The Smith House.”
+4. If additional reading procedures are required, simple prose paragraphs from a magazine may be used. A person who cannot read may be
+requested to give his or her name and address and name all the days of the week and months of the year. Additional evidence regarding the person’s rate of speech and ability to sustain it may be obtained by noting the time required to count to 100 by ones. Completion of this task in 60 to 75 seconds is accepted as normal.
+5. Record judgment of the individual’s speech capacity with regard to each of the three rows of the classification chart (Table 11-8). The degree of impairment of speech is equivalent to the greatest percentage of impairment recorded in any one of the three rows of the classification chart.
+
+For example, a person’s speech capacity is judged to be the following: audibility, 10% (class 1); intelligibility, 50% (class 3); and functional efficiency,
+30% (class 2). The individual’s speech impairment is judged to be equivalent to the greatest impairment (50%). A speech impairment of 50% is judged to be an 18% impairment of the whole person, according to Table 11-9.
+-- chars 3174 --
+11.4e Voice
+Voice, as the term is used in this section, refers to the production of audible sounds by the vibration of the true vocal folds of the larynx. Voice, or phonation, is therefore the generator of speech—the shaping of sounds into intelligible words. Alternative physiological sound generators, such as the false vocal folds or the esophagus, are not considered here.
+
+This section does not consider the causes of voice disorders. Rather, it recognizes that voice disorders may present such definable symptoms as abnormal volume (voice fatigue, weakness, or low sound intensity), abnormal control (pitch and/or melodic variation), and/or abnormal quality (hoarseness, harshness, or breathiness). These symptoms indicate abnormal physiological functioning of the phonatory mechanism and may contribute to impairment of speech.
+
+At this time, there is no single, acceptable, proven test that will measure objectively the degrees of impairment associated with the many varieties of voice disorders. Tests such as laryngoscopy, acoustical analysis of voice, strobovideolaryngoscopy, analysis of phonatory function, and laryngeal electromyography are recognized as appropriate and useful.15-17 The significance of current normative data is unclear when confined to consideration of impairment.
+
+For voice and/or speech impairments, the classifications in Table 11-8 and Table 11-9 should be used. Note that the impairment ratings for speech and/or voice impairments are not evaluated separately. The degree of impairment of speech and/or voice is equivalent to the greatest percentage of impairment recorded in any one of the three sections (audibility, intelligibility, or functional efficiency) of the classification chart (Table 11-8).
+
+United States to receive necessary voice care. Voice is now of a sufficient intensity for most everyday speech needs. However, because of her emotional distress, loss of her previous occupation as an international opera star, and change in activities of daily living, an impairment rating is warranted.
+
+Comment: Class 2 on the basis of audibility and activities of daily living, not including work. Unhappy with his vocal progress. Totally disabled as a professional singer because of this work-related injury.
+
+11.5 Ear, Nose, Throat, and Related Structures Impairment Evaluation Summary
+
+See Table 11-10 for an evaluation summary for the assessment of impairmnent of the ear, nose, throat, and related structures.
+
+Table 11-10 continued

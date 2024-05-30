@@ -1,0 +1,379 @@
+================================================================================
+
+Chapter 12:
+-----------------------------------------------------------------
+The Visual System
+12.1 Principles of Assessment
+12.2 Impairment of Visual Acuity
+12.3 Impairment of the Visual Field
+12.4 Impairment of the Visual System
+12.5 Visual Acuity Measurement at Near (Reading Acuity)
+-------INTRODUCTION START -------
+Introduction
+This chapter provides criteria for evaluating permanent impairment of the visual system as it affects an individual’s ability to perform activities of daily living. The visual system consists of the eyes and supporting structures, the neural pathways, and the visual cortex of the brain. The visual system is unique in that it
+combines the input from two separate eyes into a single visual perception.
+
+This chapter focuses on functional impairment of the visual system as a whole. The impairment ratings in this chapter estimate the severity of the effects of certain types of vision loss on the ability to perform activities of daily living. Changes due to abnormalities in the optic nerve or visual cortex are also discussed in Chapter 13, The Central and Peripheral Nervous System.
+
+This chapter has been significantly revised from the fourth edition of the Guides. The revision was based on a consensus within the international community of experts in low vision. Individuals interested in further discussion, including an emphasis on ability, can refer to the Guide for the Evaluation of Visual Impairment, published for the International Society for Low Vision Research and Rehabilitation.12 A summary of revisions follows.
+1. The Visual Efficiency Scale that was used up to the fourth edition of the Guides to the Evaluation of Permanent Impairment22, 23 was developed by Snell in 1925.19-21 This scale was replaced with the Functional Vision Score (FVS).17 The FVS provides an estimate of the effect of certain types of vision loss on the ability to perform activities of daily living. On this scale, 20/200 is rated as a 50% impairment.
+2. The FVS is based on an assessment of visual acuity and visual field. The FVS allows for individual adjustments for other functional deficits, such as contrast and glare sensitivity, color vision, binocularity, stereopsis, suppression, and diplopia, if these deficits cause a significant ability loss that is not reflected in a visual acuity or visual field loss.
+3. The extra scale and losses for diplopia and aphakia have been removed. Recommendations to make adjustments on an individual basis, if needed, have been added.
+4. Near vision measurements are optional; the last section of this chapter contains a discussion on how to make the assessment of reading acuity more accurate.
+5. Visual field is recalculated using a new Visual Field Score (VFS). To better account for the functional significance of losses in the two lower quadrants, the lower visual field carries 50% more weight than the upper field. Hemianopia is also scored more appropriately.
+-- chars 3075 --
+6. Visual impairment ratings are calculated using the formula (3 ? OU + OD + OS)/5 instead of the prior formula (3 ? better eye + 1 ? lesser eye)/4. The new formula better accounts for situations where the binocular function is not identical to the function of the better eye. This can be particularly important for dissimilar field losses.
+7.
+This edition also calculates a binocular impairment value for visual acuity and for field loss before combining these into an estimate of total visual loss and functional vision.
+8. The impairment rating for the visual system = 100 – the FVS.
+
+12.1  Principles of Assessment
+Before using the information in this chapter, the Guides user should become familiar with Chapters 1 and 2 and the Glossary. Chapters 1 and 2 discuss the Guides’ purpose, applications, and methods for performing and reporting impairment evaluations.
+The Glossary provides definitions of common terms used by many specialties in impairment evaluation.
+
+A permanent visual impairment is defined as a permanent loss of vision that remains after maximal medical improvement of the underlying medical condition has been reached. Ophthalmology has the capability to measure organ functions such as visual acuity and visual field rather precisely. Accordingly, this chapter uses a numerical assessment of visual functions to derive an estimate of their effect on functional vision (ie, on the ability to perform generic activities of daily living). The process is summarized in Table 12-1.
+
+Note that the prefix visual is used when the score refers to each eye. The prefix functional refers to the estimated performance of the individual. The term vision score combines visual acuity and visual field estimates (and individual adjustments, if significant).
+
+12.1 a Steps to Calculate the Visual Impairment Rating
+1. Measure visual acuity. Use Table 12-2 to convert each of the measured acuity values to a Visual Acuity Score (VAS).
+2. Use Table 12-3 to combine the acuity scores from each eye to determine a single Functional Acuity Score (FAS). Note: If the visual fields are normal and no individual corrections are made, the impairment rating for the visual system is equal to the acuity-related impairment rating (100 – FAS).
+3. Measure the visual fields. Use Table 12-5 or the detailed instructions in Section 12.3c to convert each of the measured field values to a Visual Field Score (VFS).
+4. Use Table 12-6 to combine the field scores from each eye to determine a single Functional Field Score (FFS).
+5. Use the rules in Section 12.4 to combine the Functional Acuity Score and the Functional Field Score to determine a Functional Vision Score (FVS).
+6.
+Subtract the Functional Vision Score from 100 to obtain the impairment rating for the visual system.
+7. If additional visual impairments are not reflected in the reduction of visual acuity or visual field, the examiner may make an adjustment as explained in Section 12.4. The need for such adjustment must be well documented.
+-- chars 3119 --
+The procedure as outlined in Table 12-1 reduces a complex reality to a single number. This number ignores individual differences in adjustment to vision loss. This approach can be helpful for administrative and legal purposes because it does not penalize the individual who has made a good adjustment with a reduction of the impairment rating. By the same token, this approach cannot be used for individualized rehabilitation plans. Such plans must be based on an ability profile detailing each of the various skills and abilities of the specific individual. As the rehabilitation proceeds, successful adaptations will reduce further rehabilitation needs. Thus, the ability profile may change while the generic impairment rating will remain the same.
+
+12.1 b Interpretation of Symptoms and Signs
+Subjective symptoms of vision loss usually are the result of objective changes in visual acuity and/or visual field.
+
+Visual acuity describes the ability of the eye to perceive details. Visual acuity loss will manifest itself in an inability to perform detail-oriented tasks, such as reading and face recognition. A lay term for visual acuity loss is blurred vision. Visual acuity loss affects many activities of daily living. Although visual acuity is governed by only a small area of the retina (the fovea, the central-most area), it occupies a major part of the visual cortex.
+
+Visual field refers to the ability to detect objects in the periphery of the visual environment. A lay term for peripheral field loss is tunnel vision. Visual field loss will manifest itself in an inability to detect peripheral objects and, often, in a reduced ability to avoid obstacles. The peripheral visual field occupies the largest part of the retina, but it occupies a smaller part of the visual cortex.
+
+Good visual acuity and good visual field are both needed for the performance of daily living skills. A person with tunnel vision may not notice when someone enters the room. A person with visual acuity loss, on the other hand, may notice the newcomer but may have difficulty recognizing the person’s face. Once an object has been detected in peripheral vision, central vision will be used to recognize it. A person with a visual field defect (ie, tunnel vision) may not notice a sign on the road or on a wall but could read the sign once found, assuming the individual had good visual acuity. A person with normal visual fields but a visual acuity loss will detect the sign but will not be able to read it.
+
+Another important function is contrast sensitivity. Whereas visual acuity is generally measured with small objects of high contrast, contrast sensitivity refers to the ability to detect larger objects of poor contrast. This ability is often needed for daily living skills. Facial characteristics are an example of typical low-contrast objects. Contrast sensitivity loss often accompanies visual acuity loss, but it can occur separately. Because measurement methods for contrast sensitivity are not standardized, this function is not included in the impairment ratings. Where indicated, contrast sensitivity loss that exceeds the effects of the visual acuity loss may be handled as an individual adjustment.
+-- chars 3215 --
+Other symptoms may result from deficits in glare sensitivity, color vision, night vision, binocularity, stereopsis, suppression, and diplopia. If these deficits cause a significant ability loss that is not reflected in a visual acuity or a visual field loss, they may also be handled as adjustments to the impairment rating.
+
+12.1 c Description of Clinical Studies
+To obtain the required information, the physician needs to perform a detailed visual assessment, including the cause, severity, and prognosis of the underlying disorder and the expected or documented effects of the vision loss on the ability to perform activities of daily living. Such a visual assessment includes the following.
+• Medical history, with particular emphasis on preexisting conditions and treatments and on the major cause of the current vision loss.
+• Current condition of the eyes and visual system, with documentation of relevant anatomic findings.
+• Visual acuity measurement with best correction, binocularly and for each eye separately. Accurate measurement of distance visual acuity (letter chart acuity) is mandatory; measurement of near acuity (reading acuity) is optional.
+• Visual field measurement for each eye.
+• Other visual functions, such as contrast sensitivity or color vision, if considered relevant.
+• Calculation of an initial impairment rating (visual ability estimate), as detailed in this chapter.
+• Other factors that may affect the individual’s ability to perform activities of daily living.
+• Discussion (with documentation) of factors that might justify an adjustment of the initial ability estimate and discussion of apportionment considerations, if relevant.
+
+In addition to the equipment needed for a standard ophthalmologic evaluation, the following tools are required for the functional evaluation.
+• Standardized letter chart. A lighted chart in a lighted room is preferred because it is more representative of normal viewing conditions than is a projector chart in a semidark room. Charts with five letters per line, proportional spacing, and a geometric progression of letter sizes are preferred.5-10 For vision in the normal and nearnormal ranges, testing at 6 m (20 ft) is recommended. For testing in the low-vision range, testing at 1 m is recommended (see Table 12-2). Test charts for this distance are commercially available.24
+
+• Standardized reading tests. Such tests are optional. If performed, they should be standardized tests with continuous text segments as specified in the last section of this chapter. A geometric progression of letter sizes is preferred. Letter size designations should be in M-units24 because the implementation of point size and Jaeger numbers has been shown to be inconsistent from chart to chart.
+• Visual field equipment. If a restriction of the visual field is claimed or suspected, formal visual field testing on standardized equipment is required. If no visual field restriction is claimed, a confrontation visual field is acceptable to confirm the absence of field restrictions.
+-- chars 3048 --
+• Other functional tests, such as a contrast sensitivity test or glare test, if problems in these areas are reported.
+• Samples of actual job-related tasks, if these tasks are different from average reading tasks.
+
+12.2 Impairment of Visual Acuity
+12.2 a Visual Acuity Notations
+Visual acuity is usually recorded as a fraction comparing the individual’s performance to a performance standard. If the individual needs letters that are twice as large or twice as close as those needed by a standard eye (ie, 2x angular magnification), the visual acuity is 1/2. If letters are needed that are five times larger or five times closer than those needed by a standard eye, the visual acuity is 1/5, etc. In the United States, it is customary to standardize the numerator at 20. Thus, a visual acuity of 1/2 is recorded as 20/40 and one of 1/5 is recorded as 20/100.
+
+12.2 b Test Procedures
+Visual acuity is usually measured with symbols (letters, numbers, pictures, or other symbols) presented in a letter chart format. Because visual acuity values can vary widely, the optimum testing distance is not the same for all groups.
+
+12.2b.1 Testing in the Normal Range Individuals in the normal and near-normal range of vision (20/60 or better, ICD-9-CM2, Table 12-2) represent the majority of all patients. The traditional letter charts and projector charts were designed for this group. The most common testing distance is 6 m (20 ft) because at this distance the optical difference with infinity may be ignored. When a printed chart is used, the indicated visual acuity values are valid only if the individual is located at the distance for which the
+chart was designed. If a projector chart is used, the individual must be located at the distance for which the projector was adjusted. Charts with a geometric progression of letter sizes, five letters on each row, and letter spacing that is equal to the letter size (often referred to as ETDRS-type charts) are the preferred standard.9, 10
+
+The individual is placed at the distance for which the chart was designed and encouraged to read as far down as possible. The line is considered read when more than half of the characters (eg, three of five) are read correctly. Most charts will indicate the visual acuity level that corresponds to the ability to read each line. When visual acuity is measured in this way, the result should be recorded using the standard US notation (ie, 20/…). The individual should be tested with the best available refractive correction.
+
+When testing for visual acuities around the 20/200 level (legal blindness), the choice of letter chart is particularly important because it affects the assignment of benefits. On traditional charts that have no lines between 20/100 and 20/200, the descriptor 20/200 or less becomes, effectively, less than 20/100, so individuals with 20/125 would be recorded as 20/200. On newer charts, 20/200 or less is more appropriately interpreted as less than 20/160. If only an older printed chart is available, the individual can be brought to 10 ft so that less than 20/160 can be interpreted as less than 10/80. The individual with 20/125 (10/63) is then reported appropriately as better than 20/200. Note that the term legal blindness is a misnomer because 90% of individuals who have 20/200 or less visual acuity are not blind. The term severe vision loss as used in ICD-9-CM should replace the term legal blindness.
+-- chars 3461 --
+12.2b.2 Testing in the Low-Vision Range Use of the Guides will often involve individuals whose visual acuity has dropped to less than 20/60 (ie, to the low-vision range in ICD-9-CM,2 Table 12-2). Individuals in the low-vision range form a
+minority of the general population but may represent the majority of those for whom visual impairment evaluations are requested.
+
+Traditional letter charts often have only a few letters for visual acuities worse than 20/100. Such charts are inadequate for the low-vision range and have promoted the use of vague statements such as “count fingers” and “hand motions.” More accurate results can be obtained by bringing the chart closer. Testing at 1 m is recommended because it can cover the entire low-vision range, down to 1/50 (20/1000).
+
+When visual acuity is measured at 1 m, it should be recorded as a metric Snellen fraction in which the numerator records the test distance in meters (in this case 1 m, thus 1/…) and the denominator indicates the smallest letter size read in “M-units” (1 M = 1.45 mm = about 1/16 in). The standard US notation may be added in parentheses. Thus, the ability to read 8 M characters at 1 m should be recorded as 1/8 (20/160). Charts with a cord attached and labeled for 1-m testing are available commercially.24
+
+12.2b.3 Correction for Refractive Error
+The visual acuity without correction may be reported as part of the general eye examination. The impairment ratings should be based on the best-corrected visual acuity. It is important, therefore, to ensure that the refractive correction is appropriate for the testing distance. This is especially true for the short viewing distances used for low-vision individuals. If uncorrected and best-corrected visual acuity are the same, this should be stated explicitly.
+
+12.2b.4 Monocular vs Binocular Acuity Because binocular viewing represents the most common viewing condition in daily life, the impairment rating should consider the best-corrected binocular visual acuity as well as the best-corrected acuity for each eye separately.
+
+Under most circumstances, best-corrected visual acuity measured binocularly will be determined by the acuity of the better eye. There are exceptions, however. People with latent nystagmus may have better eye stability, and hence better acuity, when viewing binocularly than when one eye is occluded. Some people with diplopia or with distortions in one eye may see better when the poorer eye is occluded.
+
+12.2b.5 Incomplete Data
+Whenever possible, determination of an impairment rating should be based on direct examination of the individual. Occasionally, it may be necessary to determine a tentative impairment rating based on chart review, where complete data may not be available. If no better information is obtainable, use the following:
+Interpret CF … ft
+as
+… /200. Interpret CF … m
+as
+… /60. Interpret HM … ft
+as
+… /1000. Interpret HM … m
+as
+… /300.
+Therefore, CF 3 ft is interpreted as 3/200, and HM 5 ft is interpreted as 5/1000.
+-- chars 3043 --
+12.2b.6 Use of Realistic Conditions
+The evaluation of visual functions should be based on performance under optimal conditions. An exception can be made, however, when the best possible conditions are not feasible in daily life. Examples include individuals who would see better with contact lenses but who cannot tolerate them; those with a large interocular difference in refractive error who cannot tolerate full correction of both eyes; and those who can achieve better acuity with an extremely high or extremely low illumination level that cannot be achieved under daily living conditions or in the workplace.
+
+Under these and similar conditions, the evaluation should be based on measurements obtained under realistic daily living conditions. Document why testing under suboptimal conditions is most appropriate. When testing multihandicapped individuals, a distinction must be made between failure to see and failure to respond.
+
+12.2 c Steps for Assigning a Visual Acuity–Based Impairment Rating
+1. Assign a Visual Acuity Score for each eye. Measure visual acuity as outlined above. Use Table 12-2 to replace the visual acuity value with a score value.
+
+The left part of Table 12-2 lists the ranges of visual acuity loss used in ICD-9-CM.2 At the top of the scale are those with normal vision (20/20 or better), and at the bottom are those who are blind (no light perception). In between are those who have lost part of their vision. This group is said to have low vision (the word vision indicates that they are not blind; the word low indicates that they have less than normal vision). The visual acuity values follow a geometric progression—each line differs from the adjacent lines by a fixed ratio (25%, 10 steps = 10x).
+
+The central part of Table 12-2 lists impairment ratings. This conversion is based on Weber-Fechner’s law, which states that a proportional increase in the stimulus corresponds to a linear increase in sensation. The Visual Acuity Score (VAS) has fixed increments (5 points) based on counting 1 point for each letter read on a standard acuity chart with 5 letters per line. The VAS is an ability scale on which higher values indicate better function. The impairment rating, which is a scale of ability loss, is obtained by subtracting the VAS from 100. Note that the VAS extends beyond 100 (as does normal visual acuity), but that ability loss is counted only when visual acuity is less than 20/20.
+
+The right part of Table 12-2 lists the estimated impact of visual acuity loss on reading ability. These ranges are based on a general ability scale with the following gradations.17
+
+h reserve capacity 80 ± 10
+Mild loss
+Normal function, but
+(near-normal)
+loss of reserve
+
+d for some aids 40 ± 10
+Severe loss
+Restricted function,
+slower than normal, even with aids
+20 ± 10
+Profound loss
+Restricted function,
+marginal performance, even with aids
+0 ± 10
+(Near-) total loss  Cannot perform;
+needs substitution skills
+
+The three parts of Table 12-2 fit well with each other. This confirms that the VAS is a reasonable estimate of acuity-related visual abilities and that the impairment rating is a reasonable estimate of acuity-related performance loss. If no visual acuity data were obtainable, the right side of Table 12-2 might be used to obtain a very rough impairment estimate.
+-- chars 3361 --
+2. Combine the acuity values.
+After the best-corrected visual acuity values for binocular vision (OU), for the right eye (OD), and for the left eye (OS) have been obtained and converted to Visual Acuity Scores, these values need to be combined to a single Functional Acuity Score (FAS). The FAS provides an estimate of the ability of the person to perform acuity-dependent daily living tasks. This is done using Table 12-3.
+
+Note that VAS and FAS may differ. For example, an individual with one blind eye will have a 0 VAS for that eye. However, if the other eye is normal, the FAS will be near-normal, indicating normal performance but loss of reserves (see Examples 12-2 and 12-14).
+
+The acuity-related impairment rating (IR) is calculated by subtracting the FAS from 100. Note that the FAS can be larger than 100 but that the impairment rating is truncated at 0.
+
+3. Consider reading acuity (optional). Determination of reading acuity (near vision) is optional and is explained in more detail in the last section of this chapter. Reading acuity is typically determined binocularly, but it may be determined monocularly if this gives better results.
+
+If reading acuity is significantly worse than letter acuity, the functional acuity score may be adjusted to the average of the letter chart (or distance) acuity score and the reading (or near) acuity score. The probable reason for the discrepancy should be explored and explained.
+
+Note: The visual acuity values used in this table follow a strict geometric progression. For clinical use, values such as 20/32 and 20/63 may be rounded to 20/30 and 20/60.
+
+12.2d Calculation Examples for Visual Acuity Loss
+Note: In the following examples it is assumed that the visual acuity loss is the only deficit. Visual fields and other visual functions are presumed to be normal.
+
+12.3 Impairment of the Visual Field
+12.3a Test Procedures
+If no visual field impairment is claimed or suspected (impairment rating = 0), a confrontation visual field may be used to confirm a normal field. In all other circumstances (impairment rating > 0), formal visual field tests should be performed by qualified personnel according to the instructions provided with the equipment.
+
+12.3a.1 Confrontation Visual Field
+This method uses only the examiner’s hands. Seated in front of the individual, the examiner moves his or her hands from the periphery inward to test for the peripheral field limits. This method is an acceptable way to confirm a normal visual field in individuals in whom no field loss is claimed, but it is too gross for detailed evaluation if a field loss is claimed or suspected.
+
+12.3a.2 Tangent Screen Testing
+This method uses a black screen on which variously sized objects may be moved. This method is difficult to standardize and loses accuracy beyond 45°. It
+is not acceptable for the accurate assessment of permanent impairment.
+
+12.3a.3 Goldmann-Type Testing
+The Goldmann visual field equipment provided the first standardized measurement technique. Testing is done in a bowl so that all testing distances are equal while the background and stimulus luminances can be controlled tightly. The usual mode of testing is known as kinetic perimetry because a test stimulus of constant size and intensity is moved by an operator.
+-- chars 3359 --
+The test results are plotted as isopters, contour lines that outline the areas where stimuli of various intensity can be perceived. The functional implications of certain isopter patterns are relatively easy to interpret. Agencies, such as the Social Security Administration, often require testing of the Goldmann III4e isopter for eligibility determinations.
+
+12.3a.4 Automated Perimetry
+In recent decades, there has been a move from manual to automated perimetry. (Commonly used equipment includes Humphrey, Octopus, Dicon, and other brands.) This has been accompanied by a move to static perimetry. In static perimetry, the presentations are limited to various fixed locations where stimulus size and intensity are varied.
+
+Automated perimetry results are commonly plotted as a gray scale. Such reports are better suited for automated statistical analysis. They are less intuitive for human interpretation with regard to functional vision. Most clinical tests are limited to the central 30° because this is the most important area for medical diagnostic purposes. For the functional assessment of visual field loss, however, testing to 60° or beyond is mandatory.
+
+12.3a.5 Binocular Fields
+Considering both monocular and binocular function is even more important for a functional assessment of the field of vision than it is for visual acuity because intact field areas in one eye may compensate for field loss in the other eye. In cases of asymmetric field loss, the binocular field of view may be substantially better than the field of view of either eye alone.
+
+Direct testing of the binocular visual field presents problems, however, because the amount of convergence in a bowl perimeter cannot be monitored and fixation monitoring devices will not work when the head, rather than the eye, is centered. Therefore, the fields of each eye should be measured separately, and a binocular field plot should be derived from the superimposition of the two monocular field plots.
+
+12.3a.6 Tests Used
+When Goldmann equipment is used, the III4e isopter should be plotted. If only a larger isopter is available, this isopter may be used (this may result in an underestimation of the field loss). If only smaller isopters are available, the test cannot be used for impairment evaluation.
+
+If automated equipment is used, a pseudoisopter equivalent to the Goldmann III4e isopter should be constructed (see Example 12-9). On the Humphrey equipment, this would be the isopter for a 10-dB stimulus. Plots of the central 30° may only be used when the remaining field radius is smaller than 20° and confrontation testing indicates no further peripheral vision.
+
+12.3b The Visual Field Score (VFS)
+The Visual Field Score (VFS), which is the basis for the calculation of visual field–based impairment ratings, parallels the Visual Acuity Score (VAS). The VAS can be determined by counting the letters read correctly on a standardized visual acuity chart.
+Similarly, the VFS can be determined by counting the points seen on a standardized visual field grid. The combination rules are also similar.
+-- chars 3125 --
+12.3b.1 Testing Grid
+The testing grid is constructed by drawing 10 meridians: 2 in each of the upper quadrants and 3 in each of the lower quadrants. The optimal positions for the 10 meridians are as follows: 25°, 65° (upper right), 115°, 155° (upper left), 195°, 225°, 255° (lower left),
+285°, 315°, and 345° (lower right). Along these meridians, 5 points (spaced 2° apart) are assigned to the central 10° and 5 points (spaced 10° apart) are assigned to the periphery beyond 10°; thus, a 60° radius will represent 10 points. The nasal and superior meridians may not reach 60°, but the lateral field will extend further. Thus, the average normal field will score about 100 points.
+
+Figure 12-1 summarizes the point assignments. The circle represents a 10° radius.
+
+This arrangement has the following effects:
+• The visual field score for the central 10° is 50 points. This reflects that the central 10° of the visual field correspond to 50% of the primary visual cortex. This also maintains the traditional assumption that a visual field loss to a 10° radius is equally disabling as a visual acuity loss to 20/200.
+• Choosing the measured meridians within the quadrants rather than along the horizontal and vertical meridians avoids the need for special rules for hemianopias.
+• A complete homonymous hemianopia receives a 50-point score. This implies that it is considered equally disabling as a field restriction to a 10° radius or as a visual acuity loss to 20/200.
+• Choosing 3 meridians in the lower quadrants and 2 in the upper ones acknowledges the functional importance of the lower field by giving it 50% extra weight.
+• ICD-9-CM defines severe, profound, and neartotal visual field loss as concentric restriction to a 10°, 5°, and 2.5° field radius.2 These categories fit the VFS scale.
+
+The VFS is summarized in Table 12-5, which is similar to Table 12-2 in organization.
+
+Use Table 12-5 or the detailed rules in Section 12.3c to determine a Visual Field Score for each eye.
+Proceed to Table 12-6 to combine the scores from each eye to determine a single Functional Field Score.
+
+12.3c Assigning a Field-Based Impairment Rating
+Calculation of a visual field–based impairment rating requires the following steps.
+
+1. Determine the extent of the visual field for each eye. If Goldmann visual field plots are available, determine the III4e isopter for each eye. If only automated visual field plots are available, determine a pseudoisopter by drawing a line surrounding all points with a sensitivity of 10 dB or better, excluding points with < 10-dB sensitivity. If automated field plots are used, these should be full-field plots (Humphrey 60-2 or the equivalent). The 30° plot may be used only if confrontation testing has determined that there are no peripheral islands of vision and if a 30° central field plot (Humphrey 30-2 or the equivalent) shows that there is no vision beyond 20°.
+2.
+Determine the Visual Field Score for each eye. Use the pattern explained in Figure 12-1. This pattern can be implemented in several ways, explained below.
+-- chars 3107 --
+2.a. Paper and pencil
+Starting with a visual field plot of the III4e isopter (or the equivalent), draw 10 meridians, 2 in each upper quadrant and 3 in each lower quadrant. To space the meridians evenly, use the following approximate positions: 25°, 65° (upper right), 115°,
+155° (upper left), 195°, 225°, 255° (lower left), 285°,
+315°, and 345° (lower right).
+
+Determine the extent of each meridian. Within 10° from fixation, round to the nearest 2° value; outside 10° round to the nearest 10° value. Convert the rounded extent to a subscore using Table 12-8.
+
+If a scotoma interrupts the meridian, round the extent of the scotoma to the nearest 2° or 10° value and subtract the corresponding point value. In the presence of scotomata, use of the overlay grid is the preferred method.
+
+Add the 10 subscores to obtain the VFS for that eye. The average normal field will score about 100 points.
+
+2.b. Overlay grid
+Create an overlay grid with 10 meridians (see step 2.a) and grid points on each meridian at 1°, 3°, 5°, 7°, 9°, 15°, 25°, 35°, 45°, 55°, and 65°. Place the
+overlay grid over the field plot. Count the grid points enclosed by the III4e isopter (or the equivalent). Grid points within scotomata should not be counted. The total number of points seen is the Visual Field Score (VFS).
+
+2.c. Automated calculation
+A pilot study in 1992 conducted with a Humphrey Field Analyzer and controlled by an IBM-PC has shown the feasibility of a fully automated test sequence using the points of the overlay grid as stimulus positions.16 Such a program is not yet available commercially.
+
+3. Determine the Functional Field Score (FFS). Determine the binocular field by superimposing the monocular fields. For the binocular field, points are counted as seen if seen by both eyes or by one of the eyes. This determines the binocular VFS.
+
+Combine the Visual Field Scores for OU, OD, and OS (see Table 12-6):
+12.3
+d Calculation Examples for Visual Field Loss
+The following examples calculate the Visual Field Score for a single eye. This calculation needs to be followed by the same calculation for the other eye and for the binocular field (see Examples12-10 and
+12-11). Finally, use Table 12-6 to combine these values to determine a Functional Field Score.
+
+Method 2: Create an overlay grid (see instructions in Section 12.3c).
+Count the points within the III4e isopter. The diagram has 100 solid dots within the 60° circle and 8 open dots outside. The score is easily counted as: 100 – solid dots missed (symbol ?) + open dots seen (symbol heavy ). For this field plot: FFS = 100 – 4 + 4 = 100.
+Comment: The Visual Field Score is 100; therefore, the impairment rating is 0%. Note that the extra points seen laterally compensate for the points missed nasally and superiorly.
+
+12.3e Calculating the Binocular Field Existing perimeters are not equipped to provide reliable measurements of the binocular visual field.
+-- chars 3001 --
+Therefore, the binocular visual field is constructed by superimposing the two monocular plots. On the superimposed plot, areas seen by either eye are counted as seen; only areas not seen by either eye are counted as defects. The resulting binocular score can vary dramatically, depending on the location of the defects.
+
+12.4 Impairment of the Visual System
+The preceding calculations have provided us with two separate impairment estimates. The FAS provides an estimate for visual acuity–related abilities, such as reading, while the FFS provides an estimate for visual field–related abilities, such as orientation and mobility. To obtain an overall estimate of visual impairment, the two impairment estimates must be combined to a single Functional Vision Score (FVS). Subtracting the FVS from 100 then provides the visual impairment rating for the visual system.
+See below (Section 12.4c, Table 12-10) for the whole person impairment rating.
+
+Because the calculations outlined so far consider only the visual acuity and visual field aspects of vision, there must be room for individual adjustments in cases where functional vision is limited by factors other than visual acuity and visual field. The procedure was summarized in Table 12-1.
+
+12.4a Calculating an Impairment Rating for the Visual System
+The FAS and the FFS were calculated as weighted averages. This is appropriate because a good visual acuity or good visual field in one eye can compensate for loss of the same function in the other eye. Visual acuity–related functions and visual field–related functions, however, are largely independent. Good visual acuity cannot compensate for a loss of visual field, and vice versa. Therefore, the FAS and the FFS are combined using a multiplication formula.
+
+12.4a.1 Basic Rule
+To calculate the FVS, the FAS and the FFS are multiplied as if they represented percentage scores:
+FVS = (FAS ? FFS)/100
+For example, if the FAS is 80 (a 20% impairment) and the FFS is 75 (a 25% impairment), the FVS is calculated as: 80% ? 75% = 60% (a 40% impairment).
+
+Note that this calculation can be performed only on the basis of the residual ability scores. Adding or multiplying the impairment ratings (which indicate ability loss) gives erroneous answers.
+
+12.4a.2 Additional Rules
+Some additional rules are needed to avoid unrealistic calculations.
+1. For the purpose of this calculation, Functional Acuity and Functional Field Scores that are > 100 are treated as if they were 100. Thus, losses are counted only if the performance drops below the performance standard. The average performance of healthy eyes often is better than the performance standard. This better performance is taken into account in calculating the Functional Scores (see Example 12-2), but it is not counted as a reduction of the impairment rating.
+2. If visual field data are not available and if there is no clinical reason to suspect visual field loss, the FFS may be assumed to be 100. In this case, the FVS is the same as the FAS, and the impairment rating for the visual system is the same as the impairment rating for the visual acuity loss.
+-- chars 3179 --
+12.4a.3 Rule for Central Scotomata (Field Loss and Acuity Loss Are Not Independent) The dense array of points in the central 10° area of the visual field grid means that paracentral scotomata (blind spots adjacent to the point of fixation) will be counted even if they do not affect the central acuity. This is appropriate because it has been shown that such scotomata can interfere significantly with reading ability and with other activities of daily living.
+
+However, if the scotoma is central (ie, it covers the point of fixation), it affects both visual acuity and visual field and the two impairment ratings can no longer be treated as independent. Using the basic formula, central scotomata would be counted twice: once through their effect on visual acuity and once through their effect on the central field. Therefore, an additional rule is needed.
+
+3. If visual acuity is reduced, some central visual field losses will not be counted, as specified in Table 12-9.
+
+Thus, for every 10 points of VAS loss, field losses in one ring of 10 grid points are ignored. This means that these points are counted as if they were seen.
+This adjustment is made for each eye separately. The effect of this rule is that individuals with a small island of good acuity within a pericentral scotoma will get credit for this scotoma, but that those with a central scotoma that affects visual acuity will not get double benefits. The adjustment does not affect peripheral field losses. Thus, a person with peripheral field loss due to glaucoma who also develops a
+
+central loss due to macular degeneration will get credit for the central loss as well as for the peripheral field loss (see Examples 12-13, 12-14, and 12-15).
+
+12.4b Individual Adjustments
+Although visual acuity loss and visual field loss represent significant aspects of visual impairment, they are not the only factors that can lead to a loss of functional vision. This edition of the Guides does not provide detailed scales for other functions, such as:
+
+• Contrast sensitivity. This is the ability to perceive larger objects of poor contrast. Loss of this ability can interfere significantly with many activities of daily living. It is often, but not always, associated with a loss of visual acuity.
+• Glare sensitivity (veiling glare), delayed glare recovery, photophobia (light sensitivity), and reduced or delayed light and dark adaptation. These are other functions that may interfere with proper contrast perception.
+• Color vision defects. These defects are not uncommon but usually do not interfere significantly with generic activities of daily living. Severe color vision defects (achromatopsia) are usually accompanied by visual acuity loss. In some vocational settings the impact of minor color vision deficiencies can be significant. This could be a case where the generic impairment rating does not reflect the job-specific employability rating.
+• Binocularity, stereopsis, suppression, and diplopia. These functions vary in their effect on activities of daily living. Their significance often depends on the environment and on vocational demands.
+-- chars 3149 --
+Standardized measurement techniques on which standardized ability estimates can be based have not yet been developed for most of these functions.
+Furthermore, their effect may be partially accounted for by a loss of visual acuity and may vary significantly according to environmental demands.
+
+If significant factors remain that affect functional vision and that are not accounted for through visual acuity or visual field loss, a further adjustment of the impairment rating of the visual system may be in order. The need for the adjustment, however, must be well documented. The adjustment should be limited to an increase in the impairment rating of the visual system (reduction of the FVS) by, at most, 15 points.
+
+The same rule should be observed as in the case of central scotomata: Deficits should only be counted to the extent that their effect exceeds the effect of the related visual acuity or visual field deficit. Note the following examples.
+1. An individual with a congenital dark adaptation deficit with normal acuity and normal fields may be given a limited impairment rating based on this deficit. In someone with rod dystrophy (RP) manifested by field loss as well as dark adaptation problems, the impairment rating will be determined by the field loss and no additional rating is given for the dark adaptation deficit.
+2. Most people with visual acuity loss due to macular degeneration also have a loss of contrast sensitivity. Because the impairment rating is dominated by the visual acuity loss, no additional rating is given for the contrast sensitivity loss. Occasionally, individuals will have a bothersome contrast sensitivity loss while the visual acuity is still normal. In these cases, a limited impairment rating may be given based on the contrast sensitivity loss.
+3. Minor color vision deficits exist in about 5% of males. These deficits do not interfere with generic activities of daily living and do not receive an impairment rating. A printer with such a deficit would have no problems with black-and-white printing, but he or she may have difficulty judging the accuracy of color prints. This is a deficit that affects employability in a specific job, but it does not enter into the generic impairment considerations in this chapter (see Chapters 1 and 2). Total color blindness (achromatopsia) is extremely rare. It is accompanied by visual acuity loss, in which case the visual acuity loss will determine the impairment rating.
+
+12.4c Impairment of the Whole Person In classes 1, 2, and 3, individuals may benefit from vision enhancement techniques such as large print,
+better illumination, and better contrast. In classes 4, 5, and 6, a shift to vision substitution techniques occurs; this may include talking books, Braille, long cane, etc. Because of these techniques, a totally blind person is not totally incapacitated. In the previous section, a downward adjustment of the Functional Vision Score of up to 15 points was allowed for additional impairments whose effect exceeds that of the visual acuity and/or visual field loss. A similar, but opposite, adjustment may be made in classes 4, 5, and 6 to account for the effects of vision substitution skills that alleviate the effects of the permanent vision loss.
+-- chars 3296 --
+This adjustment affects the translation of the impairment rating of the visual system to an impairment rating of the whole person as shown in Table 12-10. Since the effectiveness of vision substitution skills will vary from person to person and cannot be predicted from the visual acuity and visual field measurements, the adjustments in Table 12-10 are generalized estimates.
+
+That the whole person impairment rating is not reduced further, even for blind persons who have made very effective adjustments, reflects the fact that vision substitution skills alleviate the effects of vision loss but do not eliminate the vision loss itself.
+
+12.4 d Calculation Examples Combining Visual Acuity Loss and Visual Field Loss
+
+Diagnosis: History of retinoblastoma.
+Impairment Rating: 100 – 84 = 16% impairment of the visual system, which is also the impairment of the whole person (see Table 12-10).
+Comment: The loss of one eye reduces the Functional Vision Score to the near-normal range, indicating a significant loss of reserves but not a significant restriction of the ability to perform activities of daily living.
+Note: To simplify the presentation of the following cases, the assumption is made that both eyes have identical conditions so that the Functional Acuity and Field Scores equal the Visual Acuity and Field Scores of the eye that is discussed. In real cases there usually will be differences in the scores.
+
+12.5 Visual Acuity Measurement at Near (Reading Acuity)
+Consideration of reading acuity in the calculation of the FAS is optional. It is warranted only if the reading acuity is significantly different from the distance acuity. In that case, it is appropriate to use the average of the FAS for letter chart acuity and the FAS for reading as indicated in Table 12-11. This section contains instructions for accurate reading acuity measurement.
+
+12.5 a Near Acuity vs Distance Acuity (Reading Acuity vs Letter Chart Acuity) Near acuity may be measured with a reduced-size letter chart or with continuous text. When the objective is the assessment of functional vision—as is the purpose of the Guides—continuous textual reading material should be used.
+
+Under most circumstances, letter chart acuity and reading acuity—if measured appropriately and with the proper refractive correction—will be similar.
+If significant differences between reading acuity and letter chart acuity exist, measurement errors,
+inappropriate refractive correction, and/or other complicating factors should first be suspected. The nature of these factors needs to be explored, documented, and corrected where possible. Accurate calculation of the reading acuity requires accurate measurement of the letter size as well as the viewing distance. Many practitioners record only the letter size read and not the reading distance. Table 12-11 shows that this is inappropriate because small changes in the reading distance can result in significant changes in visual acuity, especially if the reading distance is short.
+-- chars 3036 --
+One cause of a true discrepancy between reading acuity and letter chart acuity might be that the individual uses a small central island within a ring scotoma for letter acuity while using a larger, more eccentric area for reading. Another cause might be that when measuring letter chart acuity, people are usually pushed for threshold or marginal performance, whereas reading tests more often aim at a level of comfortable performance. For this reason, the magnification requirement for reading acuity may be somewhat greater than that for letter acuity. The difference is known as the magnification reserve needed for reading fluency.
+
+12.5b Letter Size Notations
+Another reason for discrepancies can be found in the use of inaccurate letter size notations. The commonly used Jaeger numbers refer to the labels on the boxes in the printing house in Vienna where Jaeger selected his print samples. They have no numerical value, and their implementation on various reading cards is notoriously variable. The J-numbers listed in Table 12-11 present the range of J-designations found for each letter size when a number of reading cards were surveyed.
+
+Some charts use a notation in printer’s points. Point sizes have a numerical value but may vary depending on the type style used. Many reading cards list distance equivalents. This notation is valid only if the card is used at the distance for which the card was designed. At any other distance, the use of distance equivalents is utterly confusing.
+
+The only letter size unit that allows a comparison between letter chart acuity and reading acuity is the M-unit. M-units refer directly to the actual letter size (X-height for uppercase letters on a letter chart, xheight for lowercase letters in a reading segment).
+One M-unit subtends 5 minutes of arc at 1 m and equals 1.454 mm (10% less than 1/16 in).
+
+12.5c Measurement Guidelines for Reading Acuity (Near-Vision Acuity) Visual acuity measurement at near is more complex than visual acuity measurement at distance because
+both letter size and viewing distance can vary. When reading acuity is measured, follow these guidelines.
+If binocular reading is possible, the binocular reading acuity should be recorded. If binocular reading is not possible or not preferred, the reading acuity of the eye that is preferred for actual reading should be
+
+1/16 in. Measuring the letter size in units of 1/16 in overestimates the visual acuity by slightly less than half a standard step size.
+
+To test reading acuity for the normal and near-normal range, many cards are available. Most will indicate distance equivalents. Note that these distance equivalents are valid only if the designated distance is used.
+
+Many individuals undergoing impairment evaluation will fall in the low-vision range. They may require shorter reading distances and/or larger print sizes.
+Table 12-11 shows the proper visual acuity values and impairment ratings for many combinations of letter size and viewing distance.
+-- chars 3020 --
+12.5d Modified Snellen Formula
+The visual acuity values found in Table 12-11 could be calculated using the standard Snellen fraction V = m/M, in which the viewing distance is specified in meters (1 m = 100 cm = 40 in, 1 in = 2.5 cm) and the letter size is in M-units. Use of the standard Snellen fraction becomes awkward when the viewing distance (in meters) is itself a fraction. In this case, it is more convenient to use the reciprocal of the viewing distance, which is known as the diopter (2 diopters = 1/2 m, 5 D = 1/5 m, etc). The use of reciprocal values turns the Snellen fraction into a multiplication, which is more easily calculated in one’s head because it uses whole numbers instead of fractions within fractions.
+
+The traditional formula
+
+used.
+
+The measurement of reading acuity requires a reading card with calibrated reading segments. Cards with proportionally spaced segments of equal length are preferred. The preferred step size is the same as for letter charts. The viewing distance should be measured and recorded carefully. Measurement with a diopter ruler simplifies calculations (see Section 12.5d) and provides a direct comparison to the required accommodation or reading add. Letter size specification in M-units is mandatory if any calculations or comparisons are involved. One M-unit equals 1.454 mm, which is slightly smaller than
+
+where M = letter size in M-units, m = viewing distance in meters, and D = viewing distance in diopters.
+
+12.5e Instructions
+To find the optimal combination of reading distance and letter size, start at the reading distance that corresponds to the individual’s current reading add and/or accommodative power. Increase the reading add (reduce the reading distance) to reach smaller print. Using Table 12-11, find the visual acuity at the intersection of the letter size row and the reading distance column. Alternatively, using the M ? D formula and a diopter ruler, calculate the 1/V value.
+
+For each combination of viewing distance and letter size read, compare the reading add to the viewing distance in diopters to verify the appropriate refractive correction. Also, compare the M ? D value to verify that the visual acuity values are consistent.
+
+12.5f Correction of Refractive Error
+To verify that the refractive correction is appropriate for the viewing distance, it is often useful to ask the individual to move the card back and forth to find the best possible focus. If the refractive correction (reading add) is not optimal, the measured acuity will not be the best-corrected visual acuity. Measuring the reading distance in diopters has the advantage of easy comparison to the reading addition.

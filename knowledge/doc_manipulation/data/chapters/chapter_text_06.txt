@@ -1,0 +1,117 @@
+================================================================================
+
+Chapter 6:
+-----------------------------------------------------------------
+The Digestive System
+6.1 Principles of Assessment
+6.2 Upper Digestive Tract
+6.3 Colon, Rectum, and Anus
+6.4 Enterocutaneous Fistulas
+6.5 Liver and Biliary Tract
+6.6 Hernias
+6.7 Digestive System Impairment Evaluation Summary
+-------INTRODUCTION START -------
+Introduction
+
+This chapter provides criteria for evaluating permanent impairment of the digestive system, consisting of the alimentary canal, liver, biliary tract, and pancreas. The criteria for assigning permanent impairment ratings of digestive system disease include clinically established or objectively determined deviations from normal in the transport and assimilation of ingested food, nutrition metabolism, waste product excretion, and the effect of these problems on individuals’ performance of activities of daily living.
+The following sections have been revised from the fourth edition: (1) impairment from ulcer disease has been revised since most duodenal and gastric ulcer disease cases can be eradicated with treatment of
+H. pylori infection, and bleeding ulcer treatment has improved with injection or heat therapy, in some cases avoiding gastric resection; (2) orthotopic liver transplantation has reclaimed the lives of many endstage liver disease patients and significantly reduced the degree of permanent impairment; (3) parenteral nutrition and, in particular, home nutrition programs have completely rehabilitated some and improved the daily lives of many individuals with intestinal failure from a variety of causes; (4) new techniques for improving biliary drainage prevent or delay irreversible liver damage; (5) continued experience with intestinal anastomosis and stomas provides a greater sense of security and self-esteem, improves overall function, and reduces the degree of permanent impairment in some people. Impairments of similar gravity, which have similar impact on the ability to perform activities of daily living for the small and large intestine, have been given the same impairment ratings for comparable classes.
+
+6.1 Principles of Assessment
+
+Before using the information in this chapter, the Guides user should become familiar with Chapters 1 and 2 and the Glossary. Chapters 1 and 2 discuss the Guides’ purpose, applications, and methods for performing and reporting impairment evaluations. The Glossary provides definitions of common terms used by many specialties in impairment evaluation.
+
+6.1a Interpretation of Symptoms and Signs
+Some impairment classes refer to symptoms that limit the ability to perform daily activities. When this information is subjective and possible to misinterpret, it should not serve as the sole criterion for assigning impairment ratings. Rather, the examiner should obtain objective data about the limitation’s extent and integrate those findings with the subjective data to estimate the degree of permanent impairment.
+-- chars 3037 --
+Esophageal impairment signs and symptoms include dysphagia, pyrosis or heartburn, retrosternal pain, regurgitation, bleeding, and weight loss. Note that occasional, minor dyspepsia, gas, and belching are within the experience of all individuals.
+
+Stomach and duodenum impairment symptoms and signs include nausea, vomiting, pain, bleeding, obstruction, diarrhea, weight loss, and certain types of malabsorption. Some impairments may produce nutritional deficiencies that lead to hematologic and neurologic manifestations, which would be rated separately and combined with digestive system impairments.
+
+Small intestine impairment symptoms and signs include abdominal pain, diarrhea, steatorrhea, bleeding, obstruction, and weight loss, which often are associated with general debility and other extraintestinal manifestations.
+
+Pancreatic function impairment symptoms and signs include, but are not limited to, pain, anorexia, nausea, vomiting, diarrhea, steatorrhea, weight loss, muscle wasting, jaundice, diabetes mellitus, and debility. Impairment due to endocrine disturbance related to the pancreas is considered in the Guides chapter on the endocrine system (Chapter 10).
+
+Colon, rectum, and anus impairment symptoms and signs include abdominal, pelvic, or perineal pain; disordered bowel action; tenesmus; fecal incontinence; bleeding; suppuration; and the appearance of hemorrhoids, fissures, and fistulas. Systemic manifestations may include fever, weight loss, debility, and anemia.
+
+Hepatobiliary impairment symptoms and signs include pain, nausea, vomiting, anorexia, loss of strength and stamina, reduced resistance to infection, altered immune response, jaundice, and pruritus.
+Advanced liver disease complications include edema and generalized ascites, portal hypertension leading to esophageal varices and hemorrhage, and metabolic disturbances leading to hepatic encephalopathy and renal failure.
+
+Abdominal wall impairment symptoms and signs include typically intermittent discomfort or pain at or near the herniation site, often associated with postural changes or increased abdominal pressure; visible or palpable protrusion or swelling at the herniation site, often appearing and disappearing with abdominal pressure; and more acute and intense pain due to complications, especially incarceration and strangulation of contained bowel or omentum.
+
+Incisional hernias may be unsightly and annoying; other symptoms, if any, tend to be related to the incisional hernia size. Inguinal and femoral hernias typically are painful and entail a greater risk of incarceration or strangulation. Most abdominal wall hernias are amenable to surgical correction.
+6.1b Description of Clinical Studies Objective procedures useful in establishing esophageal impairment include, but are not limited to: (1) imaging procedures, such as fluoroscopy and radiography employing contrast media, and computed tomography (CT); (2) peroral endoscopy, including cytologic study or biopsy; and (3) functional tests, such as manometry or intraesophageal pH measurement.
+-- chars 3071 --
+Objective procedures useful in establishing stomach and duodenum impairment include, but are not limited to: (1) imaging techniques, such as fluoroscopy and roentgenography with contrast media, scintigraphy, and CT; (2) peroral endoscopy, with biopsy and cytologic study; (3) gastric secretory tests; (4) malabsorption tests; (5) stool examination; and (6) urea breath test for H. pylori.
+
+Objective procedures useful in establishing impairment of the small intestine include, but are not limited to: (1) fluoroscopy and roentgenography employing contrast media; (2) peroral endoscopy and mucosal biopsy; and (3) intestinal malabsorption testing measures such as fecal fat content and urinary d-xylose excretion tests, carbon 14 breath test, and Schilling test.
+
+Objective procedures useful in establishing impairment of pancreatic function include, but are not limited to: (1) ultrasonography; (2) radiography, including plain or scout films of the abdomen, CT, and endoscopic pancreatography; (3) guided, fineneedle aspiration; (4) determination of plasma glucose level and glucose tolerance; (5) assay of pancreatic enzyme activity in blood, urine, and feces;
+(6) sweat electrolyte test; and (7) procedures such as the secretin test.
+
+Objective procedures useful in establishing colon, rectum, and anus impairment include, but are not limited to: (1) digital and endoscopic examination, including anoscopy, proctoscopy, sigmoidoscopy, and colonoscopy; (2) biopsy; (3) fecal microscopy and culture; and (4) fluoroscopy and roentgenography employing contrast media.
+
+Objective procedures useful in establishing hepatobiliary impairment include, but are not limited to: (1) ultrasonography; (2) contrast radiography, such as percutaneous and endoscopic cholangiography; (3) CT and magnetic resonance imaging (MRI); (4) nucleide scintigraphy; (5) angiography; (6) liver biopsy and
+fine-needle aspiration; and (7) laboratory tests to assess the bile ducts and various liver functions.
+
+Objective procedures useful in establishing impairment by hernias include, but are not limited to:
+(1) abdominal wall physical examination and
+(2) imaging by roentgenography or CT scan with or without contrast media.
+6.1 c Desirable Weight
+Weight loss is an essential criterion for evaluating the severity and consequences of gastrointestinal disorders. To determine impairment resulting from digestive disorders, desirable weight may be defined as follows:
+
+1. If possible, the examiner should determine by history or from previous medical records a weight that predates the individual’s digestive disorder that is considered usual and customary. The examiner should use that weight as the desirable weight from which any deviation is measured.
+
+2. If the examiner is not able to determine by history or previous medical records a usual and customary weight that predates the disorder, then the examiner should refer to a table of desirable weights and calculate deviations from the lower end of the table’s range that corresponds to the individual’s gender, height, and body build.
+-- chars 3099 --
+Tables 6-1 and 6-2 present desirable weights according to height for men and women, respectively. For an obese person, the usual preimpairment weight may not be as physiologically desirable as the current weight. Thus, the examiner should use his
+or her clinical judgment when assessing the relative importance of weight loss.
+6.1 d Impairment Determination
+Impairment classes, as listed in Tables 6-3 through 6-9, are organand system-specific. The impairment classes and percentage ratings reflect anatomic, physiological, and functional abnormalities at the organ and system level and the ability to perform activities of daily living (see Table 1-2). A gastrointestinal system impairment evaluation falling within
+normal range reflects an individual who performs all activities of daily living with only normal, occasional gastrointestinal symptoms; no limitation of activities; no special diet; and no required medication, with adequate reserve capacity that allows the body to obtain the required nutrition and maintain normal weight.
+
+For the purposes of impairment ratings, the upper digestive tract has been defined to include the esophagus, stomach and duodenum, small intestine, and pancreas. Impairment criteria and classes have been combined for the colon and rectum; anal; liver and biliary impairments; and hernia impairments.
+
+6.2 Upper Digestive Tract (Esophagus, Stomach and Duodenum, Small Intestine, and Pancreas)
+6.2 a Criteria for Rating Permanent Impairment Due to Upper Digestive Tract Disease
+Criteria for evaluating impairments related to upper digestive tract disease are given in Table 6-3.
+
+Impairment Rating: 0% impairment of the whole person.
+Comment: The original hiatal hernia and motility disorder have neither interfered with normal nutrition nor impaired ability to perform usual daily activities.1
+
+12
+injections, increasing impairment to 10% or more.
+
+6.3 Colon, Rectum, and Anus
+6.3
+a Criteria for Rating Permanent Impairment Due to Colonic or Rectal Disease
+Criteria for evaluating impairments in function of the colon and rectum are listed in Table 6-4.
+
+6.3b Criteria for Rating Permanent Impairment Due to Anal Disease
+Criteria for evaluating permanent impairments of the anus are listed in Table 6-5.
+
+6.4 Enterocutaneous Fistulas
+Evaluate permanent enterocutaneous fistulas of the gastrointestinal tract, biliary tract, or pancreas that are associated with diseases of these structures or their treatment as part of the primarily involved organ system. Permanent, surgically created stomas usually are provided to compensate for anatomic losses and to allow either ingress to or egress from the alimentary tract.
+
+If an individual has a permanent, surgically created stoma, combine a percentage based on Table 6-6 with an estimate based on criteria related to the involved organ (see the Combined Values Chart,
+p. 604).
+
+Many people with well-functioning, long-standing stomas such as Brooke ileostomy or descending colostomy lead full and active lives with few limitations in overall performance of daily activities.
+-- chars 3142 --
+6.5 Liver and Biliary Tract
+6.5a Criteria for Rating Permanent Impairment Due to Liver or Biliary Tract Disease
+Criteria for evaluating permanent impairment of the liver and biliary tract are listed in Tables 6-7 and 6-8.
+
+6.6  Hernias
+6.6a Criteria for Rating Permanent Impairment Due to Herniation
+Criteria for evaluating impairment due to herniation are listed in Table 6-9.
+
+Clinical Studies: None.
+Diagnosis: Uncomplicated incisional hernia.
+Impairment Rating: 0% impairment of the whole person.
+Comment: Asymptomatic incisional hernia only mildly annoying. No significant risk of complication. No limit in ability to perform activities of daily living.
+
+6.7 Digestive System Impairment Evaluation Summary
+See Table 6-10 for an evaluation summary for the assessment of permanent impairment due to digestive system disorders.
+
+Assessment of

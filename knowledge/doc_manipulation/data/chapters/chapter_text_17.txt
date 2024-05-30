@@ -1,0 +1,419 @@
+================================================================================
+
+Chapter 17:
+-----------------------------------------------------------------
+The Lower Extremities
+17.1 Principles of Assessment
+17.2 Methods of Assessment
+17.3 Lower Extremity Impairment Evaluation Procedure Summary and Examples
+-------INTRODUCTION START -------
+Introduction
+This chapter provides criteria for evaluating permanent impairment of the lower extremities, including impairment ratings that reflect an individual’s ability to perform the activities of daily living (ADL). For evaluation purposes, the lower extremities are divided into six sections: the feet, the hindfeet, the ankles, the legs, the knees, the hips, and the pelvis. In addition to the skeletal framework, assessment of the lower extremities also requires an assessment of its joints and the associated soft tissues, vascular system, and nervous system. The lower extremities are evaluated on the basis of anatomic changes, diagnostic categories, and functional changes. Impairment evaluations pertain to conditions that have reached maximum medical improvement (MMI), as defined in Chapter 1 and the Glossary.
+
+The following revisions have been made for the fifth edition: (1) The principles of assessment have been expanded to clarify when the different evaluation methods should be used; (2) a new table, Guide to the Appropriate Combination of Evaluation Methods (Table 17-2), has been added to indicate which methods are appropriate to use in combination;
+(3) the evaluation of causalgia and complex regional pain syndrome now follows the same principles used to evaluate central nervous system lesions;
+(4) additional case examples are provided; and (5) a lower extremity worksheet is provided as a template to simplify making the assessment and recording the evaluation.
+
+17.1 Principles of Assessment
+Before using the information in this chapter, the Guides user should become familiar with Chapters 1 and 2 and the Glossary. Chapters 1 and 2 discuss the Guides’ purpose, applications, and methods for performing and reporting impairment evaluations. The Glossary provides definitions of common terms used by many specialties in impairment evaluation.
+
+The evaluation should include a comprehensive, accurate medical history; a review of all pertinent records; a comprehensive description of the individual’s current symptoms and their relationship to daily activities; a careful and thorough physical examination; and all findings of relevant laboratory, radiologic (imaging), and ancillary tests. It is also essential that the rater include in the report a description of how the impairment was calculated. Because many ratings are reviewed by other physicians and third-party administrators, the explanation of the calculation will lead to a better understanding of the method used and the report will be considered more reliable.
+
+17.1 a Interpretation of Symptoms and Signs
+-------INTRODUCTION START (History)-------
+-- chars 3012 --
+History
+The case history should be based mainly on the individual’s own statements rather than on secondhand information. The evaluator should consider information from other sources, including medical records. The physician should use this information cautiously, especially if it is subjective. It is not appropriate to question the individual’s integrity. If information from the individual is inconsistent with what is known about the medical condition, the circumstances, or the written record, this should be reported and comment should be included about the inconsistencies.
+
+The medical history must describe the chief complaint. Discuss the quality, frequency, duration, and anatomic location of pain, numbness, paresthesias, and weakness in detail. Further, report how the condition interferes with daily activities. The physician should elicit the facts about when and how the condition started and the relationship to any related problems elsewhere in the lower extremity or in other areas of the musculoskeletal system, such as the spine. The report should describe any precipitating events or factors.
+
+Ideally, include the individual’s description as to how the symptoms developed and the assumed cause. In addition, discuss the results of special studies and treatment. The physician should review available xrays and other imaging studies personally or report the findings as being those of another reviewer (based on reports). A review of organ systems and of the general medical history can provide potentially helpful information, including complicating medical problems that can affect the diagnosis and care plan.
+
+Examination
+Physical examination of nonmusculoskeletal areas (eg, the nervous system) is discussed in other parts of the Guides. A targeted neurologic assessment is needed for individuals with lower extremity problems. Guided by the history and physical examination, the physician records lower extremity–related physical findings, such as range of motion, limb length discrepancy, deformity, reflexes, muscle strength and atrophy, ligamentous laxity, motor and sensory deficits, and specific diagnoses such as fractures and bursitis.
+
+Neurologic examination of the lower extremities includes measurement of knee and ankle reflexes and motor and sensory functions. It is important to ensure that lower extremity impairment discussed in this chapter is not due to underlying spine pathology. If lower extremity impairment is due to an underlying spine disorder, the lower extremity impairment would, in most cases, be accounted for in the spine impairment rating.
+
+The Lower Extremities
+525
+
+17.1 b Description of Clinical Studies
+Specific Lower Extremity Techniques
+The physician needs to review and record findings from diagnostic studies, including laboratory tests, electromyographic, vascular, and roentgenographic studies, CT scans, and MRI studies with or without contrast. A summary of the studies should be included as a separate paragraph or section. While imaging and other studies may assist physicians in making a diagnosis and help determine the method for assessment, they are not the sole determinants.
+-- chars 3175 --
+17.2 Methods of Assessment
+Thirteen methods can be used to assess the lower extremities, as listed in Table 17-2. Table 17-1 classifies the 13 methods into three non–mutually exclusive categories to reflect their primary mode of assessment: (1) anatomic, (2) functional, or (3) diagnosis based. Detailed discussions of each method are provided in the sections noted.
+
+Anatomic changes, including range of motion (ROM), any limb length discrepancy, arthritis, skin changes, amputation, muscle atrophy, nerve impairment, and vascular derangement are assessed in the physical examination and supported with clinical studies. Arthritis has its own diagnostic category, which applies to individuals with documented arthritis who are impaired by pain, weakness, or stiffness, but who have maintained functional ranges of motion. Arthritis is evaluated based on narrowing of the joint space as measured from x-rays. Causalgia and complex regional pain syndrome (reflex sympathetic dystrophy) are evaluated using a combination of ROM and peripheral neurologic evaluation techniques.
+
+Diagnosis-based estimates are used to evaluate impairments caused by specific fractures and deformities, as well as ligamentous instability, bursitis, and various surgical procedures, including joint replacements and meniscectomies. In certain situations, diagnosis-based estimates are combined with other methods of assessment.
+
+Functional impairments are chosen for conditions when anatomic changes are difficult to categorize or when functional implications have been documented. Functional impairments are assessed last.
+
+The evaluator should read this chapter in its entirety and understand and follow the evaluation methods using the worksheet given in Figure 17-10 at the end of the chapter or a similar, comprehensive checklist. The evaluator’s first step is to establish the diagnosis(es) and whether or not the individual has reached MMI. The next step is to identify each part of the lower extremity that might possibly warrant an impairment rating (pelvis, hip, thigh, etc, down to the toes). Figure 17-10 lists potential methods for each lower extremity part. The evaluator determines whether ROM impairment or other regional impairments are present for each relevant part and records the impairment values in the appropriate locations on the worksheet. The selection of the most specific method(s) and the appropriate combination are
+later considerations.
+After all potentially impairing conditions have been identified and the correct ratings recorded, the evaluator should select the clinically most appropriate (ie, most specific) method(s) and record the estimated impairment for each. The cross-usage chart (Table 17-2) indicates which methods and resulting impairment ratings may be combined. It is the responsibility
+
+of the evaluating physician to explain in writing why a particular method(s) to assign the impairment rating was chosen. When uncertain about which method to choose, the evaluator should calculate the impairment using different alternatives and choose the method or combination of methods that gives the most clinically accurate impairment rating.
+-- chars 3174 --
+X = Do not use these methods together for evaluating a single impairment. 0 = See specific instructions for CRPS of the lower extremity.
+
+The Lower Extremities
+527
+
+Typically, one method will adequately characterize the impairment and its impact on the ability to perform ADL. In some cases, however, more than one method needs to be used to accurately assess all features of the impairment. When more than one rating method is used, the individual impairment ratings are combined using the Combined Values Chart (p. 604).
+
+Avoid combining methods that rate the same condition. Selecting the optimal approach or combining several methods requires judgment and experience. A careful examination and review of supporting material is essential to produce accurate and consistent results. If more than one method can be used, the method that provides the higher rating should be adopted.
+
+17.2 a Converting From Lower Extremity to Whole Person Impairment
+To make this chapter easier to use, the tables in this chapter show the impairment percentages of the whole person, the lower extremity, and the specific lower extremity part together. The whole person impairments are not in parentheses; the lower limb impairment percents are in parentheses ( ); and, when applicable, the specific part impairments are in brackets [ ]. To calculate the lower extremity impairment percent from a specific part impairment percent (eg, foot), multiply by 0.7. To calculate whole person impairment from a lower extremity impairment, multiply by 0.4. These values are shown in Table 17-3.
+Some individuals may have several impairments involving different parts of the same lower extremity; others may have several impairments of the same lower extremity part. If there are several impairments involving different regions of the lower extremity (eg, the thigh and the foot), evaluate each impairment separately, convert these regional impairments to whole person impairments, and combine the whole person impairment rating using the Combined Values Chart (p. 604). If there are multiple impairments within a region (eg, the toes and the ankle), combine these regional, lower extremity impairments of the foot and convert the combined foot impairment to a whole person impairment. Similarly, when using separate methods on the same region, combine the regional impairments before converting to a whole person impairment rating.
+
+The 13 assessment methods listed in Table 17-1 are discussed separately below.
+
+17.2 b Limb Length Discrepancy
+To determine limb length discrepancy, place the individual supine on the examination table with the legs in the same position, measure the distance between the anterior superior iliac spine and the medial malleolus on the involved side, and compare it with the opposite side. To identify where on the leg the discrepancy is, the knee is flexed to 90° while the feet are kept flat on the table. If one knee is higher than the other, the tibia is longer on that leg. Another method sometimes used is to evaluate the level of the iliac crest when the individual is standing. This is not recommended because differences in iliac crest levels may be due to pelvic obliquity, flexion, or adduction deformity of the hip. When these reasons exist for the obliquity, it is referred to as apparent leg length discrepancy.
+-- chars 3361 --
+Both clinical methods have at least a 0.5to 1.0-cm variance, and both measurements are difficult to perform in a person with pelvic angulation, knee flexion contracture, or significant ankle edema. For this reason, teleroentgenography is recommended. If surface measurements with a tape measure from the anterior superior iliac spine to medial malleolus are used, they should be repeated three times and averaged to reduce measurement error. Impairments from limb length discrepancy depend on the magnitude of the leg length difference and are provided in Table 17-4. When applicable, the leg length discrepancy impairment is combined with other impairments.
+
+In case of shortening due to overriding or malalignment or fracture deformities, but not to include flexion or extension deformities, combine the following values with other functional sequelae, using the Combined Values Chart:
+
+1.25 cm (0-1/2 in) = 5% of lower extremity 1.25-2.5 cm (1/2-1 in) = 10% of lower extremity 2.5-3.75 cm (1-11/2 in) = 15% of lower extremity 3.75-5.0 cm (11/2-2 in) = 20% of lower extremity
+
+The Lower Extremities
+529
+
+shortening results in an impairment of 5% of the leg, or 2% impairment of the whole person.
+Because the teleroentgenography is more accurate than tape measurements, especially in an obese individual (as this person was), it is the preferred method of determining leg length. Limb shortening may be combined with other methods (eg, diagnosis of femur fracture, as listed in Table 17-2).
+
+17.2c Gait Derangement
+Gait derangement is present with many different types of lower extremity impairments and is always secondary to another condition. An impairment rating due to a gait derangement should be supported by pathologic findings, such as x-rays. Except as otherwise noted, the percentages given in Table 17-5 are for full-time gait derangements of persons who are dependent on assistive devices.
+
+Whenever possible, the evaluator should use a more specific method. When the gait method is used, a written rationale should be included in the report.
+The lower limb impairment percents shown in Table 17-5 stand alone and are not combined with any other impairment evaluation method.
+
+Section 17.2c does not apply to abnormalities based only on subjective factors, such as pain or sudden giving-way, as with, for example, an individual with low-back discomfort who chooses to use a cane to assist in walking.
+17.2d Muscle Atrophy (Unilateral)
+In evaluating muscle atrophy, the leg circumference should be measured and compared to the opposite leg at equal distances from either the joint line or another palpable anatomic structure. For example, a thigh atrophy may involve measuring the thigh circumference with a tape measure 10 cm above the patella and comparing it to a similar measure on the other leg. Calf circumference is compared at the maximum level bilaterally. Neither limb should have swelling or varicosities that would invalidate the measurements. Diminished muscle function can be estimated using four different methods. Only one should be used; that is, use only one method for assessing muscle function. Atrophy ratings should not be combined with any of the other three possible ratings of diminished muscle function (gait derangement, muscle weakness, and peripheral nerve injury). When muscle dysfunction is present, assess the condition with all four methods. Use the method that most accurately and objectively reflects the individual’s impairment. Atrophy at both the thigh and calf is evaluated separately and the whole person impairment combined. Impairment ratings from atrophy
+-- chars 3652 --
+are provided in Table 17-6.
+
+17.2e Manual Muscle Testing
+Manual muscle testing, which typically involves groups of muscles, depends on the examinee’s cooperation and is subject to his or her conscious and unconscious control. To be valid, the results should be concordant with other observable pathologic signs and medical evidence. In general, this method is best used for pathology that does not have a primary neurologic basis, eg, a compartment syndrome or direct muscle trauma. Weakness caused by an identifiable motor deficit of a specific peripheral nerve should be assessed according to Section 17.2l, Peripheral Nerve Injuries.
+
+Measurements can be made by one or two observers. If the measurements are made by one examiner, they should be consistent on different occasions. If made by two, they should be consistent between examiners. Even in a fully cooperative individual, strength may vary from one examination to another, but not by more than one grade. If they vary by more than one grade between observers, or by the same examiner on separate occasions, the measurement should be considered invalid. In those individuals, impairment estimates should not be made using this section.
+Individuals whose performance is inhibited by pain or the fear of pain are not good candidates for manual muscle testing, and other evaluation methods should be considered for them. Table 17-7 shows the criteria on which estimates and grades of the lower extremity’s strength are based, and Table 17-8 lists the actual ratings based on lower extremity weakness.
+17.2f Range of Motion
+Lower extremity impairment can be evaluated by assessing the range of motion of its joints, recognizing that pain and motivation may affect the measurements. If it is clear to the evaluator that a restricted range of motion has an organic basis, three measurements should be obtained and the greatest range measured should be used. If multiple evaluations exist, and there is inconsistency of a rating class between the findings of two observers, or in the findings on separate occasions by the same observer, the results are considered invalid. Figures 17-1 to 17-6 illustrate one method of measuring range of motion in the lower extremity. The ranges listed in Tables
+17-9 through 17-14 are examples of mild, moderate, and severe impairments and are to be used as guides. Range-of-motion restrictions in multiple directions do increase the impairment. Add range-of-motion impairments for a single joint to determine the total joint range-of-motion impairments. For example, hip motion is evaluated and any impairment added in each of the six principal directions of motion.
+Figure 17-1 Using a Goniometer to Measure Flexion of the Right Hip*
+
+(a) Goniometer is placed at the right hip, and the pelvis is locked in the neutral position by flexing the left hip until the lumbar spine is flat.
+(b) Examinee flexes the right hip until the anterior superior iliac spine begins to move, when the angle is recorded.
+-- chars 3023 --
+(c) To measure loss of extension of the right hip, the left hip is flexed until the lumbar spine is flat on the examining table, as determined by the examiner’s hand, which is placed between the lumbar spine and table surface. The right thigh should rest flat on the table;
+any right hip flexion is recorded as a flexion contracture.
+
+Figure 17-3 Measuring Internal and External Hip Rotation*
+
+The examinee is prone on a flat surface, and the knee is flexed 90°. One part of the goniometer is parallel to the flat surface, and the other is along the tibia. While testing, the examiner should place the hand on the knee to determine whether there is significant laxity of the knee joint. Keep the pelvis flat on the table.
+Neutral
+
+Figure 17-5 Measuring Foot Dorsiflexion and Plantar Flexion
+
+The goniometer’s pivot is centered over the ankle, and one arm parallels the tibia. The examiner reads the angles subtending the maximum arcs of motion for dorsiflexion and plantar flexion. The test is repeated with the knee flexed to 45°. The averages of the maximum angles represent dorsiflexion and plantar flexion ranges of motion.
+
+Rosemont, Ill: American Orthopaedic Association; 1966.
+
+Figure 17-4 Measuring Knee Flexion
+
+(a) The examinee is supine and the goniometer is next to the knee joint; one goniometer arm is parallel to the lower leg, and the other is parallel to the femur. Any deviation from 0° is recorded.
+(b) The examinee exerts maximum effort to flex the knee. The flexion angle is obtained from the goniometer.
+Figure 17-6 Evaluating the Range of Motion of a Toe: the Metatarsophalangeal (MTP) Joint of the Great Toe
+
+(a) The examinee is seated in the position for evaluation of the toes. The knee is flexed to 45°, and the foot and MTP joint are in the neutral position.
+(b) Extension: The goniometer is under the MTP joint, and its angle is read as a baseline. The examinee extends (dorsiflexes) the toe maximally, and the angle subtending the maximum arc of motion is read; the baseline angle is subtracted.
+(c) Flexion: The goniometer is placed over the MTP joint. The baseline angle is read. The examinee plantar flexes the MTP joint maximally. The angle subtending the maximum arc of motion is read, and the baseline angle is subtracted.
+
+The Lower Extremities
+537
+Range-of-motion impairment values for the lower extremity are listed in Tables 17-9 to 17-14.
+
+The maximum whole person impairment percent for impairment of two or more lesser toes of one foot is 2%.
+17.2g Joint Ankylosis
+An immobile joint is an impairment even when the position of ankylosis is optimal. Malposition in angulation or rotation of an arthrodesed or fused joint increases the magnitude of the impairment.
+Surgical correction usually is preferable to accepting a significant malposition, but it is not always possible or practical. Impairment estimates for malposition are therefore included for the infrequently encountered individual who is not a candidate for surgical correction.
+-- chars 3003 --
+The following text and Tables 17-15 through 17-30 indicate the optimal neutral positions for ankyloses of the lower extremity joints and provide the impairment percents for ankyloses in those optimal positions.
+Any variation from the optimal neutral position of an ankylosed joint increases the baseline impairment percent as indicated in the tables. The values listed are for the maximum end of the deformity range.
+Specific deformities should be rated using interpolation of the ranges in the tables as illustrated by examples in this section. Multiple malposition deformities of the same joint, ie, angulation and malrotation, are added, whereas deformities of different joints are combined using the Combined Values Chart (p. 604). The baseline rating for ankylosis in the neutral position is used only once for each joint. As noted elsewhere, added or combined impairment ratings can never exceed 100% of the lower extremity.
+
+Hip
+The optimal position of ankylosis is 25° to 40° flexion and neutral rotation, adduction, and abduction. This position represents a 20% whole person impairment and a 50% lower extremity impairment.
+
+Tables 17-15 through 17-19 provide impairment estimates for hip ankyloses in various positions. See Figures 17-1 through 17-3 for illustration of the measurement of hip motion and ankylosis.
+Impairment estimates for rotation, abduction, and adduction deformities are added. The maximum hip impairment or lower limb impairment is 100%, which is a 40% whole person impairment.
+Knee
+The optimal position is 10° to 15° of flexion with neutral alignment. Figure 17-4 shows how the goniometer is used to measure knee flexion. Ankylosis in the optimal position is a 67% lower extremity impairment or 27% whole person impairment.
+
+Impairments beyond those of the optimal position are evaluated according to Tables 17-20 through 17-23. Malpositions of the knee include varus, val-
+gus, and malrotation deformities, which can increase the impairment up to 100% impairment of the lower extremity.
+
+The appropriate ankylosis impairment percent is added to the impairment percent for ankylosis in the neutral position given in the text.
+The optimal ankylosis position is the neutral position without flexion, extension, varus, or valgus. Ankylosis of the ankle in the neutral position is a 4% whole person impairment, a 10% lower extremity impairment, and a 14% foot impairment. A variation from the neutral position should be evaluated according to Tables 17-24 through 17-28. The maximum impairments are 25% whole person impairment, 62% lower extremity impairment, and 88% ankle impairment. Figure 17-5 illustrates a measurement of dorsiflexion and plantar flexion.
+
+The appropriate ankylosis impairment percent is added to the impairment percent for ankylosis in the neutral position given in the text.
+
+The appropriate ankylosis impairment percent is added to the impairment percent for ankylosis in the neutral position given in the text.
+
+The appropriate ankylosis impairment percent is added to the impairment percent for ankylosis in the neutral position given in the text.
+-- chars 3104 --
+Foot (Hindfoot, Midfoot, Forefoot)
+For the subtalar part of the foot, the optimal ankylosis position is neutral, or 0°, without varus or valgus. The ankylosis impairment in the neutral position is 4% for the whole person, 10% for the lower extremity, and 14% for the foot. Malpositioning may increase the whole person impairment up to 25%.
+Varus or valgus malpositioning is estimated in the same way as for the ankle (Tables 17-25 and 17-26).
+
+Ankylosis impairment for loss of the tibia–os calcis angle is estimated according to Table 17-29. The tibia–os calcis angle is made by the longitudinal axis of the os calcis and the longitudinal axis of the tibia with the ankle in neutral position (Figure 17-7).
+For pantalar ankylosis, the optimal position is neutral; the impairment estimates for that position are 10% for the whole person, 25% for the lower extremity, and 35% for the foot. Further flexion, varus, and valgus impairments are estimated as shown in Tables 17-25 to 17-29.
+
+Toes
+Figure 17-6 illustrates the use of a goniometer to measure a toe’s range of motion. Table 17-30 provides impairment estimates related to ankylosis of one or several toes.
+17.2h Arthritis
+Roentgenographic grading systems for inflammatory and degenerative arthritis are well established and widely used for treatment decisions and scientific investigation. For most individuals, roentgenographic grading is a more objective and valid method for assigning impairment estimates than physical findings, such as the range of motion or joint crepitation. While there are some individuals with arthritis for whom loss of motion is the principal impairment, most people are impaired more by pain and sometimes weakness, but they still can maintain functional ranges of motion, at least in the early stages of the process. Range-of-motion techniques are therefore of limited value for estimating impairment secondary to arthritis in many individuals. Crepitation is an inconstant finding that depends on such factors as forces on joint surfaces and synovial fluid viscosity.
+
+Certain roentgenographic findings that are of diagnostic importance, such as osteophytes and reactive sclerosis, have no direct bearing on impairment. The best roentgenographic indicator of disease stage and impairment for a person with arthritis is the cartilage interval or joint space. The hallmark of all types of arthritis is thinning of the articular cartilage; this correlates well with disease progression.
+
+The need for joint replacement or major reconstruction usually corresponds with complete loss of the articular surface (joint space). The impairment estimates in a person with arthritis (Table 17-31) are based on standard x-rays taken with the individual standing, if possible. The ideal film-to-camera distance is 90 cm (36 in), and the beam should be at the level of and parallel to the joint surface. The estimate for the patellofemoral joint is based on a “sunrise view” taken at 40° flexion or on a true lateral view.
+-- chars 3005 --
+In the case of the knee, the joint must be in neutral flexion-extension position (0°) to evaluate the x-rays. Impairments of individuals with knee flexion contractures should not be estimated using x-rays because measurements are unreliable. In these individuals, the range-of-motion method should be used. X-rays of the hip joint are taken in the neutral position. The cartilage interval (joint space) of the hip is relatively constant in the various positions; therefore, positioning is not as critical as for the knee x-rays.
+The ankle x-ray must be taken in a mortise view, which is 10° internal rotation: 10° flexion or extension is permissible. Evaluation of the foot joints requires a lateral view for the hindfoot and an anteroposterior view for the midfoot and forefoot. If there is doubt or controversy about the suitability of the
+
+† In an individual with a history of direct trauma, a complaint of patellofemoral pain, and crepitation on physical examination. but without joint space narrowing on x-rays, a 2% whole person or 5% lower extremity impairment is given.
+
+radiographic method in a specific individual, rangeof-motion techniques may be used instead.
+
+A person who has an intra-articular fracture and subsequent rapid onset of arthritis should be evaluated using the arthritis section combined with Section
+17.2j on diagnosis-based estimates.
+
+17.2i Amputations
+Impairments of the lower extremity due to amputations are estimated according to Table 17-32.
+
+17.2j Diagnosis-Based Estimates
+Some impairment estimates are assigned more appropriately on the basis of a diagnosis than on the basis of findings on physical examination. A good example is that of an individual impaired because of a successful replacement of a hip. This person may function well but require prophylactic restrictions of activities of daily living to prevent a further impairment, such as premature failure of the prosthesis.
+Table 17-33 provides impairment estimates for certain lower extremity impairments. For most diagnosis-based estimates, the ranges of impairment are broad, and the estimate will depend on the clinical manifestations and their impact on the ability to perform activities of daily living. Hip replacements should first be rated using Table 17-34 and knee replacements using Table 17-35. The points obtained from the assessment are then applied to Table 17-33 for the diagnosis impairment rating. If limb length discrepancy also exists, that impairment rating should be combined with the impairment from
+the joint replacement using the Combined Values Chart (p. 604).
+† See Table 17-34 or Table 17-35 for point rating system.
+‡ A stress x-ray is an anterior-posterior view taken with a varus or valgus stress applied by a knowledgeable physician.
+§ The tibia–os calcis angle is measured as shown in Figure 17-7.
+
+The Lower Extremities
+547
+
+Region and Condition
+Total knee replacement including unicondylar replacement
+Good result, 85-100 points† Fair results, 50-84 points†
+-- chars 3033 --
+Poor results, less than 50 points†
+
+Proximal tibial osteotomy
+
+Whole Person (Lower Extremity) [Foot] Impairment (%)
+
+Region and Condition
+Loss of tibia–os calcis angle§ Angle is 120°-110°
+
+Angle is 100°-90° Angle is less than 90°
+
+Intra-articular fracture with displacement
+
+Whole Person (Lower Extremity) [Foot] Impairment (%)
+
+5 (12) [17]
+
+8 (20) [28]
+
++1 (2) [3] per degree up to
+15 (37) [54]
+
+Ligamentous instability (based on stress x-rays‡)
+Mild (2-3 mm excess opening) Moderate (4-6 mm)
+Severe (> 6 mm)
+
+Fracture
+Extra-articular with angulation 10°-14°
++1 (2) [3] per degree up to
+15 (37) [53]
+
+Moderate Severe
+Avascular necrosis of the talus Without collapse
+
+With collapse
+
+Forefoot deformity
+Metatarsal fracture with loss of weight transfer
+1st metatarsal 5th metatarsal Other metatarsal
+
+Intra-articular with displacement
+
+Hindfoot
+Fracture
+Extra-articular (calcaneal)
+
+With varus angulation 10°-19°
+
+0.5 (1) [1] per degree up to
+10 (25)
+
+Metatarsal fracture with plantar angulation and metatarsalgia
+1st metatarsal 5th metatarsal Other metatarsal
+
+With valgus angulation 10°-19°
+
+With valgus angulation 20°+
+0.5 (2) [1] per degree up to
+10 (25) [35]
+The evaluating physician must determine whether diagnostic or examination criteria best describe the impairment of a specific individual. The evaluator should, in general, use only one approach for each anatomic part. There are, however, a few instances in which elements from both diagnostic and examination approaches will apply to a specific situation (see Figure 17-2). An individual with an acetabular fracture
+
+and a sciatic nerve palsy should have estimates made for both the hip joint impairment and the nerve palsy. The estimates for the fracture and the nerve condition are then combined using the Combined Values Chart (p. 604) to provide the final impairment estimate. The final lower extremity impairment cannot exceed the impairment estimate for amputation of the extremity (100%), or 40% whole person impairment.
+
+Fractures in and about joints with degenerative changes should be rated either by using this section and combining the rating with that for arthritis (Table 17-31 and Combined Values Chart, p. 604) or by using the loss of range-of-motion method. It is recommended that the method providing the greater of the two impairment estimates be used. A diagnosis of isolated full-thickness articular cartilage defects and ununited osteochondral fractures requires arthroscopic or surgical confirmation.
+17.2k Skin Loss
+Full-thickness skin loss about certain areas in the lower extremity results in significant impairment, as shown in Table 17-36, even when the areas are successfully covered with an appropriate type of skin graft. Chronic osteomyelitis is also evaluated using this method.
+
+17.2l Peripheral Nerve Injuries
+Peripheral nerve injuries are divided into two components: motor deficits and sensory deficits. Figures 17-8 and 17-9 show the sensory and motor nerves of the lower extremity. All estimates listed in Table 17-37 are for complete motor or sensory loss for the named peripheral nerves. Partial sensory and motor deficits should be rated as in the upper extremity (Tables 16-10 and 16-11). First identify the injured
+-- chars 3341 --
+nerve and find the maximum impairment of the lower extremity due to motor deficit in Table 17-37. Grade the severity of motor deficit of the individual muscle groups innervated by that nerve according to the classification given in Table 16-11. Assign a motor deficit concordant with that grade and multiply the maximum impairment value of the nerve for motor loss by the percent motor deficit to obtain the lower extremity impairment for this partial loss. Sensory deficits follow a similar method, as described in Table 16-10.
+Motor and sensory estimates should be combined, but impairments from multiple peripheral nerve injuries should not exceed the whole person impairment from complete loss of a lower extremity (40%).
+
+The Lower Extremities
+551
+Sensory deficits, including dysesthesias, are subjective and must be carefully evaluated. Ideally, two examiners should agree. Estimates for peripheral nerve impairments may be combined with those for other types of lower extremity impairments, except those for muscle weakness, atrophy, and gait derangement, using the Combined Values Chart
+(p. 604). See cross-usage Table 17-2.
+
+The Lower Extremities
+553
+
+17.2m Causalgia and Complex Regional Pain Syndrome (Reflex Sympathetic Dystrophy)
+Causalgia is a burning pain resulting from injury of a peripheral nerve. As a term, complex regional pain syndrome (CRPS) is preferred to reflex sympathetic dystrophy (RSD) because the relationship to the sympathetic nervous system is uncertain. CRPS is characterized by pain, swelling, stiffness, discoloration, and skeletal demineralization, and it may follow a sprain, fracture or nerve or vascular injury. CRPS is further described in Section 13.8.
+When causalgia or CRPS occurs in an extremity, the evaluator should use the method described in Chapter 13, The Central and Peripheral Nervous System.
+
+17.2n Vascular Disorders
+Table 17-38 classifies and provides criteria for impairments due to peripheral vascular disease of the lower extremity. When amputation due to peripheral vascular disease is involved, the impairment due to amputation should be evaluated according to the criteria in section 17.2i, and the impairment percent should be combined (Combined Values Chart, p. 604) with an appropriate percent based on Table 17-38 for the remaining vascular disease.
+The Lower Extremities
+555
+
+17.3 Lower Extremity Impairment Evaluation Procedure Summary and Examples
+When evaluating an individual with lower extremity impairment, first obtain the person’s detailed history and perform a thorough and careful physical examination, then follow the steps suggested below.
+
+1. Establish the diagnosis.
+2. Determine whether the individual has reached maximal medical improvement (MMI).
+3. Identify each anatomic region of the lower extremity(ies) with abnormalities related to the illness/injury being evaluated. List potential methods. Use the worksheet shown in Figure 17-10.
+-- chars 3014 --
+4. Calculate the impairment according to the text and tables for each applicable method (Table 17-1).
+5. Identify and calculate impairment related to the peripheral nervous system.
+6. Identify and calculate impairment related to the peripheral vascular system.
+7. Identify and calculate any impairment that is related to a complex regional pain syndrome.
+8. If no other methods are available, use the gait derangement method if clinically applicable; document its validity.
+
+9. Select the most appropriate method(s) based on the history and physical examination. Use the cross-usage table (Table 17-2) to ensure only the proper methods are combined. Although diminished muscle function can be evaluated by means of four methods (peripheral nervous system impairment, atrophy, manual muscle testing, or gait), use only the method that has the greatest specificity (eg, a peripheral nerve injury, if present). Anatomically based, specific methods are used to evaluate skin loss and osteomyelitis (Section 17.2k), peripheral nerve injuries (Section 17.2l), and vascular disorders (Section 17.2n). If a vascular impairment results in an amputation, any remaining vascular and amputation impairments are combined. Neurologic and vascular impairments are recorded separately since they are not limited to one region of the lower extremity. Gait derangements should be used only infrequently, when other, more specific measures are not appropriate.
+10. If there are several alternatives, use the grouping that provides the greatest impairment percent. Convert a lower extremity impairment rating to whole person impairment using the appropriate tables. Combine whole person impairments for each injury/illness for the same extremity using the Combined Values Chart (p. 604).
+11. If more than one leg is involved, each lower extremity is rated separately and converted to whole person; then both whole person ratings (right and left leg) are combined using the Combined Values Chart.
+The Lower Extremities
+559
+
+Notice that to calculate the lower extremity impairment, all the impairment ratings must be calculated for the lower extremity. Thus, the lower extremity amputation impairment rating must be used, not the foot impairment rating. Calculating the whole person impairment by combining the lower extremity impairments and multiplying by 0.4 should be the same as converting each lower extremity impairment to whole person impairment and then combining the whole person impairments. In cases where they are not equal, the evaluator should use the higher rating.
+
+The Lower Extremities
+561
+
+DBE = diagnosis-based estimates; DJD = degenerative joint disease (arthritis).
+Box 17-1 Choosing a Lower Extremity Impairment Rating
+
+1. Establish the diagnosis.
+
+Right Lower Extremity
+Anterior cruciate ligament tear; lateral meniscus tear; common peroneal nerve neuropraxia.
+Left Lower Extremity
+Fracture/dislocation, left great toe IP joint.
+-- chars 3042 --
+2. Determine whether MMI has been reached.
+
+Right Lower Extremity
+Right lower extremity injuries meet definitional requirements and MMI.
+Left Lower Extremity
+Left lower extremity injuries meet definitional requirements and MMI.
+
+3. Identify each lower extremity anatomic region with abnormalities that are related to illness/ injury in question. List potential methods.
+
+Right Lower Extremity Thigh—Atrophy Knee—Diagnosis-based estimate Calf—Atrophy
+Left Lower Extremity
+Great toe—Range of motion
+
+4. Calculate impairment according to text and tables for each applicable method.
+
+Right Lower Extremity
+Thigh atrophy—3% impairment of the lower extremity (1% whole person impairment); see Table 17-6.
+Partial lateral meniscectomy—2% impairment of the lower extremity (1% whole person impairment); see Table 17-33.
+Calf atrophy—3% impairment of the lower extremity (1% whole person impairment); see Table 17-6.
+Anterior cruciate laxity, mild—7% impairment of the lower extremity (3% whole person impairment); total diagnosis-based estimate combines 7% (ACL laxity) with 2% (for partial menisectomy) for a lower extremity diagnosis estimate of 9%.
+Left Lower Extremity
+Great toe range of motion—2% impairment of the lower extremity (1% whole person impairment); see Table 17-14.
+5.
+Identify and calculate illness/injury related to peripheral nervous system impairment.
+
+Right Lower Extremity
+Partial common peroneal nerve injury with some motor and sensory residuals.
+Motor: According to Table 16-11, 4/5 evertor strength would allow for 25% of the motor value of the involved nerve (25% of 15% lower extremity impairment [see Table 17-37]) or approximately 4% of the lower extremity.
+Sensory deficits: Partial; able to do all activities of daily living. Using Table 16-10 from The Upper Extremities as a guide, take the sensory deficit in the 25% sensory deficit category. This would be 25% of the total value of superficial peroneal nerve (7% is total value), which results in an impairment of approximately 2% of the lower extremity for partial sensory loss. Combine motor and sensory losses for total peripheral nerve impairment, which would be 4% of the lower extremity for motor losses and 2% for partial sensory losses, for a total rating of 6% of the lower extremity.
+Left Lower Extremity
+None.
+
+6. Identify and calculate all illness/injury related to the peripheral vascular system.
+
+Right Lower Extremity
+None.
+Left Lower Extremity
+None.
+
+7. Identify and calculate all injury impairment related to CRPS.
+
+Right Lower Extremity
+None.
+Left Lower Extremity
+None.
+
+The Lower Extremities
+563
+
+8. If no other method is available, then determine impairment due to gait derangement if clinically applicable.
+
+Right Lower Extremity
+Not applicable.
+Left Lower Extremity
+Not applicable.
+
+9. Consult lower extremity cross-usage table (Table 17-2) to determine possible method groupings.
+
+Right Lower Extremity
+Methods used: Atrophy; diagnosis-based estimate; peripheral nervous system.
+-- chars 3071 --
+Possible groupings: Atrophy alone; diagnosis-based estimate and peripheral nervous system.
+Left Lower Extremity
+Range of motion only method available; no specific grouping used since single parameter present.
+
+10. Consider all medical data available and select the largest and most clinically appropriate methods for each illness/injury; combine each parameter within each individual grouping in order to determine impairment for each leg. Numeric figures should be in whole person units.
+
+Right Lower Extremity
+Use diagnosis-based estimate combined with peripheral nervous system injury. That is, combine 9% impairment of the lower extremity with 6% impairment of the lower extremity, which results in an impairment rating of 14% of the right lower extremity for this illness/injury.
+Left Lower Extremity
+Range of motion is the only parameter available; for that reason, the rating is 2% impairment of the left lower extremity.
+
+11. Use the Combined Values Chart (p. 604) to combine whole person impairments from each regional impairment calculated in step 10 of the same limb. This allows the examiner to determine the lower extremity rating for that particular extremity. The lower extremity impairment rating for each limb is then converted to whole person impairment using Table 17-3. If both lower extremities are involved, the impairment rating for each extremity is first converted to a whole person impairment before being combined with
+the whole person impairment for the contralateral extremity.
+
+Right Lower Extremity
+Final impairment is 14% of the lower extremity as the only condition being rated due to the injuries to the knee and common peroneal nerve. Therefore, the 14% lower extremity impairment is converted to 6% whole person impairment.
+Left Lower Extremity
+The IP fracture/dislocation was the only illness/injury rated in the left lower extremity. Therefore, the 2% lower extremity impairment rating does not need to be combined with any other illnesses/injuries in the left lower extremity. The final rating is 2% of the lower extremity or 1% whole person impairment.
+
+Now that the lower extremity impairment rating for each limb has been converted to a whole person impairment rating, the two whole person ratings for each limb are then combined to give the final whole person impairment for this particular individual. The 6% whole person impairment for the right lower extremity is combined with 1% whole person impairment for the left lower extremity, resulting in a total whole person impairment rating of 7%.

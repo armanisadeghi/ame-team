@@ -1,0 +1,124 @@
+================================================================================
+
+Chapter 8:
+-----------------------------------------------------------------
+8.1 Principles of Assessment
+8.2 Disfigurement
+8.3 Scars and Skin Grafts
+8.4 Contact Dermatitis
+8.5 Natural Rubber Latex Allergy
+8.6 Skin Cancer
+8.7 Criteria for Rating Permanent Impairment Due to Skin Disorders
+8.8 Skin Impairment Evaluation Summary
+-------INTRODUCTION START -------
+Introduction
+This chapter provides criteria for evaluating permanent impairment of the skin and its appendages and estimating the extent to which skin impairments affect the ability to perform activities of daily living (see Table 1-2). Permanent impairment of the skin is any dermatologic abnormality or loss that persists after medical treatment and rehabilitation and that is unlikely to change significantly in the next year, with or without medical treatment.
+
+Table 8-1 summarizes skin components, functions, and disorders. Skin functions include: (1) providing a protective covering; (2) participating in sensory perception, temperature regulation, fluid regulation, electrolyte balance, immunobiologic defenses, and trauma resistance; and (3) regenerating the epidermis and its appendages.
+
+Protective skin functions include barrier defenses against chemical irritant and allergic sensitizer damage, microorganism invasion, and ultraviolet light injuries. Temperature regulation involves proper sweat gland and small blood vessel functioning. The barrier defense against fluid loss is related to the intactness of the stratum corneum.
+
+Revisions from the fourth edition include: (1) new sections on contact dermatitis and natural rubber latex allergy; (2) a new section on cancer; and (3) updated clinical information and references.
+
+8.1 Principles of Assessment
+Before using the information in this chapter, the Guides user should become familiar with Chapters 1 and 2 and the Glossary. Chapters 1 and 2 discuss the Guides’ purpose, applications, and methods for performing and reporting impairment evaluations. The Glossary provides definitions of common terms used by many specialties in impairment evaluation.
+
+Skin disorders may develop from exposure to physical, mechanical, biological, and chemical agents.
+Identification and avoidance of these agents may prevent ongoing skin disorder aggravation. Physicians need to determine the clinical course and permanence
+
+of skin disorders associated with possible intermittent exposures.
+
+Clinical evaluation requires sound clinical judgment based on a detailed medical history, thorough physical examination, and judicious use of diagnostic procedures. Ancillary diagnostic and laboratory procedures include patch, open, prick, intracutaneous, and serologic allergy tests; Wood’s light examinations, cultures, and scrapings for bacteria, fungi, and viruses; and biopsies.
+
+To determine the appropriate impairment class (Table 8-2) for an affected individual, evaluate the severity of the skin condition and the impact of the skin condition on the ability to perform activities of daily living (see Table 1-2). Determine the appropriate percentage within any impairment class by considering the frequency, intensity, and complexity of the medical condition and the treatment regimen. In general, the more frequent and intense the symptoms, signs, and medical treatment, the higher the estimated impairment rating within any impairment class. Table 8-2 lists the impairment classes and percents of whole person impairment for all dermatologic disorders. A brief overview of those disorders follows.
+-- chars 3611 --
+Impairments of other body systems, such as behavioral problems, restriction of motion or ankylosis of joints, and respiratory, cardiovascular, endocrine, or gastrointestinal tract disorders, may be associated
+
+with skin impairments. When there is a permanent impairment of more than one body system, evaluate the extent of whole person impairment related to each system and combine the estimated impairment percentages (see the Combined Values Chart, p. 604) to determine total impairment.
+
+8.1a Interpretation of Symptoms and Signs
+In some cases, limitations in the ability to perform daily activities are based on symptoms. This information may be subjective and possibly misinterpreted, and it should not serve as the sole criterion for impairment rating decisions. Rather, obtain objective data about the extent of the limitation and integrate findings with subjective data to estimate the permanent impairment rating.
+
+8.1a.1 Pruritus
+Pruritus is a common symptom of dermatologic conditions. Pruritus is a subjective, unpleasant sensation and symptom that provokes the desire to scratch and rub the skin. The itching sensation may be intolerable. Pruritus is closely related to pain and is mediated by pain receptors and fibers when they are weakly stimulated. Like pain, pruritus may be defined as a unique complex of afferent stimuli that interacts with the individual’s emotional or affective state of mind.
+
+The pruritus sensation has two elements that are extremely variable in makeup and time. Peripheral neural stimulation varies from the absence of sensation to awareness that stimuli are producing a usual or unusual sensation. Central nervous system reaction is modified by state of attentiveness, experience, motivation at the moment, and such stimuli as exercise, sweat, and temperature change.
+
+When evaluating pruritus associated with skin disorders, consider (1) how the pruritus interferes with performance of the activities of daily living, and (2) to what extent the pruritus description is supported by such objective skin signs as lichenification, excoriation, or hyperpigmentation. Subjective itching complaints that cannot be substantiated objectively may require referral or consultation.
+
+8.1b Description of Procedures
+Common clinical investigations for dermatologic conditions include skin testing, biopsy, and relevant laboratory studies.
+8.1
+b.1 Patch Testing, Performance, Interpretation, and Relevance
+The sine qua non for the diagnosis of allergic contact dermatitis is a properly performed and interpreted patch test. The information from patch testing complements an appropriate, detailed history. Patch testing may significantly contribute to the diagnosis and management of contact dermatitis.
+
+Be aware that patch testing may yield false-positive and false-negative results. Selecting the proper concentration of the suspected allergen, vehicle, site of application, and type of patch is critical for procedure validity. Making such selections and determining test result relevance require considerable skill and experience.
+-- chars 3107 --
+Interpret a positive or negative patch test result in conjunction with the clinical history and a detailed knowledge of testing procedures. Although appropriate test concentrations and vehicles have been established for many sensitizers, there are no established vehicle and concentration standards for the vast number of chemicals in use.
+
+Patch test results require careful interpretation to discern allergic from irritant responses, as well as to appropriately interpret whether the result is relevant to the individual’s dermatitis and exposures. Patch tests are only used to detect contact allergy and are only one component in a complete evaluation.
+Further details about patch testing, its values, and its limitations are discussed in standard texts, some of which are listed at the end of this chapter.
+
+8.2  Disfigurement
+Skin disfigurement is an altered or abnormal appearance that may be an alteration of color, shape, or structure, or a combination of these.
+Disfigurement may be a residual of injury or disease, or it may accompany a recurrent or ongoing disorder. Examples of disfigurement include giant pigmented nevi, nevus flammeus, cavernous hemangioma, and pigmentation alteration.
+
+Disfigurement usually has no effect on body function and may have little or no effect on the ability to perform activities of daily living, except if the disfigurement causes social rejection or an unfavorable
+self-image with self-imposed isolation, lifestyle alteration, or other behavioral changes. If impairment in the ability to perform activities of daily living due
+
+to disfigurement does exist, it is usually manifested by a behavior change, such as withdrawal from social contacts. Behavioral changes are evaluated in accordance with the criteria in the Guides Chapter 14, Mental and Behavioral Disorders.
+
+Evaluate impairments related to disfigurement or altered pigmentation in accordance with the criteria given in Table 8-2 and described later in this chapter. Enhance disfigurement descriptions with good color photographs that show multiple defect views.
+Estimate the probable duration and permanency of the disfigurement. Describe in writing the possibility of improving the condition through medical or surgical therapy and the extent to which it can be concealed cosmetically, as with hairpieces, wigs, or cosmetics. Depict with photographs if possible.
+
+Evaluate the effect on the performance of the activities of daily living if a scar involves the loss of sweat gland function, hair growth, nail growth, or pigment formation. Evaluate burns and scars according to the criteria in this chapter; give special consideration to the injury’s impact on the individual’s ability to perform activities of daily living. When impairment resulting from a burn or scar is based on peripheral nerve dysfunction or loss of range of motion, evaluate the skin impairment separately and combine the impairment rating with that from Chapters 13, The Central and Peripheral Nervous System; 16, The Upper Extremities; or 17, The Lower Extremities. If chest wall excursion is limited or if there are behavioral changes secondary to disfigurement, consult Chapter 5, The Respiratory System, or Chapter 14, Mental and Behavioral Disorders.
+-- chars 3250 --
+8.3  Scars and Skin Grafts
+Scars, cutaneous abnormalities that result from the healing of burned, traumatized, or diseased tissue, represent a special type of disfigurement. Give the scars’ dimensions in centimeters, and describe their shape, color, anatomic location, and any evidence of ulceration, depression, or elevation. Indicate whether the scar is “atrophic” or “hypertrophic”; soft and pliable or hard and indurated, thin or thick, and smooth or rough; and attachment, if any, to underlying bones, joints, muscles, or other tissue. Good color photographs with multiple views of the defect enhance the scars’ description.
+
+Consider the tendency of a scar to disfigure when evaluating whether there is permanent impairment due to scarring. Also consider whether the scar can be changed, made less visible, or concealed.
+Function may be restored without improving appearance, and appearance may be improved without altering function.
+
+Skin grafts may be used to replace skin losses resulting from trauma or disease. Grafts commonly lack hair, lubrication, pliability, and sensation, and they may demonstrate altered pigmentation. These changes affect the function and appearance of the graft site. The altered lubrication, pliability, and sensation may result in diminished protection against microorganisms and diminished resistance to mechanical, chemical, and thermal trauma. The altered appearance may be significant if the area involves exposed parts, such as the dorsum of the hand, the face, or the neck.
+8.4
+
+tact Dermatitis
+Contact dermatitis is an inflammatory skin reaction induced by exposure to an external agent and is the most frequent cause of occupational skin disease.
+Contact dermatitis most often involves the hands, wrists, and forearms, although any area may be affected. Two types of contact dermatitis are generally recognized: irritant (80% of cases), which results from direct tissue damage, and allergic (20% of cases), in which tissue damage is mediated through type IV delayed cellular hypersensitivity.
+Irritant and allergic contact dermatitis may coexist in the same person and are often difficult to differentiate on physical examination and histologically.
+
+Irritants may be strong (absolute) or weak (marginal). Cumulative exposure to marginal irritants causes most cases of contact dermatitis and may impair the barrier function of the skin, allowing the penetration of potential allergens. Many cutaneous allergens, such as chromates, nickel salts, epoxy resins, and preservatives, are also primary irritants. Allergy can be induced or maintained by chemicals in concentrations insufficient to irritate nonallergic skin. Allergen cross-sensitivity is an important phenomenon in which an individual who is allergic to one chemical (eg, urushiol in poison ivy or poison oak) also will react to structurally related chemicals (eg, in Japanese lacquer, mango, and cashew nutshell oil).
+
+Accurate diagnosis is the key to proper management of contact dermatitis. If the specific agent(s) can be identified (see section on patch testing) and successfully avoided, full recovery usually is anticipated; but if contact continues, the dermatitis may become chronic and disabling, and it may prevent the individual from performing some activities of daily living.
+-- chars 3316 --
+8.5 Natural Rubber Latex Allergy
+Latex allergy generally refers to an IgE-mediated immediate hypersensitivity reaction to one or more protein allergens present in natural rubber latex (NRL) devices, especially gloves. Individuals with spina bifida and health care workers are at particular risk; NRL allergy has become a significant medical and occupational health problem. Clinical manifestations range from contact urticaria and angioedema to allergic rhinitis and conjunctivitis, asthma, and anaphylaxis. Contact dermatitis to rubber accelerators and antioxidants added during manufacture has been associated with NRL allergy. A number of NRLallergic individuals are atopic, with asthma, other environmental type I allergies, and hand eczema.
+Symptoms and signs of contact urticaria to NRL may be masked by preexisting hand eczema. Also evaluate individuals with NRL allergy for manifestions in other organ systems (eg, respiratory symptoms and asthma). See Chapter 5, The Respiratory System, for an example of NRL-induced asthma.
+
+Allergen avoidance is the current treatment for NRL allergy. When aerosolized, glove powder (an NRLallergen carrier) can produce respiratory symptoms in susceptible individuals. Affected workers may have to avoid contact with NRL gloves and other NRL-containing products, avoid areas where they might inhale the powder from NRL gloves worn by other workers, and wear a medical alert bracelet.
+8.6
+
+n Cancer
+Skin cancer is the most prevalent of all cancers. Three main types exist: basal cell carcinoma, squamous cell carcinoma, and malignant melanoma.
+
+Basal cell carcinoma (BCC) is the most common form of skin cancer. Predisposing factors include light skin color, inability to tan, sun exposure, blond or red hair, freckling in childhood, therapeutic radiation, and arsenic exposure. Several different clinical and histologic types exist; there is also a much less common, inherited condition called the basal cell nevus or Gorlin syndrome. BCC is usually locally invasive, with a small metastatic potential. The main goal of therapy is complete eradication of the tumor with the highest cure rate and the least amount of disfigurement.
+
+Squamous cell carcinoma (SCC) makes up about one fifth of nonmelanoma skin cancers. SCC is more common in individuals with light skin coloration and can arise from excess sun exposure, leading to precancerous actinic keratoses. Environmental risk factors include arsenic, polycyclic aromatic hydrocarbon, chronic infrared heat, and therapeutic radiation exposure. SCC may also occur in chronic scars from burns, trauma, and inflammatory processes.
+Several clinical and histologic types exist, but SCC is more likely to metastasize, especially from sites involving the lip, dorsal hand, and temple, as well
+as in larger, deeper, and more anaplastic lesions. Therapeutic options are the same as for basal cell carcinoma. Sun avoidance and close follow-up are essential in patients with SCC.
+
+Cutaneous malignant melanoma is an increasingly common and lethal malignancy of melanocytes and nevus cells in certain precursor lesions. The increased frequency of melanoma is well documented; rates of incidence are rising more rapidly for this than for any other cancer. The salient challenge for clinicians is to detect and excise melanoma in its earliest stage, as tumor thickness remains the most important prognostic indicator of this malignancy.
+-- chars 3440 --
+Early diagnosis and surgical excision of in situ, or early invasive, melanomas are curative in most individuals. Despite advances in chemotherapy and immunotherapy, the efficacy of treatment of advanced melanoma remains limited, and the prognosis of metastatic disease remains guarded.
+
+8.7 Criteria for Rating Permanent
+Impairment Due to Skin Disorders
+The impairment criteria for all dermatologic disorders are given in Table 8-2.
+
+Current Symptoms: None.
+Physical Exam: Hands and arms: no signs of dermatitis.
+Clinical Studies: Patch test: strong allergic reaction to 0.1% petrolatum mixture of a nonmercurial preservative, 2-n-4-isothiazolin-3-one, used in company’s latex paints. Subsequent evaluation: normal.
+Diagnosis: Resolved allergic contact dermatitis caused by preservative.
+
+8.8 Skin Impairment Evalution Summary
+See Table 8-3 for an evalution summary for the assessment of permanent impairment due to skin disorders.

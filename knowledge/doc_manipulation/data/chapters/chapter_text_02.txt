@@ -1,0 +1,111 @@
+================================================================================
+
+Chapter 2
+-----------------------------------------------------------------
+Practical Application of the Guides
+2.1 Defining Impairment Evaluations
+2.2 Who Performs Impairment Evaluations?
+2.3 Examiners’ Roles and Responsibilities
+2.4 When Are Impairment Ratings Performed?
+2.5 Rules for Evaluation
+2.6 Preparing Reports
+-------INTRODUCTION START -------
+Introduction
+This chapter describes how to use the Guides for consistent and reliable acquisition, analysis, communication, and utilization of medical information through a single set of standards. Two physicians, following the methods of the Guides to evaluate the same patient, should report similar results and reach similar conclusions. Moreover, if the clinical findings are fully described, any knowledgeable observer may check the findings with the Guides criteria. This chapter provides information about the practical application of the Guides and is to be used in conjunction with Chapter 1, which provides the conceptual framework upon which the instructions in this chapter are based.
+2.1 Defining
+Impairment Evaluations
+An impairment evaluation is a medical evaluation performed by a physician, using a standard method as outlined in the Guides to determine permanent impairment associated with a medical condition. An impairment evaluation may include a numerical impairment percentage or rating, as defined in the Guides. An impairment evaluation is not the same as an independent medical evaluation (IME), which is performed by an independent medical examiner who evaluates but does not provide care for the individual. Impairment evaluations may be less comprehensive than IMEs and may be performed by a treating physician or a nontreating physician, depending upon the state’s requirements and the preferences of the individual, physician, and requesting party. Examples of an impairment evaluation and components of a comprehensive IME will be discussed later in this chapter.
+
+2.2 Who Performs Impairment Evaluations?
+Impairment evaluations are performed by a licensed physician. The physician may use information from other sources, such as hearing results obtained from audiometry by a certified technician. However, the physician is responsible for performing a medical evaluation that addresses medical impairment in the body or organ system and related systems. A state may restrict the type of practitioner allowed to perform an impairment evaluation, and some require additional state certification and other criteria, such as a minimum number of hours of practice, before the physician is approved as an impairment evaluator. The physician is encouraged to check with the local workers’ compensation agency, industrial accident board, or industrial commission concerning their prerequisites.
+2.3
+Examiners’ Roles and Responsibilities
+The physician’s role in performing an impairment evaluation is to provide an independent, unbiased assessment of the individual’s medical condition, including its effect on function, and identify abilities and limitations to performing activities of daily living as listed in Table 1-2. Performing an impairment evaluation requires considerable medical expertise and judgment. Full and complete reporting provides the best opportunity for physicians to explain health status and consequences to patients, other medical professionals, and other interested parties such as claims examiners and attorneys. Thorough documentation of medical findings and their impact will also ensure that reporting is fair and consistent and that individuals have the information needed to pursue any benefits to which they are entitled.
+-- chars 3747 --
+The skills required for impairment evaluation are usually not taught during basic medical training, although some specialties such as occupational medicine, physical medicine and rehabilitation, and orthopedics have emphasized elements of the evaluation such as occupational, functional, or anatomical assessment.
+
+In some cases, physicians may be asked to assess the medical impairment’s impact on the individual’s ability to work. In the latter case, physicians need to understand the essential functions of the occupation and specific job, as well as how the medical condition interacts with the occupational demands. In many cases, the physician may need to obtain additional expertise to define functional abilities and limitations, as well as vocational demands.
+
+As an impairment evaluator, the physician has the responsibility to understand the regulations that pertain to medical practice in his or her specific area, as in workers’ compensation or personal injury evaluations. It is also the responsibility of the physician to provide the necessary medical assessment to the party requesting the evaluation, with the examinee’s consent. The physician needs to ensure that the examinee understands that the evaluation’s purpose is medical assessment, not medical treatment.
+However, if new diagnoses are discovered, the physician has a medical obligation to inform the requesting party and individual about the condition and recommend further medical assessment.
+
+2.4 When Are Impairment Ratings Performed?
+An impairment should not be considered permanent until the clinical findings indicate that the medical condition is static and well stabilized, often termed the date of maximal medical improvement (MMI). It is understood that an individual’s condition is dynamic. Maximal medical improvement refers to a date from which further recovery or deterioration is not anticipated, although over time there may be some expected change. Once an impairment has reached MMI, a permanent impairment rating may be performed. The Guides attempts to take into account all relevant considerations in rating the severity and extent of permanent impairment and its effect on the individual’s activities of daily living.
+
+Impairments often involve more than one body system or organ system; the same condition may be discussed in more than one chapter. Generally, the organ system where the problems originate or where the dysfunction is greatest is the chapter to be used for evaluating the impairment. Thus, consult the vision chapter for visual problems due to optic nerve dysfunction. Refer to the extremity chapters for neurological and musculoskeletal extremity impairment from an injury. However, if the impairment is due to a stroke, the neurology chapter is most appropriate.
+Whenever the same impairment is discussed in different chapters, the Guides tries to use consistent impairment ratings across the different organ systems.
+
+2.5  Rules for Evaluation
+
+2.5a Confidentiality
+-- chars 3017 --
+Prior to performing an impairment evaluation, the physician obtains the individual’s consent to share the medical information with other parties that will be reviewing the evaluation. If the evaluating physician is also that person’s treating physician, the physician needs to indicate to the individual which information from his or her medical record will
+be shared.
+
+2.5b Combining Impairment Ratings
+To determine whole person impairment, the physician should begin with an estimate of the individual’s most significant (primary) impairment and evaluate other impairments in relation to it. It may be necessary for the physician to refer to the criteria and estimates in several chapters if the impairing condition involves several organ systems. Related but separate conditions are rated separately and impairment ratings are combined unless criteria for the second impairment are included in the primary impairment. For example, an individual with an injury causing neurologic and muscular impairment to his upper extremity would be evaluated under the upper extremity criteria in Chapter 16. Any skin impairment due to significant scarring would be rated separately in the skin chapter and combined with the impairment from the upper extremity chapter. Loss of nerve function would be rated within either the musculoskeletal chapters or neurology chapter.
+
+In the case of two significant yet unrelated conditions, each impairment rating is calculated separately, converted or expressed as a whole person impairment, then combined using the Combined Values Chart (p. 604). The general philosophy of the Combined Values Chart is discussed in Chapter 1.
+2.5c Consistency
+Consistency tests are designed to ensure reproducibility and greater accuracy. These measurements, such as one that checks the individual’s lumbosacral spine range of motion (Section 15.9) are good but imperfect indicators of people’s efforts. The physician must use the entire range of clinical skill and judgment when assessing whether or not the measurements or tests results are plausible and consistent with the impairment being evaluated. If, in spite of an observation or test result, the medical evidence appears insufficient to verify that an impairment of a certain magnitude exists, the physician may modify the impairment rating accordingly and then describe and explain the reason for the modification in writing.
+
+2.5d Interpolating, Measuring, and Rounding Off
+In deciding where to place an individual’s impairment rating within a range, the physician needs to consider all the criteria applicable to the condition, which includes performing activities of daily living, and estimate the degree to which the medical impairment interferes with these activities. In some cases, the physician may need additional information to determine where to place an individual in the range.
+
+As with any biological measurements, some variability and normal fluctuations are inherent in permanent impairment ratings. Two measurements made by the same examiner using the Guides that involve an individual or an individual’s functions would be consistent if they fall within 10% of each other.
+-- chars 3196 --
+Measurements should also be consistent between two trained observers or by one observer on two separate occasions, assuming the individual’s condition is stable. Repeating measurements may decrease error and result in a measurement that is closer to average function. The final calculated whole person impairment rating, whether it is based on the evaluation of one organ system or several organ systems, should be rounded to the nearest whole number.
+2.5e Pain
+The impairment ratings in the body organ system chapters make allowance for any accompanying pain. Chronic pain, also called chronic pain syndrome, is discussed in the chapter on pain (Chapter 18).
+2.5f Using Assistive Devices in Evaluations If an individual’s prosthesis or assistive device can be removed or its use eliminated relatively easily, the physician should usually test and evaluate the organ system without the device. For example, ask the patient to remove a hearing aid before testing auditory acuity. The examiner may choose also to test the system with the assistive device in place and then report both sets of results. The physician may also choose to report alterations in the individual’s organ function with and without use of the device and challenges that are posed by using the device, if any.
+
+If the assistive device is not easily removable, as with an implanted lens, evaluate the organ system’s functioning with the device in place. Test the visual system with the patient’s glasses or contact lenses in place if they are used.
+
+2.5g Adjustments for Effects of Treatment or Lack of Treatment
+In certain instances, the treatment of an illness may result in apparently total remission of the person’s signs and symptoms. Examples include the treatment of hypothyroidism with levothyroxine and the treatment of type 1 diabetes mellitus with insulin. Yet it is debatable whether, with treatment, the patient has actually regained the previous status of normal good health. In these instances, the physician may choose to increase the impairment estimate by a small percentage (eg, 1% to 3%).
+
+In some instances, as with organ transplant recipients who are treated with immunity-suppressing pharmaceuticals or persons treated with anticoagulants, the pharmaceuticals themselves may lead to impairments. In such an instance, the physician should use the appropriate parts of the Guides to evaluate impairment related to pharmaceutical effects. If information in the Guides is lacking, the physician may combine an estimated impairment percent based on the severity of the effect, with the primary organ system impairment, by means of the Combined Values Chart (p. 604).
+
+A patient may decline surgical, pharmacologic, or therapeutic treatment of an impairment. If a patient declines therapy for a permanent impairment, that decision neither decreases nor increases the estimated percentage of the individual’s impairment. However, the physician may wish to make a written comment in the medical evaluation report about the suitability of the therapeutic approach and describe the basis of the individual’s refusal. The physician may also need to address whether the impairment is at maximal medical improvement without treatment and the degree of anticipated improvement that could be expected with treatment.
+-- chars 3325 --
+2.5h Changes in Impairment from Prior Ratings
+Although a previous evaluator may have considered a medical impairment to be permanent, unanticipated changes may occur: the condition may have become worse as a result of aggravation or clinical progression, or it may have improved. The physician should assess the current state of the impairment according to the criteria in the Guides. If an individual received an impairment rating from an earlier edition and needs to be reevaluated because of a change in the medical condition, the individual is evaluated according to the latest information pertaining to the condition in the current edition of the Guides.
+
+Valid assessment of a change in the impairment estimate would depend on the reliability of the previous estimate and the evidence upon which it was based. If a prior impairment evaluation was not performed, but sufficient historical information is available to currently estimate the prior impairment, the assessment would be performed based on the most recent Guides criteria. However, if the information is insufficient to accurately document the change, then the physician needs to explain that decision and should not estimate a change.
+
+If apportionment is needed, the analysis must consider the nature of the impairment and its relationship to each alleged causative factor, providing an explanation of the medical basis for all conclusions and opinions. (Apportionment and causation are considered more fully in Chapter 1 and are briefly defined in the Glossary.) For example, in apportioning a spine impairment, first the current spine impairment rating is calculated, and then an impairment rating from any preexisting spine problem is calculated. The value for the preexisting impairment rating can be subtracted from the present impairment rating to account for the effects of the intervening injury or disease. Using this approach to apportionment requires accurate information and data to determine both impairment ratings. If different editions of the Guides are used, the physician needs to assess their similarity. If the basis of the ratings is similar, a subtraction is appropriate. If they differ markedly, the physician needs to evaluate the circumstances and determine if conversion to the earlier or latest edition of the Guides for both ratings is possible. The determination should follow any state guidelines and should consider whichever edition best describes the individual’s impairment.
+
+2.6 Preparing Reports
+A clear, accurate, and complete report is essential to support a rating of permanent impairment. The following elements in bold type should be included in all impairment evaluation reports. Other elements listed in italics are commonly found within an IME or may be requested for inclusion in an impairment evaluation.
+2.6a Clinical Evaluation
+2.6a.1 Include a narrative history of the medical condition(s) with the onset and course of the condition, symptoms, findings on previous examination(s), treatments, and responses to treatment, including adverse effects. Include information that may be relevant to onset, such as an occupational exposure or injury. Historical information should refer to any relevant investigations. Include a detailed list of
+-- chars 3296 --
+prior evaluations in the clinical data section.
+
+2.6a.2 Include a work history with a detailed, chronological description of work activities, specific type and duration of work performed, materials used in the workplace, any temporal associations with the medical condition and work, frequency, intensity, and duration of exposure and activity, and any protective measures.
+
+2.6a.3 Assess current clinical status, including current symptoms, review of symptoms, physical examination, and a list of contemplated treatment, rehabilitation, and any anticipated reevaluation.
+2.6a.4 List diagnostic study results and outstanding pertinent diagnostic studies. These may include laboratory tests, electrocardiograms, exercise stress studies, radiographic and other imaging studies, rehabilitation evaluations, mental status examinations, and other tests or diagnostic procedures.
+
+2.6a.5 Discuss the medical basis for determining whether the person is at MMI. If not, estimate and discuss the expected date of full or partial recovery.
+
+2.6 a.6 Discuss diagnoses, impairments.
+
+2.6a.7 Discuss causation and apportionment, if requested, according to recommendations outlined in Chapters 1 and 2.
+2.6a.8 Discuss impairment rating criteria, prognosis, residual function, and limitations. Include a discussion of the anticipated clinical course and whether further medical treatment is anticipated. Describe the residual function and the impact of the medical impairment(s) on the ability to perform activities of daily living and, if requested, complex activities such as work. List the types of affected activities (see Table 1-2). Identify any medical consequences for performing activities of daily living.
+
+If requested, the physician may need to analyze different job tasks to determine if an individual has the residual function to perform that complex activity.
+The physician should also identify any medical consequence of performing a complex activity such as work.
+
+2.6a.9 Explain any conclusion about the need for restrictions or accommodations for standard activities of daily living or complex activities such as work.
+
+2.6b Calculate the Impairment Rating Compare the medical findings with the impairment criteria listed within the Guides and calculate the appropriate impairment rating. Discuss how specific findings relate to and compare with the criteria described in the applicable Guides chapter. Refer to and explain the absence of any pertinent data and how the physician determined the impairment rating with limited data.
+
+2.6c. Discuss How the Impairment Rating Was Calculated
+2.6c.1 Include an explanation of each impairment value with reference to the applicable criteria of the Guides. Combine multiple impairments for a whole person impairment.
+2.6c.2 Include a summary list of impairments and impairment ratings by percentage, including calculation of the whole person impairment.
+-- chars 3021 --
+On the following two pages is a standard form that the evaluator may use to ensure that all essential elements are included in the impairment evaluation report. The form may be reproduced without permission from the American Medical Association. Most chapters include a summary form that identifies the salient, specific features to consider for each category of organ system impairment.
+
+Calculated total whole person impairment:
+%. Discussion of rationale of impairment rating and any possible inconsistencies in the examination:

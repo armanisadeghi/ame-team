@@ -1,0 +1,150 @@
+================================================================================
+
+Chapter 7:
+-----------------------------------------------------------------
+The Urinary and Reproductive Systems
+7.1 Principles of Assessment
+7.2 The Urinary System
+7.3 Upper Urinary Tract
+7.4 Urinary Diversion
+7.5 Bladder
+7.6 Urethra
+7.7 Male Reproductive Organs
+7.8 Female Reproductive Organs
+7.9 Urinary and Reproductive Systems Impairment Evaluation Summary
+-------INTRODUCTION START -------
+Introduction
+This chapter provides criteria for evaluating permanent impairments of the urinary and male and female reproductive systems as they affect the body’s overall function and an individual’s ability to perform activities of daily living.
+
+The following sections have been revised for the fifth edition: (1) the criteria for upper and lower urinary tract impairment have been revised; (2) impairment classes for bladder and urethral dysfunction have been revised to reflect an increased understanding of bladder impairment and to incorporate results from urodynamic studies; (3) the reproductive system sections have been updated to reflect more common cases and approaches; and (4) updated and detailed references are listed for the disorders discussed.
+7.1 Principles of Assessment
+Before using the information in this chapter, the Guides user should become familiar with Chapters 1 and 2 and the Glossary. Chapters 1 and 2 discuss the Guides’ purpose, applications, and methods for performing and reporting impairment evaluations. The Glossary provides definitions of common terms used by many specialties in impairment evaluation.
+
+The purpose of urinary and reproductive system impairment assessment is to determine whether a permanent impairment in these systems exists, to assess the severity and document the impact of the impairment on the ability to perform activities of daily living, and to prevent further impairment.
+
+Pathologic abnormalities in other systems (eg, the hematologic, endocrine, or neurologic systems) may produce urinary or reproductive system impairment. These abnormalities are combined with urinary or reproductive system impairments to produce a whole person impairment rating. For example, an intracranial brain lesion above the pons will produce some degree of bladder hyperreflexia and an urgent need to urinate. However, an intracranial brain lesion below the pons in the spinal cord will result not only in a hyperreflexic bladder but also in detrusorsphincter dyssynergia that may result in difficulty urinating, and high intravesical pressures that could lead to vesicoureteral reflux and hydronephrosis.
+Urinary tract dysfunction is also seen with lumbosacral injury below the T10 vertebra level and would be combined with musculoskeletal dysfunction to determine whole person impairment.
+
+To determine the individual’s placement within a particular class range, assess the disease’s severity and impact on the ability to perform the activities of daily living as listed in Table 1-2. Impairment ratings are greater for urinary tract or reproductive impairments, which have more of an effect on the ability to perform activities of daily living.
+-- chars 3184 --
+7.1 a Interpretation of Symptoms and Signs
+Some impairment classes refer to limitations in the ability to perform daily activities because of symptoms. When this information is subjective and possibly misinterpreted, it should not serve as the sole criterion upon which decisions about impairment are made.
+Rather, obtain objective data about the limitation’s
+
+extent and integrate the findings with the subjective data to estimate the degree of permanent impairment.
+
+7.2  The Urinary System
+The urinary system consists of the upper urinary tract (the kidneys and ureters), the bladder, and the urethra. The parenchyma of the kidneys produces urine, which is conducted by the renal calices, pelves,
+and ureters to the bladder and then the urethra.
+
+The kidneys are an important homeostatic regulatory organ. The degree to which kidney and conduit abnormalities may affect the whole person ranges from a clinically undetectable change to marked specific and generalized manifestations of deterioration of the nephron reserves, loss of kidney function, and urine transport abnormalities.
+
+The bladder is a voluntarily controllable urine reservoir that normally permits several hours of urine retention. Bladder dysfunction may be due to pathologic conditions within or outside the urinary system. Within the urinary system, bladder tumors, stones, and inflammatory lesions may produce urinary system impairment.
+
+In women, the urethra is a urinary conduit containing a voluntary sphincter. In men, the urethra possesses a voluntary sphincter and propulsive muscles and is a conduit for urine and seminal ejaculations.
+
+Permanent, surgically created urinary diversions are usually performed to compensate for anatomic losses and to allow for urine outflow. Diversions are evaluated as a part of, and in conjunction with, the assessment of the involved portion of the urinary tract.
+When evaluating permanent impairment of any segment of the urinary system, impairments of all components of the upper and lower tract must be evaluated and combined to determine renal system impairment (see the Combined Values Chart, p. 604).
+
+7.2 a Interpretation of Urinary Symptoms and Signs
+Symptoms and signs of upper urinary tract function impairment may include changes in urination; edema; decreased physical stamina; appetite and weight loss; anemia; uremia; loin, abdominal, or costovertebral angle pain; hematuria; chills and fever; hypertension and its complications; abnormalities in the appearance of the urine or its
+
+sediment; and biochemical blood changes. Renal disease, especially in early stages, may be made evident only by laboratory findings.
+
+Signs and symptoms of bladder function impairment may include urinary frequency, dysuria, urinary incontinence, urine retention, hematuria, pyuria, passage of urinary calculi, and a suprapubic mass.
+
+Signs and symptoms of urethra function impairment include dysuria, diminished urinary stream, urinary retention, incontinence, extraneous or ectopic urinary openings, periurethral masses, and diminished urethral caliber.
+-- chars 3099 --
+7.2 b Description of Clinical Studies
+Two clinically useful renal function determinations, serum creatinine and the renal clearance of endogenous creatinine, may serve as criteria for evaluating upper urinary tract function. The serum creatinine level reflects overall renal function. Under normal hydration conditions, the serum creatinine level should be less than 133 µmol/L (1.5 mg/dL).
+
+The glomerular filtration rate, which measures renal clearance of endogenous creatinine, gives a quantitative estimate of the total functioning nephron population. Because longer periods of urine collection improve the reliability of renal function clearance tests, use 24-hour endogenous creatinine clearance measurements. The normal creatinine clearance ranges are 130 to 200 L/24 h (90 to 139 mL/min) for men and 115 to
+180 L/24 h (80 to 125 mL/min) for women.
+
+If there are discrepancies in these two test results or additional information is needed, tests—such as metabolic studies, tests of the concentration levels of electrolytes and other chemicals in serum and urine, urine osmolalities, urinalyses, urine cultures, radiologic investigations, isotope renograms, and renal computed tomographic (CT) scans—may be necessary to determine impairment.
+
+Parenchymal disfiguration and conduit abnormality assessment may require diagnostic procedures such as endoscopy, study of one or both kidneys, biopsy, arteriography, radiography of the urinary tract, CAT scan, or magnetic resonance imaging (MRI).
+
+Objective techniques useful in evaluating bladder function include (but are not limited to) cystoscopy, cystography, voiding cystourethrography, cystometry, uroflometry, urinalysis, and urine cultures.
+
+Objective techniques useful in evaluating urethral function include (but are not limited to) urethroscopy, urethrography, cystourethrography, endoscopy, and cystometrography.
+
+7.3  Upper Urinary Tract
+
+7.3 a Criteria for Rating Permanent Impairment Due to Upper Urinary Tract Disease
+The impairment criteria for evaluating upper urinary tract disease are given in Table 7-1. The creatinine clearance, the most accurate reflection of renal function, is an important criterion in each class because it quantifies the degree of upper urinary tract functional impairment.
+
+From a physiologic point of view, the individual with only one functioning kidney may have normal overall renal function because of the efficiency of the remaining kidney. However, with only one kidney, a normal safety factor is lost. Consider the individual with only one functioning kidney as having a 10% whole person impairment because of such an essential organ loss. Combine this percentage with the estimate for any other permanent impairment (see the Combined Values Chart, p. 604).
+
+Renal function deterioration that requires either peritoneal dialysis or hemodialysis indicates severe impairment in the 60% to 95% range, or a class 4 impairment (Table 7-1). Successful renal transplantation may result in marked renal function improvement; the impairment is now in the 15% to 34% range, or a class 2 impairment. However,
+-- chars 3142 --
+transplant recipients require continuous observation and medication, which may add to their impairment. For this reason, depending upon the impairment’s effect on the activities of daily living (see Table 1-2), one may add 0% to 5% to the final renal function impairment estimate, as discussed in Chapter 1.1
+
+Also, evaluate impairment that is related to complications of the disease or therapy, such as cushingoid changes and osteoporosis, as they arise, and combine the appropriate percentages with the final renal impairment estimate (see the Combined Values Chart, p. 604).
+
+Impairment Rating: 0% impairment of the whole person.
+Comment: Full recovery with no permanent impairment.
+
+7.4  Urinary Diversion
+
+7.4 a Criteria for Rating Permanent Impairment Due to Urinary Diversion Disorders
+The impairment criteria for evaluating urinary diversion disorders are given in Table 7-2.
+
+7.7 Male Reproductive Organs
+The male reproductive organs include the penis, scrotum, testicles, epididymides, spermatic cords, prostate, and seminal vesicles. See the following sections for impairment percentages for male reproductive organs for 40to 65-year-old men. Increase the percentages by 50% for men younger than 40, and decrease the percentages by 50% for men older than
+65. For instance, class 3 impairment in a 35-year-old man would be rated at 30% (20% + 0.5[20%]). New treatments, when successful, may decrease the degree of impairment.
+
+7.7 a Penis
+The penis has the sexual functions of erection and ejaculation. The penis’s urinary function is discussed in the first part of this chapter on the urethra (Section 7.6). Penile functional impairment symptoms and signs include erection and sensation abnormalities and partial or complete loss of the penis.
+
+When evaluating penis impairment, consider both sexual and urinary function impairment. Determine sexual function impairment according to the following classifications. To determine impairment of the whole person, combine this estimate with the appropriate percentage for estimated urinary function impairment. This classification also may be used to estimate penile implant use impairment (see the Combined Values Chart, p. 604).
+
+Objective techniques useful in evaluating penis function include (but are not limited to) penile tumescence studies, Doppler ultrasound penile blood flow evaluations, dynamic cavernosometry and cavernosography, and angiography.10-14
+
+7.7b Criteria for Rating Permanent Impairment Due to Penile Disease
+The impairment criteria for evaluating penile disease are given in Table 7-5.
+
+7.7c Scrotum
+The scrotum covers, protects, and provides a suitable environment for the testicles. Scrotum function impairment symptoms and signs include pain, enlargement, testicular immobility, inappropriate testicle location, and masses. Objective techniques useful in evaluating scrotum function include, but are not limited to, observation, palpation, testicular examination, and scrotal ultrasound.
+-- chars 3043 --
+7.7d Criteria for Rating Permanent Impairment Due to Scrotal Disease
+The impairment criteria for evaluating scrotal disease are given in Table 7-6.
+
+7.7e Testicles, Epididymides, and Spermatic Cords
+The testicles produce spermatozoa and synthesize male steroid hormones. The epididymides and spermatic cords transport the spermatozoa.
+
+Testicular, epididymal, and spermatic cord impairment signs and symptoms include local or referred pain; tenderness and change in size, contour, position, and texture; and testicular hormones and seminal fluid abnormalities.
+
+Objective techniques useful in evaluating testicular, epididymal, and spermatic cord function include (but are not limited to) vasography; ultrasound; lymphangiography; spermatic arteriography and venography; biopsy; semen analysis; and follicle-stimulating, ketosteroid, and hydroxysteroid hormone studies.
+
+7.7f Criteria for Rating Permanent Impairment Due to Testicular, Epididymal, and Spermatic Cord Disease
+The impairment criteria for evaluating testicular, epididymal, and spermatic cord disease are given in Table 7-7.
+
+The impairment criteria for evaluating prostate and seminal vesicle disease are given in Table 7-8.
+
+7.8 Female Reproductive Organs
+The female reproductive organs include the vulva, vagina, cervix, uterus, fallopian tubes, and ovaries. Female reproductive system impairment is influenced by age, especially if the woman is of childbearing age. Consider the physiologic differences between premenopausal and postmenopausal women when evaluating and estimating female reproductive organ impairment.15
+
+7.8a Vulva and Vagina
+The vulva has cutaneous, sexual, and urinary functions. Urinary function is discussed in the first part of this chapter on the urethra (Section 7.6). The vagina has a sexual function and also serves as a birth pas-
+
+sageway. The clitoris is an erectile organ that has an important role in sexual functioning.
+
+Vulval and vaginal function impairment symptoms and signs include sensation alteration or loss; lubrication loss; partial or complete absence; vulvovaginitis; vulvitis; vaginitis; cicatrization; ulceration; stenosis; atrophy or hypertrophy; neoplasia or dysplasia; difficulties with sexual intercourse, urination, or vaginal delivery; and underlying perineal structure support defect.
+
+7.8b Criteria for Rating Permanent Impairment Due to Vulval and Vaginal Disease
+The impairment criteria for evaluating vulval and vaginal disease are given in Table 7-9.
+
+7.8c Cervix and Uterus
+The cervix serves as a passageway for spermatozoa and menstrual blood, maintains closure of the uterus during pregnancy, and serves as a portion of the birth canal during vaginal delivery. Hormones, elaborated by the ovaries or administered exogenously, influence the uterus. The uterus serves as the organ of menstruation, a means of spermatozoa transportation, and the container of fertilization products. The uterus supplies the power for the first and third stages of labor and, in part, for the second stage.
+-- chars 3087 --
+Cervical and uterine functional impairment symptoms and signs include abnormalities of menstruation, fertility, pregnancy, or labor; excessive cervical canal size, stenosis, or atresia; cervical incompetence during pregnancy; noncyclic hemorrhage; uterine displacement; dysplasia; and neoplasia.
+
+Objective techniques useful in evaluating cervical and uterine function include (but are not limited to) cervical mucous studies; vaginal, cervical, and intrauterine cytologic smears; biopsy; ultrasound; radiologic studies using radiopaque contrast media; blood and urine hormone studies; basal body temperature recordings; sperm concentration, mobility, and viability studies; uterus dilation and curettage; endometrium microscopic study; gynecography; laparoscopy; computed tomography; magnetic resonance imaging; hysteroscopy; ultrasound placental localization techniques; and saline solution sonohysterography.
+
+7.8d Criteria for Rating Permanent Impairment Due to Cervical and Uterine Disease
+The impairment criteria for evaluating cervical and uterine disease are given in Table 7-10.
+
+Evaluate any associated endocrine impairment in accordance with the criteria set forth in the Guides Chapter 10, The Endocrine System.
+
+The impairment criteria for evaluating fallopian tube and ovarian disease are given in Table 7-11.

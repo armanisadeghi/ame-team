@@ -1,0 +1,215 @@
+================================================================================
+
+Chapter 3:
+-----------------------------------------------------------------
+The Cardiovascular System: Heart and Aorta
+3.1 Principles of Assessment
+3.2 Valvular Heart Disease
+3.3 Coronary Heart Disease
+3.4 Congenital Heart Disease
+3.5 Cardiomyopathies
+3.6 Pericardial Heart Disease
+3.7 Arrhythmias
+3.8 Cardiovascular Impairment Evaluation Summary
+-------INTRODUCTION START -------
+Introduction
+This chapter provides criteria for evaluating permanent impairments of the cardiovascular system and their effects on an individual’s ability to perform the activities of daily living. The cardiovascular system consists of the heart, the aorta, the systemic arteries, and the pulmonary arteries. Impairment of the heart is the focus of this chapter; impairment of diseases of the aorta, the systemic arteries, and pulmonary arteries (including coronary and peripheral circulation) are included in Chapter 4.
+
+The following sections have been revised from the fourth edition: (1) information about valvular heart disease reflecting newly published guidelines from the American Heart Association and American College of Cardiology; (2) information about coronary artery disease reflecting the important prognostic impact of left ventricular function on impairment in individuals with coronary artery disease, and the inclusion of silent ischemia and coronary artery spasm with regard to impairment; and (3) information about cardiomyopathy, including the impact of HIV-related conditions that affect cardiac function.
+3.1 Principles of Assessment
+Before using the information in this chapter, the Guides user should become familiar with Chapters 1 and 2 and the Glossary. Chapters 1 and 2 discuss the Guides’ purpose, applications, and methods for performing and reporting impairment evaluations. The Glossary provides definitions of common terms used by many specialties in impairment evaluation.
+
+3.1 a Interpretation of Symptoms and Signs Some impairment classes refer to limitations in the ability to perform daily activities because of symptoms. When this information is subjective and possibly misinterpreted, it should not serve as the sole criterion upon which decisions about impairment are made. Rather, the examiner should obtain objective data about the extent of the limitation and integrate the findings with the subjective data to estimate the degree of permanent impairment. See the functional classifications of cardiac disease in Table 3-1.
+
+Exercise Testing
+When feasible, the physician should attempt to quantify limitations due to symptoms by observing the individual during exercise.2 A motor-driven treadmill with varying grades and speeds is the most widely used device for standardized exercise protocols. The protocols vary slightly, but they all attempt to relate the exercise to excess energy expended and to functional class. The excess energy expended is usually expressed in terms of the “MET,” which represents the multiples of resting metabolic energy used for any given activity. One MET is considered to be
+-- chars 3137 --
+3.5 mL (kg/min). The 70-kg man who burns 1.2 kcal/min while sitting at rest uses approximately 3 METS when walking 4 km/h.
+
+Table 3-2 displays the relationship of excess energy expenditures in METS to functional class according to the protocols of several investigators. With all protocols, the exercise periods last for 2 or 3 minutes; the time periods are represented in the table by boxes with numbers giving the estimated METS involved.
+A major problem with the use of any exercise-testing technique to attempt to quantify an individual’s functional capacity is the marked variability in people’s efforts and abilities. Therefore, while measuring the maximum oxygen consumption response, the health care professional should estimate and note the individual’s cooperation and effort during the test; eg, some will continue longer than they should, while others will stop after minimal effort because they feel fatigued.
+
+Functional Capacity
+The functional capacity of an individual depends on age, gender, and level of training. The functional class determined by means of Tables 3-2 and 3-3 may not be applicable to people at the ends of the age spectrum, such as a 20-year-old athlete or an inactive 70-year-old woman. Therefore, it may be useful to calculate a “percentage functional aerobic capacity” that is achieved on an exercise test.
+Standard charts are available for the various exercise protocols that determine the percentage functional aerobic capacity based on total exercise duration, age, gender, and level of training.4
+
+Left Ventricle Function
+Knowledge of the status of the left ventricle is important to assess in the examination and evaluation of an individual with cardiac disease. Two phases of left ventricular (LV) function contribute to the person’s symptoms and condition: systolic function, which is the ability of the heart to pump out blood during contraction; and diastolic function, the process by which the heart fills with blood during relaxation of the myocardium and a passive filling phase.5
+
+Ejection Fraction
+A clinically used measure of systolic function is the “ejection fraction” (EF), the percentage of blood the heart is able to eject during one beat. Echocardiography, radionuclide angiography, and left ventriculography are commonly used to measure the EF. A normal EF is greater than to 0.50; EFs of 0.40 to
+0.50 indicate mild systolic dysfunction; 0.30 to 0.40, moderate systolic dysfunction; and < 0.30, severe systolic dysfunction.
+
+Diastolic Dysfunction
+Diastolic dysfunction may contribute to the signs and symptoms of heart failure (HF), but quantifying the degree of dysfunction is problematic. Diastolic dysfunction is usually diagnosed clinically by elevated filling pressures that result in HF in the absence of systolic dysfunction or valvular abnormalities.
+Echocardiography with cardiac Doppler is emerging as an accepted tool for the assessment of diastolic function.3, 5-7
+
+3.1b Determination of Impairment Impairment classes, as listed in Tables 3-5 through 3-11, are disease-specific and based on the NYHA classification system as listed in Table 3-1. The impairment classes reflect anatomic, physiologic,
+-- chars 3203 --
+and functional abnormalities. For example, the information in Table 3-1 category I of the NYHA system is represented in the corresponding class 1 on Table 3-5. The classes listed in Tables 3-5 through 3-11 apply the NYHA functional classification to specific disease conditions. The percentages of impairment reflect the severity of the condition and the extent to which the condition limits the abilities to do activities of daily living.
+
+In the illustrative examples of impairment in this chapter, any historic, physical examination, or laboratory information or data not described should be considered to be within normal limits.
+
+In summary, an evaluation of the cardiovascular system that falls within normal range reflects an individual who performs all activities of daily living without cardiovascular symptoms, has some reserve capacity that allows comfortable exercise without the development of major cardiovascular symptoms, has an LV ejection fraction that falls within normal limits, and completes at least 80% of ageand gender-predicted functional aerobic capacity during exercise stress testing.
+
+3.2 Valvular Heart Disease
+Congenital, rheumatic, infectious, or traumatic factors or a combination of those factors may cause valvular heart disease. Valvular disease may result in
+(1) pressure hypertrophy of the left or right ventricle (RV), causing elevated filling pressures, myocardial ischemia, and eventual LV dysfunction with signs and symptoms of congestive heart failure (CHF);
+(2) volume hypertrophy of the LV or RV, causing ventricular dilatation and eventual irreversible myocardial dysfunction with signs and symptoms of CHF; (3) inflow obstruction to the ventricles causing congestion of organs, even in the absence of ventricular dysfunction; or (4) decreased cardiac output.5
+
+Valvular heart disease can be detected and its severity assessed by means of a thorough history and physical examination and should be confirmed by either Doppler echocardiography or cardiac catheterization.8 A valve gradient measures the pressure drop across a stenotic valve and is proportional to the severity of obstruction. Since the valve gradient is influenced by the cardiac output, the valve gradient calculates a valve area that takes into consideration both the pressure gradient and the cardiac output.
+There may be technical limitations to these derived variables. Their correlation with the severity of the stenosis is shown in Table 3-4.
+
+The severity of a regurgitant valve lesion is more difficult to assess than that of a stenotic lesion. Physical examination and Doppler echocardiography may provide a qualitative assessment. Although Doppler echocardiography may help the physician determine a mild or severe regurgitant valve lesion, this technique’s inherent limitations preclude an accurate assessment of intermediate grades of severity.
+Cardiac catheterization may be required for a semiquantitative estimate of the valve lesion’s severity; it can provide a view of the contrast medium’s intensity as it crosses the regurgitating valve into the receiving heart chamber. To assess the severity of aortic valve regurgitation, obtain the estimate with aortic root angiography; to assess the severity of mitral valve regurgitation, obtain the estimate with left ventriculography.
+-- chars 3318 --
+Catheter-based interventional procedures, operative repair, or prosthetic valve replacement can reduce the severity of, but not fully repair, valvular heart disease. After any of these procedures, allow sufficient time to elapse from the date of surgery for
+maximum recovery and reconditioning of the heart, lungs, and other organs before estimating permanent impairment.
+
+In addition, because medication may affect the severity of valvular heart disease, especially limitations due to symptoms, allow sufficient time for medication to be introduced and adjusted and to take effect before estimating permanent impairment.
+
+3.2 a Criteria for Rating Permanent Impairment Due to Valvular Heart Disease The impairment criteria for valvular heart disease are given in Table 3-5.
+
+Chest roentgenogram: normal.
+Diagnosis: Asymptomatic mild aortic stenosis secondary to a bicuspid aortic valve with electrocardiographic evidence of LV hypertrophy.
+Impairment Rating: 1% to 9% impairment of the whole person.
+Comment: Antibiotic prophylaxis before dental or surgical procedure to minimize risk of bacterial endocarditis. Periodic cardiac follow-up for progression of aortic stenosis. Aortic valve surgery necessary later in life.
+
+Comment: Impairment greater if (1) a diastolic decrescendo murmur; (2) the systolic gradient across the prosthesis > Doppler-derived normal values for the type of prosthesis; or (3) mild recurrent dyspnea. Cardiac catheterization not necessary for estimate.
+
+impairment due to hypertension per Table 4-2.
+roentgenogram: slight prominence heart apex; prosthesis properly positioned: no evidence of pulmonary congestion. Echocardiogram: normal size ventricles; thickening of LV wall; prosthesis properly positioned, mean gradient 10 mm Hg across the prosthesis; slight regurgitation. LV systolic function mildly depressed; 0.45 LVEF.
+Diagnosis: Calcific aortic stenosis, probably related to congenital bicuspid aortic valve, and valve replacement.
+Impairment Rating: 20% impairment of the whole person.
+
+Comment: Greater exercise tolerance and less cardiomegaly for lower impairment. If reduced systolic function, increase impairment. Cardiac catheterization not necessary for estimate.
+Consider surgical treatment.
+
+Diagnosis: Aortic and mitral valve disease, probably rheumatic in origin; surgical replacement of valves.
+Impairment Rating: 40% to 49% impairment of the whole person.
+Comment: Bruce protocol: class I if exertion
+> 6 minutes; class II if 3 to 6 minutes; class III if 1 to 3 minutes; and class IV if < 1 minute.
+
+Diagnosis: Mitral valve replacement with a prosthesis; LV dysfunction, with probable rheumatic origin.
+Impairment Rating: 70% to 79% impairment of the whole person.
+Comment: Cardiac catheterization, though done, not essential for estimate.
+
+3.3 Coronary Heart Disease
+Coronary heart disease (CHD) is most commonly due to arteriosclerosis of the coronary arteries, resulting in reduced coronary blood flow. Other causes of limited or reduced coronary blood flow include coronary artery spasm, emboli, congenital abnormalities, and trauma. Inflammatory processes and arthritis also can obstruct the coronary arteries, especially the coronary ostia.
+-- chars 3218 --
+Reduced coronary flow resulting in transient ischemia or in permanent injury to the myocardium causes angina pectoris, which may impair a person’s ability to perform activities of daily living. Infarction or diffuse fibrosis and a decrease in EF causes permanent injury. The degree of the patient’s impairment is determined by the consequences of both the reduced coronary blood flow and the reduced ventricular function. In addition, reduced coronary blood flow and myocardial damage may cause cardiac arrhythmias. (See Section 3.6).9
+
+The physician must obtain a detailed history to estimate the degree of impairment due to CHD. The physical examination contributes to the estimate of the disorder’s severity, and especially to the estimate of the degree of ventricular function impairment. In most individuals, laboratory studies will also be necessary. Studies obtained at rest, during exercise, and after exercise are especially useful in examining people suspected of having CHD. Knowledge of ventricular function should usually be obtained for all individuals. If there is a normal examination, normal heart size on chest x-ray, and normal resting ECG, the EF should be normal. Coronary angiography may be necessary in some.2,6, 10
+
+Exercise training programs, cessation of cigarette smoking, use of medications, and surgical procedures can reduce but not eliminate impairment due to CHD. Allow sufficient time for these measures to have an effect before estimating permanent impairment.
+
+3.3 a Criteria for Rating Permanent Impairment Due to Coronary Heart Disease Impairment criteria for CHD are given in Table 3-6.
+
+work. Follows diet to maintain weight of 72 kg (160 lb)—11 kg (24 lb) less than 1 year before. Asymptomatic; no medication.
+Clinical Studies: Chest roentgenograms: normal. ECG: Q and flat T waves in 2, 3, and F. During exercise, HR: 152 BPM; BP: adequate rise.
+ECG: no pattern changes to indicate ischemia or arrhythmias.
+Diagnosis: Recent inferior-wall MI.
+Impairment Rating: 10% to 19% impairment of the whole person.
+Comment: Greater impairment for uncomplicated recovery from anterior wall infarction, especially if LV systolic dysfunction.
+
+Any of the exercise protocols in Table 3-2 may be used. The maximal and 90% of maximal predicted HR by age and sex group are presented in Table 3-7.
+
+echocardiogram: reduced exercise tolerance; completed only 5.5 minutes on Bruce protocol. ECG with exercise: 4 mm of ST segment elevation.
+Current Symptoms: Complained of exertional dyspnea after 20 minutes’ exercise and significant fatigue in office practice by early afternoon despite medication.
+Physical Exam: BP: 98/60; PR: 68. No venous pressure elevation; large, sustained impulse above and lateral to the left nipple centered in the third intercostal space at the anterior axillary line. S gallop.
+Clinical Studies: Echocardiogram: anteroapical LV aneurysm at rest; EF: 0.35; fell to 0.25 with
+exercise. Cardiac catheterization: occluded proximal LAD; no significant disease in LCx, RCA. Initially placed on an ACE inhibitor, nitrates, and low doses of furosemide and Coumadin. Low-salt diet. Beta-blocker 4 weeks later. ECG: 1-mm ST
+-- chars 3175 --
+segment elevation in V -V . Chest roentgenogram:
+
+Cardiac enlargement; clear lung fields.
+Diagnosis: Anterior LV aneurysm secondary to MI and CAD.
+Impairment Rating: 45% to 49% impairment of the whole person.
+Comment: LV aneurysm with secondary symptoms. Stable symptoms occurred with moderate activity. Maximal medical therapy. If symptoms worsen, future treatment includes aneurysm resection.
+
+where. Chest roentgenogram: marked cardiomegaly; increased vascular markings in upper lung fields; small, right-sided pleural effusion.
+Coronary angiography: total occlusion of LAD; 90% blockage right and circumflex coronary arteries. Patent grafts to RCA and one circumflex artery branch; no visualization of grafts to other circumflex artery branch and anterior descending artery. Ventriculogram: 0.20 EF; akinesis of entire anterior wall; poor contraction elsewhere.
+Diagnosis: Angina pectoris and LV failure after coronary artery bypass surgery.
+Impairment Rating: 90% to 100% impairment of
+leads. Chest roentgenogram: marked cardiomegaly; upper lung fields vasculature prominent. During and after 2 minutes of exercise, pain
+and ST depression in I, L, V , and V . EF: fell
+
+the whole person.
+Comment: Unable to perform most activities of daily living.
+
+from 0.30 to 0.25 (multigated blood pool scan).
+Diagnosis: Angina pectoris and LV failure due to CHD.
+Impairment Rating: 75% to 90% impairment of the whole person.
+Comment: Needs assistance for most activities of daily living.
+
+3.4 Congenital Heart Disease
+Recently, surgical procedures designed to correct or improve the circulation of infants and children with congenital cardiac disorders have allowed many of the children to live to adulthood. Many of these surgically treated patients continue to have less than normal functioning of the heart and circulation and are therefore impaired.11
+
+Congenital heart disease may be recognized by medical history and physical examination, but often the exact diagnosis and the individual’s functional
+
+impairment require special studies, including ECG, chest roentgenogram, radioisotope studies, echocardiography, hemodynamic measurements, and angiography.12 The functional classification of cardiac disease found in Table 3-1 is used in the classification for congenital heart disease listed below in Table 3-8.
+
+3.4 a Criteria for Rating Permanent Impairment Due to Congenital Heart Disease
+Impairment criteria for congenital heart disease are given in Table 3-8.
+
+3/6 systolic murmur ends well short of S , loudest in second left intercostal space; early systolic click varies with respiration. No diastolic murmurs or gallops.
+Clinical Studies: Chest roentgenogram: normal.
+ECG: normal.
+Diagnosis: Mild pulmonary valve stenosis.
+Impairment Rating: 9% impairment of the whole person.
+Comment: Higher estimate if gradient > 40 mm Hg (Doppler echocardiography) or if ECG showed RV hypertrophy and a suitable surgical candidate. If asymptomatic with a small ventricular septal defect, estimate at upper end of class 1; but if bacterial endocarditis present, then estimate higher. If small atrial septal defect and normal pressures in all cardiac chambers and great vessels, or anomalous venous return from small lung segment, also estimate at upper end of class 1.
+-- chars 3294 --
+Comment: If shunt evidence, then impairment estimate higher. Also, if conduit or prosthesis in pulmonary outflow tract, or if significant symptoms, impairment estimate higher. Cardiac catheterization unnecessary for estimate.
+
+Doppler: no right-to-left shunt. Cardiac catheterization, angiography: mean right atrial pressure 7 mm Hg; V waves 15 mm Hg. RVP and PAP: normal. No evidence of a shunt.
+Diagnosis: Ebstein’s anomaly of the tricuspid valve.
+Impairment Rating: 25% impairment of the whole person.
+
+Comment: If right-to-left shunt, then estimate considerably higher. If symptomatic cardiac arrhythmia, then estimate impairment according to arrhythmia criteria and combine with congenital heart disease impairment (see Combined Values Chart, p. 604). Cardiac catheterization unnecessary for estimate. Exercise testing might be useful for determining functional class.
+Clinical Studies: ECG: right bundle-branch block; low R waves in V ; prominent P waves. Chest roentgenogram: greatly enlarged cardiac silhouette, especially right of the sternum. Pulmonary vasculature: normal. Echocardiogram: Ebstein’s anomaly of the tricuspid valve—typical changes. Doppler: small right-to-left shunt across atrial septum.
+Diagnosis: Ebstein’s anomaly of the tricuspid valve.
+Impairment Rating: 40% to 49% impairment of the whole person.
+
+3.5  Cardiomyopathies
+Cardiomyopathies, caused by a primary disease that affects the heart muscle, lead to impairment from abnormal ventricular function. Abnormal ventricular function may be the result of (1) systolic dysfunction, (2) diastolic dysfunction, or (3) a combination of both. An individual with these abnormalities may be asymptomatic or symptomatic due to pulmonary or systemic organ congestion and decreased cardiac output. In people with hypertrophic cardiomyopathy, a dynamic outflow tract obstruction and secondary mitral regurgitation may cause symptoms of exertional dyspnea, angina, and syncope. Because some cardiomyopathies are reversible, every effort should be made to identify the reversible forms and to treat
+
+them appropriately and prevent further deterioration. When the conditions are stable, the individual may be evaluated in terms of permanent impairment.13-18
+
+Cardiomyopathies arise from many mechanisms, but the conditions may be divided into three major types:
+(1) dilated or congestive, (2) hypertrophic, and
+(3) restrictive. Careful history-taking and physical examination can reveal cardiomyopathies, but it is appropriate to confirm the diagnosis with echocardiography and selected laboratory studies.
+
+3.5 a Criteria for Rating Permanent Impairment Due to Cardiomyopathies Impairment criteria for cardiomyopathies are given in Table 3-9.
+
+Diagnosis: Idiopathic cardiomyopathy.
+Impairment Rating: 49% impairment of the whole person.
+Comment: Reduced exercise capacity; poor LV function.
+
+3.6 Pericardial Heart Disease
+Inflammation from diseases of the pericardium is associated with (1) systemic illnesses such as lupus erythematosus; (2) a reaction to mechanical forces, such as trauma or irradiation; (3) no obvious cause (idiopathic pericarditis); (4) infections, eg, viral, bacterial, fungal; or (5) open heart surgery (postcardiotomy syndrome). The pericardium may also be affected by tumors.
+-- chars 3301 --
+Recurrent pericarditis can lead to disabling episodes of fevers and pleuritic chest pain. Since chest pain is nonspecific, pericarditis evidence must be documented by echocardiography to show a pericardial effusion or by laboratory evidence of active inflammation, such as an increase in the erythrocyte sedimentation rate (ESR).
+
+Constrictive pericarditis is the most common pericardial disorder leading to permanent impairment; surgical removal of the thickened pericardium may significantly reduce symptoms and improve the overall condition of the individual. Before assessing permanent impairment, it is mandatory to allow sufficient time for the person to recover from a surgical procedure and to reach maximal medical improvement.
+
+Pain and compromised cardiac function because of tamponade may cause some impairment, but they are rare as causes of permanent impairment. Recurrent episodes of pericarditis with tamponade or pericardial disease related to tumors may lead to permanent impairment. Allow adequate time for resolution of an acute illness, generally a period of months, before assessing permanent impairment.
+
+Diagnosis of pericardial disease is made by historytaking; identifying a pericardial fraction rub or early diastolic pericardial knock; demonstrating pericardial effusion, thickening, or calcification on an echocardiogram; showing a thickened pericardium with computerized tomography (CT) or magnetic resonance imaging (MRI); or findings at cardiac catheterization.
+
+3.6 a Criteria for Rating Permanent Impairment Due to Pericardial Heart Disease
+Criteria for evaluating permanent impairment related to pericardial heart disease are given in Table 3-10.
+
+Impairment Rating: 0% impairment of the whole person.
+Comment: Self-limited illness; no effects on activities of daily living.
+
+3.7  Arrhythmias
+An arrhythmia is one or more heartbeats generated at a site other than the sinus node. An impulse generated in the sinus node but not transmitted normally through the conducting system is a conduction defect arrhythmia. Arrhythmias may occur in individuals with structurally and functionally normal hearts or in those with any type of organic heart disease.
+
+Because arrhythmias tend to fluctuate remarkably in frequency, the physician must adequately document and estimate the frequency with which an arrhythmia occurs. The associated symptoms can include syncope, weakness and fatigue, palpitations, dizziness, lightheadedness, chest heaviness, and shortness of breath, alone or in any combination.
+
+The degree of impairment from cardiac arrhythmias often has to be combined with the degree of impairment due to underlying heart disease and then calculated according to the Combined Values Chart (p. 604). Before estimating the degree of permanent impairment, allow adequate time for the individual’s condition to reach maximal medical improvement after instituting therapy.19
+
+3.7 a Criteria for Rating Permanent Impairment Due to Arrhythmias Criteria for evaluating impairments related to arrhythmias are given in Table 3-11.
+-- chars 3089 --
+3.8 Cardiovascular Impairment Evaluation Summary
+See Table 3-12 for an evaluation summary for the assessment of cardiovascular impairment.

@@ -11,6 +11,7 @@ from automation_matrix.processing.processor import Processor
 class OutputClassifier(Processor):
     def __init__(self):
         super().__init__()
+        self.clean_text = False
         self.separated_sections = []
         self.classified_sections = []
         self.table_tuples = []
@@ -73,9 +74,43 @@ class OutputClassifier(Processor):
         lines = text.split('\n')
         for line in lines:
             category = self.classify_line(line)
+            if self.clean_text:
+                line = self.text_cleaner(category, line)
             classified_lines.append((category, line))
 
         return classified_lines
+
+    def text_cleaner(self, category, line):
+
+        # TODO: This was added by Armani for demonstration purposes, but we know it's not ideal because it is removing text from anywhere, including the middle, which we don't want to do.
+        # It would be a very quick fix to look specifically and remove starting text and ending text that meet these requirements.
+
+        clean_text = line
+        if category == 'header':
+            clean_text = line.replace('#', '').strip()
+        elif category == 'bold_text':
+            clean_text = line.replace('**', '').strip()
+        elif category == 'italic_text':
+            clean_text = line.replace('__', '').strip()
+        elif category == 'bullet':
+            clean_text = line.replace('- ', '').strip()
+            clean_text = clean_text.replace('**', '').strip()
+        elif category == 'sub_bullet':
+            clean_text = line.replace(' -', '').strip()
+        elif category == 'numbered_list':
+            clean_text = line.replace('\d+\.', '').strip()
+            clean_text = clean_text.replace('**', '').strip()
+        elif category == 'entry_and_value':
+            clean_text = line.split(':', 1)[1].strip()
+        elif category == 'header_text':
+            clean_text = line.split(':', 1)[1].strip()
+        elif category == 'other_text':
+            clean_text = clean_text.replace('**', '').strip()
+            clean_text = clean_text.replace('#', '').strip()
+
+            clean_text = clean_text.strip()
+
+        return clean_text
 
     def split_text_sections_and_identify_line_types(self, text):
         lines = text.strip().split('\n')
@@ -161,9 +196,12 @@ class OutputClassifier(Processor):
         self.table_tuples.append(updated_tables)
         return
 
-    def classify_output_details(self, text):
+    def classify_output_details(self, text, clean_text=False):
+        self.clean_text = clean_text  # Added by Armani
+
         self.split_text_sections_and_identify_line_types(text)
         self.categorize_sections(self.separated_sections)
+        # TODO: Jatin this is where you would add a feature to create structure from the data, if that's what we want next. (Could be optional)
 
         return self.classified_sections
 
@@ -223,15 +261,21 @@ async def classify_markdown_content(text_data):
 
     return classified_content
 
+
 async def get_classify_markdown_section_list(text_data):
     classifiers = OutputClassifier()
     classified_sections = classifiers.classify_output_details(text_data)
 
     return classified_sections
 
+
 async def main(text_data):
+
+    clean_text = True  # Turn this to false to get the old functionality back - NEW FUNCTIONALITY
+
     classifiers = OutputClassifier()
-    classified_sections = classifiers.classify_output_details(text_data)
+
+    classified_sections = classifiers.classify_output_details(text_data, clean_text=clean_text)
     pretty_print(classified_sections)
 
     print("\nCategorized sections:")
@@ -248,12 +292,14 @@ async def main(text_data):
 if __name__ == "__main__":
     import asyncio
 
-    sample_data = get_sample_data(app_name="automation_matrix", data_name="markdown_content",
-                                  sub_app="ama_ai_output_samples")
+    sample_data = get_sample_data(app_name="automation_matrix",
+                                  data_name="markdown_content",
+                                  sub_app="ama_ai_output_samples",
+                                  )
 
     asyncio.run(main(sample_data))
 
     # VERY GOOD FOR MARKDOWN TO DOCX CONVERSION
-    output_docx_file_path = os.path.join(BASE_DIR, "temp", "app_outputs", "output.docx")
+    # output_docx_file_path = os.path.join(BASE_DIR, "temp", "app_outputs", "output.docx")
 
-    convert_markdown_content_to_docx(sample_data, output_docx_file_path=output_docx_file_path)
+    # convert_markdown_content_to_docx(sample_data, output_docx_file_path=output_docx_file_path)

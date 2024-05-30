@@ -1,0 +1,280 @@
+---- GLOSSARY START----
+## Glossary
+
+**Abnormal Illness Behavior**
+Behavior that suggests amplification of symptoms for any of a variety of psychological or social reasons or purposes.
+
+**Acquired**
+Developed after birth. Not hereditary or congenital.
+
+**Activities of Daily Living (ADL)**
+Activities of daily living include those listed in Table 1-2, reproduced below.
+
+### Table 1-2 Activities of Daily Living
+
+Commonly Measured in Activities of Daily Living (ADL) and Instrumental Activities of Daily Living (IADL) Scales
+
+**Assistive Devices**
+Devices that help individuals with a functional loss increase function. Examples include reachers, extended grabbers, hearing aids, and telephone amplifiers.
+
+**Blindness**
+The absence of vision (no light perception, NLP).
+
+**Causalgia**
+See Complex regional pain syndromes.
+
+**Causation**
+An identifiable factor (eg, accident or exposure to hazards or disease) that results in a medically identifiable condition.
+
+**Chronic Pain**
+Pain that extends beyond the expected period of healing or is related to a progressive disease. It is usually elicited by an injury or disease but may be perpetuated by factors that are both pathogenically and physically remote from the original cause. Because the pain persists, it is likely that environmental and psychological factors interact with the tissue damage, contributing to the persistence of pain and illness behavior.
+
+**Combined Values Chart**
+A method used to combine multiple impairments, derived from the formula A + B(1–A) = combined values of A and B, which ensures that the summary value will not exceed 100% of the whole person.
+
+**Complex Regional Pain Syndromes (CRPS)**
+CRPS I Reflex sympathetic dystrophy
+CRPS II Causalgia. Described in Sections 13.8, 16.5e, and 17.2m. Burning pain associated with signs of vasomotor and sudomotor dysfunction and later trophic changes of all tissues from skin to bone. Causalgia follows a lesion of a peripheral nerve, while RSD may follow a sprain, fracture, or nerve or vascular injury.
+
+**Congenital Condition**
+Exists at or dates from birth and may be acquired during development in the uterus. A congenital condition is not hereditary.
+
+**Contracture**
+A permanent shortening (as of muscle, tendon, or scar tissue) producing loss of motion, deformity, or distortion.
+
+**Contrast Sensitivity**
+The ability to perceive larger objects with low contrast. This ability is important for ADL tasks such as face recognition (see Section 12.4b).
+
+**Creatinine Clearance**
+A quantitative measure of the degree of functional impairment of the upper urinary tract.
+
+**Cure**
+Complete recovery from a disease or condition.
+
+**Dermatitis**
+An inflammation of the skin.
+
+**Desirable Weight**
+A range of optimal weight given an individual’s sex, age, height, and body habitus.
+
+**Deterioration or Decompensation**
+An individual’s repeated failure to adapt to stressful circumstances.
+
+**Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (DSM-IV)**
+Published by the American Psychiatric Association, this book lists and describes the criteria necessary to meet a psychiatric diagnosis.
+
+**Diffusing Capacity**
+Measurement of gas transfer from the lung tissue into the blood.
+
+**Disability**
+Alteration of an individual’s capacity to meet personal, social, or occupational demands or statutory or regulatory requirements because of an impairment. Disability is a relational outcome, contingent on the environmental conditions in which activities are performed.
+
+**Disfigurement**
+An altered or abnormal appearance of color, shape, or structure of the skin or of a body part. Disfigurement may be caused by an injury or illness and may persist after the underlying condition has resolved. Disfigurement may cause social rejection, impairment of self-image, alteration of lifestyle, or other adverse mental and behavioral effects.
+
+**Dizziness**
+A sensation of unsteadiness accompanied by a feeling of movement of the individual.
+
+## Dominant extremity
+One of a pair of bodily structures that is the more effective or predominant in action.
+
+## Dysesthesia
+Impairment of sensitivity, especially to touch.
+
+## Effects of medication
+Medication may impact the individual’s signs, symptoms, and ability to function. The physician may choose to increase the impairment estimate by a small percentage (1% to 3%) to account for effects of treatment.
+
+## Functional Acuity Score (FAS), Functional Field Score (FFS)
+These scores combine the VAS and VFS values from OD, OS, and OU to derive an estimate of the ability to perform generic activities of daily living (see Tables 12-3 and 12-6).
+Higher values indicate better vision.
+
+## Functional limitations
+The inability to completely perform a task due to an impairment. In some instances, functional limitations may be overcome through modifications in the individual’s personal or environmental accommodations.
+
+## Functional Vision Score (FVS)
+The functional vision score combines the Functional Acuity Score and the Functional Field Score (see Table 12-1) with individual adjustments if needed (see Section 12.4b). Higher values indicate better vision.
+
+## Handicap
+A historical term used to describe disability or a person living with a disability or disabilities. A handicapped individual has been considered to be someone with a physical or mental disability that substantially limits activity, especially in relation to employment or education.
+
+## Hernia
+A protrusion of an organ or body part through connective tissue or through a wall of the cavity in which it is normally enclosed.
+
+## HIV
+See Human immunodeficiency virus (HIV).
+
+## Hormone
+A product of living cells that circulates in body fluids and produces a specific effect on the activity of cells remote from its point of origin.
+
+## Human immunodeficiency virus (HIV)
+Any of a group of retroviruses, and especially HIV-1, that infect and destroy helper T cells of the immune system, causing the marked reduction in their numbers that is one of the diagnostic criteria of AIDS. Also called AIDS virus.
+
+## Impairment
+A loss, loss of use, or derangement of any body part, organ system, or organ function.
+
+## Impairment evaluation
+A medical evaluation performed by a physician, using a standard method as outlined in the Guides, to determine permanent impairment associated with a medical condition.
+
+## Impairment percentages or ratings
+Consensus-derived estimates that reflect the severity of the impairment and the degree to which the impairment decreases an individual’s ability to perform common activities of daily living as listed in Table 1-2.
+
+## Independent medical evaluation (IME)
+An evaluation performed by an independent medical examiner, who evaluates—but does not provide care for—the individual.
+
+## Inherited condition
+A condition received from a parent or ancestor by genetic transmission.
+
+## Legal blindness
+A term used to indicate eligibility for certain benefits. It is a misnomer, since 90% of “legally blind” individuals are not blind. The preferred term, as used in ICD-9-CM, is severe vision loss (see Section 12.2b.1).
+
+The definition of legal blindness varies slightly in different statutes. A common definition is “visual acuity of 20/200 or less.” Implementation of this definition depends on the chart used (see Section 12.2b.1). An alternative definition is “visual field loss to a 20° diameter or less.” This definition does not address nonconcentric field losses.
+
+## Malingering
+A conscious and willful feigning or exaggeration of a disease or effect of an injury in order to obtain specific external gain. It is usually motivated by external incentives, such as receiving financial compensation, obtaining drugs, or avoiding work or other responsibilities.
+
+## Maximal medical improvement (MMI)
+A condition or state that is well stabilized and unlikely to change substantially in the next year, with or without medical treatment. Over time, there may be some change; however, further recovery or deterioration is not anticipated.
+
+## Menopause
+The period of natural cessation of menstruation, usually occurring between the ages of 45 and 55.
+
+## METS
+Multiples of resting metabolic energy used for any given activity. Each MET represents 3.5 cc of oxygen consumption per kilogram per minute. One MET equals oxygen uptake at rest. The results of stress testing are expressed in METs.
+
+## Motivation
+A need or desire that causes a person to act.
+
+## Neutral zero measuring method
+An approach used by the Guides to measure range of motion that defines the neutral or starting position of reference for any joint being measured as the standing anatomic position. The neutral or anatomic position is recorded as the 0° position.
+
+## Normal
+A range or zone that represents healthy functioning and varies with age, gender, and other factors, such as environmental conditions.
+
+## Occupational history
+A tool used in a comprehensive clinical assessment to obtain, organize, and assess information about the current and prior workplace environments and exposures and their relationship to illness and injury. An occupational history can provide essential information to improve treatment, prevent further or additional illness or injury, and assist in the determination of whether work directly caused or contributed to the development of the injury or illness.
+
+## Pain
+An unpleasant sensory and emotional experience associated with actual or potential tissue damage or described in terms of such damage.
+
+## Pain behavior
+Verbal or nonverbal actions understood by observers to indicate that a person may be experiencing pain, distress, and suffering. These actions may include audible complaints, facial expressions, abnormal postures or gait, use of prosthetic devices, or avoidance of activities.
+
+## Paresthesias
+A sensation of pricking, tingling, or creeping on the skin, usually associated with injury or irritation of a sensory nerve or nerve root.
+
+## Patch test
+Patch tests are used to diagnose allergic contact sensitivity. Small patches containing non-irritating concentrations of the allergens to be tested are applied to unbroken skin, usually on the upper back, for 48 hours. A positive test reaction occurs when dermatitis develops at the site of application 48 to 168 hours later.
+
+## Permanent impairment
+An impairment that has reached maximal medical improvement.
+
+## Prosthesis
+An artificial device to replace a missing part of the body.
+
+## Psychogenic pain
+Severe and prolonged pain that is inconsistent with neuroanatomic distribution of pain receptors or without, or grossly in excess of, detectable organic or pathophysiologic mechanisms. As a result, the report of pain is attributed primarily to psychological factors.
+
+## Pulmonary function tests
+Studies of lung function including such measurements as lung volumes, inspiratory and expiratory flow rates, and efficiency of gas transfer.
+
+## Radiculopathy
+Any pathological condition of the nerve roots.
+
+## Raynaud’s phenomenon
+A vascular disorder marked by recurrent spasm of the capillaries, especially those of the fingers and toes upon exposure to cold, that is characterized by pallor, cyanosis, and redness in succession and usually accompanied by pain.
+
+## Recurrence
+A return of the disorder or disease after a remission.
+
+## Reflex sympathetic dystrophy
+See Complex regional pain syndromes.
+
+## Reliability
+See Reproducibility.
+
+## Remission
+Improvement or a state or period during which the symptoms of a disease are abated.
+
+**Replacement Medication or Therapy**
+Treatment that involves the supply of something (an element, compound, or hormone) lacking or lost to the body’s system. Although the person may be fully functional on an everyday basis while taking replacement medication, he or she may be unable to respond properly to stresses such as fever, trauma, or infection. This impaired ability to respond to stress needs careful consideration.
+
+**Reproducibility**
+Synonymous with reliability. Consistency in results when examinations (tests) are repeated.
+
+**Sciatica**
+Pain along the course of a sciatic nerve, especially in the back of the thigh, caused by compression, inflammation, or reflex mechanisms.
+
+**Sensitivity**
+The extent to which individuals with a condition are correctly classified.
+
+**SFTR Documentation System**
+A numeric method for recording range-of-motion measurements taken by the neutral zero method.
+
+**Social Functioning**
+An individual’s ability to interact appropriately and communicate effectively with other individuals.
+
+**Somatoform Pain Disorder**
+According to DSM-IV, this is preoccupation with pain in the absence of physical findings that adequately account for the pain and its intensity, as well as the presence of psychological factors that are judged to have a major role in the onset, severity, exacerbation, and maintenance of pain.
+
+**Specificity**
+The extent to which individuals without a condition are correctly classified.
+
+**Spirometry**
+Measurement by means of a spirometer of the forced vital capacity and its subdivisions, as well as measurement of the speed of airflow achieved in performance of this maneuver.
+
+**Stress Testing**
+An electrocardiographic test of heart function before, during, and after a controlled period of increasingly strenuous exercise (as on a treadmill).
+
+**Surgically Created Stoma**
+An artificial permanent opening, especially in the abdominal wall, created to compensate for anatomic losses and allow either ingress to or egress from the alimentary tract.
+
+**Teleroentgenography**
+A radiographic method used to determine actual limb length.
+
+**Tinnitus**
+A sensation of noise (such as ringing or roaring) in the ear. Tinnitus may be audible or inaudible. Audible tinnitus is usually associated with a muscular tic or vascular bruit. Inaudible tinnitus can be heard only by the person affected and may be associated with an obstruction of the external auditory canal or a disturbance of the auditory nerve and/or the central nervous system.
+
+**Treatment**
+The action or manner of treating an individual, medically or surgically. Medical treatment is the action or manner of treating an individual, medically or surgically by a physician. Treatment may include modalities recommended by a health care provider.
+
+**Validity**
+An accurate measurement apart from random errors. Validity refers to the extent to which a test measures what it is intended to measure.
+
+**Vertigo**
+A sensation of motion (eg, spinning) when there is no motion or an exaggerated sense of motion in response to a given bodily movement.
+
+**Vision (Low)**
+A term applied to the large group of individuals who are not blind (hence low vision), but who do not have normal vision either (hence low vision) (see Section 12.2b.2). In ICD-9-CM, low vision is defined as visual acuity loss to less than 20/63 (20/60 if rounded) down to 20/1000 (1/50).
+
+**Vision Loss (Ranges of)**
+Table 12-2 lists more detailed ranges of visual acuity loss as defined in ICD-9-CM.
+- Range of Normal Vision: 20/25 or better
+- Mild Vision Loss: Less than 20/25 (near-normal vision)
+- Moderate Vision Loss: Less than 20/63 (20/60)
+- Severe Vision Loss: Less than 20/160 (20/200 or less)
+- Profound Vision Loss: Less than 20/400
+- Near-Blindness: Less than 20/1000
+- Total Blindness: No light perception (NLP)
+
+Table 12-5 defines similar ranges of visual field loss.
+
+**Visual Acuity**
+The ability to recognize small objects with high contrast, such as letters on a letter chart (see Section 12.2). This ability is important for ADL tasks such as reading.
+
+**Visual Acuity Score (VAS), Visual Field Score (VFS)**
+Scales used to assign a numeric value to visual acuity and visual field measurements for each eye (see Tables 12-2 and 12-5). They are used for calculation purposes. Higher values indicate better vision.
+
+**Visual Field**
+The ability to detect objects in the periphery of the visual environment (see Section 12.3). This ability is important for ADL tasks such as orientation and mobility.
+
+**Visual Impairment Rating**
+A rating calculated as 100 – FVS. Higher values indicate poorer vision.
+
+**VO Oxygen Consumption**
+Or uptake, measured in mL/min.
+
+**Whole Person Impairment**
+Percentages that estimate the impact of the impairment on the individual’s overall ability to perform activities of daily living, excluding work.
+
+**Workers’ Compensation**
+A compensation program designed to provide medical and economic support to workers who have been injured or become ill from an incident arising out of and in the course of their employment.

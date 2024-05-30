@@ -1,0 +1,559 @@
+================================================================================
+
+Chapter 18:
+-----------------------------------------------------------------
+Pain
+18.1 Principles of Assessment
+18.2 Overview of Pain
+18.3 Integrating Pain-Related Impairment Into the Conventional Impairment Rating System
+18.4 Behavioral Confounders
+18.5 How to Rate Pain-Related Impairment: A Sample Protocol
+18.6 Psychogenic Pain
+18.7 Malingering
+18.8 Conclusion
+18.9 Case Examples
+-------INTRODUCTION START -------
+Introduction
+This chapter provides information that will enable physicians to understand pain and develop a method to distinguish pain that accompanies illnesses and injuries from pain that has become an autonomous process, and provide physicians with a qualitative method for evaluating permanent impairment due to chronic pain.
+
+This chapter has been completely revised from the fourth edition. Its new features include (1) an overview of pain; (2) a discussion of the complexity of assessing impairment due to pain; (3) a review of situations in which pain is a major cause of suffering, dysfunction, or medical intervention rather than a part of injuries and illnesses of specific organ systems as covered in other chapters of the Guides; (4) a qualitative method for evaluating impairment due to chronic pain; and (5) a description of when to use the methods described in this chapter and how they can be integrated with the impairment rating methods used in other chapters of the Guides.
+Physicians need to use their clinical judgment as to what constitutes normal or expected pain in conditions that produce widely variable amounts of pain; a herniated lumbar disk, for example, may be completely painless or incapacitatingly painful. This chapter focuses on those situations in which the pain itself is a major cause of suffering, dysfunction, or medical intervention. Pain as considered in this chapter is persistent, which is not to say that it is refractory to all treatment, but that it is likely to be permanent and stationary.
+
+18.1 Principles of Assessment
+Before using the information in this chapter, the Guides user should become familiar with Chapters 1 and 2 and the Glossary. Chapters 1 and 2 discuss the Guides’ purpose, applications, and methods for performing and reporting impairment evaluations. The Glossary provides definitions of common terms used by many specialties in impairment evaluation.
+
+It is considerably more difficult to provide a method for assessing chronic, persistent pain than acute pain. In chronic pain states, there is often no demonstrable active disease or unhealed injury, and the autonomic changes that accompany acute pain, even in the anesthetized individual, are typically absent. Historically, it was assumed that pain derived from underlying peripheral tissue pathology and that its severity should correlate highly with the identified pathology. Current research, however, shows that pain perception is less a moment-to-moment analysis of afferent input than a dynamic process influenced by the effects of past experiences. Sensory stimuli act on neural systems that have been modified by earlier inputs, and the output of these systems is significantly influenced by the “memory”
+-- chars 3250 --
+of these prior events.
+
+18.2  Overview of Pain
+18.2a Definitions
+Pain is defined by the International Association for the Study of Pain1 as “an unpleasant sensory and emotional experience associated with actual or potential tissue damage or described in terms of such damage.”
+
+Pain is a plural concept with biological, psychological, and social components. Its perception is influenced by cognitive, behavioral, environmental, and cultural factors. At first glance, it seems at odds with scientific medicine because of the difficulty accounting for it with obvious pathophysiologic changes.
+
+Pain is subjective. Its presence cannot be readily validated or objectively measured. Physicians are confronted with ambiguity as they attempt to assess the severity and significance of chronic pain in their patients. In large part, this stems from the fundamental divide between a person who suffers from pain and an observer who attempts to understand that suffering. Observers tend to view pain complaints with suspicion and disbelief, akin to complaints of dizziness, fatigue, and malaise. As Scarry remarked, “To have great pain is to have certainty, to hear that another person has pain is to have doubt.”2
+
+The concept of chronic pain as an extension of acute nociceptive pain is not valid. Chronic pain is an evolving process in which injury may produce one pathogenic mechanism, which in turn produces others, so that the cause(s) of pain change over time.
+Support for this concept includes evidence that primary afferent discharge actually has the ability to injure or kill spinal inhibitory neurons (excitotoxicity), leading to hyperexcitability due to disinhibition. Peripheral nerve injury can initiate evolving abnormalities in spinal cord neurons, which in turn generate abnormal responsiveness of thalamic neurons, which in turn generate cortical dysfunction. In time, these higher-level abnormalities may become independent of the abnormalities that produced them.3
+
+Even in situations that might be expected to provide clear correlations between perceived pain and identified peripheral pathology, there are perplexing observations. For example, in up to 85% of individuals who report back pain, no pain-producing pathology can be identified4; conversely, some 30% of asymptomatic people have significant pathology on magnetic resonance imaging (MRI)5 and computed tomographic (CT) scans6 that might be expected to cause pain. Headache is another common disabling condition in which impairment must be assessed primarily on the basis of individuals’ reports of pain rather than on tissue pathology or anatomic abnormality. The reason is straightforward: in the majority of cases there is no demonstrable tissue pathology. Thus, pain can exist without tissue damage, and tissue damage can exist without pain. In summary, there is no “pain thermometer,” that is, no biological measure that correlates highly with individuals’ complaints of pain.
+
+18.2b Impact of Pain on Population Health and Disability
+-- chars 3043 --
+Pain is among the most common reasons for seeking medical attention, accounting for more than 70 million office visits to physicians each year.7 It is also the most common cause of disability, with chronic low back pain alone accounting for more disability than any other condition, resulting in nearly 150 million lost work days in 1988.8 Disability related to back pain has increased dramatically, although there is no reason to suspect that back problems by themselves have increased.9,10 Headache disorders are also a major cause of work loss.11 Despite advances in physiologic understanding, surgical interventions, and pharmacologic therapies, the prevalence of chronic pain shows no signs of abating and continues to be of epidemic proportions. Notwithstanding this fact, the importance of pain is often discounted.
+Morris has averred that pain reported by somebody else falls into the category we reserve for whatever is invisible, subjective, immaterial, and therefore unreal.12 A 1987 report of the Social Security Administration opined that it is impossible to understand the pain that another person is suffering.13
+
+Pain is an essential determinant of the incapacitation of many individuals who undergo impairment evaluation. As observed by the Institute of Medicine Committee on Pain and Disability and Chronic Illness Behavior,14 “The notion that all impairments should be verifiable by objective evidence is administratively necessary for an entitlement program. Yet this notion is fundamentally at odds with a realistic understanding of how disease and injury operate to incapacitate people. Except for a very few conditions, such as the loss of a limb, blindness, deafness, paralysis, or coma, most diseases and injuries do not prevent people from working by mechanical failure. Rather, people are incapacitated by a variety of unbearable sensations when they try to work.”
+
+When pain persists, it has the capacity to dominate a person’s existence, contributing to significant impairment, reduction in the quality of life, functional limitations, and disability. The ravages of chronic pain often extend beyond the person who has it, as the lives of family members are often dominated by the pain of a loved one. Indeed, the children of individuals with chronic pain are at risk for suffering a similar fate.15 In addition to the human costs, chronic pain is extremely costly to society. Medical expenditures for pain-related assessment and treatment, indemnity costs, loss of productivity, and loss of tax revenues are estimated to be $125 billion each year in the United States.16
+18.2
+c Medical Advances in Understanding and Managing Pain Behavioral/Psychological
+Several major currents of thought and investigation in the last three decades have profoundly altered medical understanding of pain and its associated behaviors. The first was the behavioral hypothesis that much of the behavior associated with chronic pain was not intrinsic to a disease or injury but, rather, reflected environmental contingencies.17 This development led to the introduction of powerful clinical interventions, but it had the unfortunate effect of increasing skepticism about the validity of the suffering in those with persistent pain.
+-- chars 3250 --
+The considerable role of cognitive factors and coping skills in augmenting and mitigating the suffering and dysfunction of chronic pain has been compellingly demonstrated. These insights have provided the foundation of efficacious treatments.18
+
+Associated with these developments has been the introduction of the term chronic pain syndrome (CPS) into common parlance. Although not official nomenclature, it is frequently used to describe an individual who is markedly impaired by chronic pain with substantial psychological overlay.19 CPS is largely a behavioral syndrome that affects a minority of those with chronic pain. It may best be understood as a form of abnormal illness behavior that consists mainly of excessive adoption of the sick role. The term is useful in that it properly directs therapy toward the reversal of regression and away from an exclusive focus on elimination of nociception. It does not, however, substitute for a careful diagnosis of the physiologic, psychological, and conditioning components that comprise the syndrome. The term CPS must be used with caution, as grouping pain problems together under a generic disorder may mask and leave untreated important physiologic differences.
+
+Neurophysiologic
+A second major current has derived from explosive growth in our understanding of the pathophysiology of pain, which has rendered many older concepts untenable. Processes of peripheral and central sensitization have been clarified, along with such phenomena as the development of adrenergic sensitivity in injured nociceptive fibers and the accumulation of ion channels at sites of nerve injury, all of which may produce severe pain in response to trivial stimulation. Processes have been identified by which unilateral inflammation, trauma, or illness can lead to pain and sensitivity in uninvolved, often contralateral, structures. Physiologic
+
+processes underlying such symptoms, which were often dismissed as “not real,” have been found at the level of the dorsal horn, thalamus, and sensory cortex. Intense stimulation and peripheral nerve damage have been found to induce persistent changes in the spinal cord that, over time, alter the receptive field mapping and the phenotype of neurons rostral to them, which in turn may induce changes at the cortical level. These findings are of major import. They demonstrate that pain need not be symptomatic of a disease or injury but, in fact, can become a disease unto itself.
+
+A major implication of recent research on sensitization is that the failure of medical and surgical investigation to account for a given pain may result not from looking in the wrong place, but from looking at the wrong time. That is, the investigations may be directed toward the organ or body part that was historically responsible for the individual’s pain, but they may be unrevealing because the pain, having been initiated by an injury or illness in the past, is now relatively independent.
+
+Although sensitization of the peripheral and central nervous system has been demonstrated repeatedly in basic neuroscience research, there are currently no widely accepted methods for determining whether the symptoms of an individual with chronic pain can be ascribed to sensitization. Thus, while the concept of sensitization is extremely important to a conceptual understanding of chronic pain, there is currently no systematic way to incorporate it into impairment ratings.
+-- chars 3437 --
+Implications
+The scientific advances described above have important implications for the assessment of pain-related impairment. The AMA Guides as a whole embodies the premise that injuries and illnesses cause deficits in the functioning of organs or body parts, and these deficits can be quantitatively assessed during an impairment evaluation. In the simplest situations, an individual experiences a definite biological insult that creates a clear-cut abnormality in his or her biological functioning. This abnormality, in turn, leads directly to deficits in activities of daily living (ADL) that can be quantified during the course of an impairment evaluation. An example is an individual who sustains a below-elbow amputation in a sawmill accident.
+
+The behavioral concept of CPS and the neurophysiologic concept of peripheral or central nervous system sensitization imply that pain and pain-related activity restrictions may be dissociated from the biological insult to which a person was exposed and from any measurable biological dysfunction in that person’s organs or body parts. Both concepts thus challenge the assumed linkages among biological insult, organ or body part dysfunction, and ADL deficits that are fundamental to the AMA rating system.
+
+Physicians differ sharply in the way in which they conceptualize the relations among biological insult, measurable organ or body part dysfunction, and selfreported activity limitations in individuals with chronic pain. Some physicians have a low threshold for using diagnoses like “chronic pain syndrome” or “psychogenic pain” to describe these people. The diagnoses highlight the lack of association between the complaints of the individuals and any welldefined biological abnormality.
+
+Other physicians attempt to link the complaints of pain patients to a biological abnormality. In general, they do this by employing one of two strategies. The first is to view the person as having an atypical presentation of a well-accepted syndrome. For example, thoracic outlet syndrome is a well-recognized condition that can be caused by measurable abnormalities in arterial, venous, or neural structures in the thoracic outlet. Some physicians view people with chronic pain and paresthesias in an upper extremity as having a variant of thoracic outlet syndrome, even though vascular studies and electrodiagnostic studies are either normal or equivocal.20 The other strategy is to construct diagnoses based on the person’s symptoms and on subjective physical examination findings. The assumption of physicians employing this strategy is that a biological underpinning for the symptoms exists, but that medical science has not yet identified it. For example, the diagnosis of fibromyalgia is based on individuals’ reports of widespread pain and their reports of tenderness during physical examination. Despite extensive research, no specific underlying biological abnormality has been discovered to explain the reports of these people.
+
+Acrimonious debates have occurred between physicians who favor biological explanations for controversial pain syndromes and those who construe the syndromes as dissociated from any definable biological abnormality. The interpretation has significant practical implications because many of the administrative agencies that provide benefits for people
+-- chars 3338 --
+with impairments emphasize the importance of
+(1) objective findings of biological dysfunction and
+(2) a clear causal link between an index injury and an individual’s present symptoms and findings.
+If a painful condition is construed as a CPS or a psychogenic pain syndrome, both of these criteria are violated.
+
+The distinction between well-accepted conditions and those that are ambiguous or controversial is itself ambiguous. Sometimes disagreements arise about individuals with atypical presentations of well-recognized painful syndromes. The example of thoracic outlet syndrome was given above. Another example is a person with chronic low back pain,
+vague symptoms in one lower extremity, and an MRI with questionable compromise of a lumbar nerve root. The person might be described as having an atypical presentation of a lumbar radiculopathy; an alternative assessment is that the individual has a nonspecific chronic pain syndrome involving the low back. In other instances, disagreements center around the validity of the diagnostic procedures used to diagnose conditions. For example, a practitioner of manual medicine might ascribe an individual’s back pain to a lumbar subluxation or torsion of the ilium, whereas physicians not practiced in manual medicine might discount these diagnoses because they do not accept the validity of the physical examination maneuvers underlying them. Finally, as in the case of fibromyalgia, reliable diagnostic criteria exist, but physicians disagree about whether the condition diagnosed by use of these criteria has a specific, definable biologic basis.
+
+The controversies described above cannot be resolved in this chapter of the Guides for the simple reason that the medical community has not achieved consensus about how to construe such conditions as myofascial pain syndrome, fibromyalgia, and “disputed neurogenic” thoracic outlet syndrome.20 A practical approach for performing impairment ratings on individuals with ambiguous or controversial syndromes is given below.
+18.3
+Integrating PainRelated Impairment Into the Conventional Impairment Rating System
+There are several difficulties associated with integrating pain-related impairment into an impairment rating system such as the Guides. A basic challenge for a system of rating pain-related impairment is to incorporate the subjectivity associated with pain into an impairment rating system whose fundamental premise is that impairment assessment should be based on objective findings. The inherent subjectivity of pain is incongruent with the Guides’ attempts to assess impairment on the basis of objective measures of organ dysfunction, as it requires that determinations of pain intensity and the restrictions imposed by it must be largely based on patients’ reports.
+
+A second issue is that an individual’s pain behaviors are influenced by his or her social environment.
+Impairment ratings are usually performed not to establish academic facts or to make treatment decisions but, rather, to establish the financial obligations of payers to individuals or, conversely, the entitlements of individuals to monetary rewards. Thus, the social context surrounding impairment ratings might provide an incentive for individuals to exaggerate their reports of pain so as to maximize awards.
+-- chars 3307 --
+Conversely, since insurance companies and government agencies often hire the professionals who perform impairment ratings, evaluators may have an incentive to doubt the complaints of individuals. An ideal rating system would validate the genuine suffering of individuals and resist influence by those who exaggerate their incapacitation for secondary gain. In the absence of objective criteria for assessing the severity and functional significance of pain, it has proved exceedingly difficult to achieve this goal.
+
+Third, this chapter assesses pain qualitatively. Because percentages for pain-related impairment have not been used and tested on a widespread basis, as have other impairment ratings used in the Guides, it was decided that impairment ratings for pain disorders would not be expressed as percentages of whole person impairment. Future scientific evidence may emerge that will enable a more quantifiable approach to be adopted. Nevertheless, the value of a qualitative assessment is that any identification of a significant pain component warrants additional consideration when interpreting impairment ratings used for allocation of medical resources, work placement, or financial compensation.
+
+Finally, at a practical level, a chapter of the Guides devoted to pain-related impairment should not be redundant of or inconsistent with principles of impairment rating described in other chapters. The Guides’ impairment ratings currently include allowances for the pain that individuals typically experience when they suffer from various injuries or diseases, as articulated in Chapter 1 of the Guides: “Physicians recognize the local and distant pain that commonly accompanies many disorders. Impairment ratings in the Guides already have accounted for pain. For example, when a cervical spine disorder produces radiating pain down the arm, the arm pain, which is commonly seen, has been accounted for in the cervical spine impairment rating” (p. 10). Thus, if an examining physician determines that an individual has pain-related impairment, he or she will have the additional task of deciding whether or not that impairment has already been adequately incorporated into the rating the person has received on the basis of other chapters of the Guides.
+
+18.3a When This Chapter Should Be Used to Evaluate Pain-Related Impairment
+Organ and body system ratings of impairment should be used whenever they adequately capture the actual ADL deficits that individuals experience. However, the organ and body system impairment rating does not adequately address impairment in several situations, discussed below.
+
+When There Is Excess Pain in the Context of Verifiable Medical Conditions That Cause Pain Individuals in this group have pain associated with medical conditions that are verifiable by objective means. An example is an individual with a persistent lumbar radiculopathy following a lumbar diskectomy. Such an individual will usually have objective findings, including atrophy of the affected leg, muscle weakness, and MRI evidence of epidural scarring. An individual with these findings would receive an impairment rating of 10% on the basis of the DRE spine impairment rating system described in Chapter
+-- chars 3234 --
+15. Although the DRE rating is usually appropriate, some individuals with persistent lumbar radiculopathies report “excess” pain. That is, they report that their pain causes severe ADL deficits, suggesting a level of impairment greater than 10%. Procedures in this chapter can be used to assess this additional impairment and to classify it as mild, moderate, moderately severe, or severe.
+
+When There Are Well-Established Pain Syndromes Without Significant, Identifiable Organ Dysfunction to Explain the Pain Individuals in this group have pain syndromes that are widely accepted by physicians based on the individuals’ clinical presentation but that are not associated with definable tissue pathology. These syndromes are not ratable under the conventional rating system and also they do not fit any of the other chapters in the Guides since there is no measurable organ dysfunction. Individuals with these well-established pain syndromes can be evaluated on the basis of concepts elaborated in this chapter. These individuals must have symptoms and signs that can plausibly be attributed to a well-defined medical condition. Some of the most common of these syndromes are listed in Table 18-1. The list is not comprehensive and may change as the body of medical information about various pain syndromes grows. If an examiner determines that an individual has a diagnosis that is not
+on the list, he or she may rate the individual’s pain-
+related impairment if he or she is convinced that the diagnosed condition is well recognized and that the pain-related impairment is a consequence of the condition. An explanation should be provided in writing.
+
+When There Are Other Associated Pain Syndromes
+Use this chapter to evaluate pain-related impairment when dealing with syndromes with the following characteristics: (a) They are associated with identifiable organ dysfunction that is ratable according to other chapters in the Guides; (b) they may be associated with well-established pain syndromes, but the occurrence or nonoccurrence of the pain syndromes is not predictable; so that (c) the impairment ratings provided in other chapters of the Guides do not capture the added burden of illness borne by individuals who have the associated pain syndromes.
+
+If the answer to all three of the above questions is yes, the examiner should consider the individual’s pain-related impairment to be ratable and should proceed according to the rating protocol described in Section 18.3d. If the answer to any of the above three questions is no, the examiner should consider the individual’s pain-related impairment to be unratable on the basis of concepts in this chapter. In that instance, he or she should still use the assessment protocol described in Section 18.3d to determine the severity and impact of the individual’s pain and report the results. That is, even if the examiner considers the person to have unratable pain, he or she needs to characterize the apparent pain-related impairment.
+-- chars 3004 --
+The fact that pain-related impairment may be unratable either on the basis of the organ and body rating system or on the basis of this chapter highlights the limits that exist in the science and practice of impairment evaluation. The judgment that pain-related impairment is unratable does not mean that the evaluating physician considers the pain to be “unreal” or fabricated. In fact, individuals with ambiguous or controversial pain syndromes may suffer from severe pain and report significant restrictions in ADL. These reports are often corroborated by information provided by family members and treating physicians.
+Thus, when a physician judges pain-related impairment to be unratable, he or she is simply asserting an inability to determine how the activity restrictions reported by an individual are linked to a disease or injury. The decision regarding how to construe these reports must therefore be administrative, not medical.
+
+Advances in diagnostic technology and clinical experience may eventually make pain-related impairment rating feasible for individuals with ambiguous or controversial pain syndromes. At the present time, however, the best option available to an examiner is to report that the individual has apparent impairment that is unratable on the basis of current medical knowledge. Insurance companies and administrative agencies that dispense benefits for impairments will need to make the final decision about how to use this information.
+
+18.3c Administrative Issues Associated With Pain-Related Impairment
+In essence, this chapter divides apparent impairment into three categories: (1) impairment ratable on the basis of the conventional rating system used throughout Guides Chapters 3 through 17; (2) pain-related impairment ratable according to concepts outlined in this chapter; and (3) pain-related impairment that is unratable according to the concepts outlined in this chapter.
+
+There are two major reasons why these distinctions are crucial. First, agencies that provide benefits for individuals with impairments function under different legal mandates with respect to pain-related impairment. For example, workers’ compensation laws in some states mandate that pain-related impairment be considered in disability awards for injured workers.21 In other states pain-related impairment is not considered.22
+
+The system described here distinguishes between an impairment rating using the organ system approach and impairment awarded on the basis of pain. This distinction permits administrative agencies to count “conventional” impairment ratings and pain-related impairment ratings on an equal footing, to discount pain-related impairment ratings, or to disregard them entirely. Similarly, the present system identifies individuals with unratable pain-related impairment so that administrative agencies can make informed decisions about whether or not to compensate these individuals.
+
+Second, the distinction between ratable and unratable pain-related impairment embodies a key premise of this chapter: physicians do not currently possess reliable, valid techniques for assessing impairment associated with pain in all clinical settings. It is then more appropriate for the examining physician to describe the individual’s pain-related impairment as unratable than to give a rating that cannot be supported by either scientific evidence or consensus.
+-- chars 3402 --
+18.3d How to Rate Pain-Related Impairment: Overview
+The system described in this chapter relies largely on self-reports by individuals. Thus, it differs significantly from the conventional rating system, which relies primarily on objective indices of organ dysfunction or failure. The present system assesses pain intensity, emotional distress related to pain, and ADL deficits secondary to pain. ADL deficits are given the greatest weight. An individual’s pain-related impairment is considered unratable if (a) his or her behavior during the evaluation raises significant issues of credibility, (b) he or she has clinical findings atypical of a well-accepted medical condition, or (c) he or she is diagnosed with a condition that is vague or controversial.
+
+A detailed protocol for assessing pain-related impairment is described below and outlined in Figure 18-1.
+
+A. Evaluate the individual according to the body or organ rating system, and determine an impairment percentage. During the evaluation, the examiner should informally assess pain-related impairment.
+B. If the body system impairment rating appears to adequately encompass the pain experienced by the individual due to his or her medical condition, his or her impairment rating is as indicated by the body system impairment rating.
+C.
+If the individual appears to have pain-related impairment that has increased the burden of his or her condition slightly, the examiner may increase the percentage found in A by up to 3%.
+D. The examiner should perform a formal painrelated impairment assessment if any of the following conditions are met:
+1) The individual appears to have pain-related impairment that is substantially in excess of the impairment determined in step A
+or
+2) The individual has a well-recognized medical condition that is characterized by pain in the absence of measurable dysfunction of an organ or body part (see Table 18-1 for examples)
+or
+3) The individual has a syndrome with the following characteristics: (a) it is associated with identifiable organ dysfunction that is ratable according to other chapters in the Guides; (b) it may be associated with a well-established pain syndrome, but the occurrence or nonoccurrence of the pain syndrome is not predictable; so that (c) the impairment ratings provided in step A do not capture the added burden of illness borne by the individual because of his or her associated pain syndrome (see Table 18-2 for examples).
+E. If the examiner performs a formal pain-related impairment rating, he or she may increase the percentage found in step A by up to 3%, and he or she should classify the individual’s pain-related impairment into one of four categories: mild, moderate, moderately severe, or severe. In addition, the examiner should determine whether the pain-related impairment is ratable or unratable.
+
+Table 18-3 Impairment Classification Due to Pain Disorders
+
+Class 1 Mild
+Pain severity, based on a combination of intensity and frequency, is mild
+-- chars 3023 --
+Individual’s pain is mildly aggravated by performing ADL; is able to perform them with few modifications
+Individual demonstrates no or only minimal emotional distress in response to his or her pain
+Individual is not receiving treatment for pain on a regular basis
+Pain-related limitations during physical examination are mild and appear appropriate; few pain behaviors (overt expressions of pain, distress, and suffering, such as moaning, limping, moving in a guarded fashion, facial grimacing) are observed during examination
+
+Class 2 Moderate
+Pain severity, based on a combination of intensity and frequency, is moderate
+Individual has moderate difficulty managing ADL; must make significant modifications in order to perform them (eg, move to a ground floor apartment, buy a car with automatic transmission)
+Individual demonstrates mild to moderate affective distress in relation to his or her pain
+Individual requires ongoing medical monitoring and is taking medication much of the time
+Individual demonstrates significant pain-related limitations on physical examination; relatively few pain behaviors appear during the examination, and they are of indeterminate appropriateness
+
+Class 3 Moderately Severe
+Pain is present most of the time and may reach an intensity of
+9-10/10
+Individual can perform ADL only with substantial modifications; unable to perform many routine activities (eg, driving a car)
+Individual demonstrates moderate to severe affective distress in relation to his or her pain
+Individual receives medication to control pain on a maintenance basis
+On physical examination, individual demonstrates severe painrelated limitations that may make the examination difficult to perform and results difficult to interpret
+A number of pain behaviors are observed during the examination, and they appear to be congruent with organ dysfunction
+
+Class 4 Severe
+Pain is essentially continuous, with intensity reaching 9-10/10 at its worst
+Individual must either get help from others for many ADL (eg, preparing food, dressing), modify them drastically (eg, stop bathing), or spend an inordinate amount of time accomplishing them (eg, 2 hours to get out of bed and dressed)
+Individual demonstrates severe affective distress in relation to his or her pain and communicates the perception that the pain is completely out of control
+Individual is receiving maximal pharmacologic support for his or her pain on an ongoing basis
+Physical examination is virtually impossible to perform because individual is intolerant of many examination maneuvers (eg, refuses to ambulate or to allow examiner to palpate symptomatic area); a significant number of pain behaviors are observed during the examination, and they appear to be congruent with organ dysfunction
+
+18.3e Classes of Pain-Related Impairment There are four general classes of impairment due to pain: class 1, mild; class 2, moderate; class 3, moderately severe; and class 4, severe (see Table 18-3).
+
+18.3f How to Rate Pain-Related Impairment: Practical Steps
+-- chars 3049 --
+There are six steps in the pain-related impairment evaluation process, each discussed below. Several alternative methods are available to evaluate the severity of pain, activity restrictions, emotional distress, and pain behaviors, some of which are discussed subsequently. One such methodology is provided
+in Table 18-4. The first three parts of the protocol included in Table 18-4 rely on the individual’s
+
+self-report. The questions may be provided to the individual to complete on his or her own, or they can be presented in interview format. If the individual is asked to complete the questionnaire on his or her own, someone should be available to answer questions and to review the completed form to make sure the individual has responded to all the items. If the individual has a question about completion of any of the items in Sections I to III, he or she should be instructed to make the best estimate possible. Although Table 18-4 provides a numerical score, this should not be misunderstood to represent a quantitative impairment rating, but rather is used to classify individuals into the four qualitative classes. To that purpose, alternative methods may be used so long as they are valid and appropriately referred to in the report.
+
+Table 18-4 Ratings Determining Impairment Associated With Pain
+
+I. Pain (Self-report of Severity)
+A. Rate how severe your pain is right now, at this moment
+Most severe pain can imagine
+
+B. Rate how severe your pain is at its worst (circle a number):
+8
+9
+10
+None
+Excruciating
+
+C. Rate how severe your pain is on the average
+Excruciating
+
+D. Rate how much your pain is aggravated by activity
+7
+8
+9
+10
+Activity does not
+Excruciating following
+aggravate pain
+any activity
+
+Sum score of Section I: A–D = Total pain severity/4 =
+
+E. Rate how frequently you experience pain (circle a number):
+8
+9
+10
+Rarely
+All of the time
+
+Add total pain severity score
+(items A–D/4) to score for item E =
+Total pain severity score (range from 0 to 20) =
+
+II. Activity Limitation or Interference
+A. How much does your pain interfere with your ability to walk 1 block? (circle a number):
+8
+9
+10
+Does not restrict
+Pain makes it impossible
+ability to walk
+for me to walk
+
+B. How much does your pain prevent you from lifting 10 pounds
+7
+8
+9
+10
+Does not prevent from
+Impossible to lift lifting 10 pounds
+
+10 pounds
+
+C. How much does your pain interfere with your ability to sit for 1/2 hour? (circle a number):
+8
+9
+10
+Does not restrict ability
+Impossible to sit to sit for 1/2 hour
+
+for 1/2 hour
+D.
+How much does your pain interfere with your ability to stand for 1/2 hour? (circle a number):
+8
+9
+10
+Pain does not interfere
+Unable to
+with ability to stand at all
+stand at all
+
+E. How much does your pain interfere with your ability to get enough sleep? (circle a number):
+-- chars 3034 --
+8
+9
+10
+Does not prevent me
+Impossible
+from sleeping
+to sleep
+
+F. How much does your pain interfere with your ability to
+participate in social activities? (circle a number):
+8
+9
+10
+Does not interfere
+Completely interferes
+with social activities
+with social activities
+
+G. How much does your pain interfere with your ability to travel up to 1 hour by car? (circle a number):
+8
+9
+10
+Does not interfere with ability
+Completely unable to to travel 1 hour by car
+
+travel 1 hour by car
+
+H. In general, how much does your pain interfere with your daily activities? (circle a number):
+8
+9
+10
+Does not interfere
+
+Completely interferes with my daily activities
+with my daily activities
+
+I. How much do you limit your activities to prevent your pain from getting worse? (circle a number):
+8
+9
+10
+Does not limit
+Completely limits activities
+
+activities
+
+J. How much does your pain interfere with your relationship with your family/partner/significant others? (circle a number):
+8
+9
+10
+Does not interfere
+Completely interferes
+with relationships
+with relationships
+
+K. How much does your pain interfere with your ability to do jobs around your home? (circle a number):
+8
+9
+10
+Does not interfere
+
+Completely unable to do any job around home
+
+L. How much does your pain interfere with your ability to shower or bathe without help from someone else? (circle a number):
+8
+9
+10
+Does not interfere
+My pain makes it impossible to at all
+
+shower or bathe without help
+
+M. How much does your pain interfere with your ability to
+7
+8
+9
+10
+Does not interfere
+
+My pain makes it at all
+impossible to write or type
+
+N. How much does your pain interfere with your ability to dress yourself? (circle a number):
+8
+9
+10
+Does not interfere
+
+My pain makes it at all
+impossible to dress myself
+
+O. How much does your pain interfere with your ability to
+engage in sexual activities? (circle a number):
+8
+9
+10
+Does not interfere
+My pain makes it almost
+at all
+impossible to engage in any sexual activity
+
+P. How much does your pain interfere with your ability to
+A-P = Total score for activity limitation/16 = Mean activity limitation =
+III.
+Individual’s Report of Effect of Pain on Mood
+A. Rate your overall mood during the past week. (circle a number):
+8
+9
+10
+Extremely high/good
+Extremely low/bad
+
+B. During the past week, how anxious or worried have you been because of your pain? (circle a number):
+8
+9
+10
+Not at all anxious/worried  Extremely anxious/worried
+
+C. During the past week, how depressed have you been because of your pain? (circle a number):
+8
+9
+10
+Not at all depressed
+Extremely depressed
+-- chars 3000 --
+D.
+During the past week, how irritable have you been because of your pain? (circle a number):
+8
+9
+10
+Not at all irritable
+Extremely irritable
+
+E. In general, how anxious/worried are you about performing activities because they might make your pain/symptoms worse?
+8
+9
+10
+Not at all anxious/worried  Extremely anxious/worried
+
+Sum score of Section III:
+A-E = Total pain impairment attributed to mood state/5 = Mean score =
+
+Assess Whether the Individual Is at MMI This concept is particularly important in the assessment of pain-related impairment. A person should
+not be judged medically stable, and therefore ratable, unless he or she has undergone a thorough evaluation for the entire range of factors that can affect pain
+and has undergone a vigorous trial of rehabilitative treatment.
+
+For example, there may be no further orthopedic interventions available for a lumbar pseudarthrosis. Spinal arachnoiditis may be refractory to any intervention. Yet in both cases, appropriate pain management may reduce all the components of impairment, with reduced pain severity, functional restoration, and mood normalization. Consultation with a specialist in pain medicine may be required to determine whether the impairment is fixed or potentially useful treatments are available.
+
+Determine the Severity of the Pain
+Although absolute quantification of pain is not possible, severity may be estimated using, for example, a visual analog scale, a numeric, or a box-rating scale. A horizontal or vertical line of known length is anchored by “no pain at all” at one end and “worst pain ever” at the other. A line of consecutive boxes also anchored with these end points, with a number in each one and in which the individual is asked to place an “X” in the box, may be of particular use because some people have difficulty understanding how to use a VAS scale.23 It is useful to obtain least, worst, and current levels, as well as the usual level. Exacerbating and mitigating factors should be sought. The character or quality of pain may assist with diagnosis and help establish that the pain is compatible with a known medical syndrome.
+
+The McGill Pain Questionnaire is widely used in pain medicine. It contains lists of words chosen to reflect the sensory (eg, dull, cramping), affective (eg, agonizing, terrifying), and evaluative (eg, annoying, unbearable) components of the pain experience.24 There are also descriptors of the temporal qualities of the pain (momentary, steady, intermittent). Line drawings of the body permit the individual to shade in the location of the pain. Numeric descriptors of the overall present pain intensity are provided (1 = mild, 2 = discomforting, 3 = distressing, 4 = horrible, 5 = excruciating).
+
+Determine Activity Restrictions
+The reported severity of pain may not correlate well with its functional impact. Indeed, some individuals report well-preserved function despite pain of 9/10 in severity, while others portray a vegetative existence with a pain level of 4/10. It is essential to know the extent to which the following functions are impeded by pain: ADL, socialization, recreation, work, sleep, sexuality, and cognition.
+-- chars 3225 --
+A quasi-quantification of functional status can be derived by scoring the extent to which pain interferes with each (applicable) activity. The individual should be queried as to how often he or she leaves the home (with documentation if housebound), gets out only for medical appointments, and the like. “Down time,” the total number of hours a day the person is reclining, is a useful measure.
+
+It is useful to provide quantification of functional limitations via accepted, standardized instruments that permit interrater comparisons. The Pain Disability Index provides 0 to 10 scales on which individuals rate pain-related interference in seven domains, including family/home responsibilities, recreation, social activity, occupation, sexual behavior, self-care, and life support activities (eating, sleeping, breathing).25 The SF-36 is widely used to determine the degree of functional impairment and changes in overall wellness following treatment of those with pain as well as of other populations.26 The Oswestry27 and Roland-Morris28 are brief questionnaires that provide an economical office assessment of function in individuals with back pain. A large number of other instruments exist, as reported in the literature. It is also possible to correlate estimates of function to actual impairment using questionnaires and scales.
+
+The ADL listed in Table 1-2 are commonly classified within one of eight different areas: physical activity, nonspecialized hand activities, sleep, travel, self-care and personal hygiene, sexual function, communication, and sensory function.29 The first six of these are most relevant for impairment due to pain, as it is extremely rare for pain to create major restrictions in communication and sensory functioning. A number of measures have been developed to assess ADL, some of which are general and others of which are designed for use with specific diseases and injuries.30,31 Physicians may choose to select from among the available ADL scales if they wish a more detailed assessment. Although individuals may have difficulty separating the effect of specific diseases or injuries from the pain on their activities, some estimate is necessary to help in determining the extent of impairment due to pain that exceeds activity restriction due to the disease or injury. For example, an individual with a below-the-knee amputation may have some activity limitations in ambulation; he or she may have additional limitations due to severe stump pain.
+
+Several well-established general measures have been standardized on chronic pain sufferers and have been used in numerous published studies that may be of particular use as they assess several important domains relevant to the assessment of impairment.
+For example, the Sickness Impact Profile (SIP) is a widely used health status measure that has been shown to reliably assess the impact of health problems on function and quality of life.32 The West Haven–Yale Multidimensional Pain Inventory (MPI)33 is another reliable and valid health status measure that has been used extensively.
+-- chars 3077 --
+Determine the Presence of Emotional Distress
+An important component of chronic pain-related impairment is its associated affective distress, which often includes sadness, anger or irritability, and anxiety.34 In some cohorts, the depression seems to be primarily a function of life interference and cognitive changes, while in others it seems to be primarily a function of the pain itself.35 In either case, it is unnecessary that an individual meet diagnostic criteria for a mood, anxiety, or other psychiatric disorder for there to be substantial suffering related to such issues as pain, loss of meaningful and pleasurable life activities, and a bleak future.
+
+It may be appropriate to use rating scales to provide some quantification of affective changes. Brief selfadministered screens for depression, such as the Beck Depression Inventory,36 the Zung Depression Index,37 and rater-administered screens such as the Hamilton Self-rating Scale for Depression,38 may alert the physician to the presence of a mood disorder that requires treatment, as well as to the possibility of suicide. Similar instruments are available for anxiety and include the Beck Anxiety Scale and Hamilton Rating Scale for Anxiety. The Profile of Mood States (POMS),39 which has also been useful in providing quantification of various mood states in individuals with chronic pain, has scales reflecting impaired concentration, anxiety, depression, fatigue, and others.
+
+As with pain reports, these instruments all are subject to minimization or exaggeration on the part of the individual. People are seen who score four times the cutoff for depression on the Beck Depression Inventory, yet who are animated and playful in the gym. When such discrepancies occur, the weighting given the instrument should be minimal. Moreover, caution must be taken in interpreting responses on these measures, as they were not standardized on samples of individuals with medical disorders, and using the usual cutoff scores may lead to an excessively large number of false positives.
+
+It is important to obtain information from the individual regarding the impact of pain on his or her mood state. As noted in the discussion of activity restrictions, it may be difficult for the individual to separate the effect of specific diseases or injuries from the pain on activities; however, the items are designed to obtain a rough estimate of the individual’s beliefs.
+
+Determine if Pain Behaviors Are Present Pain behaviors are the ways that individuals communicate about their pain. These behaviors may be verbal or nonverbal. The individual may be unaware of them, as they may be emitted and maintained due to responses that have been received from significant others, including health care professionals. In other
+instances, individuals may exaggerate their behaviors to signal pain and distress with the intent to achieve some desired response from those who observe the behaviors. Thus, both the antecedents and consequences of the behaviors are important.
+-- chars 3020 --
+Some individuals appear stoic as they go through evaluations, and the pain behaviors they do demonstrate are concordant with other medical information regarding their condition. In this instance, the pain behaviors provide valuable clues regarding a person’s diagnosis and tend to validate the fact that he or she is suffering because of the diagnosed condition. For example, consider an individual with suspected degenerative joint disease of the hip who walks with a characteristic limp. The limp provides a clue to the diagnosis and tends to support the individual’s reports that he or she has significant pain when walking.
+
+At the opposite extreme, an individual may demonstrate pain behaviors that appear exaggerated and discordant with his or her presumed medical condition. These pain behaviors may appear to be driven by a variety of factors, such as overwhelming somatic anxiety or the person’s desire to convince an examiner that he or she is suffering greatly. The common denominator underlying them is that they do not appear to be direct, inevitable consequences of a definable medical condition. Exaggerated, discordant pain behaviors tend to cast doubt on the validity of the information that people provide regarding their condition.
+
+Thus, an examiner has a twofold task regarding pain behaviors demonstrated by a person undergoing an impairment rating: to identify the pain behaviors, and to interpret their significance, that is, to decide whether they tend to authenticate the validity of the individual’s suffering or to raise questions about his or her communication style.
+
+It is hard to specify a generic list of pain behaviors. The behaviors to look for depend on the individual’s medical condition, examination maneuvers that are performed, previous responses obtained, and intent. Physicians probably differ significantly in what they view as exaggerated pain behaviors. Sources of variation include different concepts of what represents “legitimate disease” and thresholds for calling a behavior abnormal.
+
+Despite the limitations noted, pain behaviors provide useful information regarding both the impact of pain on observable behavior and the individual’s style of communicating (eg, demonstrative, stoic) about their pain. The physician should observe the individual’s pain behaviors as he or she enters the examination room, during the interview, and during the history taking. This will eliminate the increase in pain behaviors that might be directly associated with the physical examination.
+
+The examiner should give a score between +10 and
+–10 to indicate his or her global evaluation of an individual’s pain behavior during the interview and physical examination. A positive score is given when the individual demonstrates pain behaviors that are concordant with the overall clinical findings and, in the opinion of the examiner, tend to authenticate his or her suffering. A negative score is given when an individual demonstrates grossly “nonorganic” or “exaggerated” pain behaviors. A score close to 0 should be given when the examiner is uncertain about how to interpret the individual’s pain behaviors.
+-- chars 3146 --
+The specific behaviors an examiner considers vary according to the individual’s medical condition and the examination maneuvers performed. Potentially significant behaviors that commonly occur during evaluations are listed in Table 18-5. Note that the significance of pain behavior cannot be determined unless related to a particular individual and context. Thus, a pain behavior that would be considered concordant in one clinical context would be considered discordant in a different one. Also, note that pain behaviors that tend to validate an individual’s pain are generally specific to that person’s medical condition. In contrast, exaggerated pain behaviors—such as emotional displays and pain-limited weakness— tend to occur in conjunction with a wide variety of medical conditions.
+
+The physician can record the pain behaviors observed using the behaviors listed in Table 18-5.40 These behaviors may be viewed as indicating symptom magnification, especially when several are present and they grossly exceed what might be expected from individuals with a similar diagnosis. These systematic observations should be used as the basis for determining a global rating regarding the presence and congruence of pain behaviors given the individual’s diagnosis and organ dysfunction.
+
+Credibility of the Individual
+Physicians routinely assess the credibility of individuals in the course of their clinical work. This kind of assessment is particularly important in the context of rating pain-related impairment because the ratings depend on verbal and nonverbal behaviors of people that are at least partly under voluntary control.
+Although there are no definite rules for assessing credibility, Section 18.4, Behavioral Confounders, discusses several issues that a physician should consider when making a judgment about a person’s credibility.
+
+The key question the examiner should ask is, Do the limitations that an individual describes and demonstrates accurately reflect the burden of illness he or she bears during everyday activity?
+
+18.4 Behavioral Confounders
+An extensive literature demonstrates what common sense suggests: pain behaviors and perception of pain are strongly influenced by beliefs, expectations, rewards, attention, and training. In the absence of a direct measure of pain, such behaviors function as markers by which pain is judged. However, voluminous literature demonstrates that these markers reflect social and environmental factors as much as they reflect pain. It has been shown, for example, that individual ratings of pain severity diminish when “well talk” is reinforced. With repeated identical pain stimuli, intensity reports vary with feedback. Verbal reinforcement increases performance in individuals with back pain. Studies consistently show that spouse solicitousness is correlated with pain behavior.41
+
+Prospective studies consistently show that onset of disabling pain is highly associated with such factors as job dissatisfaction, lack of support at work, stress, and perceived inadequacy of income.42-45 Once initiated, the progression of pain to chronicity is contingent on similar factors.46,47 Financial compensation, receipt of work-related sickness payments, and compensation-related litigation are also associated with chronicity, as are such social and economic factors as poor education, language problems, and low income. Chronicity is also favored by individual tendencies to be preoccupied with one’s body and symptoms.48,49 Even in individuals with clear-cut radicular pain from disk prolapse/protrusion, application for retirement at 6 months was best predicted by depression and daily hassles at work.50,51 In the case of injured workers, performance on functional capacity evaluation is reduced if the worker is informed that the test results will be used to determine work classification.52 Industrial injuries and compensation situations appear to provide a disproportionate number of individuals with such issues.53,54
+-- chars 3994 --
+Although the suffering induced by a miserable vocational situation may equal or exceed that from disease or injury, it is the intent of the Guides to assign impairment based on disease and injury, not on such environmental situations as an individual’s fear of returning to a hostile work environment. Similarly, the physician charged with assigning an impairment rating expects to discharge the obligation by assessing the state of the person as an organism, and he or she rightly considers such external factors as the state of the economy, the market for particular skills, and the local tolerance for language barriers to be distracters that lower the “signal-to-noise” ratio in the assessment.
+
+Thus, examiners face a dilemma. They know that a variety of nonbiological factors strongly influence the disability status and ADL deficits of individuals they rate, but they are charged with the task of rating impairment on the basis of measurable dysfunctions of organ or body parts.
+
+18.4a Assessing Behavioral Reliability
+A primary step in radiographic interpretation is evaluation of the quality of the image. Incorrect exposure, motion artifact, and other technical deficiencies may weaken the conclusions that may be drawn from the image. The principal gauge of pain is its associated behaviors, which include reports. Thus, it is critical that this measure of pain be assessed for reliability. Inappropriate pain behavior, embellishment, and symptom magnification are common, particularly in medicolegal circumstances and entitlement programs. The following is a guide to their assessment.
+
+Congruence With Established Conditions In cases of phantom pain, the individual describes pain in an absent extremity. While this might be expected to evoke incredulity, it does not because this condition has been well described for decades, long before its pathophysiology was understood.
+Similarly, the person with complex regional pain syndrome (previously called reflex sympathetic dystrophy, or RSD) may describe exquisite pain on light touch of a healthy-appearing extremity following a trivial injury. A constellation of associated signs and symptoms, such as cold sensitivity, autonomic changes, trophic changes, dystonic phenomena, and others help to confirm that the pain complaint is consistent with a known clinical syndrome. Intolerance of light touch over a region of the lower back in individuals with mechanical low back pain is inconsistent with a defined disease process and thus fails to meet this criterion.
+
+Most known conditions have such expected concomitants. Typically, an individual would not watch television or read while waiting for a migraine to abate, and there would be an expected response to ergots, triptans, or other antimigraine preparations. An individual with neuropathic pain will likely, but not always, show some response to certain antiepileptic drugs (eg, gabapentin, carbamazepine) or antidepressants (eg, tricyclics). A person with persistent pain of pancreatitis would be unlikely to gain weight.
+-- chars 3054 --
+Consistency Over Time and Situation
+There is risk in placing unwarranted confidence in the validity of assessments that are numeric and therefore often considered “objective” and “scientific.” Such confidence is challenged by such observations as a person who can tolerate only 10° forward flexion while standing, yet can sit with legs outstretched and touch his or her toes. Similarly, a person may demonstrate collapsing with pain on manual testing of plantar flexion, yet be able to tiptoe. Others may limp on one leg walking forward, the other walking backward, but neither on a treadmill. Grip strength may
+be measured repeatedly and coefficients of variation calculated, although these methods have been criticized.55 Rapid exchange grip strength testing may provide similar information.56 Isokinetic strength testing may discriminate between maximal and submaximal effort.57 Complaints and dysfunction should be relatively independent of the observers present and should generally persist, despite distraction.
+
+Consistency With Anatomy and Physiology Waddell’s signs are perhaps the best known of numerous indicators of pain behaviors that are more likely to be accounted for by an individual’s expectations than by organic pathology.58,59 One example is that of axial rotation, in which the standing individual’s hips are rotated in each direction by the examiner. This essentially affects only the hips and ankles, leaving the pelvis and all above it to move as a unit. Exacerbation of back pain by this maneuver is considered abnormal. It is important, however, when using this method not to rate the individual on only one abnormal test and to place the response in the context of the individual’s history and physical examination.
+
+Observer Agreement
+Collateral information from relatives and other evaluating professionals is of critical value in determining the consistency of individual behaviors, which helps to confirm that their relationship is to perceived pain and varies little with changes in observers.
+
+Other Inappropriate Illness Behavior
+It may be difficult to judge whether or not behavior is compatible with perceived pain. For example, because one cannot know how much leg pain an individual experiences on walking, it is hard to know
+whether an antalgic gait is exaggerated. Inappropriate illness behavior may be suspected, however, if an individual demonstrates dysfunction in unrelated domains. For example, except in extreme situations, an individual with back pain should not require that the spouse complete the individual’s questionnaire— or his or her sentences. Chronic pain rarely precludes making one’s own phone calls to the doctor, paying bills, etc. When a person has delegated these functions to others, abnormal illness behavior is likely.
+
+18.4b Incorporating Behavioral Confounders Into Impairment Ratings Physicians should consider the confounders described in Section 18.4a when they evaluate the pain behaviors of individuals (see Determine if Pain Behaviors Are Present, Section 18.3f) and when they rate the credibility of individuals (see Credibility of the Individual, Section 18.3f).
+-- chars 3151 --
+18.4c Cautions
+Although no one would conclude that because an
+x-ray is of poor quality there is unlikely to be pathology of concern, this non sequitur frequently occurs in cases of aberrant pain behaviors. Such behaviors should properly cause physicians to be uncertain, but not dismissive. Behavior is affected by many factors. The appearance of symptom exaggeration can be created by fear or by having learned that certain actions or positions provoke pain. “Nonphysiologic” signs may occur in dementia. Excessive or exaggerated pain behaviors can be a response to feeling discounted or mistrusted, so that one must emphasize symptoms to persuade physicians of their reality.
+Anyone might dramatize a problem in an effort to have it taken seriously. Thus, symptom magnification can be an iatrogenic phenomenon that occurs when an individual feels mistrusted or poorly cared for.
+18.5
+How to Rate
+Pain-Related Impairment: A Sample Protocol
+As the preceding discussion indicates, a physician must rely on a wide range of clinical skills when he or she assesses pain-related impairment. Also, the discussion indicates that several different assessment instruments may be used in the course of the assessments. The plethora of assessment methods available can further complicate the already difficult task facing the examining physician.
+
+The protocol described below selects assessment instruments and procedures that, in the opinion of the authors, permit physicians to reach conclusions about pain-related impairment that are reliable and valid.
+The specific steps in the protocol are as follows:
+
+1. Determine whether the individual is medically stable.
+2. Follow the steps outlined in Figure 18-1.
+3. If a formal assessment of pain-related impairment is to be performed:
+a. Have the individual complete the questionnaire shown in Table 18-4.
+(1) This provides information about three domains that are relevant to pain-related impairment: severity of pain, ADL restrictions, and emotional distress.
+(2) Follow the instructions given in Table 18-6 to obtain the person’s score for each of these three domains.
+b. Observe the individual’s pain behaviors throughout the evaluation. Follow the instructions given in Table 18-5 to obtain the individual’s score for the pain behaviors domain.
+c. Make a global assessment of the person’s credibility, taking into consideration the factors discussed in the Section 18.4. Assign a score between –10 and +10, where –10 indicates very low credibility and +10 indicates very high credibility. Enter this score in line 5 of Table
+18-6. If the credibility score is less than 0, the examiner should consider the possibility of aborting the pain-related impairment assessment on the grounds that the individual does not meet the entry criteria given in Section 18.3b.
+
+d. Follow the instructions given in Table 18-6 to combine scores from each of the above five domains (severity of pain, ADL restrictions, emotional distress, pain behaviors, and credibility) into a total pain-related impairment score. These scores are not impairment ratings but are used only to classify the individual as discussed under c.
+-- chars 3208 --
+e. Follow the instructions given in Table 18-7 to convert this total pain-related impairment score into one of the four categories of impairment described in Table 18-3 (ie, mild, moderate, moderately severe, or severe).
+4. Review the material provided in Sections 18.3a and 18.3b to determine whether the pain-related impairment is ratable or unratable.
+5. The final impairment rating should include the following:
+a. The percentage impairment rating based on the dysfunction in the organ or body part being rated (see step A in Section 18.3d).
+b. Additional impairment of up to 3% may be given if an individual has pain-related impairment that increases the burden of illness slightly (see step C in Section 18.3d).
+c. If the individual has undergone a formal painrelated assessment:
+(1) An indication of the individual’s painrelated impairment category (see 3e above).
+(2) An indication of whether this impairment is ratable or unratable.
+(a) If pain-related impairment is ratable, an indication of whether or not the painrelated impairment is adequately encapsulated by the impairment rating given for organ or body part dysfunction (see Section 18.3a).
+
+18.6  Psychogenic Pain
+Somatoform disorders are a group of conditions characterized by physical symptoms that are not fully explained by a medical condition, the effects of a substance, or another mental disorder.60 The symptoms are not under voluntary control. Pain disorder is diagnosed when pain is a predominant focus of the presentation and causes significant distress or impairment in important areas of functioning.
+Psychological factors are judged to play a significant role in the onset, severity, exacerbation, or maintenance of the pain. Pain disorder associated with psychological factors is diagnosed when psychological factors are judged to have the major role; in this subtype, general medical conditions play little or no role. Pain disorder associated with both psychological factors and a general medical condition is indicated when both psychological factors and a general medical condition are judged to have important roles in the onset, severity, exacerbation, or maintenance of the pain. The diagnoses are rather general, and almost any person with persistent pain would meet the inclusion criteria.
+
+These current diagnostic terms appear to refer to conditions previously called conversion, hysteria, and psychogenic pain. There appears to be no fully satisfactory explanation or conceptualization of these conditions. Since pain is a perceptual experience, one could argue that all pain is a psychic phenomenon. Thus, psychogenic pain would be a tautology, much like psychogenic joy. Certainly, those processes in the dorsal horn, spinothalamic tract, and thalamus of an anesthetized person are not considered pain, a term reserved for what occurs when these processes access conscious awareness in an aversive fashion.
+
+The concept of psychogenic pain is further complicated by the fact that a variety of conditions formerly considered psychogenic have been found to be neurologically based and that its diagnostic signs have been challenged.61 Nevertheless, psychogenic pain appears to exist and probably represents several different phenomena. Unlike psychogenic pain, other psychogenic symptoms can be confirmed; for example, conversion blindness preserves the opticokinetic reflex, psychogenic seizures occur during a normal EEG recording, conversion anesthesia does not diminish the sensory evoked potential, and psychogenically paralyzed extremities move during sleep. Such confirmation is unavailable in the case of pain.
+-- chars 3644 --
+Some individuals are seen whose symptoms resemble no organic condition, who have inconsistent and nonphysiologic physical findings, yet who demonstrate great distress with agitation or psychomotor retardation, inability to sleep, and a general misery that is consistent across environments and confirmed by others. Such individuals’ suffering is genuine, should not be minimized, and constitutes a risk for suicide. It is most probable that these individuals truly perceive pain, suffer with it, and are impaired.
+
+Chapter 14, which deals with impairment associated with mental disorders, describes a system for assessing impairment among individuals with pain disorders. Examiners will sometimes be uncertain about whether to use the assessment procedures described in this chapter or the ones described in Chapter 14. They should ask the following key question when evaluating an individual whose chronic pain is not fully explained on the basis of organ pathology: Does it appear that psychological factors played a major role in the initiation of the pain syndrome or are playing a major role in its continuation? If the answer to this question is yes, the examiner should use the rating methods described in Chapter 14. If the answer is no, or if the examiner is uncertain, he or she should use the rating methods described in this chapter.
+
+18.7  Malingering
+Malingering is conscious deception for the purpose of gain. While most authorities declare that malingering is quite uncommon, there appear to be few data regarding its frequency. Fishbain et al reviewed literature suggesting that malingering is present in 1.25% to 10.4% of individuals with chronic pain; however, they found serious flaws with the methodology and concluded that no conclusions could be drawn from the data.62
+
+Other fields provide some limits regarding the prevalence of malingering. In individuals with unexplained intractable diarrhea, 14% had positive stool examinations for laxatives, although all had denied use of laxatives.63 Among 333 people who claimed compensation for noise-induced hearing loss, the incidence of exaggeration on hearing tests (as determined by cortical evoked response audiometry) was 17.7%.64 Weintraub cites studies showing that 20% to 46% of people consider purposeful misrepresentation of compensation claims to be acceptable behavior.65
+
+These studies suggest that factitious illness and malingering may not be rare, but they do not provide information as to how often these conditions simulate pain. They do suggest that evaluators keep an open mind as to the possibility of these phenomena, which are probably less likely in those seeking treatment than in those seeking compensation.
+
+Confirmation of malingering is extremely difficult and generally depends on intentional or inadvertent surveillance. Anecdotes abound of providers running into wheelchair-bound individuals strolling about a mall or encountering an individual in the parking lot holding a cane in the air and demonstrating a normal gait. By definition, malingering is not a disease but a volitional deception. It thus requires no treatment.
+-- chars 3138 --
+18.9 Case Examples
+
+18.8  Conclusion
+The assessment of pain-related impairment constitutes a substantial challenge, as it is the most common reason for disability, the most subjective, and perhaps the most multifaceted. Equitable quantification of impairment requires attention to subjective experiences of pain and emotional distress, as well as reports of behavioral impairment, all of which can only be confirmed indirectly. At times, it seems to present the dilemma of being too difficult to perform and too essential to omit.
+
+Despite these obstacles, it appears that each of the components of pain can, in most cases, be assessed with good reliability if a meticulous evaluation is performed that includes observation and collateral information. In this way, the interests of individuals who hope to achieve validation of their symptoms and payers who hope to avoid indiscriminate financial obligations can be fairly addressed.

@@ -1,0 +1,415 @@
+================================================================================
+
+Chapter 15:
+-----------------------------------------------------------------
+The Spine
+15.1 Principles of Assessment
+15.2 Determining the Appropriate Method for Assessment
+15.3 Diagnosis-Related Estimates Method
+15.4 DRE: Lumbar Spine
+15.5 DRE: Thoracic Spine
+15.6 DRE: Cervical Spine
+15.7 Rating Corticospinal Tract Damage
+15.8 Range-of-Motion Method
+15.9 ROM: Lumbar Spine
+15.10 ROM: Thoracic Spine
+15.11 ROM: Cervical Spine
+15.12 Nerve Root and/or Spinal Cord
+15.13 Criteria for Converting Whole Person Impairment to Regional Spine Impairment
+15.14 The Pelvis
+15.15 Spine Evaluation Summary
+-------INTRODUCTION START -------
+Introduction
+This chapter provides criteria for evaluating permanent impairments of the spine, including how they affect an individual’s ability to perform activities of daily living (ADL). The spine consists of four regions: the cervical, thoracic, lumbar and sacral vertebrae, and associated soft tissues including muscles, ligaments, disks, and neural elements. Impairments of the spine discussed in this chapter include lumbar, thoracic, cervical, spinal cord, and pelvic impairments.
+
+The following revisions have been made for the fifth edition: (1) The use of the diagnosis-related estimate (DRE) and range-of-motion (ROM) methods has been modified, and applications are described in greater detail; (2) impairment is rated only when the individual has reached maximal medical improvement (MMI); (3) impairments within a DRE category encompass a range, with adjustments of up to 3%;
+(4) spinal cord injury is evaluated according to the functional approach in the nervous system chapter;
+(5) the “differentiators” in the fourth edition have been replaced by “objective findings” and are more specifically defined; and (6) alterations of motion segment integrity have been redefined to reflect current scientific knowledge.
+As in the fourth edition,1 the DRE method is the primary method used to evaluate individuals with an injury. Use the ROM method when the impairment is not caused by an injury or when an individual’s condition is not well represented by a DRE category. The ROM method is also now used to evaluate individuals with an injury at more than one level in the same spinal region and in certain individuals with recurrent pathology. This approach addresses the difficulty of assigning these individuals to an appropriate DRE category. An exception, however, is individuals with corticospinal involvement who have been treated with decompression and multilevel fusions within the same region; they should be rated by the DRE method because assessing ROM in paralyzed individuals is difficult. Finally, the range-of-motion method should be used if statutorily mandated in a particular jurisdiction. A more detailed description of the applications of either method is provided in Section 15.2.
+
+As stated in this edition, an individual with a spinal condition is rated only when the condition is stable (unlikely to change within the next year regardless of treatment), ie, when MMI has been reached (Chapter 1 and Glossary). The individual is evaluated based on medical findings that are present when MMI has been reached.
+-- chars 3253 --
+15.1 Principles of Assessment
+Before using the information in this chapter, the Guides user should become familiar with Chapters 1 and 2 and the Glossary. Chapters 1 and 2 discuss
+the Guides’ purpose, applications, and methods for performing and reporting impairment evaluations. The Glossary provides definitions of common terms used by many specialties in impairment evaluation.
+
+The evaluation should include a comprehensive, accurate medical history; a review of all pertinent records; a comprehensive description of the individual’s current symptoms and their relationship to daily activities; a careful and thorough physical examination; and all findings of relevant laboratory, radiologic (imaging), electrodiagnostic, and ancillary tests. It is also essential that the rater include in the report a description of how the impairment was calculated. Because many ratings are reviewed by other physicians and nonmedical personnel, the explanation of the calculation will lead to a better understanding of the method used and the report will be considered more reliable and complete.
+15.1
+a Interpretation of Symptoms and Signs
+-------INTRODUCTION START (History)-------
+History
+The history should be based primarily on the individual’s own statements rather than secondhand information. While the medical history should consider information from others, the physician should be cautious about using subjective information from medical records. It is not appropriate to question the individual’s integrity. If information from the individual is inconsistent with what is known about the medical condition, circumstances, or written records, the physician should report and comment on the inconsistencies.
+
+The history must describe in detail the chief complaint and the quality, severity, anatomic location, frequency, and duration of symptoms, including pain, numbness, paresthesias, and weakness.
+Document exacerbating and alleviating factors and the way in which the condition interferes with daily activities. The physician should elicit the history of when and how the condition started, any precipitating events or factors, and the relationship to any previous spine problems.2-4
+
+The history should include the individual’s description, in his or her own words, of how the symptoms developed and the assumed cause. In addition, the response to treatment and the results of special studies that have been performed should be described.
+The physician should either review available roentgenograms and other imaging studies personally or report the findings as being those of another reviewer (based on reports). A review of organ systems and of the general medical history can provide potentially helpful information, including complicating medical problems that can affect the diagnosis, treatment plan, prognosis, disability, etc.
+
+Examination
+Physical examination of nonmusculoskeletal areas (eg, nervous system) is discussed in other parts of the Guides. Since a targeted neurologic assessment is needed for individuals with back or neck problems, the physician must have a good grasp of basic neurologic examination techniques and principles. Guided by the history, the physician should focus on
+-- chars 3232 --
+spine-related physical findings, such as range of motion, reflexes, muscle strength and atrophy, sensory deficits, root tension signs, gait, and the need for assistive devices (Table 15-1). Range-of-motion measurements are discussed later in this chapter.
+
+The physical examination of the spine must be placed in the context of the individual’s general health and condition. For findings such as atrophy, consider other possible explanations besides spine impairment, such as previous joint surgery or hypertrophy of the contralateral side from overuse. Other physical conditions may be present that influence motor and sensory function, ranges of motion, and sciatic nerve tension. Examination of associated systems (vascular, nervous) and follow-up of any possibly significant information from the history and physical examination will allow the physician to distinguish between spine-related findings and other abnormalities.2-4
+
+The physician should record and discuss any physical findings that are inconsistent with the history.
+Many physical findings are subjective, ie, potentially under the influence of the individual. It is important to appreciate this and not confuse such observations with truly objective findings.
+
+It is not the purpose of this text to discuss in detail how the physical examination is performed; textbooks are available to cover that subject. A few aspects of particular value to the impairment evaluation will be discussed subsequently.
+
+Thoracic Spine
+
+Cervical Spine
+
+Evaluation of Sciatic Nerve Tension Signs Sciatic nerve tension signs are important indicators of irritation of the lumbosacral nerve roots. While most commonly seen in individuals with a herniated lumbar disk, this is not always the case. In chronic nerve root compression due to spinal stenosis, tension signs are often absent. A variety of nerve tension signs have been described. The most commonly used is the straight leg raising test (SLR). When performed in the supine position, the hip is flexed with the knee extended. In the sitting position, with the hip flexed 90°, the knee is extended. The test is positive when thigh and/or leg pain along the appropriate dermatomal distribution is reproduced. The degree of elevation at which pain occurs is recorded.
+
+Research indicates that the maximum movement of nerve roots occurs when the leg is at an angle of 20° to 70° relative to the trunk. However, this may vary depending on the individual’s anatomy. Further, the L4, L5, and S1 nerve roots are those that primarily change their length when straight leg raising is performed. Thus, pathology at higher levels of the lumbar spine is often associated with a negative SLR. Root tension signs are most reliable when the pain is elicited in a dermatomal distribution. Back pain on
+
+SLR is not a positive test. Hamstring tightness must also be differentiated from posterior thigh pain due to root tension.
+
+With time, spine-related symptoms usually improve, and a positive root tension (SLR) test is elicited only at the extremes of hip flexion (leg raising). While straight leg raising in disk herniation is a relatively sensitive test (72% to 97%), it is nonspecific (11% to 45%).5 Straight leg raising of the asymptomatic limb (eg, crossed SLR) that produces sciatica in the limb with symptoms (crossed positive) is a specific (85% to 100%) but less sensitive (23% to 42%) test.
+-- chars 3391 --
+Results of supine SLR can be further validated by recording the individual’s response to gentle dorsiflexion and plantar flexion of the ankle, and to internal and external rotation of the hip when the straightened leg is raised to the point where symptoms begin. Normally, ankle dorsiflexion and hip internal rotation increase the pain, and ankle plantar flexion and hip external rotation decrease the sciatica. Since sitting knee extension and supine hip flexion culminate in essentially identical positions, symptomatic responses to the two types of SLR should be similar, although the angle at which pain is elicited may vary.
+
+The reverse SLR or femoral stretch test causes root tension of L2, L3, and L4 and may be a sign of disk herniations at the higher levels. This test has low sensitivity and specificity.
+Neurologic Tests
+Neurologic examination of the lower extremity should include measurement of knee and ankle reflexes and motor and sensory functions. Because over 90% of all nerve-related pathology in the lumbar spine occurs at the L3-4, L4-5, and L5-S1 levels, it is especially important to recognize the functions of the L4, L5, and S1 nerves (Table 15-2). The knee reflex is primarily a test of L4 nerve root function. Individuals with pathology at the L3-4 level may also have sensory changes in the L4 dermatome (Figure 15-1) and quadriceps weakness. L5 nerve root compression will often influence the strength of the extensor hallucis longus muscle, but other foot and ankle muscles can be affected as well, resulting in weakness in foot dorsiflexion and difficulty walking on the heels. The ankle reflex is primarily mediated by the S1 nerve root. Weakness in foot plantar flexion and difficulty with toe walking can also occur with S1 root compression. The Babinski sign and
+the presence of clonus and hyperreflexia are important indicators of corticospinal tract involvement.
+
+Changes in balance and gait pattern may also signify myelopathy.
+
+A systematic neurologic examination can also localize the affected cervical nerve root (Table 15-2). The upper spine and extremity sensory dermatomes appear in Figure 15-2. The biceps (C5, partially C6), brachioradialis (C6), and triceps (C7) reflexes should
+L4
+be elicited. Weakness of the deltoid and biceps muscles implicates C5; wrist extensors C6; triceps, wrist flexors, and finger extensors C7; finger flexors C8; and intrinsics C8 and T1. Sensation can be grossly evaluated by touch and more precisely determined by pinprick, light touch, and a vibrating fork.
+Dermatomal overlap is common.
+
+Reflexes should always be compared between extremities and elicited several times to determine reproducibility. Importantly, reflexes once “lost” due to previous injury or disease rarely return. Strength should also be compared between extremities and may need repeat testing to determine effort and reproducibility.
+
+15.1 b Description of Clinical Studies
+General
+The individual may have undergone a variety of special tests including electromyographic, cystometric, roentgenographic studies with or without dye, CT scans, and MRI studies with or without contrast. The physician should determine when, where, and by whom the studies were done, the findings, and who interpreted them. Whenever possible, the physician should personally review the studies and report agreement or disagreement with previous interpretations. A summary of the studies should be included as a separate paragraph or section.
+-- chars 3482 --
+While imaging and other studies may assist physicians in making a diagnosis, it is important to note that a positive imaging study in and of itself does not make the diagnosis. Several reports indicate approximately 30% of persons who have never had back pain will have an imaging study that can be interpreted as positive for a herniated disk, and 50% or more will have bulging disks. Further, the prevalence of degeneration changes, bulges, and herniations increases with advancing age.6-11 To be of diagnostic value, clinical symptoms and signs must agree with the imaging findings. In other words, an imaging test is useful to confirm a diagnosis, but an imaging result alone is insufficient to qualify for a DRE category. Individuals with electromyography (EMG) studies that are clearly positive support a diagnosis of radiculopathy and therefore qualify for at least DRE category III.14
+
+Motion Segment Integrity
+A motion segment of the spine is defined as two adjacent vertebrae, the intervertebral disk, the apophyseal or facet joints, and ligamentous structures between the vertebrae. The range of motion from segment to segment varies. In the upper cervical spine (occiput to C2), there is little flexionextension, while the lower cervical spine permits increasing flexion-extension movements from about 10° at C2 to C3 to about 20° at C5 to C6 and C6 to C7. Flexion-extension movements are about 4° in the upper thoracic spine, 6° in the midthoracic spine, and 12° in the lower thoracic spine segments. In the lumbar spine there is a gradual increase from about 12° at L1 to L2 to 20° at the L5 to S1 level.13
+
+Lateral bending is 5° to 6° in the lower cervical spine and about 6° in the upper thoracic spine.
+In the lumbar spine, lateral bending is greatest at L3 to L4, where it is about 8° to 9°. Axial rotation is 30° to 40° in each direction in the upper cervical spine, 5° to 6° in the lower cervical and upper thoracic spine, and minimal in the lumbar spine.
+
+Throughout the spine, movements are coupled; this means that the primary motion in one direction always is accompanied by a secondary motion in another direction. For example, rotation is almost always combined with side bending. The dominant motions at both the lower cervical and entire lumbar spine, where most clinical pathology occurs, are flexion-extension.
+
+Alteration of motion segment integrity can be either loss of motion segment integrity (increased translational or angular motion) or decreased motion resulting mainly from developmental changes, fusion, fracture healing, healed infection, or surgical arthrodesis. An attempt at arthrodesis may not necessarily result in a solid fusion, but it may significantly limit motion at a motion segment and qualify for alteration of motion segment integrity.
+
+A line is drawn along the posterior bodies of the vertebrae below and above the motion segment in question on dynamic (flexion and extension), lateral roentgenograms of the spine. The distance between lines A and B and the distance between lines B and C at the level of the posteroinferior corner of the upper vertebral body are summed. A value greater than 2.5 mm in the thoracic spine, greater than 4.5 mm in the lumbar spine, and greater than 3.5 mm in the cervical spine qualifies as loss of structural integrity.
+-- chars 3312 --
+Motion of the individual spine segments cannot be determined by a physical examination but is evaluated with flexion and extension roentgenograms (see Figures 15-3a through 15-3c).13,14 Loss of motion segment integrity is defined as an anteroposterior motion of one vertebra over another that is greater than 3.5 mm in the cervical spine, greater than
+2.5 mm in the thoracic spine, and greater than 4.5 mm in the lumbar spine (Figure 15-3a). Loss of motion segment integrity is also defined as a difference in the angular motion of two adjacent motion segments greater than 15° at L1-2, L2-3, and L3-4 and greater than 20° at L4 to L5. Loss of integrity of the lumbosacral joint is defined as angular motion between L5 and S1 that is greater than 25°. In the cervical spine, loss of motion segment integrity is defined as motion at the level in question that is more than 11° greater than at either adjacent level.
+
+When routine x-rays are normal and severe trauma is absent, motion segment alteration is rare; thus, flexion and extension x-rays are indicated only when the physician suspects motion segment alteration from history or findings on routine x-rays.14
+15.2
+Determining the Appropriate Method for Assessment
+Spinal impairment rating is performed using one of two methods: the diagnosis-related estimate (DRE) or range-of-motion (ROM) method.
+
+The DRE method is the principal methodology used to evaluate an individual who has had a distinct injury.When the cause of the impairment is not easily determined and if the impairment can be well characterized by the DRE method, the evaluator should use the DRE method.
+
+The ROM method is used in several situations:
+1. When an impairment is not caused by an injury, if the cause of the condition is uncertain and the DRE method does not apply, or an individual cannot be easily categorized in a DRE class. It is acknowledged that the cause of impairment (injury, illness, or aging) cannot always be determined. The reason for using the ROM method under these circumstances must be carefully supported in writing.
+
+Lines are drawn along the superior border of the vertebral body of the lower vertebrae and the superior border of the body of the upper vertebrae and the lines extended until they join. The angles are measured and subtracted. Note that lordosis (extension) is represented by a negative angle and kyphosis (flexion) by a positive angle. Loss of motion segment integrity is defined as motion greater than 15° at L1-2, L2-3, and L3-4 and greater than 20°
+at L4 to L5. Loss of integrity of the lumbosacral joint is defined as angular motion between L5 and S1 that is greater than 25°. The flexion angle is +8° and the extension angle is –18°. Therefore (+8) – (–18) = +26° and would qualify for loss of structural integrity at any lumbar level.
+
+Lines are drawn along the inferior borders of the two vertebral bodies adjacent to the level in question and of the vertebral bodies above and below those two vertebrae. Angles A, B, and C are measured on both flexion and extension x-rays and the measurements subtracted from one another. Note that lordosis (extension) is represented by a negative angle and kyphosis (flexion) is represented by a positive angle. Loss of motion segment integrity is defined as motion at the level in question that is more than 11° greater than at either adjacent level.
+-- chars 3398 --
+2. When there is multilevel involvement in the same spinal region (eg, fractures at multiple levels, disk herniations, or stenosis with radiculopathy at multiple levels or bilaterally).
+3. Where there is alteration of motion segment integrity (eg, fusions) at multiple levels in the same spinal region, unless there is involvement of the corticospinal tract (then use the DRE method for corticospinal tract involvement).
+4. Where there is recurrent radiculopathy caused by a new (recurrent) disk herniation or a recurrent injury in the same spinal region.
+5. Where there are multiple episodes of other pathology producing alteration of motion segment integrity and/or radiculopathy.
+
+The ROM method can also be used if statutorily mandated in a particular jurisdiction.
+
+In the small number of instances in which the ROM and DRE methods can both be used, evaluate the individual with both methods and award the higher rating.
+
+All spine impairment ratings shown in Tables 15-3 to 15-5 estimate whole person impairment. With both the DRE method and the ROM method, whole person function is regarded as 100%. For converting whole person to regional spine impairments, see Section 15.13. When two or more regions are impaired and rated by either the DRE or ROM method, the ratings should be combined using the Combined Values Chart, p. 604.
+
+A flowchart of the spine impairment evaluation process is provided in Figure 15-4.
+
+15.2 a Summary of Specific Procedures and Directions
+1. Take a careful history, perform a thorough medical examination, and review all pertinent records and studies. This is helpful in determining the presence or absence of structural abnormalities, nerve root or cord involvement, and motion segment integrity.
+2. Consider the permanency of the impairment, referring to Guides Chapter 1 and the Glossary for definitions as needed. If the impairment is resolving, changing, unstable, or expected to change significantly with or without medical treatment within 12 months, it is not considered a permanent (stable) impairment and should not be rated under the Guides criteria.
+3.
+Select the region that is primarily involved (ie, the lumbar, cervical, or thoracic spine) and identify the individual’s most serious objective findings.
+4. Determine whether the individual has multilevel involvement or multiple recurrences/occasions within the same region of the spine. Use the ROM method if:
+a. there are fractures at more than one level in a spinal region,
+b. there is radiculopathy bilaterally or at multiple levels in the same spinal region,
+c. there is multilevel motion segment alteration (such as a multilevel fusion) in the same spinal region, or
+d. there is recurrent disk herniation or stenosis with radiculopathy at the same or a different level in the same spinal region; in this case, combine the ratings using the ROM method.
+
+5. If the individual does not have multilevel involvement or multiple recurrences/occasions and an injury occurred, determine the proper DRE category. Most ratings will fall into categories I, II, or III. A corticospinal tract injury is evaluated according to Section 15.7.
+-- chars 3236 --
+6. If the individual has been treated with surgery or another modality, evaluate the results, extent of improvement, and impact on the ability to perform activities of daily living. If residual symptoms or objective findings impact the ability to perform ADL despite treatment, the higher percentage in each range should be assigned. If an individual had a prior condition, was asymptomatic, and now—at MMI—has symptoms that impact the ability to perform activities of daily living, the higher rating within a range may also be used. If ratings are increased, explicit documentation of the reasons for the increase should be included in the report.
+7. If more than one spine region is impaired, determine the impairment of the other region(s) with the DRE method. Combine the regional impairments using the Combined Values Chart (p. 604) to express the individual’s total spine impairment.
+8. From historical information and previously compiled medical data, determine if there was a preexisting impairment. Congenital, developmental, and other preexisting conditions may be differentiated from those attributable to the injury or illness by examining preinjury roentgenograms or by performing a bone scan after the onset of the condition.
+9.
+If requested, apportion findings to the current or prior condition, following jurisdiction practices and assuming adequate information is available on the prior condition. In some instances, to apportion ratings, the percent impairment due to previous findings can simply be subtracted from the percent based on the current findings. Ideally, use the same method to compare the individual’s prior and present conditions. If the ROM method has been used previously, it must be used again. If the previous evaluation was based on the DRE method and the individual now is evaluated with the ROM method, and prior ROM measurements do not exist to calculate a ROM impairment rating, the previous DRE percent can be subtracted from the ROM ratings. Because there are two methods and complete data may not exist on an earlier assessment, the apportionment calculation may be a less than ideal estimate.
+10. For individuals with corticospinal tract involvement, refer to Table 15-6 for the appropriate impairment rating.
+
+15.3 Diagnosis-Related Estimates Method
+
+The DRE method has eight diagnosis-related categories for each of the three spinal regions. In assigning the individual to the correct DRE category, one of two approaches is used. The first is based on symptoms, signs, and appropriate diagnostic test results. The second is based on the presence of fractures and/or dislocations with or without clinical symptoms. If a fracture is present that places the individual into a DRE category, no other verification is required. The symptoms, signs other than fractures, and tests used to assist correct categorization of an individual are defined in Box 15-1.
+
+To use the DRE method, obtain an individual’s history, examine the individual, review the results of appropriate diagnostic studies, and place the individual in the appropriate category. Although there are eight categories, almost all individuals will fall into one of the first three DRE categories. Altered motion segment integrity (ie, increased motion or loss of motion) qualifies the individual for category IV or V. A fracture and/or dislocation, with or without clinical symptoms, permits placement of the individual into a DRE category with no additional verification. If there are impairments in different spinal regions, rate each spinal region separately using the DRE method; then combine the ratings using the Combined Values Chart on page 604. As stated previously, fractures at more than one level in the same spinal region should be rated using the ROM method.
+-- chars 3840 --
+In most cases, using the definitions provided in Box 15-1, the physician can assign an individual to DRE category I, II, or III. An individual in category I has only subjective findings. In category II, the individual has objective findings but no radiculopathy or alteration of structural integrity, while in category III, radiculopathy with objective verification must be present. Since an individual is evaluated after having reached MMI, a previous history of objective findings may not define the current, ratable condition but is important in determining the course and whether
+
+MMI has been reached. The impairment rating is based on the condition once MMI is reached, not on prior symptoms or signs.
+
+If the individual had a radiculopathy caused by a herniated disk or lateral spinal stenosis that responded to conservative treatment and currently has no radicular symptoms or signs, he or she is placed in category II, since at MMI there is no radiculopathy. Category III is for individuals with a symptomatic radiculopathy, either after medical or surgical treatment, or for individuals who have a history of previous radiculopathy caused by disk herniation or lateral spinal stenosis but have improved or become asymptomatic following surgery.
+
+The DRE method recommends that physicians document physiologic and structural impairments relating to injuries or diseases other than common developmental findings, such as (1) spondylolysis, found normally in 7% of adults; (2) spondylolisthesis, found in 3% of adults; (3) herniated disk without radiculopathy, found in approximately 30% of individuals by age 40 years; and (4) aging changes, present in 40% of adults after age 35 years and in almost all individuals after age 50.6,12 As previously noted, the presence of these abnormalities on imaging studies does not necessarily mean the individual has an impairment due to an injury.
+
+In cases where the abnormalities discussed above are present on imaging studies and are known or assumed to have preexisted an injury being rated, physicians should acknowledge these antecedent conditions. If requested, physicians may need to assess whether the condition was previously symptomatic and whether any aggravation occurred as a result of the injury.
+Physicians should be aware of the statutory definition in the involved jurisdiction pertaining to aggravation to ensure their use of the term is consistent with their state’s legal interpretation.
+
+DRE categories are discussed in the following three sections.
+15.4
+
+: Lumbar Spine
+The lumbar spine DRE categories are summarized in Table 15-3. Apart from category I, each category includes a range to account for the resolution or continuation of symptoms and their impact on the ability to perform ADL.
+
+For thoracic spine problems localized to the thoracic region, use Table 15-4. If the thoracic pathology also leads to isolated bowel or bladder dysfunction not due to corticospinal damage, obtain the appropriate estimates for bowel and bladder dysfunction listed in the gastrointestional and urology chapters and combine these with the thoracic spine DRE category (I-V) listed in Table 15-4. If the thoracic spine problem is due to corticospinal tract involvement, use Section 15.7. If thoracic injury–related bowel or bladder symptoms exist without verifiable lower extremity involvement, then appropriate estimates for bowel and bladder impairments from the Guides chapters on the urinary and reproductive and digestive systems should be combined (Combined Values Chart, p. 604) with an impairment percent from one of the thoracic categories II through V.
+-- chars 3632 --
+The thoracic spine impairment DRE categories are summarized in Table 15-4.
+
+15.6  DRE: Cervical Spine
+15.6a Criteria for Rating Impairment Due to Cervical Disorders
+For cervical problems localized to the cervical or cervicothoracic region, use Table 15-5. If the cervical spine problem also leads to isolated bowel and/or bladder dysfunction not due to corticospinal damage, obtain the appropriate estimates for bowel and
+
+bladder dysfunction from the gastrointestinal and urology chapters (Chapters 6 and 7) and combine these with the appropriate cervical spine DRE category from DRE I to V, listed in Table 15-5. If the cervical spine problem is due to corticospinal tract involvement, use Table 15-6 alone.
+
+The DRE cervical categories are summarized in Table 15-5.
+
+Figure 15-5 illustrates the relationship of nerve roots to the vertebral level.
+
+The level at which nerve roots exit the spine relative to the vertebrae. The neurologic level of involvement is determined by identifying the lowest normally functioning nerve root.
+
+In prior editions of the Guides, rating spinal cord injury was done either through a combination of DRE categories or in the nervous system chapter. It was decided in this edition to evaluate spinal cord injuries based on the criteria in the nervous system chapter (Chapter 13). These criteria are repeated in this section. For bilateral neurologic or corticospinal tract damage, consultation with a spinal cord injury specialist and review of Chapter 13, The Central and Peripheral Nervous System, is recommended. Thus, for an individual with a spinal cord injury affecting the upper extremities, use Table 15-6 and the appropriate impairment rating for impairment of one or both upper extremities. For impairments involving loss of use of the lower extremities, use the section in Table 15-6 pertaining to station and gait impairment. If there is additional bowel or bladder dysfunction, combine the upper extremity or lower extremity loss with impairments in bladder, anorectal, and/or neurologic sexual impairment as warranted.
+
+Once a class has been selected, the exact value is obtained by combining the value with the corresponding additional impairment from DRE categories II through V for cervical and lumbar impairment and DRE categories II through IV for thoracic impairment. An exact value is determined based on the degree of impairment of ADL. Table 15-6 and the following examples illustrate the method for impairment rating of spinal cord injury.
+
+All impairment estimates shown in the tables of this section are expressed as whole person impairments. Section 15.13 explains how to express a whole person spine impairment as a regional spine impairment. Tables 15-8 through 15-14 provide estimates for rating ankylosis and range of motion, while neurologic impairments are rated based on Tables 15-15 through 15-18. The data on standards and normal functioning described in this section are based on both medical studies and consensus judgments.15,18-27
+-- chars 3025 --
+As previously stated (Section 15.2) the ROM method should be used only (1) if the DRE method is not applicable (no verifiable injury); (2) if, after obtaining the history and performing the examination, the physician cannot place the individual within a multilevel DRE category; (3) if multilevel involvement and/or alteration of motion segment integrity has occurred in the same spinal region; (4) if there is recurrent radiculopathy caused by a new (recurrent) disk herniation or a recurrent injury in the same spinal region; (5) if there are multiple episodes of other pathology producing alteration of motion segment integrity and/or radiculopathy; or (6) if statutorily mandated by the involved jurisdiction.
+
+Concerns have been raised by users of the Guides regarding perceived ageand gender-related variations in the normal population, which may bias impairments in favor of males or older individuals, both of whom are perceived to be less flexible and therefore may be judged “impaired” even under normal circumstances. Since preparation of the fourth edition, some scientific evidence has accumulated and several relevant articles have been identified.27-45
+
+Regarding gender, the scientific evidence is inconsistent. The majority of studies actually show a nonsignificant trend toward greater motion for male normal individuals in each age group. The only movement showing any statistically significant gender difference is cervical extension, and then only in younger women. This finding is inconsistent among various studies, however, and the difference disappears with advancing age.35,41
+
+There is a decrease in normal motion with advancing age, but the effect is not linear. Most studies examining a wide spectrum of age groups find greater alterations in mobility below 20 and above 60 years of age. Several studies suggest that lifestyle factors may influence flexibility far more than inherent factors, as the variability of overall motion between individuals increases with advancing years. However, the evidence is inconsistent, and the changes in normative data too small for the most relevant age groups 20 to 59, to warrant age adjustment in this edition of the Guides.
+
+15.8 a General ROM Method Measurement Principles
+Impairment should be evaluated when the condition has stabilized after completion of all necessary medical, surgical, and rehabilitative treatment. This principle precludes rating an acute illness or injury. For example, if acute muscle spasm is present, this should be noted in the examiner’s report; however, the mobility measurements would not be valid for estimating permanent impairment. Because the Guides only considers permanent impairment, rating should be deferred until after any acute exacerbation of the chronic condition has subsided, ie, when the individual is at MMI (see Chapter 1 and the Glossary).
+
+Pain, fear of injury, disuse, or neuromuscular inhibition may limit mobility by diminishing the individual’s effort, leading to inaccurately low and inconsistent measurements. The physician should seek consistency when testing active motion, strength, and sensation. Tests with inconsistent results should be repeated. Results that remain inconsistent should be disregarded. When the physiologic measurements fail to match known pathology, they should be repeated and, if still inconsistent, disallowed until documented evidence is provided for the abnormalities noted on the physical examination.
+-- chars 3471 --
+The reproducibility (precision) of an individual’s performance is one (but not the sole) indicator of optimum effort. When measuring range of motion, the examiner should obtain at least three consecutive measurements and calculate the mean (average) of the three. Measurements should not change substantially with repeated efforts. If the average is less than 50°, three consecutive measurements must fall within 5° of the mean; if the average is greater than 50°, three consecutive measurements must fall within 10% of the mean. Motion testing may be repeated up to six times to obtain three consecutive measurements that meet these criteria. If after six measurements inconsistency persists, the spinal motions are considered invalid. The measurements and accompanying impairment estimates may then be disallowed, in part or in their entirety.
+
+There are multiple potential sources of error in a quantitative physical examination.17,20,21 The greatest source of error that occurs is due to test administrator inexperience or lack of knowledge. The evaluator should also ensure adequate warm-up movements have been performed.16 When possible, the individual being evaluated should warm up prior to the ROM measurements: flexion and extension twice, left and right rotation twice, left and right lateral bending twice, and one additional flexion and extension. The warm-up movements do not need to be repeated before each subsequent test of motions of the same spinal region.
+
+The physician also needs to ensure the anatomical landmarks are accurate, the body part is stabilized, the measurement device is properly stabilized on the spine, and appropriate instructions are provided to the individual.17,20,21 If these principles are followed, errors due to examination technique, the measurement device itself, or normal human variability will be minimized.
+
+15.8 b Principles of Inclinometry and Spine Motion Measurement
+Since spinal motion is compound, it is essential to measure simultaneously motion of both the upper and lower extremes of the spine region being examined. Because the small joints of the spine do not lend themselves readily to two-arm goniometric measurements and measuring a spine segment’s mobility is confounded by motion above and below the assessed points, an inclinometer is the preferred device for obtaining accurate, reproducible measurements in a simple, practical, and inexpensive way.
+The subcutaneous bony structures that mark the upper and lower ends of the three spine regions can be palpated readily.
+
+Inclinometers, also called angle finders or level indicators, are small angle-measuring devices traditionally used by carpenters, mechanics, and tradespeople. Recently, physicians, therapists, and veterinarians have used them to measure angles and ranges of motion in humans and animals. Inclinometers work like a plumb line, operating on the principle of gravity, which is a constant. An inclinometer used by a physician should be marked off in 2° increments or less and in good operating condition (Figure15-6). A mechanical inclinometer has a starting or 0° position indicated by a weighted needle or pendulum. A fluid level can cause errors in reading the meniscus. A fluid-filled inclinometer should allow rotation of its inclinometer face so any number on the face can be set as the initial position. Electronic inclinometers use gravity sensors to determine an angle from the vertical, and then perform internal calculations.21
+-- chars 3486 --
+Features of a properly designed inclinometer for medical use include a dial large enough to allow easy reading of 2° increments but small enough to enable application on the spine and all joints of the body; features to enable repeated, accurate application and stabilization of the instrument on the body; and a dial that can both display the 0° gravity position and be set by the examiner to a 0° starting position when the body part cannot be placed in a 0° gravity or neutral position.
+
+Box 15-2 offers a partial list of companies that produce or distribute inclinometers. The American Medical Association does not endorse or recommend any particular type or brand of inclinometer.
+
+The following principles, discussed in greater detail by Mayer,17 by Gerhardt et al,20,21 and in forthcoming AMA educational material, are important to follow to obtain accurate measurements.
+
+Gravitational plane. An inclinometer works only in the vertical position because only that plane allows the pointer or sensor to move freely in response to gravity. An inclinometer will not operate properly if tilted or at all when horizontal. Therefore, the individual being examined must be in a position that permits motion of the part being tested in a vertical plane. For spinal measurements in the sagittal and frontal (coronal) planes the individual should be standing or sitting, with the spine vertical (Figure
+15-7). Measurements in the transverse or axial plane must be made with the individual in the supine, prone, or flexed hip position.
+
+Measure spinal ROM in three principal planes: sagittal (extension-flexion), frontal or coronal, and transverse or axial (rotation) (Figure 15-7). If a spinal region has two or more impaired motions, the ratings for each range of motion impairment are added.
+Impairments of two or more regions of the spine are
+combined using the Combined Values Chart (p. 604).
+
+Stabilization. If the caudad (superior), or lower, part of a spine region can be stabilized so it does not move when the superior, or upper, part moves, a single mechanical inclinometer may be used, as with measuring cervical rotation (see Figure 15-17).
+However, two inclinometers are usually needed to measure most movements of the spine. Single electronic inclinometers use microprocessors to duplicate functions of mechanical inclinometers. Their use
+will not be described in detail here as information is available from the manufacturer. The user should ensure that the features described above are addressed.
+
+15.8c Ankylosis and Motion With Ankylosis
+Ankylosis is defined as the complete absence of joint motion and is expressed as a fixed position. In the spine, which has multiple motion segments in each region with vertebrae moving together and separately, complete absence of regional motion is rare. For spine impairment evaluation only, when an individual cannot reach the neutral (0°) position, the position or angle of restriction closest to neutral is considered the position of ankylosis or end-restricted movement.
+-- chars 3050 --
+If the individual has end-restricted movement, this value, taken as the ankylosis value, is used to determine impairment instead of the ROM. If the motion crosses the neutral position in any plane, the examiner should use the abnormal motion section of the appropriate table to determine the impairment for that plane.
+
+S: sagittal plane, T: transverse plane, F: frontal or coronal plane.
+
+Manual pressure during use. The inclinometer should be held so it remains firmly applied to the subcutaneous skeletal structure while the spine is moving through the entire range of motion. It must not deviate from the original position because of skin movement or uneven pressure on the skin overlying the bony landmark, which might occur with an obese individual. The inclinometer design is important to allow proper application and avoid slippage on subcutaneous bony prominences. Firm contact of two points of the instrument with the structure is essential, especially if a convex surface such as the sacrum or calvarium (top of the head) is involved.
+
+Recording ROM Measurements
+ROM measurements can be recorded on the summary sheets (Figures 15-10, 15-15, and 15-18).
+
+In determining ankylosis impairments, the examiner should add the ankylosis impairments in several planes within a single region or combine the ankylosis impairments of two or more regions (Combined Values Chart, p. 604). If a spinal region has several range-of-motion impairments and an ankylosis impairment, the ROM impairments are added and the total is combined with the ankylosis impairment.
+Impairments of two or more regions are always combined (Combined Values Chart).
+
+15.8d Estimating Whole Person Impairment Using the ROM Method
+1. Determine whether the individual has reached MMI and the impairment is stable. If the condition is changing or likely to improve substantially with medical treatment, the impairment is not permanent and should not be rated. If it is permanent, proceed to step 2.
+2. Select the impaired region: cervical, thoracic, or lumbar.
+3. Use Table 15-7 to determine the percentage impairment for the part of the ROM diagnosis– based method. If there are two or more diagnoses within a spinal region, use that which is most significant. This percent will be combined with those for the impaired range(s) of motion and the whole person neurologic deficit (steps 7-9 below).
+
+4. Measure the range of motion in the relevant sagittal, frontal (coronal), and transverse planes (Figure 15-7), and determine any angle of ankylosis or any restricted motion that is present.
+5. Perform at least three measurements of each motion. Determine which measurements meet reproducibility criteria described under general measurement principles described in Section
+15.8b. Calculate the average of each set of three measurements and determine whether the three measurements in each set fall within 5° or 10% of the mean, whichever is larger.
+-- chars 3002 --
+6. If the measurements do not meet the consistency requirements described in step 5, perform additional tests until the reproducibility criteria are satisfied, up to a maximum of six. If the test results remain inconsistent after six measurements, repeat the tests at a later date or disallow impairment related to that motion.
+7. Use the maximum motion from a reproducible set of measurements to determine any impairment rating from the appropriate tables, based on the spinal region and type of movement. Refer to Section 15.8c, Ankylosis and Motion With Ankylosis, if there are several range-ofmotion or ankylosis impairments in a region. For example, an individual who can flex the cervical spine from 30° to 60° but who lacks 30° of motion in reaching the neutral 0° position has restricted end motion and the same estimated impairment as if he or she had fixed ankylosis at 30° of cervical flexion. According to Table 1512, the individual’s impairment is 30% of the whole person. If there are impairments due to loss of motion in more than one plane in the same spinal region (extension, flexion, or rotation), the impairments are added to determine total impairment due to loss of motion in a spinal region.
+8. Determine any impairments due to neurologic deficits, such as radiculopathy or spinal nerve injury. Refer to Table 15-15 for the procedure to evaluate the sensory deficit. Use Table 15-16 to determine the procedure for estimating loss of strength. Apply these tables to Table 15-17 (cervical and thoracic nerve roots) or Table 15-18 (lumbar and sacral nerve roots) as needed. Convert the neurologic impairments, initially calculated as upper or lower extremity, into a whole person impairment.
+9.
+Combine the diagnosis-based (Table 15-7) and physical examination–based (mobility and neurologic) impairment percents using the Combined Values Chart (p. 604).
+10. Repeat steps 1 through 9 for either of the other two spinal regions with significant involvement related to the primary diagnosis.
+11. Combine the regional impairments into a single whole person impairment using the Combined Values Chart (p. 604).
+12. Combine the whole person spine impairment with whole person ratings for any other organ system using the Combined Values Chart, if indicated.
+13. Record the results of the evaluation on the Spine Impairment Summary form (see Table 15-20).
+
+Instructions for Using Table 15-7
+1. Use this table only when the ROM method is used.
+2. Identify the most significant (impairing) diagnosis of the primarily involved region (lumbar, thoracic, or cervical).
+3. The diagnosis-based impairment percent should be combined with range-of-motion impairment estimates and whole person impairment estimates involving sensation, weakness, and other conditions of the musculoskeletal, nervous, or other organ systems.
+4. Combine the diagnosis-based, range-of-motion, and other whole person impairment estimates using the Spine Impairment Summary form (Table 15-20).
+-- chars 3086 --
+5. Repeat for other involved spine regions and combined regional impairments if those exist.
+
+† Structural tests include radiographs, myelograms with and without CT scan, CT scan and MRI with and without contrast, and diskogram with and without CT scan.
+
+15.9  ROM: Lumbar Spine
+15.9 a Flexion and Extension
+Two-Inclinometer Technique
+1. Provide information about the test and allow warm-up within pain tolerance. Warm-up exercises, as described in Section 15.8a, are done as tolerated by the individual, based on physician judgment.
+2. The individual should be standing with knees extended and weight balanced on both feet, ideally with hands on hips for support to permit greater motion. The spine should be in the neutral position while the inclinometers are set at 0° (See Figure 15-8a). Locate and place horizontal skin marks
+
+over the T12 spinous process and the sacrum. Center the first inclinometer aligned in the sagittal plane, over the mark for the T12 spinous process. Center the second inclinometer over the sacral horizontal mark. It is generally best to place the sacral mark at the midpoint of the posterior superior iliac spine because if the mark is placed too high on the sacral convexity, the inclinometer may be displaced during extension. Be certain of the bony landmarks.
+3. Instruct the individual to flex the trunk as far as possible (Figure 15-8b), again recording both inclinometer angles and subtracting the sacral (hip) from the T12 inclinometer angle to obtain true lumbar flexion angle. Ask the individual to return the trunk to the neutral position.
+
+4. Ask the individual to extend maximally while holding the inclinometers firmly, and record both angles (Figure 15-8c). Subtract the sacral (hip) inclination from the T12 inclinometer angle to obtain the true lumbar extension angle. Return the trunk to the neutral position (verify that the inclinometers are still at 0°).
+5. Repeat the procedure at least three times and at most six times for flexion and extension to obtain a valid measurement set (three consecutive, reproducible measurements). Only the true lumbar spine flexion and extension angles need to be consistently measured within 5° if the average is less than 50°, or within 10° if the average is greater than 50°. The impairment is based on the maximum true extension and flexion angles from within the three measurements. The average of the three is only used to determine consistency.
+6. An accessory validity test can be performed for lumbosacral flexion and extension.35 In this test, record the straight-leg-raising angle of the supine individual by placing an inclinometer on each tibial crest with the knees extended and the hip flexed (Figure 15-8d). Compare the straight-leg-raising angle to the sum of the sacral flexion and extension (sacral or hip motion) angles (Figures 15-9a and 15-9c). If the straight-leg-raising angle exceeds the sum of sacral flexion and extension angles by more than 15°, the lumbosacral flexion test is invalid. Normally, the straight-leg-
+-- chars 3118 --
+raising angle is about the same as the sum of the sacral flexion-extension angle. If the individual resists passive SLR without other evidence of radiculopathy, the accessory test is also invalid. If invalid, the examiner should either repeat the flexion-extension test or disallow impairment for lumbosacral spine flexion and extension.
+
+Tightest SLR – [sacral flexion + sacral extension]
+? 15° for validity (assumes sacral flexion and extension are less than normal).
+
+Note: This accessory validity test is useful only when sacral flexion plus extension is less than the average for normal individuals (ie, 65° for women and 55° for men). At these levels or above, the difference between sacral motion and supine straight leg raising will usually exceed 15° because the hamstring and gluteal muscles are contracted in the standing flexed position and relaxed in the supine position. However, below the threshold of 65° for women and 55° for men, the tightest supine straight-leg-raising angle should not be more than 15° greater than the combined sacral (hip) flexion and extension angle in the standing position.
+
+a. neutral position
+b. lateral bending
+
+4. Instruct the individual to bend the trunk to the right as far as possible (Figure 15-9b), again recording both inclinometer angles and subtracting the sacral (hip) angle from the T12 inclinometer angle to obtain the lumbar right lateral bending angle. Ask the individual to return to the neutral position.
+5. Repeat the procedure at least three times per side. To be valid, three of six consecutive measurements must lie within 5° or 10% of the mean, whichever is greater. The impairment estimate is based on the highest (least impairing) angle of a valid set. The mean is used only for a test of reproducibility.
+
+With measurements for left and right lateral bending and any ankylosis, use Table 15-9 to determine the whole person impairment.
+
+Add the impairments within the lumbar region. If other regions are impaired, the lumbar impairment should be combined with the other region impairment using the Combined Values Chart (p. 604).
+
+Physical Exam: Measured T12 angles for left lateral bending are 20°, 20°, 30°, and 25°. Corresponding sacral (hip) lateral flexion measurements to the right are 15°, 5°, 10°, and 10°. Subtracting the sacral bending measurements, the true lumbosacral left lateral flexion angles are 5°, 15°, 20°, and 15°, respectively. The first measurement is discarded, being more than 5° less than the mean of 13.75°, but the next three measurements fulfill reproducibility criteria. The best left lateral bending angle is 20°.
+Diagnosis: Chronic low back pain.
+Impairment Rating: 1% impairment due to loss of left lateral bending (Table 15-9). Obtain the other ROM measurements for the lumbar spine and add the ROM impairments.
+
+Ankylosis
+Ankylosis in lumbar spine lateral bending (flexion) is generally associated with a scoliosis and usually produces only limited impairment. Mark the T12 and spinous process and sacrum, and ask the individual to stand in the most erect position possible that corrects the deformity. Using measurements made in the frontal (coronal) plane, subtract the sacral (hip) inclination from the T12 inclination and record the ankylosis angle or the angle of restriction (closest to the 0° neutral position). Consult Table 15-9 for the impairment rating.
+-- chars 3388 --
+15.10 ROM: Thoracic Spine
+15.10 a Flexion and Extension
+Thoracic flexion and extension are relatively limited motions. The amount of extension is determined mainly by the individual’s posture and the degree of fixed kyphosis or curvature of the thoracic spine. To determine the ranges of motion of this region, the individual is measured in the military brace posture to obtain the angle of extension or minimum kyphosis. Then, with the individual fully flexing the thoracic spine, the flexion angle is determined. The angle of minimum kyphosis is actually a measure of ankylosis, and impairment resulting from deformity corresponding to this angle is found in the Ankylosis part of Table 15-10.
+
+Two-Inclinometer Technique
+1. Provide information to the individual, and allow for the appropriate warm-up exercises. Measurements are obtained with the individual standing or sitting.
+2. Locate and place horizontal skin marks over the T1 and T12 spinous processes. Place both inclinometers, which do not show gravity 0 automatically against a true vertical surface, such as a wall, and set the neutral 0° positions. Place the inclinometers over the T1 and T12 spinous processes while instructing the individual to maintain the maximally extended military brace posture position (Figures 15-11a and 15-11c). Subtract the T12 inclinometer reading from the T1 inclinometer reading (if both are inclined in the same direction from the vertical) to obtain the angle of minimum kyphosis. If T12 and T1 are inclined in opposite directions from the vertical, add the angles. Find the impairment percent in the Ankylosis part of Table 15-10.
+3.
+Set the inclinometers to 0° with the individual standing in the erect military brace posture. Then ask the individual to fully flex the thoracic spine. Flexing at the hips is permitted. Subtract the T12 inclinometer reading from the T1 reading obtained in step 1 above to obtain the angle of thoracic flexion (Figures 15-11b and 15-11d).
+4. Repeat either the sitting or the standing test up to six times to obtain three measurements within 5° of the mean or 10%, whichever is greater.
+5. A reproducibility test is done after a positional change, having the standing individual sit or vice versa. If the initial measurements were made standing, seat the individual on a stool, record the neutral 0° position, and ask him or her to flex the thoracic spine maximally from the military brace position. The thoracic flexion sitting angle should be nearly identical to the flexion angle obtained in the erect position.
+6. Consult the Abnormal Motion part of Table 15-10 to determine the whole person impairment.
+
+Ankylosis
+The angle of minimum kyphosis of the thoracic spine may be considered equal to the angle of ankylosis. Excessive kyphosis or thoracic lordosis is evaluated as an impairment according to Table 15-10.
+
+15.10b Rotation
+Two-Inclinometer Technique
+1. Provide information to the individual about the procedure and allow for appropriate warm-up exercises.
+-- chars 3101 --
+2. The individual should be seated or standing, whichever is more comfortable, and in a forward flexed position, with the thoracic spine in as horizontal a position as can be achieved (Figure 1512a). Locate and place horizontal skin marks over the T1 and T12 spinous processes. The trunk should be in the neutral position for rotation. The inclinometers are set to 0 by placement against a flat, horizontal table or floor if they do not automatically indicate gravity 0°. Place the first inclinometer aligned vertically in the transverse (axial) plane over the T1 spinous process while holding the second over the T12 spinous process.
+3. Ask the individual to rotate the trunk maximally to the left and record both angles (Figure 15-12b). Subtract the T12 angle from the T1 angle to obtain the thoracic left rotation angle. Return the trunk to the neutral position (Figure 15-12a).
+4. Instruct the individual to rotate the trunk maximally to the right, again recording both inclinometer angles; subtract the T12 angle from the T1 angle to obtain the thoracic right rotation angle.
+5. Repeat the procedure three to six times per side to obtain a valid set of three consecutive measurements. The angles of a valid set should be within 5°or 10% of the mean of the set, whichever is greater. The final impairment percent is based on the best (least impairing) angle measured.
+
+Using the best angle of rotation and Table 15-11, determine the whole person impairment.
+b. rotation
+
+The figure shows the individual standing. The inclinometers are
+
+If ankyloses in several planes are present, combine the ankylosis estimates (Combined Values Chart), then combine the result with the range-of-motion impairment.
+
+15.11 ROM: Cervical Spine
+15.11a Flexion and Extension
+Two-Inclinometer Technique
+1. Provide information to the individual about the procedure, and allow for appropriate warm-up exercises.
+2. Locate and place a horizontal skin mark over the T1 spinous process. With the individual seated, place the first inclinometer, aligned in the sagittal plane, over the T1 spinous process. Place the second inclinometer at the side of the face, from the corner of the eye to the ear, along a parallel line where the temple of eyeglasses would sit (Figure 15-15a). From this position, set the inclinometer to 0. This represents the 0° true neutral position. Move the second inclinometer to the calvarium, and set the head to the neutral position in both the sagittal and frontal planes, where the inclinometer again reads 0 (Figure 15-15a).
+
+3. Ask the individual to flex maximally and record both angles. Subtract the T1 angle from the calvarium angle to obtain the cervical flexion angle (Figure 15-15b) and record it. Return the head
+to the neutral position so both inclinometers read 0° again.
+4. Instruct the individual to extend the neck as far as possible, keeping the chin close to the sternum, again recording both inclinometer angles. Subtract the T1 angle from the calvarium angle to obtain the cervical extension angle (Figure 15-15c). Ask the individual to return the head to the neutral position.
+-- chars 3202 --
+5. Repeat the procedure three times. The cervical flexion and extension angles should be consistently measured within 5° or 10%, whichever is greater. The impairment rating is based on the greatest angle of a valid set of three consecutive measurements.
+6. Using the largest valid cervical flexion and extension measurements, obtain the whole person impairment rating for cervical flexion and extension using Table 15-12.
+7. Add the cervical flexion and extension impairment ratings and combine the sum with any ratings for diagnostic criteria (Table 15-7) and/or neural impairment.
+
+Ankylosis
+1. Note whether there is motion of the cervical spine in the sagittal plane or whether the spine is unable either to flex or extend beyond the neutral point. Determine if the ankylosis or restricted motion is in flexion or extension. If some motion is possible in the sagittal plane, ask the individual to hold the position closest to the neutral point.
+2. Place the inclinometer’s base against a vertical surface to set the inclinometer to the neutral 0 position. Then place it at the side of the face, from the corner of the eye to the ear, along a parallel line where eyeglass temples would lie (Figure 1515b). Move the inclinometer to the calvarium and set the head to the neutral position in both the sagittal and frontal planes, where the inclinometer again reads 0 (Figure 15-15b).
+3. Place the second inclinometer at T1 and record the angle. Subtract or add the T1 angle from the first-read angle to obtain the angle of ankylosis in either flexion or extension.
+4. Consult the Ankylosis section of Table 15-12 to determine the whole person impairment.
+5. Add the impairment percent for left rotation and right rotation. Their sum is the whole person impairment contributed by abnormal rotation of the cervical region.
+
+3. Determine whether the individual has cervical lateral motion or is unable to attain the neutral position. If there is motion and the individual cannot reach the neutral position, read the angle closest to neutral 0. This is the angle of ankylosis used for rating (Figure 15-16b).
+
+Consult the Ankylosis section of Table 15-13 to determine the whole person impairment.
+
+15.12 Nerve Root and/or Spinal Cord
+When using the ROM method, it is important to consider any nerve root or spinal cord impairment.
+Injury or illness to the cervical spine may produce nerve root compression manifested by sensory or motor loss in the upper extremities, as well as long tract signs from spinal cord compression. In the thoracic spine, spinal cord compression or injury may produce long tract signs, but nerve roots are uncommonly compressed. In the lumbosacral spine, spinal cord involvement is rare because the cord typically ends at L1, although nerve root compression (cauda equina or isolated root[s]) affecting the lower extremities is common. If any neural impairment is identified, proceed with the following evaluation:
+-- chars 3037 --
+1. Identify the nerve(s) involved, based on the clinical evaluation and the dermatome distribution charts for the lower (Figure 15-1) and upper extremity (Figure 15-2).
+2. Determine the extent of any sensory and motor loss due to nerve impairment, based on Tables 15-15 and 15-16.
+3. Find the maximum impairment due to nerve dysfunction in Table 15-17 for the upper extremity and Table 15-18 for the lower extremity.
+4. Multiply the severity of the sensory or motor deficit by the maximum value of the relevant nerve (Tables 15-17, 15-18). If there is both sensory and motor impairment of a nerve root, the impairment percents are combined (Combined Values Chart, p. 604) to determine the extremity impairment. If both extremities are impaired, the impairment percent for each extremity is determined, converted to whole person impairment, and the two impairment ratings combined using the Combined Values Chart.
+
+5. Convert to whole person impairment by multiplying the upper extremity impairment by 0.6 and the lower extremity impairment by 0.4. To convert any regional ROM spine impairment to whole person impairment, multiply the specific spinal nerve impairment by the regional weight: 0.80 for the cervical spine, 0.40 for the thoracic spine, and 0.90 for the lumbosacral spine. Impairment ratings above 100% are rounded down to 100% since a whole person impairment rating cannot exceed 100%. This is described further in Section 15.14.
+
+If there is bilateral spinal nerve impairment or spinal cord involvement, especially if in conjunction with head injury, consultation with a neurologist and/or neurosurgeon and review of the diagnostic criteria in the neurology chapter (Chapter 13) is advisable. The physician should decide whether evaluation by the spine or neurology chapter criteria is most appropriate.
+
+15.13 Criteria for
+Converting Whole Person Impairment to Regional Spine Impairment
+In some instances, the evaluator may be asked to express an impairment rating in terms of the involved spine region rather than the whole person. This is done by dividing the whole person impairment estimate by the percent of spine function that has been assigned to that region. Under the DRE method, a whole person estimate being converted to a regional estimate would be divided by 0.35 for the cervical spine, 0.20 for the
+
+thoracic spine, and 0.75 for the lumbar and sacral spines. Under the ROM method, a whole person estimate being converted to a regional estimate should be divided by 0.80 for the cervical spine, 0.40 for the thoracic spine, or 0.90 for the lumbosacral spine (Figure 15-19). For example, a 24-year-old female office worker sustained a cervical injury that, after it was healed and stable, resulted in a whole body impairment, estimated by the DRE method, of 20%.
+Dividing the 20% by 0.35 results in 57% impairment of the cervical spine. An individual with multiple lumbar compression fractures was rated 25% whole body impairment by the ROM method. To obtain an estimate of lumbar spine impairment, the physician should divide the 25% by 0.9, resulting in a 27.7% rounded up to 28% lumbar spine impairment. Any values that exceed 100% are rounded down to 100% regional impairment.
+-- chars 3269 --
+15.14 The Pelvis
+Criteria for Rating Impairment Due to Pelvic Injury
+The pelvis is composed bilaterally of three bones: the ilium, the ischium, and the pubis, forming a ringlike structure. Each ilium is attached to the sacrum via the sacroiliac synchondrosis. The pelvis, including the symphysis pubis, assists in transfer
+of body weight to the lower extremities. In females, the pelvic structure and function are also of paramount importance in pregnancy and delivery.
+
+The whole spine divided into regions indicating the maximum whole person impairment represented by a total impairment of one region of the spine. Lumbar 90%, thoracic 40%, cervical 80%.
+
+Pelvic disorders are evaluated using Table 15-19. When necessary, these disorders may be combined with impairment ratings from either the DRE or ROM methods for spine impairment.
+
+The impairment estimate for hemipelvectomy is 50% of the whole person (Table 17-32).
+
+15.15 Spine Evaluation Summary
+See Table 15-20 for a spine evaluation summary form.

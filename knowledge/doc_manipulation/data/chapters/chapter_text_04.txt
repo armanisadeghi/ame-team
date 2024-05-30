@@ -1,0 +1,93 @@
+================================================================================
+
+Chapter 4:
+-----------------------------------------------------------------
+The Cardiovascular System: Systemic and Pulmonary Arteries
+4.1 Hypertensive Cardiovascular Disease
+4.2 Diseases of the Aorta
+4.3 Vascular Diseases Affecting the Extremities
+4.4 Diseases of the Pulmonary Arteries
+4.5 Cardiovascular Impairment Evaluation Summary
+-------INTRODUCTION START -------
+Introduction
+This chapter provides criteria for evaluating permanent impairments of the systemic and pulmonary arteries as they affect an individual’s ability to function and perform activities of daily living. The information regarding medical evaluation, analysis of findings, and impairment criteria in Chapter 3, The Cardiovascular System: Heart and Aorta, remain applicable for this chapter. See Table 3-1 for the functional classification of cardiac disease.
+
+This chapter also integrates new findings in the rapidly changing specialty of cardiovascular disease. The following areas are new or revised from the fourth edition: (a) the addition of recent guidelines of the sixth report of the Joint National Committee on Prevention, Detection, Evaluation and Treatment of High Blood Pressure (JNC-6)1; (b) an expanded section on pulmonary hypertension that outlines guides for impairment assessment; and (c) the latest data for prognosis of individuals with pulmonary hypertension.
+4.1 Hypertensive Cardiovascular Disease
+The JNC-6 classifies hypertension, or elevated blood pressure, as an elevation of the systolic blood pressure to ? 140 mm Hg or diastolic blood pressure to
+>89 mm Hg on two or more separate readings.1 (See Table 4-1 for the JNC-6 three-stage hypertension classification.) Hypertension, the leading cause of ambulatory office visits in the United States, can produce heart disease, stroke, and renal failure. The economic impact of heart disease and stroke exceeds
+$29 billion annually in the United States. The prevalence of hypertension and its complications make it a major public health concern, particularly in the Southeast and among African Americans.2,3
+
+
+Hypertensive heart disease includes hypertension, hypertension-associated systolic and diastolic heart failure (HF), hypertension-associated angina, and hypertension-induced left ventricular (LV)
+hypertrophy. Hypertensive heart disease can be very debilitating and demands aggressive treatment.
+Preventive treatment strategies may reduce the risk of developing secondary cardiac changes, the symptoms associated with hypertension, and other organ dysfunction.4-7
+
+4.1 a Criteria for Rating Permanent Impairment Due to Hypertensive Cardiovascular Disease
+Table 4-2 addresses the impairment classification for hypertensive cardiovascular disease. Cardiovascular complications of hypertension should be established before assigning a diagnosis of hypertensive cardiovascular disease. Because patients with hypertensive cardiovascular disease do not become symptomatic until the very late stages, the impairment classification requires information on the end-organ damage that may occur even in the absence of symptoms.
+-- chars 3180 --
+Diagnosis: Essential hypertension.
+Impairment Rating: 1% to 3% impairment of the whole person.
+Comment: Mild hypertension; check BP after medication.
+
+Physical Exam: BP: 170/95 mm Hg in both arms; PR: 64 BPM. No signs of congestive heart failure (CHF). Fundus: increased light reflexes from arterioles and arteriovenous crossing depressions; no hemorrhages or exudates. Disk flat. Enlarged, sustained LV impulse in normal position. Normal S ;
+increased in intensity; S present.
+Clinical Studies: ECG: LV hypertrophy; tall R and inverted T waves in lateral chest leads. Chest roentgenogram: mild cardiomegaly; pulmonary vasculature normal. Serum electrolyte levels and urinalysis: normal.
+Diagnosis: Essential hypertension and hypertensive heart disease with documented LV hypertrophy.
+Impairment Rating: 30% to 39% impairment of the whole person.
+
+Impairment Rating: 55% impairment of the whole person.
+Comment: Lower impairment if diastolic pressure, renal function return to normal but not if any of other findings persist.
+and V through V . Chest roentgenogram: cardiomegaly; pulmonary vasculature prominent in upper lung fields. Serum electrolyte, BUN, creatinine levels, and urinalysis: normal.
+Echocardiogram: increased wall thickness; dilated LV cavity with global hypokinesis; 0.30 EF.
+Diagnosis: Essential hypertension with CHF.
+Impairment Rating: 80% impairment of the whole person.
+Comment: Lower impairment after hypertension treatment if improvement in HF symptoms and EF. Note: Impairment class corresponds to cardiomyopathy impairment in Chapter 3. Here, the class 4 impairment for hypertensive cardiovascular disease (CVD) is not combined with cardiomyopathy since hypertensive CVD class 4 includes cardiomyopathy.
+
+4.2 Diseases of the Aorta
+Diseases of the aorta, less prevalent than heart disease, can be more acutely life threatening. Diseases of the aorta include atherosclerotic dilatation, dilatation and/or stenosis from a concurrent connective tissue disease or vasculitis, and atheroembolic complications from diffuse aortic atherosclerosis.
+
+Aortic atherosclerotic dilatation can progress to a significant degree and cause dyspnea, wheezing, cough, recurrent pneumonia, and hemoptysis. Aortic dilatation can be associated with significant aortic regurgitation and can also enlarge to the point of rupture and death.
+
+The physician must obtain a careful and detailed history to estimate aortic involvement. Physical examination and chest roentgenogram may suggest aortic enlargement, but often a more advanced imaging assessment is necessary. MRI, CT scan, and transesophageal imaging identify aortic aneurysms, aortic vasculitic involvement, and atheromatous emboli sources. Laboratory studies help establish the presence of atheroemboli.8-13
+
+4.2 a Criteria for Rating Permanent Impairment Due to Diseases of the Aorta See Table 4-3 for the classification of whole person impairment due to diseases of the aorta.
+
+4.3 Vascular Diseases Affecting the Extremities
+-- chars 3020 --
+Peripheral vascular disease (PVD) that leads to permanent impairment usually includes (1) arterial disorders that reduce blood flow and lead to one or more of the following: intermittent claudication, pain at rest, minor trophic changes, ulceration, gangrene, extremity loss, or Raynaud’s phenomenon; (2) venous disorders that lead to one or more of the following: pain, edema, induration, stasis dermatitis, or ulceration; or (3) lymphatic disorders that lead to chronic lymphedema and may be complicated by recurrent acute infection.
+
+Arterial disorders are most commonly caused by arteriosclerosis, trauma, and inflammatory processes such as thromboangiitis obliterans. The venous system is most frequently affected by varicose veins, thrombosis, and chronic deep venous insufficiency. The lymphatic system may become impaired by inflammatory or neoplastic processes.
+
+Noninvasive laboratory studies are valuable in confirming occlusive arterial disease or venous abnormalities of the extremities. To estimate functional impairment due to occlusive peripheral arterial disease, determine ankle or arm systolic pressure indices before, and 1 minute after, standard exercise (eg, walking on a treadmill at 2 miles per hour at a 10% grade for 5 minutes, or something less strenuous if the individual’s symptoms warrant it).14, 15
+
+Before evaluating impairment, establish a specific diagnosis of vascular disease. The impairment estimate depends on the extent, severity, and impact of the lesions rather than on the specific diagnosis.
+
+Table 4-4 provides a classification of impairments due to peripheral vascular disease. Physical signs of vascular damage must be present and are the primary
+
+determinants in placing the the examinee into one of these classes. Raynaud’s phenomenon consists of localized blanching of one or more fingers, followed by a period of cyanosis, followed by erythema. Pain on exposure to cold or generalized paleness of the fingers on exposure to cold do not in themselves indicate Raynuad’s. When amputation due to peripheral vascular disease is involved, the impairment due to amputation should be evaluated separately and combined with the appropriate value in Table 4-4 using the Combined Values Chart (p. 604).
+
+It is important to differentiate Raynaud’s symptoms on the basis of obstructive physiology from those occurring because of vasoreactivity. Individuals with obstructive physiology will often experience symptoms more frequently and to a greater degree of severity. Establish the presence of obstructive physiology by objective testing. Arterial pressure ratios between the affected digits and the brachial pressure (finger/brachial index) are easily performed. A ratio of < 0.8 suggests obstructive physiology, even if Raynaud’s symptoms are not present. Obstuctive physiology can also be established by the use of cutaneous laser Doppler flowmetry. This technique is established and can reliably assess microcirculation performance and real time changes in skin blood flow.16
+-- chars 3019 --
+4.3 a Criteria for Rating Permanent Impairment Due to Vascular Diseases Affecting the Extremities
+The criteria for evaluating impairment due to vascular diseases of the upper extremity are found in Table 4-4; for lower extremity, Table 4-5.
+
+To translate an upper extremity impairment into a whole person impairment, multiply the upper
+extremity impairment by 0.6 or use Table 16-3 in the upper extremities chapter. To translate the lower extremity impairment to a whole person impairment, multiply the lower impairment by 0.4, or use Table 17-3 in the lower extremities chapter.
+
+4.4 Diseases of the Pulmonary Arteries
+Primary pulmonary hypertension is a consequence of obliterative and plexiform changes of unknown etiology in the pulmonary arteriolar bed. Many other causes of pulmonary hypertension include pulmonary parenchymal disease, left-sided HF, CHF, and PVD (either from pulmonary emboli or systemic disease). Pulmonary venous and capillary system disorders can also produce pulmonary hypertension. All of these disorders are classified disorders of the pulmonary circulation for impairment assessment.
+
+The physician should take a careful history of functional impairment and symptoms for individuals with pulmonary hypertension. Classic findings include a right ventricular (RV) lift and an increased intensity of the S pulmonic component. Pulmonary hypertension is often diagnosed by chest roentgenogram changes, RV hypertrophy, or ECG strain. The definitive
+
+assessment of pulmonary hypertension is made by PAP assessment with an echocardiogram or right heart catheterization.17-20
+
+4.4 a Criteria for Rating Permanent Impairment Due to Pulmonary Hypertension
+The degree of pulmonary hypertension can be classified by the measurement of PAP or PA resistance.
+Impairment classification should be based on more than the observed PAP; also consider the presence or absence of signs and symptoms of right HF. Dyspnea is the most limiting symptom of pulmonary hypertension. Cyanosis may occur from right to left shunting, especially in individuals with pulmonary hypertension associated with CHF.
+
+Table 4-6 lists the impairment criteria for disorders of the pulmonary circulation. (The Guides follows the new World Health Organization [WHO] criteria for pulmonary hypertension classification.21)
+
+4.5 Cardiovascular Impairment Evaluation Summary
+
+See Table 4.7 for an evaluation summary for the assessment of systemic and pulmonary artery cardiovascular impairment.

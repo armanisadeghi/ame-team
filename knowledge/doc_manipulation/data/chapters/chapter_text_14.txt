@@ -1,0 +1,307 @@
+================================================================================
+
+Chapter 14:
+-----------------------------------------------------------------
+Mental and Behavioral Disorders
+14.1 Principles of Assessment
+14.2 Psychiatric Diagnosis and Impairment
+14.3 A Method of Evaluating Psychiatric Impairment
+14.4 Assessing Impairment Severity
+14.5 Examples of Impairment Due to Mental and Behavioral Disorders
+14.6 Format of the Impairment Report
+-------INTRODUCTION START -------
+Introduction
+This chapter discusses impairments due to mental disorders and considers behavioral impairment of function that may complicate any condition. As did Chapter 13 (The Central and Peripheral Nervous System), this chapter assesses the brain; however, here the emphasis is on evaluating brain function and its effect on behavior for mental disorders. Unlike the other chapters in the Guides, this chapter focuses more on the process of performing a mental and behavioral impairment assessment. Numerical impairment ratings are not included; however, instructions are given for how to assess an individual’s abilities to perform activities of daily living.
+
+The following revisions have been made for the fifth edition:
+
+1. The importance of following the Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (DSM-IV) criteria for determining a mental impairment is emphasized.1
+2. The section on social security disability assessment has been removed. The Social Security Administration criteria focus on disability and work disability assessment, which is not the purpose of the AMA Guides. However, some of the
+material in this chapter is taken directly from Social Security Administration (SSA) regulations.2-4
+3. Additional case examples exemplify the relationship between diagnosis, typical symptoms and signs of the disorder, and the impact on the ability to perform activities of daily living. Examples are included for depression, personality disorder, and posttraumatic stress disorder (PTSD). The case examples, together with Table 14-1, should help clarify how, in common psychiatric disorders, one can provide a nonnumerical impairment rating. Some states have chosen to assign numerical percentages to these categories.
+4. A summary template of factors to be included in a psychiatric assessment has been added.
+
+14.1 Principles of Assessment
+Before using the information in this chapter, the Guides user should become familiar with Chapters 1 and 2 and the Glossary. Chapters 1 and 2 discuss the Guides’ purpose, applications, and methods for performing and reporting impairment evaluations. The Glossary provides definitions of common terms used by many specialties in impairment evaluations.
+
+Several principles, described below, are central to assessing mental impairment. A clear diagnosis is required to assess permanent mental or behavioral impairment. This diagnosis needs to be established according to DSM-IV criteria. The diagnosis is among the factors to be considered in assessing the severity and possible duration of the impairment, but it is not the sole criterion to be used.
+-- chars 3169 --
+Motivation for improvement may be a key factor in the severity and extent of an individual’s impairment, whether that impairment is physical or mental. The examiner needs to assess changes in motivation and whether problems in motivation are due to the illness or to secondary gains. Motivation is influenced by multiple factors, including the illness, as well as the individual’s personality, coping style, self-esteem, and self-confidence. These factors may change over time. The loss of motivation for even purely pleasurable activities may be a sign or symptom of an illness such as depression or schizophrenia. However, some individuals may be demoralized or in some way unmotivated to improve by external circumstances (such as fiscal incentives to stay ill and maintain health insurance).
+
+Assessing impairment requires a thorough review of the history of the mental disorder, the history of the individual’s ability to function over time, and his or her response to treatment and rehabilitation.
+
+14.1 a Interpretations of Symptoms and Signs
+The individual’s own description of his or her functioning and limitations is an important source of information. Information from nonmedical sources, such as family members and others who have knowledge of the person, may be useful in indicating the level of functioning and the severity of the impairment.
+
+Information concerning the individual’s behavior while performing activities of daily living is particularly useful in determining his or her ability to function. Results of work evaluations and rehabilitation programs, as well as information from day programs, are also useful in assessing level of functioning.
+
+Information from both medical and nonmedical sources may be used to obtain detailed descriptions of the individual’s activities of daily living, social functioning, concentration, persistence, pace, and ability to tolerate increased mental demands (stress). This information may be available from professionals in community mental health centers, daycare centers, and sheltered workshops, and it also can be provided by family members. If the descriptions from these sources are insufficiently detailed or in conflict with the observed clinical picture or the reports of others, it is necessary to resolve the inconsistencies. Any gaps in the history should also be explained.
+
+An individual’s level of functioning may vary considerably over time. The level of functioning at a specific time may seem relatively adequate or, conversely, rather poor. Proper evaluation of an impairment must take into account variations in the level of functioning over time to arrive at a determination of severity. Thus, it is important to obtain evidence over a sufficiently long period of time before the date of examination. This evidence should include treatment notes, hospital discharge summaries, work evaluations, and rehabilitation progress notes if they are available.
+
+14.1 b Description of Clinical Studies The use of well-standardized psychological tests, such as the Wechsler Adult Intelligence Scale
+-- chars 3093 --
+(WAIS) and the Minnesota Multiphasic Personality Inventory-2 (MMPI-2) may improve diagnostic acumen and help establish the existence of a mental disorder. For example, the WAIS is useful in documenting mental retardation. Broad-based neuropsychological assessments using, for example, the Halstead-Reitan or the Luria-Nebraska batteries may be useful in determining deficiencies in brain functioning, particularly in individuals with subtle signs such as those that may be seen in traumatic brain injuries.
+
+Taking a standardized test requires concentration, persistence, and pacing; thus, observing individuals during the testing process may yield useful information. The summary of test results should include the objective findings, a description of what occurred during the testing, and the test results. A report of intellectual assessment should include a discussion of whether the obtained intelligence quotient (IQ) score is considered to be valid and consistent with the individual’s impairment and degree of functional limitation.
+
+14.2 Psychiatric
+Diagnosis and Impairment
+In general, the history, signs, and symptoms of a mental disorder should justify the diagnosis, which should be made according to DSM-IV criteria. If there is uncertainty about the exact diagnosis, the differential diagnosis should be discussed. Document adequate descriptions of impairments and functional limitations from the reports of professional sources, such as psychiatrists, psychologists, psychiatric nurses, psychiatric social workers, and health professionals in hospitals and clinics. Data gathered over a period of years are particularly useful.
+
+The Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition, commonly known as DSM-IV, is a widely accepted classification system for mental disorders. It is similar to another system, the International Classification of Diseases (ICD), which also is in widespread use.5 The criteria for mental disorders include a wide range of signs, symptoms, and impairments. Many mental disorders are characterized by impairments in a number of
+
+areas. DSM-IV calls for a multiaxial evaluation. Each of five axes refers to a different class of information. The first three axes constitute the major diagnostic categories. These include the major clinical syndromes and the conditions that are the focus of treatment (axis I), the personality and developmental disorders (axis II), and the physical disorders and conditions that may be relevant to understanding and managing the care of the individual (axis III). Axis IV, referring to psychosocial stressors, and axis V, referring to adaptive functioning, may be particularly important for assessing impairment severity. In particular, axis V is a rating of the individual’s global functional capacity and, like disability, is related directly to the effects of impairments.
+
+In some individuals it is not possible to make a determination on the basis of the available information.
+Under these circumstances, the examiner should not feel obligated to provide an opinion about which he or she is uncertain but should seek and review relevant information from additional sources, such as medical and employment records, before rendering an opinion. The examiner must also consider the effects that medication, motivation, and rehabilitation may have on the individual’s signs, symptoms, and ability to function. A detailed discussion of these factors follows.
+-- chars 3465 --
+14.2 a Effects of Medication
+Attention must be given to the effects of medication on the individual’s signs, symptoms, and ability to function. Although psychoactive medications may control certain signs or symptoms, such as hallucinations, impaired attention span, restlessness, or hyperactivity, such treatment may not affect all impairments and limitations imposed by the mental disorder. If an individual’s symptoms are attenuated by psychoactive medications, the evaluator should focus particular attention on limitations that may persist. Those limitations should be used as measures of the impairment’s severity.
+
+Psychoactive medications used to treat some mental illnesses may cause drowsiness, blunted affect, or unwanted effects involving various body systems. Moreover, medications necessary to control such symptoms as hallucinations may result in decreased motivation and level of activity. These side effects should be considered in evaluating the overall severity of the individual’s impairment and ability to function. As explained in Chapter 2, the evaluator may need to provide an impairment estimate for the drug’s side effects.
+
+14.2 b Effects of Motivation
+Assessing motivation is difficult because lack of motivation may be hard to distinguish from mental impairment and is, in fact, a classic symptom of schizophrenia. When is an individual lacking energy, concentration, and initiative depressed or autistically preoccupied, and when is the individual unmotivated? Ultimately, making this distinction requires a clinical judgment, which should be aided by careful investigation of the individual’s efforts and accomplishments before the onset of the alleged impairment and a search for associated signs and symptoms of common mental disorders.
+
+Motivation is a difficult issue for assessment since it is mutifactorial in nature, involving the following potential factors: (1) lack of motivation as a sign of illness such as depression or schizophrenia; (2) fear of losing entitlement or other benefits of being ill;
+(3) a side effect of some neuroleptic medications;
+(4) conscious malingering; (5) a consequence of demoralization of persons with any chronic illness;
+(6) social network support for illness; and others. Thus, the determination of motivation is often nonempirical, and conclusions are all too often drawn on the basis of prejudice. Many times, an individual’s motivation is not well understood even after careful assessment.
+
+Nevertheless, motivation is a link between impairment and disability. For some people, poor motivation is a major cause of poor functioning. An individual’s underlying character may be important in determining whether he or she is motivated to benefit from rehabilitation. Personality characteristics usually remain unchanged throughout life. However, internal events and psychological reactions can influence the course of illness. An individual who tends to be dependent, for example, may become even more dependent as his or her illness proceeds.
+-- chars 3037 --
+14.2 c Effects of Rehabilitation
+Frequently, the degree of vocational limitation of the individual with impairment of function is of paramount importance to the evaluator. This limitation may range from minimal to total. In addition, the severity of functional impairment may change with the course of the illness. When the individual needs less medical care, vocational skills may be intact, or the individual may have limitations that may or may not be reversible. The evaluator should judge the possible duration of the impairment that remains, whether remission is likely to be fast or slow, whether it will be partial or total, and whether the
+
+impairment is likely to remain stable or to change. These considerations should contribute to the examiner’s judgment about the degree of impairment.
+
+Rehabilitation is a sine qua non in the treatment of most people who have recovered or are recovering from the acute phase of a mental disorder, especially a major mental disorder. Even if it is not possible to effect total remission, an outcome may be considered worthwhile if it has been possible to move the individual’s functional impairment to a lesser degree.
+
+While for some persons lack of motivation appears to be a major feature of continuing impairment and may be a major feature of an ongoing mental disorder, many individuals who undergo proper rehabilitative measures, including some who have organic illnesses, achieve improvements in functioning.
+Determining whether impaired functioning will persist is sometimes an imprecise science, and some degree of uncertainty about this prediction often exists. The use of the impairment label can be seen as pessimistic, providing an adverse prediction that may be self-fulfilling. However, the tendency for physicians and others to minimize psychiatric impairments must also be considered; this tendency may lead to failure to refer individuals for potentially helpful rehabilitative measures.
+
+An important aspect of rehabilitation is the recognition that an individual who is taking certain types of medication may be able to sustain a satisfactory degree of functioning, whereas without medication he or she might fail to do so. For instance, there may be only a slight problem in the thinking process while the person is taking a suitable medication but a severe one if he or she is not taking medication. The physician should note the individual’s performance with and without medication.
+
+Another consideration is providing an employer the assurance that a worker who is taking the proper medication and is in an appropriate job can avoid injury both to himself or herself and to coworkers. An analogy is seen in the care and treatment of a worker who has seizures: in such an instance, informing and educating the worker, as well as his or her family, employer, and coworkers, are vital steps and should be a part of the rehabilitation process.
+
+Just as there are degrees of impairment, total rehabilitation may not be possible, as is the case in the great majority of individuals afflicted with schizophrenia. To use an analogy from physical medicine, it is essentially impossible for an amputated leg to be
+-- chars 3187 --
+replaced, and the affected individual cannot hope to regain perfect ambulation. However, a well-fitted prosthesis, accompanied by practice and training, can greatly improve the individual’s ability to walk. If, in addition, the individual obtains suitable transportation, he or she may be restored to full gainful employment. If normal ambulation is a job requirement, an employer may be able to provide an alternative position or to modify existing tasks so that they can be performed by an amputee making skillful use of a prosthesis.
+
+Although the analogy between the loss of a limb and the loss of capability resulting from a mental disorder has limitations, impairment from a mental disorder can be just as real and severe as the impairment resulting from an injury or other illness. The link between motivation and recovery may need strengthening in individuals who are impaired by either physical or mental illness. This task falls primarily to rehabilitationists and psychiatrists, but others can assist. An employer’s providing alternative tasks or modifying existing work conditions may be as much a part of restoring vocational possibilities to an individual with mental illness as it is to one recovering from an injury or to one who has elements of both mental and physical illness.
+
+14.3 A Method of Evaluating Psychiatric Impairment
+Percentages are not provided to estimate mental impairment in this edition of the Guides. Unlike cases with some organ systems, there are no precise measures of impairment in mental disorders. The use of percentages implies a certainty that does not exist. Percentages are likely to be used inflexibly by adjudicators, who then are less likely to take into account the many factors that influence mental and behavioral impairment. In addition, the authors are unaware of data that show the reliability of the impairment percentages. After considering this difficult matter, the Committee on Disability and Rehabilitation of the American Psychiatric Association advised Guides contributors against the use of percentages in the chapter on mental and behavioral disorders of the fourth edition, and that remains the opinion of the authors of the present chapter.
+
+No available empirical evidence supports any method for assigning a percentage of impairment of the whole person; however, the following approach may be helpful in estimating the extent of mental impairments. Not everyone who has a mental or behavioral disorder is limited in the ability to perform activities of daily living; however, there are individuals with less than chronic, but still unremitting, impairments who are severely limited in some areas of function.6
+
+Translating specific impairments directly and precisely into functional limitations is a complex and poorly understood process. Current research finds little relationship between such psychiatric signs and symptoms as those identified during a mental status examination and the ability to perform competitive work. However, four main categories exist that assess many areas of function: (1) ability to perform activities of daily living; (2) social functioning;
+-- chars 3154 --
+(3) concentration, persistence, and pace; and
+(4) deterioration or decompensation in work or worklike settings. Independence, appropriateness, and effectiveness of activities should also be considered. The four aspects of functional limitation are discussed below and can be linked, or causally related, to specific impairments as described in Table 14-1. The examiner should assess and record the extent of function in all these categories.
+
+14.3 a Activities of Daily Living
+Activities of daily living, as indicated in Table 1-2, include such activities as self-care, personal hygiene, communication, ambulation, travel, sexual function, and sleep. Any limitations in these activities of daily living should be related to the mental disorder rather than to such factors as lack of money or transportation. In the context of the individual’s overall situation, the quality of these activities is judged by their independence, appropriateness, effectiveness, and sustainability. It is necessary to define the extent to which the individual is capable of initiating and participating in these activities independent of supervision or direction.
+
+The examiner must assess not simply the number of activities that are restricted but the overall degree of restriction or combination of restrictions. For example, a person who is able to cook and clean might be considered to have marked restriction of daily activities if he or she were too fearful to leave home to shop or go to the physician’s office.
+
+14.3 b Social Functioning
+Social functioning refers to an individual’s capacity to interact appropriately and communicate effectively with other individuals. Social functioning includes the ability to get along with others, such as family members, friends, neighbors, grocery clerks, landlords, or bus drivers. Impaired social functioning may be demonstrated by a history of altercations, evictions, firings, fear of strangers, avoidance of interpersonal relationships, social isolation, or similar events or characteristics. It is helpful to give specific examples illustrating the individual’s impaired social functioning.
+
+Strength in social functioning may be documented by an individual’s ability to initiate social contact with others, communicate clearly with others, and interact and actively participate in group activities. Cooperative behavior, consideration for others, awareness of others’ sensitivities, and social maturity also need to be considered. Social functioning in work situations may involve interactions with the public, responding to persons in authority such as supervisors, or being part of a team.
+
+The overall degree of interference with a particular aspect or combination of aspects is as significant as the number of aspects in which social functioning is impaired. For example, a hostile, uncooperative person who is tolerated by local storekeepers and neighbors may have marked restriction in overall functioning because antagonism and hostility are not acceptable in the workplace or in social contexts.
+-- chars 3060 --
+14.3c Concentration, Persistence, and Pace Concentration, persistence, and pace are needed to perform many activities of daily living, including task completion. Task completion refers to the ability to sustain focused attention long enough to permit the timely completion of tasks commonly found in activities of daily living or work settings. Deficiencies in concentration, persistence, and pace are best noted from previous work attempts or from observations in worklike settings, such as day-treatment centers and incentive work programs. Describing specific examples of the individual’s capabilities is useful. Major impairments of these abilities can often be assessed through direct psychiatric examinations or psychological testing. However, mental status examinations or psychological test data alone should not be considered adequate to fully describe the individual’s concentration and sustained ability to perform
+work tasks.
+
+Concentration and mental status may be assessed by having the individual perform such tasks as subtracting 7s serially from 100. In psychological tests of intelligence or memory, concentration is assessed through tasks requiring short-term memory or tasks that must be completed within established time limits. Strengths and weaknesses in mental concentration may be described in terms of frequency of errors, the time it takes to complete the task, and the extent to which assistance is required to complete the task. A person who appears to concentrate adequately during a mental status examination or a psychological test may not do so in a setting more like one common to the working world.
+
+14.3d Deterioration or Decompensation in Complex or Worklike Settings
+Deterioration or decompensation in complex or worklike settings refers to an individual’s repeated failure to adapt to stressful circumstances. In the face of such circumstances, the individual may withdraw from the situation or experience exacerbation of signs and symptoms of a mental disorder; that is, he or she may decompensate and have difficulty maintaining performance of activities of daily living, continuing social relationships, and completing tasks.
+Stresses common to the work environment include attendance, making decisions, scheduling, completing tasks, and interacting with supervisors and peers. It is useful to give examples of the individual’s decompensation and the stresses that might have brought it about.
+
+In assessing the individual’s stress tolerance, the examiner should be mindful of the following issues. First, stress may be defined in reference to a “reasonable man” standard in some systems and to other standards in other systems. Second, the circumstances of a given case might suggest a prophylactic preclusion from certain types of tasks or work settings. For example, a person with symptoms of posttraumatic stress disorder that date from a robbery and assault might require a prophylactic preclusion from jobs involving contact with the general public or handling large sums of money. In contrast, a stressful personality clash between the individual and his or her supervisor might require only that the individual be precluded from working with that particular supervisor.
+-- chars 3241 --
+14.3e Classes of Impairment Due to Mental and Behavioral Disorders
+Table 14-1 provides a guide for rating mental impairment in each of the four areas of functional limitation on a five-category scale that ranges from no impairment to extreme impairment. The following are recommended as anchors for the categories of the scale.
+
+1. None means no impairment is noted in the function.
+2. Mild implies that any discerned impairment is compatible with most useful functioning.
+3. Moderate means that the identified impairments are compatible with some, but not all, useful functioning.
+4. Marked is a level of impairment that significantly impedes useful functioning. Taken alone, a marked impairment would not completely preclude functioning, but together with marked limitation in another class, it might limit useful functioning.
+5. Extreme means that the impairment or limitation is not compatible with useful function. Extreme
+
+impairment in carrying out activities of daily living implies complete dependency on another person for care. In the sphere of social functioning, extreme impairment implies that the individual engages in no meaningful social contact, as with a person who is in a withdrawn, catatonic state. An extreme limitation in concentration, persistence, and pace means that the individual cannot attend to conversation or any productive task; this might be seen in a person who is in an acute confusional state or in a person with a complete loss of shortterm memory.
+
+A person who cannot tolerate any change at all in routines or in the environment, or one who cannot function and who decompensates when schedules change in an otherwise structured environment, has an extreme limitation of adaptive functioning and an extreme psychiatric impairment. Such an individual might, for example, experience a psychotic episode if a meal is not served on time or might have a panic attack if left without a companion in any situation.
+
+In the ordinary individual, extreme impairment in only one area or marked limitation in two or more spheres would be likely to preclude the performance of any complex task, such as one involving recreation or work, without special support or assistance, such as that provided in a sheltered environment.
+
+An individual impaired to a moderate degree in all four categories of functioning would be limited in the ability to carry out many, but not all, complex tasks. Mild and moderate limitations reduce overall performance but do not preclude some performance. Table 14-2 links specific impairments to potential associated disabilities.
+
+Translating these guidelines for rating individual impairment on ordinal scales into a method for assigning percentage of impairments, as if valid estimates could be made on precisely measured interval scales, cannot be done reliably. One cannot be certain that the difference in impairment between a rating of mild and moderate is of the same magnitude as the difference between moderate and marked. Furthermore, a moderate impairment does not imply a 50% limitation in useful functioning, and an estimate of moderate impairment in all four categories does not imply a 50% impairment of the whole person.
+-- chars 3254 --
+Eventually, research may disclose direct relationships between medical findings and percentages of mental impairment. Until that time, the medical profession must refine its concepts of mental and physical impairment, improve its ability to measure limitations, and continue to make clinical judgments.
+
+14.4 Assessing
+Impairment Severity
+The following factors, discussed below, must be considered when assessing severity of an individual’s impairment: (1) the effects of treatment; (2) the effects of structured settings; (3) the variability of mental disorders; (4) an assessment of workplace function; and (5) the effects of common mental and behavioral conditions.
+
+14.4a Effects of Treatment
+Problems often arise in evaluating mental impairments of individuals who have long histories of repeated hospitalizations or prolonged outpatient care with supportive therapy and medication. Individuals with
+
+chronic psychotic disorders commonly have their lives structured in such a way as to minimize stress and reduce their signs and symptoms. Such individuals may therefore be more impaired in terms of work capability than their signs and symptoms indicate. The results of a single examination may not adequately describe the ability of such a person to function in a sustained way. Thus, it is necessary to review information pertaining to the individual’s functioning at times of increased stress, such as in a worklike setting.
+
+14.4b Effects of Structured Settings
+In cases involving long-standing mental disorders, overt symptoms may be particularly controlled or attenuated by psychosocial factors, such as placement in a hospital, halfway house, board and care facility, or similar environment. These highly structured and supportive settings may greatly reduce the mental demands placed on an individual. Although overt signs and symptoms of the underlying mental disorder may be minimized with lowered mental demands, the individual’s ability to function outside of the structured setting may not have changed. The evaluator of an individual whose symptoms are controlled in a structured setting must consider such factors as the individual’s response to past attempts to function successfully at work or in other unstructured environments.
+
+14.4 c Variability of Mental Disorders
+In judging the degree of mental impairment, it is important to recognize that there are various types of mental disorders, each of which, like a physical disorder, has its own natural course and unique characteristics. In addition, degrees of impairment may vary considerably among individuals with the same diagnosis.
+
+It is apparent that some serious mental disorders are chronic. The term remission, rather than cure, is therefore used to indicate an individual’s improvement. The remission may be intermittent, long term, or short term, and it may occur in stages rather than all at once. For example, an episode of depression that follows a stressful life event may turn out to be an adjustment disorder with depressed mood, which often is a short-term, self-limiting illness that clears up when the stressful situation is relieved. Other affective disorders have their own patterns of recurrence and chronicity that often, but not always, respond well to therapeutic interventions. Thus, an individual with a medication-resistant major depressive episode may remain unable to sleep, eat, concentrate, etc, for months or even years.
+-- chars 3471 --
+14.4d Assessment of Workplace Function Assessment of the ability to perform activities at work requires evaluation of similar abilities, along with unique skills, particular to the workplace. To assess the ability of an individual to function in the workplace, the evaluator may obtain additional information by using a multidimensional description of remaining work-related abilities. Four capacities, indicated below, have been used by SSA regulations to characterize residual functional capacity.
+
+1. Understanding and memory relate to the individual’s ability to remember procedures related to work; to understand and remember short, simple instructions; and to understand and remember detailed instructions.
+
+2. Sustained concentration and persistence relate to the individual’s ability to carry out short, simple instructions; carry out detailed instructions; maintain attention and concentration for extended periods of time; perform activities within a given schedule; maintain regular attendance and be punctual within customary tolerances; sustain an ordinary routine without special supervision; work with or near others without being distracted; make simple work-related decisions; complete a normal workday and workweek without interruptions from psychologically based symptoms; and perform at a consistent pace without an unreasonable number of and unreasonably long rest periods.
+
+3. Social interaction involves the individual’s ability to interact appropriately with the general public; ask simple questions or request assistance; accept instructions and respond appropriately to criticism from supervisors; get along with coworkers and peers without distracting them or exhibiting behavioral extremes; maintain socially appropriate behavior; and adhere to basic standards of neatness and cleanliness.
+
+4. Adaptation is the ability to respond appropriately to changes in the work setting; to be aware of normal hazards and take appropriate precautions; to use public transportation and travel to and within unfamiliar places; to set realistic goals; and to make plans independently of others.
+
+14.4e Effects of Common Mental and Behavioral Conditions
+Some categories of mental and behavioral conditions, including substance-dependence disorders, personality disorders (especially antisocial personality disorders), and adjustment disorders, are characterized by abnormal emotional responses to stressful life events, which resolve in a short time when the stressor is removed. The behavior during both controlled intervals and times of exacerbation should be noted.
+
+The schizophrenias are usually chronic disorders; the onset may be insidious and recognized only in retrospect. Certain organic disorders, such as traumatic brain injury and lifelong mental retardation, are persistent and chronic, and treatment consists of minimizing the functional loss inherent to the pathophysiologic changes. Evaluation of mental retardation and autism for social security considers the presence of mental incapacity evidenced by
+-- chars 3095 --
+(1) dependence on others for personal needs, such as toileting, eating, dressing, or bathing; and (2) an inability to follow directions, which precludes tests of intellectual functioning; or (3) a valid verbal performance or full-scale IQ of 59 or less, or a score of 60 through 69 along with physical or mental impairment affecting daily activities, social functioning, or concentration, persistence, and pace. Common psychiatric diagnoses, associated impairments in the
+form of demonstrable signs and symptoms, and commonly seen areas of decreased performance are discussed below and in Table 14-2 .
+
+14.4e.1 Substance Abuse and Personality Disorders
+Chronic substance abuse and personality disorders can coincide. The effects of chronic substance abuse include impairments in concentration, attention, impulse control, judgment, etc, which often last for the duration of the dependency. These behaviors can also occur with personality disorders. To evaluate the severity of the impairment, the examiner needs to assess whether there are (1) restrictions in activities of daily living; (2) difficulties in maintaining social functioning; (3) difficulties in completing tasks in a timely manner because of deficiencies in concentration, persistence, and pace; and (4) repeated episodes of decompensation and loss of adaptive functioning, averaging three times per year, with each episode lasting 2 or more weeks.
+
+14.4e.2 Somatoform Pain Disorders
+Pain that accompanies a medical impairment is generally taken into account in the impairment ratings throughout the Guides. Chronic pain and pain exceeding the anticipated amount are discussed in Chapter 18. Mental illness may distort the perception of pain. Pain may be part of a somatic delusion in an individual with a major depression or a psychotic disorder. Pain may become the object of an obsessive preoccupation, or it may be the chief complaint in a conversion disorder. A frequent problem in pain assessment is the failure of physicians to agree on whether there is an adequate physical explanation for the pain. It would be useful for the examining psychiatrist to understand whether other professionals treating the individual feel that his or her symptoms are out of proportion with the physical findings. If they are, the psychiatrist should consider this finding in making a differential diagnosis and should recognize the possibility of the presence of somatoform or other mental disorders.
+
+The essential feature of somatoform pain disorder in DSM-IV is preoccupation with pain in the absence of physical findings that adequately account for the pain and its intensity, as well as the presence of psychological factors that are judged to have a major role in the onset, severity, exacerbation, and maintenance of pain. In the past, this syndrome has been called psychogenic pain disorder or idiopathic pain disorder, but these terms are often used more loosely to describe any complaint of pain that is greater than the physician expects for the average person who has the same physical findings. The physician should recognize that anxiety and depression almost always magnify pain, and vice versa.
+-- chars 3187 --
+The following guidelines may be useful in determining whether pain is a symptom of a mental impairment: (1) All possible somatic causes of the pain have been eliminated by careful, comprehensive medical examinations; (2) some significant emotional stressor has occurred in the individual’s life that may have acted as a triggering agent, and the stressor and the pain have occurred in a reasonable sequence; and (3) evidence exists of a mental disorder other than a conversion-related one, and the pain may be a symptom of nonconversion-related mental disorders. For example, delusional pain may occur in an individual who has a subtle paranoid disorder such as might be the case with someone who believes Martians are irradiating his head, producing constant headaches, and where the belief antedated the pain.
+
+14.4e.3 Malingering
+Malingering may arise with mental disorders as well as with nonpsychiatric conditions. Examiners should be aware of this possibility when evaluating impairments. The possibility of obtaining monetary awards and avoiding work increases the likelihood of malingering. Certain symptoms, such as headache, lowback pain, peripheral neuralgia, and vertigo, are difficult to objectively assess. Conditions that have more of an apparent organic basis, such as appendicitis, a fracture, or pregnancy, tend to be more amenable to objective diagnostic studies than are some psychiatric and neurologic complaints.
+Malingerers with supposed psychiatric conditions may be seen in circumstances involving the avoidance of an unpleasant duty or requirement, such as going to jail or entering military service, and may be seen seeking insurance or entitlement benefits.
+
+Rather than giving outright fabrications, individuals may consciously or unconsciously exaggerate the symptoms of a disorder in the clinical or impairment evaluation setting. Malingering may be suspected when the individual’s symptoms are vague, ill defined, overdramatized, inconsistent, or not in conformity with signs and symptoms known to occur. In this situation, results of the physical and mental status examinations and other data and information of the evaluation may be inconsistent with the nature and intensity of the person’s complaints.
+
+Circumstances in which an unusual number of illdefined complaints occur in a circumscribed group, perhaps in a setting of poor morale or conflict, also may be viewed with suspicion. But the most appropriate approach for the examining physician is one of clinical neutrality, the application of standard interview and diagnostic procedures, and, if warning signs appear, a careful investigation that includes multidisciplinary evaluation and psychological testing as appropriate. For a more elaborate discussion of malingering, a text may be useful.7, 8
+
+Table 14-2 Selected Impairments and Common Limitations in Ability
+
+Impairment Schizophrenia
+
+Schizophrenia or depression
+Schizophrenia, depression, or anxiety disorder
+Posttraumatic stress disorder Borderline personality disorder Panic disorder with agoraphobia
+-- chars 3066 --
+Signs and Symptoms
+Loosening of associations Delusions and hallucinations Flat affect
+Inappropriate affect Bizarre behavior Disorganized behavior Social withdrawal; autism
+Impaired concentration and attention
+
+Decreased concentration Explosive outbursts Impulsivity
+Affective lability Social withdrawal
+
+Limitations in Ability
+Social, vocational, and activities of daily living* Social, vocational, and activities of daily living Social
+Social, vocational, and activities of daily living Social and vocational
+Social, vocational, and activities of daily living Social and vocational
+Social, vocational, and activities of daily living
+
+Vocational
+Social and vocational Social and vocational Social and vocational Social and vocational
+
+14.5 Examples of
+Impairment Due to Mental and Behavioral Disorders
+The following cases indicate the information needed to accurately assess impairment and residual function.
+
+Comment: An antidepressant once a day was begun, as was twice-weekly focal dynamic therapy with a time frame of 2 months. The man talked of his guilt about surviving all his male relatives (he had one older sister) and particularly his father, who had died when he was 14, leaving him “the stag in the house.” He resented his father’s dominant personality and his father’s push for him to be a scholar/athlete just like he had been. His father was a general surgeon. He envied and resented his father and was ambivalent about his death. He experienced his own MI as punishment for his resentment of his father and for his own success. As the antidepressant took effect and therapy elucidated his anger at his father, the guilt, as well as his fear of punishment and anxiety, diminished.
+He resumed working a few hours a day, eventually returned to full practice, and resumed his sexual life as well. He stopped psychotherapy after 2 months but was to continue the antidepressant for 1 year to help prevent recurrence of the depression.
+
+Axis IV: Rejection by job and boyfriend. Axis V: GAF of 50 to 60.
+Impairment Rating: This woman would be rated as having no impairment noted on activities of daily living in Table 14-1. However, her social functioning is class 3, as is her concentration, and her adaptation would be considered class 5.
+Comment: The class 5 adaptation rating is based on the woman’s inability to hold a job for longer than a few months due to her affective dyscontrol and impulsivity, as well as her inability to sustain any long-term relationships.
+The following general format for impairment reports has been adapted from that recommended by the Social Security Administration.4 The content of the report may vary, depending on the system for which the report is being prepared. An impairment report based on the Guides also should include the main features of the Report of Medical Evaluation form shown in Chapter 2.
+
+A. Introduction: The psychiatric or psychological examination report should show not only the individual’s signs, symptoms, laboratory findings (psychological test results), and diagnosis but also the effect of the emotional or mental disorder on his or her ability to function at the usual and customary level of personal, social, and occupational adjustment.
+-- chars 3224 --
+1. Specialty: The exam should be performed by a psychiatrist.
+2. General Observations: Include in the report general observations of the following:
+a. How the individual came to the examination.
+(1) Alone or accompanied.
+(2) Distance and mode of transportation.
+(3) If by automobile, who drove?
+b. General appearance:
+(1) Dress.
+(2) Grooming.
+(3) Appearance of invalidism.
+c. Attitude and degree of cooperation.
+d. Posture and gait.
+e. Involuntary movements.
+3. Informant: The psychiatrist should identify the person providing the history (usually the examinee) and should provide an estimate of the reliability of the history.
+4. Chief Complaint: This should include a detailed chronological account of the onset and progression of the current mental/emotional condition with special reference to the individual’s concerns.
+a. Date and circumstances of onset of the condition.
+b. Date the individual reported that the condition began to interfere with work, and how it interfered.
+c. Date the individual reported inability to work because of the condition and the circumstances.
+d. Attempts to return to work and the results.
+
+e. Outpatient evaluations and treatment for mental/emotional problems, including:
+(1) Name of treating sources.
+(2) Dates of treatment.
+(3) Type of treatment (name and dosage of medications, if prescribed).
+(4) Response to treatment.
+f. Hospitalizations for mental disorders, including:
+(1) Names of hospitals.
+(2) Dates of hospitalizations.
+(3) Treatment and response.
+g. Information concerning the individual’s:
+(1) Activities of daily living.
+(2) Social functioning.
+(3) Ability to complete tasks timely and appropriately.
+(4) Episodes of decompensation and their resulting effects.
+5. Past History: This should include a longitudinal account of the individual’s personal life, including:
+a. Relevant educational, medical, social, legal, military, marital, and occupational data and any associated problems in adjustment.
+b. Details (dates, places, etc) of any past history of outpatient treatment and hospitalizations for mental/emotional problems.
+c. History, if any, of substance abuse and/or treatment in detoxification and rehabilitation centers.
+6. Mental Status: The individual case facts will determine the specific areas of mental status that need to be emphasized during the examination, but generally the report should include a detailed description of the individual’s:
+a. Appearance, behavior, and speech (if not already described).
+b. Thought process (eg, loosening of association).
+c. Thought content (eg, delusion).
+d. Perceptual abnormalities (eg, hallucinations).
+e. Mood and affect (eg, depression, mania).
+f. Sensorium and cognition (eg, orientation, recall, memory, concentration, scope of information, and intelligence).
+g. Judgment and insight.
+7. Diagnosis: American Psychiatric Association standard nomenclature as set forth in the current Diagnostic and Statistical Manual of Mental Disorders.
+-- chars 3021 --
+8. Prognosis: Prognosis and recommendations for treatment, if indicated; also recommendations for any other medical evaluation (eg, neurologic, general physical) if indicated.
+B.
+Policy—Additional Requirements by Impairment
+1. Schizophrenic, Delusional (Paranoid) Schizo-affective, and Other Psychotic Disorders: The report should reflect:
+a. Periods of residence in structured settings such as halfway houses and group homes.
+b. Frequency and duration of episodes of illness and periods of remission.
+c. Side effects of medications.
+2. Organic Mental Disorders: The report should reflect:
+a. The source of the disorder, if known, the prognosis, and:
+(1) Whether there is an acute or chronic process.
+(2) Whether stable or progressive.
+(3) Changes at various points in time.
+b. The results of any psychological or neuropsychological testing that could serve to further document an organic process and its severity.
+c. Information regarding the results of any neurologic evaluations.
+d. Information about any neurologic testing (eg, EEG, CT scan) that may have been performed and the results, if available.
+3. Mental Retardation
+a. Current documentation of IQ by a standardized, well-recognized measure. Acceptable instruments will have a representative normative sample, a mean of approximately 100, and a standard deviation of approximately 15 in the general population, and will cover a broad range of cognitive and perceptual-motor functions (eg, the Wechsler scales).
+b. Verbal performance and full-scale IQ scores, together with the individual subtest scores.
+c. Interpretation of the scores and assessment of the validity of the obtained scores, indicating any factors that may have influenced the results, such as the individual’s attitude and degree of cooperation; the presence of visual, hearing, or other physical problems; and recent prior exposure to the same or a similar test.
+d. Consistency of the obtained test results with the individual’s education, vocational background, and social adjustment, especially in the area of personal self-sufficiency.

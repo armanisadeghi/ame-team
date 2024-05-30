@@ -28,6 +28,15 @@ small_2_slide_sample = [
 
 title_three_bullets_sample_json = [
     {
+        "title": "Navigating the Waves of Change: The Impending AI Revolution in Professional Practices",
+        "subtitle": "Presented by Arman Sadeghi",
+        "points": [
+            "The Inevitability of Technological Disruption: Understanding historical precedents and preparing for future transformations.",
+            "AI and the Legal Industry: An imminent paradigm shift urging professionals to adapt or face obsolescence.",
+            "Embracing AI: How adopting new technologies can revolutionize efficiency and competitive edge across industries."
+        ]
+    },
+    {
         "title": "Introduction to Change and Disruption",
         "points": [
             "Calm Before the Storm: Often overlooked yet critical.",

@@ -1,0 +1,256 @@
+================================================================================
+
+Chapter 10:
+-----------------------------------------------------------------
+The Endocrine System
+10.1 Principles of Assessment
+10.2 Hypothalamic-Pituitary Axis
+10.3 Thyroid
+10.4 Parathyroids
+10.5 Adrenal Cortex
+10.6 Adrenal Medulla
+10.7 Pancreas (Islets of Langerhans)
+10.8 Gonads
+10.9 Mammary Glands
+10.10 Metabolic Bone Disease
+10.11 Endocrine System Impairment Evaluation Summary
+
+-------INTRODUCTION START -------
+Introduction
+This chapter provides criteria for evaluating permanent impairment of the endocrine system. The endocrine system is composed of the hypothalmicpituitary complex, thyroid, parathyroids, adrenals, islet cell tissue of the pancreas, and gonads. These ductless glands secrete hormones that regulate the activity of organs or tissues of the body. These hormones control growth, bone structure, sexual development and function, metabolism, and electrolyte balance. The various endocrine glands are usually interdependent, and a disorder of one gland may be reflected by dysfunction in one or more of the other endocrine glands, which, in turn, may affect other body systems. Consider multiple system effects when an endocrine permanent impairment is identified.
+
+The following revisions have been made for the fifth edition: (1) the descriptions of endocrine gland function and of disease states have been updated, as well as the techniques for evaluation of these diseases;
+(2) the nomenclature of test procedures and of disease entities, such as diabetes mellitus, has been updated; and (3) although the criteria for percentage of impairment have remained the same, many more examples of impairment have been included.
+10.1 Principles of Assessment
+Before using the information in this chapter, the Guides user should become familiar with Chapters 1 and 2 and the Glossary. Chapters 1 and 2 discuss the Guides’ purpose, applications, and methods of performing and reporting impairment evaluations. The Glossary provides definitions of common terms used by many specialties in impairment evaluations.
+
+Dysfunction of an endocrine organ may be the result of an injury to the gland or of disease involving atrophy, hypertrophy, hyperplasia, or neoplasia. An endocrine impairment develops from altered hormone secretion by one or more endocrine glands and the effect of such hormonal aberration on nonendocrine tissue. An impairment rating reflects the severity of the medical condition, the need for medication, and the effects of the impairment on the individual’s ability to perform activities of daily living.
+
+When an endocrine disorder results in decreased secretion of a hormone, it is usually possible to replace the hormone by either the oral or the parenteral route, resulting in virtual normalization of body physiology except, of course, for the inability to secrete the hormone. Apart from the need to take the medication on an ongoing basis, decreased secretion alone does not warrant an impairment rating. In cases where the replacement hormone does not completely mimic physiologic hormone secretion, however, the individual may be given an impairment rating to reflect the change in terms of either normal activity or ability to respond to stress.
+-- chars 3282 --
+Endocrine deficiencies may cause or be associated with impairments of other organ systems. Impairment ratings in other body systems are evaluated separately and then combined with the impairment rating from this chapter, using the Combined Values Chart
+(p. 604) to determine the estimated whole person impairment.
+
+Disorders resulting in increased secretion of a hormone often can be effectively treated. In some cases, treatment may leave the individual with a reduced ability to secrete the hormone. If so, the severity of the resulting condition and the effect on the ability to perform activities of daily living are evaluated to determine the impairment rating.
+
+As stated in Chapter 2, even with appropriate medication, it is debatable whether the individual has regained the previous status of good health. Thus, the examiner may increase the impairment rating by a small percentage (1% to 3%) to account for an incomplete return to a condition of normal health.
+
+10.1 a Interpretation of Symptoms and Signs
+The endocrine system has a wide array of glands, each with specific symptoms; these symptoms are discussed in each gland section.
+
+10.1 b Description of Clinical Studies Clinical studies for the endocrine system generally assess hyperfunction (increased) or hypofunction (decreased) of a specific gland and are discussed in detail in each section.
+
+10.2 HypothalamicPituitary Axis
+The hypothalamus and the pituitary are regarded as a unit because of their interdependent function. The hypothalamus produces chemical factors that either inhibit or enhance production of anterior pituitary hormones. The hypothalamus also produces precursors (prohormones) of antidiuretic hormone (ADH) and oxytocin, which travel through neural axons and are stored in the posterior pituitary.
+
+The anterior lobe of the pituitary gland, with modulation by the hypothalamus, produces trophic hormones that control the activity of the thyroid gland (thyrotropin [TSH]), the adrenal gland (corticotropin [ACTH]), and the gonads (luteinizing hormone [LH] and follicle-stimulating hormone [FSH]). The production of growth hormone (GH) and prolactin (PRL) in the anterior lobe of the pituitary gland is also modulated by hypothalamic substances. These two hormones, however, exert their effects directly upon the tissues of the body rather than through stimulation of other hormones. Growth hormone is responsible for growth of the skeleton before epiphyseal closure and, in the adult, maintains normal fat, muscle, glucose, and skeletal metabolism, as well as a sense of well-being. For women, prolactin is necessary for lactation following delivery and for milk production in the suckling process. Its role in the male has not been ascertained.
+
+The posterior lobe of the pituitary is an extension of hypothalamic neurons. It is the location where antidiuretic hormone (vasopressin) and oxytocin are converted from their prohormone state and released into the blood. Antidiuretic hormone regulates the fluid balance of the body through its ability to influence the excretion of water. The actions of oxytocin may have a role in the process of labor.
+-- chars 3173 --
+Permanent impairments due to altered function of the thyroid gland, adrenal glands, gonads, and growth hormone are discussed in subsequent sections of this chapter.
+
+10.2 a Interpretation of Symptoms and Signs
+Hypothalamic and pituitary diseases can cause impairments through either structural abnormalities or alterations in hormone production. Structural changes resulting in end-organ impairment are considered in the relevant chapter. Visual field abnormalities are considered in Chapter 12, The Visual System. Temporal lobe seizures, frontal lobe abnormalities, obstructive hydrocephalus, and nonendocrine hypothalamic dysfunction are considered in Chapter 13, The Nervous System.
+
+Hypersecretion by the anterior lobe may be manifested by (1) prolactin hypersecretion resulting from a microadenoma or macroadenoma (prolactinoma),
+(2) growth hormone hypersecretion caused by a pituitary adenoma, or (3) corticotropin hypersecretion leading to adrenocortical hyperfunction. Prolactin excess results in hypogonadism, which in women may lead to amenorrhea or oligomenorrhea, infertility, varying degrees of estrogen deficiency with its detrimental effect on the vascular and skeletal systems, decreased libido, and galactorrhea. In men, it may result in decreased libido, impotence, or infertility. Impairment from prolactin excess is equivalent to gonadotropic deficiency of the appropriate end organ, that is, secondary ovarian failure in women and testicular failure in men. Gonadal failure is discussed further in Section 10.8 of this chapter.
+
+When growth hormone hypersecretion occurs before epiphyseal closure, gigantism results; when hypersecretion occurs in the adult, acromegaly results. The manifestations of acromegaly include enlargement of the hands and feet, coarseness of facial features, and prognathism. Fatigue and increased perspiration are common symptoms. Acromegaly of long duration leads to morbidity from degenerative arthritis, peripheral neuropathy, and shortened life expectancy resulting from an increased incidence of cardiovascular disease. Growth hormone excess may lead to insulin resistance and glucose intolerance, and it may precipitate or exacerbate diabetes mellitus.
+
+Hyposecretion of a single or of multiple anterior lobe hormones is known as hypopituitarism, and the deficiencies may be either partial or complete. In the adult years, pituitary tumors, infarction (especially postpartum infarction), and surgical or radiotherapeutic interventions are the most common causes, with a lower incidence caused by granulomatous and infiltrative diseases and head trauma.
+
+In adults, hypopituitarism most often results in hypogonadism and a deficiency of growth hormone production. The most common symptoms of hypogonadism in men are impotence, weakness, decreased motivation, and depression. The most common presenting symptom of hypogonadism in women is amenorrhea. Growth hormone deficiency is accompanied most often by muscle weakness and reduced exercise capacity, fat accumulation (especially intraabdominal), decreased bone density, lack of motivation, a poor sense of well-being, and social isolation. Postpartum pituitary infarction also results in an inability to lactate. Hypopituitarism in a person with diabetes mellitus results in decreasing insulin requirements with an increased incidence of hypoglycemic episodes. Effects of dysfunction of TSH and ACTH secretion will be discussed in Sections
+-- chars 3456 --
+10.3 and 10.5, respectively.
+
+Hyperfunction of the posterior lobe, which causes the syndrome of inappropriate antidiuretic hormone secretion (SIADH), may result from a variety of central nervous system disorders; however, SIADH is rarely permanent. Inability of the kidneys to secrete a water load leads to hyponatremia if water intake is not restricted. Fatigue and lethargy, progressing to confusion, coma, and seizures, may result depending on the degree of hyponatremia.
+
+Hypofunction of the posterior lobe results in ADH deficiency and diabetes insipidus. Hypofunction usually stems from diseases involving the hypothalamus or pituitary stalk and, less commonly, from diseases of the pituitary gland itself. The hypofunction may be hereditary, or it may be related to trauma, surgery, metastatic tumors, craniopharyngioma, histiocytosis X, or other conditions. If thirst response is normal, diabetes insipidus is mostly an inconvenience because of polyuria, polydipsia, and nocturia. If the inability to ingest an adequate amount of fluid ensues or if thirst is impaired because of concomitant hypothalamic disease, severe dehydration and hypernatremia may result, leading to central nervous system changes, eg, mental depression or coma.
+
+10.2 b Description of Clinical Studies Structural abnormalities are evaluated by roentgenograms of the sella turcica, computed tomography (CT), and magnetic resonance imaging (MRI). Angiography occasionally is required.
+Evaluation of visual fields may be needed; vision impairments are discussed in Guides Chapter 12, The Visual System.
+
+Hormonal function must be assessed, and this is often done by stimulation or suppression testing. Growth hormone deficiency is assessed by measuring GH in the blood after stimulation testing with insulin, exercise, levodopa, arginine, or other agents. Corticotropin deficiency is assessed by measuring serum corticotropin and cortisol levels and by stimulation testing with insulin or corticotropin-releasing hormone (CRH).
+
+The diagnosis of secondary hypothyroidism (pituitary and hypothalamic hypothyroidism) is made by demonstrating low concentrations of thyroid hormones without elevation of the thyrotropin level. In this circumstance, CT scanning or MRI and tests of pituitary function, including measurement of thyrotropin secretion after an injection of protirelin (TRH), are needed to determine whether the hypothalamus or the pituitary is responsible. Secondary gonadal insufficiency, that is, hypogonadotropic hypogonadism, requires the demonstration of endorgan failure, with low testosterone levels in men and low estrogen levels in women, as well as low or normal levels of the gonadotropins, LH and FSH.
+
+Insufficiency of antidiuretic hormone requires the documentation of urine hyposmolality in the face of a stimulus to concentrate urine, usually water restriction. Subsequently, an increase in urine osmolality in response to ADH administration must be demonstrated. Prolactin deficiency is documented by low basal levels of the hormone and its failure to increase after an injection of TRH, chlorpromazine, or other stimulating agents.
+-- chars 3158 --
+Growth hormone excess is documented by the failure to suppress GH concentration after a glucose load.
+Prolactin excess is documented by measurement of elevated basal levels of prolactin. Inappropriate secretion of ADH is documented by hyponatremia with inappropriately elevated urine osmolality, in the presence of normal cardiac, renal, adrenal, and thyroid function.
+
+10.2 c Criteria for Rating Permanent Impairment Due to Hypothalamic-Pituitary Axis Disorders
+The assessment of permanent impairment of the whole person from disorders of the hypothalamic-pituitary axis requires evaluation of (l) primary abnormalities related to GH, prolactin, or ADH; (2) secondary abnormalities in other endocrine glands, such as thyroid, adrenal, and gonads; and (3) structural and functional disorders of the central nervous system caused by anatomic abnormalities of the pituitary.
+
+The examiner must evaluate each disorder separately, using the guidelines in this or other chapters, such as those on the visual system (Chapter 12), nervous system (Chapter 13), or mental and behavioral disorders (Chapter 14). The estimated impairments of the various organ systems then should be combined by means of the Combined Values Chart (p. 604).
+Criteria for evaluating permanent impairment resulting from hypothalamic-pituitary axis disorders are given in Table 10-1.
+
+An individual with hypothalamic-pituitary disease belongs in class 1 when the disease can be controlled effectively with continuous treatment, with minimal impact on the ability to perform activities of daily living. If a person does not take the medication, a different degree of impairment may result.
+
+An individual with hypothalamic-pituitary disease belongs in class 2 when the related symptoms and signs are inadequately controlled by treatment and impact ability to perform activities of daily living.
+
+An individual with hypothalamic-pituitary disease belongs in class 3 when severe symptoms and signs persist despite treatment and significantly impact ability to perform activities of daily living.
+
+10.3 Thyroid
+
+10.3 a Interpretation of Symptoms and Signs
+The thyroid gland, through its secretion of hormones, influences the metabolic rate of many organ systems. Hypersecretion and hyposecretion of thyroid hormones cause impairments. Hypersecretion by the thyroid gland results in hyperthyroidism and may be manifested by nervousness, weight loss, heat intolerance, goiter, tachycardia, palpitation, atrial fibrillation, frequent bowel movements, tremor, and muscle weakness. Eye changes, such as exophthalmos and double vision, may also be present. Hyposecretion by the thyroid gland results in hypothyroidism and may be manifested by lethargy, slowing of mental processes, weakness, cold intolerance, dry skin, constipation, and myxedema. Late complications include myocardial insufficiency, effusions into body cavities, and coma. Hypothyroidism in infancy may be associated with failure of physical and mental development.
+-- chars 3023 --
+10.3
+b Description of Clinical Studies These include, but are not limited to, determination of (1) circulating thyroid hormone levels, including
+total thyroxine, free thyroxine, triiodothyronine, and free triiodothyronine; (2) circulating pituitary thyrotropin level measured by a sensitive assay;
+(3) radioiodine uptake of the thyroid gland; (4) thyroid antibodies; and (5) radiotriiodothyronine resin or red blood cell uptake. The nature of thyroid nodules is often best evaluated by needle aspiration or biopsy.
+
+10.3 c Criteria for Rating Permanent Impairment Due to Thyroid Disease
+In practically all individuals with hyperthyroidism, the condition can be corrected by treatment and there is no loss in the ability to perform activities of daily living. However, the ophthalmopathy seen in some cases of hyperthyroidism may persist after treatment of the thyrotoxic state and result in permanent cosmetic disfigurement or visual impairment. In severe cases, loss of vision may result. These conditions should be evaluated as described in the chapters on the ear, nose, throat, and related structures (Chapter 11) and the visual system (Chapter 12). When atrial fibrillation persists following adequate treatment of hyperthyroidism, this condition should be evaluated as described in the chapters on the cardiovascular system (Chapters 3 and 4).
+
+In most instances, hypothyroidism can be controlled satisfactorily by the administration of thyroid medication. Occasionally, because of associated disease in other organ systems, full hormone replacement may not be possible. Table 10-2 gives the criteria for rating permanent impairment due to thyroid disease.
+
+Diagnosis: Hashimoto’s thyroiditis controlled by treatment.
+Impairment Rating: 5% impairment of the whole person.
+Comment: Regular monitoring of thyroid disease.
+
+An individual belongs in class l when (1) continuous thyroid therapy is required for correction of the thyroid insufficiency or for maintenance of normal thyroid anatomy and (2) there is no objective physical or laboratory evidence of inadequate replacement therapy.
+
+10.4  Parathyroids
+The secretion of parathyroid hormone from the four parathyroid glands regulates the levels of serum calcium and phosphorus, which are essential to the proper functioning of the skeletal, digestive, renal, and nervous systems. The major abnormalities of the glands include hyperfunction, hypofunction, and carcinoma.
+
+10.4 a Interpretation of Symptoms and Signs
+Hypersecretion of parathyroid hormone, or hyperparathyroidism, may be due to the hyperfunctioning of one gland, as with an adenoma, or that of all four glands, as with hyperplasia, or may result from a parathyroid carcinoma. Manifestations of this condition include lethargy, constipation, nausea, vomiting, and polyuria, and, in extreme cases, bone pain, renal calculi, renal failure, and coma.
+
+Hyposecretion of parathyroid hormone, or hypoparathyroidism, may be congenital in origin or due to inadvertent removal of the parathyroid glands during thyroidectomy, surgical excision for the treatment of hyperparathyroidism, or unknown causes.
+-- chars 3158 --
+Manifestations include chronic fatigue, paresthesia, tetany, and seizures. Additionally, in idiopathic cases, there may be cataracts, chronic moniliasis of the skin, alopecia, and hypofunction of other endocrine organs, including hypothyroidism, diabetes mellitus, adrenal insufficiency, hypogonadism, and pernicious anemia.
+10.4
+b Description of Clinical Studies Techniques for evaluating parathyroid gland function include determinations of serum calcium, phosphorus, albumin, creatinine, magnesium, parathyroid hormone levels, 1,25(OH)2 vitamin D, calcium concentration in urine, and urinary cyclic adenosine monophosphate response to intravenously administered parathyroid hormone. Intravenous pyelography, skeletal roentgenography, and bone density studies may be useful. Ultrasonography, MRI, and CT and sestamibi scanning are useful tools in localizing parathyroid adenomas.
+
+10.4 c Criteria for Rating Permanent Impairment Due to Parathyroid Disease
+Hyperparathyroidism
+In most cases of hyperparathyroidism, surgical treatment results in correction of the primary abnormality, although secondary symptoms and signs may persist, such as fracture, renal calculi, or renal failure. The latter signs should be evaluated according to criteria in the chapters on the urinary and reproductive systems (Chapter 7) or musculoskeletal system (Chapters 15 through 17). If surgery fails, or if the individual cannot undergo surgery, long-term therapy may be necessary, in which case the permanent impairment may be classified according to the criteria in Table 10-3.
+
+Hypoparathyroidism
+Hypoparathyroidism is a chronic condition of variable severity that requires long-term medical therapy in most cases. The degree of severity determines the estimated permanent impairment rating, as Table 10-4 indicates.
+
+10.5  Adrenal Cortex
+The adrenal cortex synthesizes and secretes adrenocortical hormones. These hormones participate in the regulation of electrolyte and water metabolism and in the intermediate metabolism of carbohydrate, fat, and protein. They also affect inflammatory response, cell membrane permeability, and immunologic responses, and they play a role in the development and maintenance of secondary sexual characteristics.
+
+Impairment may result from either hypersecretion or hyposecretion of the cortical hormones. Such abnormalities may be associated with dysfunction of another endocrine gland, for example, the pituitary. If this occurs, the adrenal impairment and the impairment related to the other gland are both evaluated, and the impairments are combined by means of the Combined Values Chart (p. 604) to determine the whole person impairment.
+
+10.5 a Interpretation of Symptoms and Signs
+Hypersecretion of adrenocortical hormones results from hyperplasia or from benign or malignant tumors of the adrenal cortex. The symptoms and signs of adrenocortical disease may arise from hypersecretion of one or more of the following hormones: (1) glucocorticoids, (2) mineralocorticoids,
+-- chars 3039 --
+(3) androgens, and (4) estrogens. In some instances, there may be hypersecretion of hormones in one category and hyposecretion of those in another. Iatrogenic Cushing’s syndrome secondary to supraphysiologic doses of glucocorticoids administered for systemic diseases such as bronchial asthma, systemic lupus erythematosus, or rheumatoid arthritis is the most common condition related to adrenal hormonal excess.
+
+Among the diseases caused by hypersecretion of the adrenocortical hormones are Cushing’s syndrome, the adrenogenital syndrome, and primary aldosteronism. Hypersecretion of the adrenal cortex caused by hyperplasia may be associated either with a tumor of the anterior pituitary gland or with a malignant tumor that arises outside the endocrine system and causes ectopic corticotropin secretion.
+
+Hyposecretion of adrenocortical hormones may be primary, resulting from surgical removal or destruction of the adrenals, as with Addison’s disease or by metastatic cancer; secondary, resulting from decreased production of corticotropin; or tertiary, resulting from decreased production of corticotropinreleasing hormone by the hypothalamus. Therapy is guided by the number of hormonal deficiencies, which may be single, as in hypoaldosteronism, or multiple, as in adrenocortical destruction. One normal adrenal gland can compensate for the loss of the other.
+
+10.5 b Description of Clinical Studies These techniques include (1) measurement of adrenocortical hormones in the urine, such as free cortisol and aldosterone, and of hormones in the plasma, such as cortisol and aldosterone; (2) meas-
+urement of corticotropin, serum electrolytes, plasma glucose, and creatinine; (3) measurement of the effects of suppression and stimulation of adrenocortical function; and (4) roentgenography of the adrenal glands, CT scanning, MRI, arteriography, and venography of the pituitary drainage.
+
+10.5 c Criteria for Rating Permanent Impairment Due to Adrenal Cortex Disease
+Hypoadrenalism is a lifelong condition that requires long-term replacement therapy with glucocorticoids and/or mineralocorticoids for proven hormonal deficiencies. Evaluation of improvement may be difficult because a person may be fully functional
+on an everyday basis while taking replacement medication but not be able to respond properly to the stress of fever, trauma, infection, or very warm weather. This impaired ability to respond to stress needs careful consideration. Impairments should be classified according to Table 10-5.
+
+Hyperadrenocorticism caused by the chronic side effects of supraphysiologic doses of glucocorticoids, that is, iatrogenic Cushing’s syndrome, is related to dosage and duration of treatment and may cause osteoporosis, hypertension, diabetes mellitus, and the catabolic effects that result in cataracts, aseptic necrosis, myopathy, striae, and easy bruising.
+Permanent impairments may range from 0% to 100%, depending on the severity and chronicity of the disease process for which the steroids are given. Impairments from diseases of the pituitary-adrenal axis should be estimated according to Table 10-6.
+-- chars 3135 --
+† The degree of estimated impairment will depend on the effects of the tumor on other organ systems; appropriate Guides chapters should be consulted
+
+10.6  Adrenal Medulla
+10.6 a Interpretation of Symptoms and Signs
+The adrenal medulla synthesizes and secretes primarily epinephrine, which functions in the regulation of blood pressure and cardiac output and, to some extent, affects the intermediary metabolism of the body. The adrenal medulla is usually not essential to the maintenance of life or well-being. Its absence may constitute a permanent impairment rating if an abnormality is detected in the individual’s ability to perform activities of daily living, especially in the response to stress. Hyperfunction of the adrenal medulla may be caused by pheochromocytomas or, rarely, by hyperplasia of the chromaffin cells.
+Pheochromocytomas may arise at any site in the body that has sympathetic nervous tissue. The presence of a pheochromocytoma is usually associated with paroxysmal or sustained hypertension and may produce manifestations of coronary artery disease. Pheochromocytomas may be multiple in an individual and may occur in families in association with medullary carcinoma of the thyroid and hyperplasia of the parathyroids; this constitutes the syndrome of multiple endocrine neoplasia. Approximately 10% of pheochromocytomas are malignant.
+
+10.6 b Description of Clinical Studies
+These techniques include (1) measurement of unmetabolized urinary catecholamines, including total catecholamines, epinephrine, and norepinephrine, and of their degradation products in urine, vanillylmandelic acid, and metanephrines; (2) measurement of the plasma catecholamines, epinephrine, norepinephrine, and dopamine; (3) suppressive response of catecholamines to oral clonidine; (4) radiography of the adrenals by CT scanning and MRI; and (5) nucleotide scanning with 123I/ 131I-metaiodobenzylguanidine (MIBG).
+
+10.6 c Criteria for Evaluating Permanent Impairment Due to Adrenal Medulla Disease
+Permanent impairment related to a pheochromocytoma may be classified by means of Table 10-7.
+
+10.7 Pancreas (Islets of Langerhans)
+Insulin and glucagon are among the hormones secreted by the islets of Langerhans. Both hormones are required for the maintenance of normal metabolism of carbohydrates, lipids, and proteins.
+Permanent impairment may result from a deficiency or an excess of either hormone. Removal of normal pancreatic tissue during the resection of an islet cell neoplasm does not constitute an endocrine impairment if, after the operation, the individual’s carbohydrate tolerance is normal.
+10.7
+a Interpretation of Symptoms and Signs
+Abnormalities of islet cell function may be manifested by high plasma glucose levels, as in diabetes mellitus, or by low plasma glucose levels, as in hypoglycemia. Diabetes mellitus is classified into two main groups: type 1 diabetes and type 2 diabetes. The complications of diabetes mellitus fall into two general categories: (1) those that are directly related to the degree of hyperglycemia and (2) the chronic complications resulting from inadequate control of hyperglycemia and lipid metabolism over many years.
+-- chars 3230 --
+People with type 1, if untreated, will develop severe hyperglycemia and ketonemia, resulting in dehydration, weight loss, and severe weakness, ultimately progressing into stupor, coma, and then death. This type of diabetes mellitus usually begins in young persons, but it may occur at any age.
+
+People with type 2 generally are over 40 years old and overweight. In the early years of this disease, these people do not develop severe hyperglycemia and its associated symptoms and, indeed, may not experience any symptoms of the disease. In later years, when insulin production falls significantly, the hyperglycemic symptoms become more evident.
+
+The main chronic complications of diabetes mellitus and associated impairments are (1) retinopathy, causing visual impairment; (2) nephropathy, causing renal impairment; (3) neuropathy, causing various neuropathic impairments; and (4) atherosclerosis, causing atherosclerotic heart disease, as well as cerebrovascular and peripheral vascular disease.
+
+Hypoglycemia occasionally causes impairment. It may result from excessive insulin that either is produced endogenously or administered by injection. Hypoglycemia may be manifested by weakness, sweating, tachycardia, headache, confusion, muscular incoordination, blurred vision, loss of consciousness, and convulsions. Prolonged hypoglycemia or repeated severe attacks of hypoglycemia may lead to mental deterioration and brain damage.
+
+10.7 b Diabetes Mellitus
+Description of Clinical Studies
+These techniques include, but are not limited to (1) determination of fasting and postprandial plasma glucose levels; (2) determination of hemoglobin A1c level; (3) measurements of levels of triglycerides, low-density lipoprotein (LDL) cholesterol, and other lipids; (4) electrocardiogram or cardiac stress testing;
+(5) ophthalmologic examination; (6) tests of renal function, including measurement of serum creatinine and urinary protein excretion; (7) Doppler testing of the peripheral circulation; (8) roentgenograms of the chest, gastrointestinal tract, pelvis, or extremities, including arteriograms; and (9) neurologic testing.
+
+Although it may be useful to examine the results from blood glucose testing done by the individual at home in order to obtain an additional measure of the degree of glucose control, one must recognize that these measurements may be less objective than laboratory methods such as self-hemoglobin A1c measurement.
+
+Much of the impairment that results from diabetes is related to the chronic complications. Therefore, the examiner must not only determine the presence or absence of retinopathy, nephropathy, and neuropathy, but also evaluate the other systems that may be involved. Impairments of other systems would be expressed as whole person impairments and then combined with an impairment percent resulting from instability of glucose control by means of the Combined Values Chart (p. 604).
+
+Criteria for Rating Permanent Impairment Due to Diabetes Mellitus
+Permanent impairment from diabetes mellitus can be rated using the criteria given in Table 10-8.
+-- chars 3095 --
+Distinction must be made between the presence of postprandial and postabsorptive hypoglycemia, since postabsorptive hypoglycemia suggests the possibility of a severe or even fatal disorder, whereas postprandial hypoglycemia is usually self-limited and rarely produces physical impairment.
+
+The techniques used include, but are not limited to
+(1) measurement of plasma glucose and insulin or Cpeptide after overnight or longer periods of fasting, on several occasions; (2) roentgenograms of the skull and chest and CT scan or MRI of the upper abdomen; (3) tests of liver function; and (4) tests of adrenocortical and pituitary gland function. Documented hypoglycemia requires a detailed medical evaluation to determine the specific cause.
+
+Criteria for Rating Permanent Impairment Due to Hypoglycemia
+The criteria for rating permanent impairment due to hypoglycemia are given in Table 10-9.
+
+10.8 a Interpretation of Symptoms and Signs
+Precocious puberty in boys is accompanied by early and rapid somatic development and an increased rate of skeletal maturation and height velocity, but, paradoxically, it results in short adult height. It may result from various central nervous system disorders, adrenal enzyme defects, virilizing tumors, or—occasionally—as a familial condition.
+
+Precocious puberty in girls may also be caused by various central nervous system disorders, as well as by ovarian and adrenal tumors. Often, a cause is not identified. As in boys, precocious puberty in girls results in early and rapid somatic development and an increased rate of skeletal maturation and height velocity, with ultimately short adult height. Some ovarian tumors may cause masculinization.
+
+Some adrenal enzyme defects and neoplasms, as well as some gonadal neoplasms, may produce contrasexual precocity. Certain ovarian conditions produce irregular menstrual periods with heavy bleeding and anemia. Polycystic ovarian syndrome and several types of ovarian neoplasms may produce severe hirsutism and virilization, in addition to anovulation.
+
+Testicular hypofunction that occurs before adolescence results in eunuchoidism, which is accompanied by diminished sexual function, infertility, and failure to develop or maintain secondary sexual characteristics. Growth of the body extends beyond the usual age because of delayed epiphyseal closure.
+Individuals with this condition usually lack endurance and strength. Testicular hypofunction that occurs in adulthood results in varying degrees of regression of secondary sexual characteristics, sexual function, strength, and endurance, and it may also be accompanied by infertility.
+
+Ovarian hypofunction, with onset before adolescence, may be characterized by primary amenorrhea, anovulation, poor development of secondary sexual characteristics, and growth beyond the usual age because of delayed maturation of the skeleton.
+Menopause is a natural occurrence in older women, but it also may follow surgical removal of the ovaries. It may be accompanied by such symptoms as hot flashes, irritability, fatigue, and headaches. If not treated, osteoporosis and an enhancement of atherosclerosis may occur during later years.
+-- chars 3176 --
+10.8 b Description of Clinical Studies
+These techniques include, but are not limited to
+(1) measurements of plasma gonadotropins, prolactin, testosterone, estrogen, progesterone, DHEAS, androstenedione, and occasionally 17-ketosteroids in the urine; (2) radiographic determinations of skeletal age in children and adolescents; (3) CT scans or MRI to evaluate the pituitary, adrenals, and ovaries; (4) sex chromatin and chromosome studies;
+(5) testicular biopsy; (6) semen analysis; (7) vaginal cytologic examination; (8) culdoscopy or laparoscopy; (9) endometrial biopsy; (10) ovarian biopsy; and (11) pelvic ultrasound in women.
+
+10.8 c Criteria for Rating Permanent Impairment Due to Disorders of the Gonads
+An individual with anatomic loss or alteration of the gonads that results in an absence, or an abnormally high level, of gonadal hormones would have 0% to 35% impairment of the whole person, as detailed in Chapter 7, The Urinary and Reproductive Systems. Impairment resulting from inability to reproduce, and other impairments associated with gonadal dysfunction, should be evaluated in accordance with the criteria set forth in Chapter 7.
+
+10.9 a Criteria for Rating Permanent Impairment Due to Mammary Gland Disorders
+A female of childbearing age with absence of the breasts, an individual with galactorrhea sufficient to require the use of absorbent pads, and a male with painful gynecomastia that interferes with performance of activities of daily living each would have 0% to 5% impairment of the whole person. If there were a coexisting psychiatric impairment, the whole person impairment would be greater (see Chapter 14, Mental and Behavioral Disorders).
+
+10.10 Metabolic Bone Disease
+Metabolic bone disease usually does not result in impairment unless there is fracture, pain, deformity, or peripheral nerve entrapment. Hyperparathyroidism, hypogonadism, glucocorticoid excess, hyperthyroidism, nutritional deficiencies, and certain drugs may cause osteoporosis, which is reversible with treatment, and are discussed elsewhere, as are multiple myeloma and other malignancies. The treatment of renal osteodystrophy may be highly successful, but even after renal transplantation, bone disease may persist. In order to prevent progressive skeletal deterioration, continuous treatment may be required for primary osteoporosis, hypogonadism, Paget’s disease, and vitamin D-resistant osteomalacia. Permanent deformity may result from rickets, osteoporotic fractures, and osteogenesis imperfecta.
+
+10.10 a Interpretation of Symptoms and Signs
+Metabolic bone disease is usually asymptomatic unless complications occur, such as fractures, accompanied by pain.
+
+10.10b Description of Clinical Studies These include, but are not limited to (1) dual-energy x-ray absorptiometry (DEXA); (2) biochemical markers such as alkaline phosphatase, osteocalcin, and collagen cross-links; (3) urinary calcium excretion; (4) radiographs and bone scans; and (5) bone biopsy.
+-- chars 3031 --
+10.10
+c Criteria for Rating Permanent Impairment Due to Metabolic Bone Disease
+Unless accompanied by pain, skeletal deformity, or peripheral nerve involvement, 0% impairment exists since activities of daily living are not affected. When continuous hormone and mineral therapy gives complete relief of symptoms, impairment of the whole person may be considered to be 0% to 3%. When continuous therapy is required to relieve pain and the activities of daily living are restricted, the estimate should be 5% to 15% impairment of the whole person.
+
+Impairment from fracture, spinal collapse, or other complications of metabolic bone disease is discussed in the chapters on the musculoskeletal system (Chapters 15-17) and pain (Chapter 18). In general, the impairment percents shown in the Guides chapters make allowance for the pain that may accompany the impairing conditions. Any associated loss of motion should be evaluated in accordance with the criteria set forth in the chapters on the musculoskeletal system.
+
+3. Marble A, Krall LP, Bradley RF, Christlieb AR, Soeldner JS, eds. Joslin’s Diabetes Mellitus. 12th ed. Philadelphia, Pa: Lea & Febiger; 1985.
+4.
+Levin ME, O’Neal LW, eds. The Diabetic Foot. 3rd ed. St Louis, Mo: CV Mosby Co; 1983.
+5.
+Davidson JK, ed. Clinical Diabetes Mellitus: A Problem-Oriented Approach. 2nd ed. New York, NY: Thieme Medical Publishers; 1991.
+6. Braverman LE, Utiger RD, eds. Werner and Ingbar’s The Thyroid. 6th ed. Philadelphia, Pa: JB Lippincott Co; 1991.
+
+7. Burger HG, McLachlan RI, eds. Gonadal Disorders. Endocrinol Metab Clin North Am. Philadelphia, Pa: WB Saunders Co; December 1998.
+8. Service JF, McMahon MM, O’Brien PC, Ballard DJ. Functioning insulinoma—incidence, recurrence and long-term survival of patients: a 60-year study. Mayo Clin Proc. 1991;66:711-719.
+9. Orth DN. Cushing’s syndrome: review article. N Engl J Med. 1995;332:791-803.
+10. Bravo EL. Evolving concepts in the pathophysiology, diagnosis, and treatment of pheochromocytoma. Endocrinol Rev. 1994;15:356-367.
+11. Silverberg SJ, Bilezikian JP. Evaluation and management of primary hyperparathyroidism. J Clin Endocr Metab. 1996;81:2036-2040.
+12. Watts NB, ed. Osteoporosis. Endocrinol Metab Clin North Am. Philadelphia, Pa: WB Saunders Co; June 1998;419-439.

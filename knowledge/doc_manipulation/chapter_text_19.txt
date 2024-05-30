@@ -1,0 +1,45 @@
+================================================================================
+
+Manual End Chapter 18 (last Chapter)
+
+Appendix
+
+Recording Range-of-Motion Measurements
+
+Range-of-motion (ROM) measurements are used in the spine, upper extremities, and lower extremities to identify dysfunction in movement that may result in changes in function in the body part. Physicians have questioned the reproducibility of ROM measurements, as well as their ability to predict aspects of function.1 Reproducibility may be improved with the use of standardized measurement techniques, proper equipment, trained evaluators, adequate designated warm-up exercises, and uniform recording.1,2 The purpose of this appendix is to provide further information on factors that can affect reproducibility to lead to greater standardization in technique.
+
+Measurement Devices
+The Guides refers to the use of goniometers or inclinomers to measure joint motion. Except in the spine, in which the inclinometer is the device of choice, either the inclinometer or the goniometer can be used to reliably measure joint motion, depending on the preference and experience of the examiner. A twoarm goniometer depends on visual assessment of both the stationary and the moving arm. An inclinometer measures gravity and enables the starting position to be consistently recorded with respect to gravity. Some researchers and clinicians believe the inclinometer is easier to use and more accurate, although limited data exist supporting this opinion.3 Other electronic devices may also yield accurate measurements. Limited data exist concerning how measurements from newer devices compare to the more commonly used goniometers and inclinometers. Before using another measurement device, the evaluator should assess its reproducibility and accuracy compared to established tools and methods.
+
+Measurement Techniques
+To increase accuracy, identify anatomic landmarks, properly position and stabilize the body, and use a consistent technique as outlined in the Guides to apply the measuring device to the joint. Anatomic landmarks are listed in the Guides. It is recommended that the evaluator mark these areas with tape or a marking pencil to ensure the same starting position for repeated measurements. The evaluator should also record the landmarks used in the impairment report; differences in the site of the landmark could result in different findings among examiners.
+
+Prior to obtaining measurements, have the individual perform appropriate warm-up exercises to obtain an accurate assessment of current ability. Include repetitions of extension, flexion, lateral bending, and rotation as listed in the relevant chapters.
+
+Properly position and stabilize the area, taking into account the individual’s impairment, level of comfort, and known biomechanical characteristics of the joint.1 Most optimal positions for measurement are noted in the Guides. Obtain proper body alignment and stabilization of the device before recording measurements. Active movements are recommended since they may be more consistent than passive movements, less of a risk to individual injury, and a better approximation of the individual’s function.
+-- chars 3195 --
+Figure A-1a Neutral (0°) Starting Positions for ROM Measurements—Frontal Plane
+Differences in recording systems for ROM measurements can contribute to additional errors in interpretation. Ideally, the examiner records the starting point and measurements in reference to the starting point. Subsequent motions are recorded in a reproducible and succinct manner.
+
+ROM measurements can be recorded with text descriptions or with the use of a numeric format. A numeric format has been adopted by some states and a few countries in Europe to facilitate an efficient and uniform way of recording and retrieving data.
+This numeric format is known as the SFTR method of recording joint motion. The SFTR method allows recording of motion with only one letter and a maximum of three numbers. This numeric format is brief and complete, minimizes errors in transcription or understanding, and facilitates communication with the universal language of numbers. The SFTR format also enables easy translation of data from reports to computerized formats and displays.
+
+Several requirements need to be met to use and record measurements according to the SFTR method.
+
+1. All joint measurements are measured from a defined, neutral 0° starting position, as shown in Figure A-1a. This neutral starting position is the generally accepted anatomic position, with the body upright and the upper extremities extended at the side of the body with palms facing anteriorly. If the individual is sitting, supine, or prone, the starting position relates to the upright anatomic position. The starting position for rotation is midway between external and internal rotation or supination and pronation.
+2. All joint motion is recorded in three basic planes: sagittal (S), frontal (F), and transverse (T). Rotation (R) crosses multiple planes and receives a separate recording. The planes are depicted in Figure 15-7.
+a. The sagittal (S) plane divides the body into right and left halves. (S) motions include extension and flexion.
+
+b. The frontal (F) plane divides the body into anterior and posterior parts (front and back).
+(F) motions include abduction, adduction, elevation, depression, radial and ulnar deviation, and lateral bending of the spine to the left
+and right.
+c. The transverse (T) plane divides the body into upper and lower halves. (T) motions include horizontal shoulder extension and flexion, hip horizontal abduction and adduction (hip flexed at 90°), shoulder retraction and protraction, and hallux valgus.
+d. Rotation (R) can occur in any of the planes, depending on the limb positions. (R) motions include external and internal rotation, supination and pronation, and spine rotation to the left and right.
+3. Record all motions with three numbers in a specific sequence. Record movements to the left or away from the middle of the body first: extension, abduction, external rotation, supination, valgus, eversion, lateral bending, or rotation of the spine to the left. Then record the reference (starting) position, which is normally 0°, in the middle. Record movements toward the middle of the body after the reference 0° (on the right side of 0°): flexion, adduction, internal rotation, pronation, varus, inversion, lateral bending, or rotation of the spine to the right.
+-- chars 3267 --
+4.
+Record all positions of ankylosis with two numbers, indicating the degree of ankylosis and the reference or starting position of 0°. For example, wrist ankylosis in 20° of extension is recorded as: wrist (S): 20-0 and in 20° of flexion as wrist (S) 0-20.
+5. When the neutral 0° position cannot be reached due to limited or restricted motion, the middle number will not be 0 but will be the actual starting position. For example, an elbow flexed at 30° (extension lag of 30°), with further flexion to 90°, is recorded as S: 0-30-90.
+
+Tables A-1, A-2, and A-3 describe a method to record ROM measurements for the upper extremties, lower extremities, and spine, using a standard text description and a numeric recording system, the SFTR method.
+† A non-0° starting position is noted in the ankylosis table.

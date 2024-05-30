@@ -1,0 +1,381 @@
+================================================================================
+
+Chapter 13:
+-----------------------------------------------------------------
+The Central and Peripheral Nervous System
+13.1 Principles of Assessment
+13.2 Criteria for Rating Impairments Due to Central Nervous System Disorders
+13.3 Criteria for Rating Cerebral Impairments
+13.4 Criteria for Rating Impairments of the Cranial Nerves
+13.5 Criteria for Rating Impairments of Station, Gait, and Movement Disorders
+13.6 Criteria for Rating Impairments of Upper Extremities Related to Central Impairment
+13.7 Criteria for Rating Spinal Cord and Related Impairments
+13.8 Criteria for Rating Impairments Related to Chronic Pain
+13.9 Criteria for Rating Impairments of the Peripheral Nervous System, Neuromuscular Junction, and Muscular System
+13.10 Nervous System Impairment Evaluation Summary
+-------INTRODUCTION START -------
+Introduction
+This chapter provides criteria for evaluating permanent impairments due to documented dysfunction of the brain, cranial nerves, spinal cord, nerve roots, and/or peripheral nerves and muscles.
+
+The following revisions have been made for the fifth edition: (1) an impairment evaluation summary is provided at the end of the chapter to allow easy access to the neurologic impairment in question; (2) a description of ancillary tests with some of their indications provides an understanding of abnormalities found on the neurologic examination; (3) there is more guidance in the assessment of cognition, gait and movement disorders, and cranial nerve disorders; and (4) additional cases are included to illustrate each area of impairment.
+
+13.1 Principles of Assessment
+This chapter emphasizes the deficits or impairments that may be identified during a neurologic evaluation.
+For some nervous system impairments listed, hand dominance is critical to determine the degree of impairment. To evaluate distal nerve traumatic injury, refer to Chapter 16, The Upper Extremities. Because neurologic impairments are intimately related to mental and emotional processes and their functioning, the examiner should also understand Chapters 14, Mental and Behavioral Disorders, and 18, Pain (pain has been accounted for in neurologic-based impairment ratings). Additional impairments based on those chapters may need to be considered.
+
+Before using the information in this chapter, the Guides user should become familiar with Chapters 1 and 2 and the Glossary. Chapters 1 and 2 discuss the Guides’ purpose, applications, and methods for performing and reporting impairment evaluations. The Glossary provides definitions of common terms used by many specialties in impairment evaluations.
+
+A permanent neurologic impairment is any anatomic, physiological, or functional abnormality or loss that remains after maximum medical improvement (MMI). Impairment rating criteria for neurologic impairments include an assessment of the ability
+to perform activities of daily living, as listed in Table 1-2. These limitations may involve physical performance (eg, walking, climbing, lifting, finger dexterity) or mental performance (eg, cognition
+-- chars 3146 --
+or communication).
+
+If impairments involve several nervous system areas (eg, the brain, spinal cord, and/or peripheral nerves), calculate separate whole person impairment ratings for each area and combine them using the Combined Values Chart (p. 604). As discussed in the following text, impairment of the brain is assessed differently. Because brain dysfunction will likely affect many overlapping functions, identify the most severe cerebral impairment. The impairment rating is based on the neurologic condition that causes the most severe impairment. Examples are provided later in the chapter.
+
+13.1 a Interpretation of Symptoms and Signs
+Nervous system disorders can present with generalized or focal symptoms. Symptoms may include alterations in level of consciousness, confusion, memory loss, difficulties with language, headache, visual blurring, double vision, fatigue, facial pain and weakness, ringing in the ears, dizziness, vertigo, difficulty swallowing or speaking, weakness of one or multiple limbs, difficulty walking or climbing
+
+stairs, shooting pain, numbness and tingling in the extremities, tremor, loss of coordination, loss of bladder or rectal control, and sexual dysfunction. Note that many of these symptoms describe the functional impairment experienced by the individual. The neurologic evaluation and ancillary clinical testing determine the origin of these symptoms. Difficulty walking, for example, may result from problems in different areas of the central and/or peripheral nervous system. The neurologic examination may find a spastic paraparesis associated with a spinal cord lesion. Magnetic resonance imaging (MRI) of the spine may show the etiology to be demyelinating plaques that also may show abnormal somatosensory evoked response since the pathway travels through the areas of demyelination in the spinal cord.
+
+Some impairment classes refer directly to limitations in the ability to perform activities of daily living because of symptoms. When this information is subjective and open to misinterpretation, it should not serve as the sole criterion upon which decisions about impairment are made. Rather, obtain objective data about the severity of the findings and the limitations and integrate those findings with the subjective data to estimate the degree of permanent impairment.
+
+13.1b Description of Clinical Studies:
+A detailed neurologic examination enables the physician to identify the location of nervous system impairment. The purpose of ancillary testing is to assess the severity and location of the lesion and confirm the underlying pathology. It is important to remember that an abnormality found on ancillary testing (anatomic or physiologic) is an impairment but is not necessarily assigned an impairment rating if functions needed for activities of daily living are not affected. The nervous system is able to compensate for a variety of lesions due to its plasticity and redundancy, sometimes resulting in limited representation on the neurologic examination.
+-- chars 3045 --
+Common clinical studies for the central nervous system (brain and spinal cord) include those described below.
+
+Neuropsychologic assessment can characterize cognitive and behavioral alterations and therefore is useful in the clinical assessment and planning of patient management. The results of this assessment must be interpreted in the context of clinical and other test information. Many factors affect neuropsychological performance—age, education, socioeconomic status, and cultural background—and they must therefore be
+
+considered for their influence on test results. Neuropsychological tests may be able to distinguish between abnormal and normal performance but cannot determine the cause of the problem. In other words, neuropsychological testing cannot demonstrate consistent diagnostic validity. Traumatic brain injury, for example, may have a profile similar to that of other forms of dementia.
+
+Lumbar puncture (spinal tap) is a procedure by which cerebrospinal fluid is removed through a medium-sized needle, usually at the L3-4 interspace, in order to examine the presence of cells, proteins, glucose, or infection. This test may be performed when evaluating peripheral nerve disease. Other indications are infections of the nervous system and, sometimes, multiple sclerosis.
+
+An electroencephalogram (EEG) records the spontaneous electrical activity generated by the cerebral cortex and is useful for recording the site and type of electrical discharge associated with seizure activity. Remember that a large percentage of cortical spikes are not recorded because they arise from deeper structures and there is significant attenuation by the cerebrospinal fluid and dura. Therefore, a seizure disorder is not necessarily accompanied by an abnormal EEG. Also, many diseases and metabolic abnormalities produce nonspecific EEG abnormalities.
+The EEG may be normal when the neurologic examination is clearly abnormal since many areas of the brain are inaccessible to the recording electrodes and the EEG is time specific, ie, normal between discharges.
+
+Evoked potentials are able to record components of response in the nervous system following multiple somatosensory, visual, and auditory stimuli. The integrity of these afferent pathways is evaluated. These studies may be used in the clinical evaluation of multiple sclerosis, optic neuritis, and acoustic neuroma.
+Also, a variety of neurotoxins (eg, solvents, heavy metals) may produce alterations in the evoked potentials.
+
+Carotid duplex examination includes Doppler flow velocity of different areas in the carotid artery and, thus, estimates the severity of stenosis in the carotid artery. It is performed in the evaluation of cerebrovascular disease.
+
+Computed tomographic (CT) scan shows the anatomy of the brain, spinal cord, skull, and vertebral column. X-ray beams are used to differentiate densities of bone-calcified tissue, gray matter, white matter, cerebrospinal fluid, and air. Intravenous
+
+contrast demonstrates areas where the blood-brain barrier is disrupted. CT scans are not ideal for examination of soft tissue but are better used to detect fresh hemorrhage or bone lesions.
+-- chars 3165 --
+CT myelogram uses a CT scan, after contrast material is injected into the dural sac, to show alterations in the anatomy between the dural sac and the structures that surround it. Since this is an invasive technique,
+it may be used for diagnostic aid or preoperative planning.
+
+Magnetic resonance imaging (MRI) uses a powerful magnetic field to align the protons of the tissue that are excited by a radio frequency, subsequently forming an image from the different intensities of radio waves emitted from the different tissues. T1weighted images show soft tissue anatomy, while T2-weighted images demonstrate edema and cerebrospinal fluid. Contrast agents enhance lesions
+when there is disruption in the blood-brain barrier. A variety of MRI techniques enhance the ability to see different types of pathology.
+
+Magnetic resonance angiography (MRA) allows vessel visualization with images of different intensities that reflect velocity and flow patterns. Basically, visualization of vessels reflects physical differences between moving and stationary protons.
+
+Positron emission tomography (PET) allows examination of cerebral function by tomographic images.
+Because of the complexity, cost, and limitation of isotopes with short half-lives, most studies at present are limited to research protocols, although clinical studies are available to document, in some individuals, the presence of Parkinson’s disease in its early stages.
+
+Single-photon emission computed tomography (SPECT) assesses brain perfusion by use of tracers. Since there is a strong relationship between local metabolism and blood flow, SPECT provides indirect information about metabolism. Therefore, it may show abnormalities in dementia and neurodegenerative diseases.
+
+The peripheral nervous system can be evaluated by means of the following tests.
+
+Nerve conduction and needle electromyography (EMG) studies help to determine which nerves are involved and their anatomic location. Also evident will be whether sensory, motor, or both fibers are predominantly involved and whether axonal degeneration, deymelination, or a combination of both is
+
+present. Skillful differentiation of peripheral neuropathy and neuromuscular disorders may also be possible. Expert neuromuscular knowledge and understanding of pathologic manifestations of disease processes are necessary for the appropriate application and performance of these tests, particularly the EMG. These tests are objective and require minimal cooperation from the individual being tested. They reflect pathology in the largest, fastestconducting nerve fibers. The interpretation of these tests must be correlated with a detailed neurologic evaluation.
+
+Quantitative sensory tests are portable tests, easily conducted in the clinician’s office, that provide a quantitative assessment of sensation. The integrity of large myelinated fibers is monitored with vibration threshold. Warm and cold temperature thresholds assess medium myelinated and unmyelinated fibers not reflected in nerve conduction studies. Since these are psychophysical tests, the cooperation of the individual being tested is required to process information from cutaneous receptors and provide the appropriate response. These tests can provide information about nerve fibers not examined by nerve conduction studies.
+-- chars 3315 --
+Autonomic function assessment is performed when cardiovascular, thermoregulatory, sphincter, and/or sexual dysfunction is believed to be caused by dysautonomia. For example, postural hypotension tests would include measuring heart rate and blood pressure response to the Valsalva maneuver and heart rate response to deep breathing, postural change, and stress. The integrity of both the central and efferent autonomic pathways is examined with these studies. Sweating abnormalities can be documented by warming the individual and then applying a powder that changes color when wet.
+
+13.2 Criteria for Rating Impairment Due to Central Nervous System Disorders
+The central nervous system (CNS) consists of the brain and spinal cord. When injury or illness affects the CNS, several areas of function may be impaired. Therefore, the most severe category of impairment is based on the neurologic evaluation and relevant clinical investigations in four categories: (1) state of consciousness and level of awareness, whether
+
+permanent or episodic; (2) mental status evaluation and integrative functioning; (3) use and understanding of language; and (4) influence of behavior and mood. The motor and sensory systems, gait, and coordination are evaluated once the four categories of cerebral impairment have been determined.
+
+The most severe of these four categories should be used to determine a cerebral impairment rating.
+
+Step 1. The initial step in assessing cerebral function is to determine whether disturbance is present in the level of consciousness or awareness. This may be a permanent alteration or an intermittent alteration in consciousness, awareness, or arousal. See Table 13-2 (Criteria for Rating Impairment of Consciousness and Awareness); Table 13-3 (Criteria for Rating Impairment Due to Episodic Loss of Consciousness or Awareness); and Table 13-4 (Criteria for Rating Impairment Due to Sleep and Arousal Disorders).
+Step 2. Evaluate mental status and highest integrative functioning (see Table 13-6, Criteria for Rating Impairment Related to Mental Status).
+Step 3. Identify any difficulty with understanding and use of language (see Table 13-7, Criteria for Rating Impairment Due to Aphasia or Dysphasia).
+Step 4. Evaluate any emotional or behavioral disturbances, such as depression, that can modify cerebral function (see Table 13-8, Criteria for Rating Impairment Due to Emotional or Behavioral Disorders).
+Step 5. Identify the most severe cerebral impairment listed above. Combine the most severe impairment from catagories 1 through 4 with any or multiple distinct neurologic impairments listed in Table 13-1 using the Combined Values Chart (p. 604).
+
+13.3 Criteria for Rating Cerebral Impairments
+13.3a Disturbances in Level of Consciousness and/or Awareness Individuals experiencing disturbances in consciousness may be suffering from a range of symptoms from episodes of altered awareness to being in a persistent vegetative state or an unresponsive coma.
+-- chars 3011 --
+These conditions are evaluated based on clinical findings on the neurologic examination and ancillary testing such as CT scan, MRI, SPECT, EEG, evoked potentials, and vestibular testing. The examination and tests will provide the extent of the underlying pathology and help examiners form a prognosis for patient management.
+
+These neurologic disturbances may result in global loss of consciousness, responsiveness, or focal or lateral neurologic impairments. Table 13-2 lists criteria for determining permanent impairment ratings in individuals with these conditions, considering the severity of their condition and their ability to perform activities of daily living. For a class 1 rating, the individual is expected to perform activities of daily living (ADL) independently but may need assistance with activities that require fine motor dexterity (eg, buttoning). Class 2 impairment, in which individuals are moderately limited in ability to perform ADL, indicates the preservation of some independence but a need for assistance with transfers, bathing, and activities that require fine motor skills. Impairment classes 3 and 4 are assigned to individuals who require assistance in performing all ADL; different levels of participation by the individual differentiate the level of care required in the two classes.
+
+13.3b Episodic Neurologic Impairments The Guides rates episodic neurologic impairments that are persistent and permanent. Episodic conditions involve syncope or loss of awareness, convulsive disorders, and arousal and sleep disorders.
+Episodic indicates more than one occurrence. When these conditions originate from a problem in the nervous system, they should be evaluated according to the guidelines given in this chapter. For similar manifestations that originate in other body systems (eg, cardiovascular, respiratory) and secondarily affect the central nervous system, see the chapter(s) for the originating body system(s).
+
+In assessing permanent impairment due to episodic conditions, first ensure that the individual’s condition has reached MMI and is unlikely to change significantly. Document the pattern of occurrence, estimate the effect of the condition on the individual’s ability to perform activities of daily living, and evaluate the effects of appropriate treatment. Record results from appropriate physiologic evaluations (eg, ECG, cardiologic evaluations, EEG) to document the disorder’s severity and provide information about prognosis.
+
+Describe episodic disorders according to their onset, frequency, duration, and effect on performance of daily activities. Document and describe the results of seizure control. Daytime loss of consciousness with tonic or clonic seizures, nocturnal episodes with daytime residua, or brief lapses of awareness/communication from minor seizures may interfere significantly with daily activities. Minor seizures with alterations of awareness or consciousness, transient manifestations of unconventional behavior, or interruptions of daytime activity can result in an inability to perform activities of daily living.
+-- chars 3101 --
+Impairment ratings for major or minor seizures are calculated on the basis of how they affect the ability to perform activities of daily living.
+
+The same criteria apply to impairments related to transient loss of awareness or consciousness (syncope, dizziness) after a period of cerebral ischemia that may be due to various mechanisms, including orthostasis, reflex actions, or cardiopulmonary disorders. Examiners may need to refer to other Guides chapters to estimate the magnitude of impairments related to cardiovascular disorders.
+
+The criteria for evaluating episodic loss of consciousness or awareness are given in Table 13-3.
+
+13.3c Arousal and Sleep Disorders
+Arousal and sleep disorders include disorders related to initiating and maintaining sleep or inability to sleep; excessive somnolence, including sleep-induced respiratory impairment; and sleep-wake schedules.
+
+Impairment categories that may arise from sleep disorders relate to (1) the nervous system, with reduced daytime attention, concentration, and other cognitive abilities; (2) mental and behavioral factors, including depression, irritability, interpersonal difficulties, and
+
+social problems; (3) the cardiovascular system, with systemic and pulmonary hypertension, cardiac enlargement, congestive heart failure, or arrhythmias; and (4) the hematopoietic system. The Respiratory System (Chapter 5) also discusses impairment as it relates to obstructive sleep apnea.
+
+Neurologic disorders associated with increased daytime sleepiness include central sleep apnea syndrome, narcolepsy, idiopathic hypersomnia, periodic limb movement disorder, restless leg syndrome, depression, brain tumors, posttraumatic hypersomnolence, multiple sclerosis, encephalitis and postencephalopathy, Alzheimer’s disease, Parkinson’s disease, multiple system atrophy, and neuromuscular disorders with sleep apnea. It is expected that the diagnosis of excessive daytime sleepiness has been supported by formal studies in a sleep laboratory.
+
+The clinician can evaluate sleepiness with the Epworth Sleepiness Scale,2 which assesses the likelihood of dozing (never = 0 to high chance = 3) in different situations: sitting and reading, watching television, sitting in a public place, riding as a passenger for an hour, taking an afternoon nap, sitting and talking to someone, sitting after a nonalcohol lunch, and stopped in traffic in a car. A score of 10/24 is equal to excessive sleepiness, or class 2 impairment. This scale correlates with the multiple sleep latency test (MSLT), which supports pathologic sleep in narcolepsy and idiopathic hypersomnia. See Table 13-4 for impairment due to sleep and arousal disorders.
+
+13.3d Mental Status, Cognition, and Highest Integrative Function
+Mental status and integrative function deficits include the general effects of organic brain syndrome; dementia; and some specific, focal, and neurologic deficiencies. Mental status tests are used to screen and follow individuals, frequently with repeated testing. They usually cover measures of orientation, attention, immediate recall, calculations, abstraction, construction, information, and recall. Frequently used mental status tests that cover these domains include the 6-item, short Blessed Test,3 the Neurobehavioral Cognitive Status Examination (NCSE),4 and the
+-- chars 3332 --
+Mini-Mental State Examination (MMSE).5 These screening tests can identify severely impaired individuals and are used to determine whether further evaluation with neuropsychological testing is needed.
+
+Neuropsychological test battery covers many functional domains—attention, language, memory, visuospatial skills, executive function, intelligence, motor speed, and educational achievement—using tests with established validity and reliability. Individuals with severe cognitive impairments that have been identified on mental status tests will usually not benefit from neuropsychological evaluation. It is the person with subtle cognitive changes who benefits from neuropsychological testing. Neurologic disorders that have different behavioral ramifications amenable to neuropsychological evaluation include traumatic brain injury, dementia, Parkinson’s disease, human immunodeficiency virus, encephalopathy, multiple sclerosis, epilepsy, neurotoxic exposure, chronic pain, and personality assessment in individuals with neurologic disease.
+
+The criteria for evaluating mental status and cognitive impairment are based on the amount of interference with the ability to perform activities of daily living.
+This information can be obtained from someone who has close and continual contact with the individual and can be documented using any one of numerous ADL indices that determine changes in activities of daily living (eg, Barthel ADL Index6 and Blessed Dementia Scale7). A tool that combines both cognitive skills and function is the Clinical Dementia Rating (CDR),8-10 which covers memory, orientation, judgment and problem solving, home and hobbies, community affairs, and personal care. This validated clinical assessment tool is reproduced in Table 13-5 to serve as an example of how to evaluate cognitive change in light of ADL impairment. One of the standardized mental status tests—the short Blessed, NCSE, or MMSE—can be used in conjunction with the CDR to rate the impairment. To use the CDR, score the individual’s cognitive function for each category (M, O, JPS CA, HH, and PC) independently.
+The maximum CDR score is 3. Memory is considered the primary category; the other categories are secondary. If at least three secondary categories are given the same numeric score as memory, then CDR = M. If three or more secondary categories are given a score greater or less than the memory score, CDR = the score of the majority of secondary categories unless three secondary categories are scored on one side of M and two secondary categories are scored on the other side of M. In this case, CDR = M. Adapted from 8
+
+Corresponding impairment ratings for CDR scores are listed in Table 13-6. A CDR score of 0.5 = class 1 impairment, CDR score of 1 = class 2, CDR score of 2 = class 3, and CDR score of 3 = class 4.
+
+Source: Morris JC. The Clinical Dementia Rating (CDR): current version and scoring rules [see comment]. Neurology. 1993;43(11):2412-2414. Reprinted with permission.
+
+-- chars 3002 --
+13.3e Communication Impairments: Dysphasia and Aphasia
+Communication involves comprehension, understanding, language, and effective interaction between and among individuals. Aphasia is a condition in which language function is defective or absent. It includes a lack of comprehension with deficits in vision, hearing, and language (both spoken and written), and also the inability to implement discernible and appropriate language symbols by voice, action, writing, or pantomime. Dysphasia is a language impairment that is less severe than aphasia (which literally means “no speech”) but still is associated with a lesion in the dominant parietal lobe. It presents as a communication problem due to receptive or expressive dysphasia or a combination of the two.
+Inability to have a meaningful conversation because no nouns are used is an example of dysphasia. Other common errors include errors of grammatical structure, word-finding difficulties, and word substitution. Dysphasia and aphasia are different from dysarthria, which is imperfect articulation of speech due to disordered muscle control. Dysphonia is an impairment of sound production that causes difficulty speaking and understanding. Speech and communication impairments due to nonneurologic primary problems are discussed in Chapter 11, Ear, Nose, Throat, and Related Structures.
+
+Dysphasia is the most common diagnosis, since most individuals usually retain some ability to communicate. An inability to understand language has a poorer prognosis than an inability to express language. Speech therapy is of little value in the absence of comprehension; therefore, compensatory techniques may not be learned when a receptive aphasia or dysphasia exists. Tests for dysphasia should be conducted after it is established how confused or disoriented the individual is and which side of the brain is dominant for speech. Cognition should also be evaluated after dysphasia mechanisms have been excluded.
+
+Aphasia and dysphasia test batteries are frequently devised by the clinician and cover the following simple tasks: (1) listening to spontaneous speech or responses to simple questions; (2) pointing commands and questions that can be answered “yes” or “no” to test comprehension; (3) repeating words and phrases; (4) naming objects that have highand lowfrequency use; (5) reading comprehension and reading aloud (reading is related to educational achievement, which must be known before interpreting reading comprehension and reading aloud results); and (6) writing and spelling.12 If comprehension is relatively intact, the aphasia screening battery may be adequate to place an individual in class 1 or
+2. However, individuals with dysphasia may score poorly on aphasia and dysphasia test batteries
+while they demonstrate communicative competency for activities of daily living. This communicative competency may be measured by means of the Communicative Abilities in Daily Living (CADL),13 in which nonverbal communication is assessed.
+-- chars 3011 --
+Table 13-7 describes the criteria for rating impairment due to aphasia or dysphasia.
+
+13.3f Emotional or Behavioral Impairments
+Emotional, mood, and behavioral disturbances illustrate the relationship between neurology and psychiatry. Emotional disturbances originating in verifiable neurologic impairments (eg, stroke, head injury) are assessed using the criteria in this chapter. Psychiatric features may also exist with primary neurologic disorders. Psychiatric features can range from irritability to outbursts of rage or panic and from aggression to withdrawal. Neurologic impairments producing psychiatric conditions are assessed using the neurologic examination, with an expanded neuropsychiatric history and the necessary ancillary tests.
+Psychiatric impairments may include depression, manic states, emotional fluctuations, socially unacceptable behavior, involuntary laughing or crying, impulsivity, general disinhibition with obsessive and scatological behaviors, and other kinds of CNS responses.
+
+Psychiatric manifestations and impairments that do not have documented neurologic impairments are evaluated using the criteria in the chapter on mental and behavioral impairments (See Table 13-8 and Chapter 14, Mental and Behavioral Disorders).
+
+The remainder of this chapter covers the impairments listed in Table 13-1. The following impairments are combined with the most severe category of cerebral impairment described previously. If no cerebral impairment exists, the following impairments can stand alone or be combined with each other using the Combined Values Chart (p. 604).
+
+13.4 Criteria for Rating Impairments of the Cranial Nerves
+13.4a Cranial Nerve I—the Olfactory Nerve
+The olfactory nerve is responsible for the sense of smell and odor recognition. It is located on the floor of the skull’s frontal fossa and is only occasionally impaired from trauma or other mechanism. Lack of sense of smell may reduce taste perception, which is mediated by cranial nerves VII and IX. Partial or complete right or left dysosmia or anosmia, or a perversion of the sense of smell, parosmia, may occur. Combine the estimate for anosmia or parosmia (given only if the anosmia interferes significantly with daily activities) with any other permanent impairment to determine the whole person impairment. The Smell Identification TestTM15 is a quantitative test for smell with an extensive normative database. The maximum impairment from anosmia is 3%.
+
+13.4b Cranial Nerve II—the Optic Nerve The optic nerves carry visual information from the eyes to the visual cortex of the brain. Loss of visual input can have a profound influence on the ability to perform ADL. Impairment ratings for vision loss are discussed in general in this chapter and in more detail in Chapter 12 (The Visual System).
+
+The optic nerve is one neural component of the visual system. The other components include the retina; the optic chiasm, which is unique in that only half of the nerve fibers cross to the contralateral side; the optic tracts; optic radiation; and visual cortex.
+-- chars 3105 --
+This section discusses vision loss due to prechiasmal lesions, such as optic nerve dysfunction (eg, optic neuritis), as well as postchiasmal vision loss due to cortical lesions (eg, hemianopia).
+
+General Principles of Vision Assessment (see Chapter 12 for more detail)
+Tables 13-9 and 13-10 in this section and the tables in Chapter 12 have been significantly revised from previous editions to reflect the effect of vision changes on the ability to perform ADL as listed in
+
+Table 1-2. When assessing vision, the ratings for visual acuity loss and visual field loss are combined to a global visual impairment rating as summarized in Table 12-1. Since vision in one eye still enables one to perform most ADL, binocular vision is weighted more heavily than monocular vision. Thus, vision loss in one eye will receive a much lower impairment rating than vision loss in both eyes.
+As discussed in detail in Chapter 12, evaluation of near-vision is optional and visual acuity loss to 20/200 receives a 50% impairment rating (see Tables 12-2,
+12-3, and 12-4). Visual field loss is sampled in 10 meridians, two in each superior quadrant, three in each inferior quadrant (Figure 12-1). Thus, a homonymous upper quadrantanopia will receive an impairment rating of about 20%; an inferior quadrantanopia will be rated at about 30%; a homonymous hemianopia, at about 50% (Tables 12-5, 12-6, and 12-7).
+
+The whole person impairment rating results from the visual acuity impairment rating and the visual field impairment rating are detailed in Section 12-4. If acuity or visual fields are normal, the whole person
+
+impairment rating equals the abnormal visual impairment rating.
+Vision Assessment Using Chapter 13
+Due to the neurologic basis of vision, some conditions affecting vision may be evaluated using the guidelines in this chapter. Simple cases of visual acuity loss without peripheral field loss, such as those caused by optic neuritis, can be evaluated using Table 13-9. More complex conditions should be evaluated according to the methodology detailed in Chapter 12.
+
+Simple cases of visual field loss, with normal acuity, may be evaluated using Table 13-10. Since postchiasmal lesions will result in vision loss in the contralateral hemifield of both eyes (eg, homonymous hemianopia or quadrantanopia), visual field tests can be an important diagnostic tool in localizing a lesion. For diagnostic purposes, a tangent screen test involving the central 30° is often sufficient. For complex vision loss patterns, especially those with some remaining peripheral vision and noncongruous patterns as may occur in chiasmal lesions, a full evaluation as detailed in Chapter 12 is required.
+
+Note: This table is based on the best corrected acuity and assumes that the visual fields are normal. See Chapter 12 for more complex cases of visual acuity loss. Note that the ability to perform ADL depends largely on the acuity of the better eye.
+
+Note: This table assumes that the visual acuity is still normal (as in hemianopia with macular sparing). See Chapter 12 for more complex cases, including noncongruous visual field loss and visual field loss combined with visual acuity loss. Note that the ability to perform ADL depends on the extent of the binocular field.
+-- chars 3266 --
+Lesions of the visual cortex may cause a homonymous visual field defect. Parietal lesions may cause visual neglect. Where possible, both these conditions should be evaluated for their effect on ADL skills.
+Because of brain plasticity, gradual improvement over a considerable period of time is possible.
+Ensure that the impairment is permanent, ie, unlikely to change significantly over the next year. If the vision loss is accompanied by other neurologic dysfunction, use the Combined Values Chart (p. 604) to combine the impairment rating from both conditions.
+
+13.4c Cranial Nerves III, IV, and VI— the Oculomotor, Trochlear, and Abducens Nerves
+The oculomotor, trochlear, and abducens nerves innervate the muscles that move the eyeballs. The oculomotor nerve also controls pupil size and reaction to light. Malfunction of the oculomotor system results in strabismus, ie, misalignment of the visual axes. There are two main types of malfunction: ordinary or comitant strabismus, which occurs mainly in children, and paralytic or noncomitant strabismus, found mainly in adults.
+
+Ordinary or comitant strabismus involves a malfunction of the oculomotor control centers. The angle of deviation is approximately the same in all directions of gaze. This type often results in visual acuity loss in one eye (amblyopia); diplopia is uncommon. The impairment rating is based on the visual acuity loss (see Chapter 12).
+
+Paralytic or noncomitant strabismus is due to a paresis of one of the oculomotor nerves and muscles. The angle of deviation of the visual axes varies with the direction of gaze. Diplopia (double vision) is common. Occlusion of one eye eliminates the diplopia but may have undesirable side effects (such as reduction of the binocular field of vision).
+
+If diplopia exists only in the extremes of gaze, it does not interfere with general ADL skills. If double vision exists at or near the primary direction of gaze, it (or the necessary occlusion) may interfere with ADL skills and would warrant an impairment rating. Assessment should be based on well-documented, individualized considerations as discussed in Chapter 12.
+
+13.4d Cranial Nerve V—the Trigeminal Nerve
+The trigeminal nerve is a mixed nerve with sensory fibers to the face, cornea, anterior scalp, nasal and oral cavities, tongue, and supratentorial dura mater. The nerve also transmits motor impulses to the mastication muscles.
+
+Evaluate sensation in the parts served by the three major divisions of the trigeminal nerve with the usual techniques: pain, temperature, and touch. (See the description of loss of function due to sensory deficit, pain, or discomfort under section 13.9, Criteria for Rating Impairments of the Peripheral Nervous System, Neuromuscular Junction, and Muscular System.) Compare the two sides of the face or body. Bilateral facial sensation loss is uncommon. Combine the impairment percentage for sensation loss that involves the trigeminal nerve with the estimated impairment percentage for pain or motor loss. Pin, cold, and light touch are the best parameters for localization of sensory findings on the face. They can outline impairment of either side of the face, a branch of, or complete trigeminal nerve impairment.
+-- chars 3246 --
+Brief episodic trigeminal neuralgia or postherpetic neuralgia that involves a branch of the trigeminal nerve may be very severe and uncontrolled. Because there usually is no documented neurologic impairment except for a trigger point with trigeminal neuralgia or allodynia with postherpetic neuralgia, severe, uncontrolled, typical pain may be the impairment. Both atypical, episodic facial pain and typical, neuralgic pain may be evaluated (see Table 13-11) if they have occurred for months and interfere with daily activities. Motor impairment of the trigeminal nerve may affect chewing, swallowing, and speech articulation and may be accompanied by pain or a tic. Bilateral impairment is rare and may be severe. Daily activities may precipitate the pain. Speech, chewing, and swallowing impairments are considered in Chapter 9, Ear, Nose, Throat, and Related Structures.
+
+Comment: This condition occurs in 30% of individuals with ophthalmic herpes. Pain may last for years and is associated with a high suicide risk because of severe uncontrolled neuralgic pain preventing normal usual activities.
+
+13.4f Cranial Nerve VIII—the Vestibulocochlear Nerve
+Cranial nerve VIII is composed of nerves from two adjacent nuclei. The cochlear portion of the nerve is concerned with hearing, and the vestibular portion of the nerve is concerned with vertigo and position and orientation in space. See Chapter 11 for evaluation of hearing impairment without known nerve dysfunction.
+
+Tinnitus in the presence of unilateral hearing loss may impair speech discrimination and adversely influence the ability to carry out daily activities, especially in crowds or noisy places. Therefore, add up to 5% to the impairment evaluation for severe unilateral hearing loss due to tinnitus when ADL are affected.
+
+Dysfunction of the vestibular part of the eighth nerve may be unilateral or bilateral. The impaired person may or may not be able to compensate for a unilateral loss. With bilateral loss of vestibular function, equilibrium and station are dependent on other systems, such as those for visual cues and kinesthetic senses; however, those systems may be inadequate for normal movement or ambulation.
+
+Vertigo is the most disturbing symptom of vestibular dysfunction and is seldom, if ever, minor. Associated symptoms include nausea, vomiting, headache, fear of movement, ataxia, and nystagmus. Movement or environmental object movement may worsen these uncomfortable symptoms. Vertigo as a single entity is evaluated in Chapter 11. Equilibrium and balance impairment is significant if daily activities are limited. See Table 13-13 for criteria for rating impairment of the vestibulocochlear nerve. Criteria of vestibular impairment are detailed in the section discussing equilibrium in Chapter 11, Ear, Nose, Throat, and Related Structures.
+
+13.4g Cranial Nerves IX and X—the Glossopharyngeal and Vagus Nerves These are mixed nerves that supply sensory fibers
+chiefly to the posterior one third of the tongue and to the pharynx, larynx, and trachea. Involvement of the glossopharyngeal nerve by neuralgia usually is selflimiting or treatable and not permanent; the nerve’s involvement may cause a condition similar to trigeminal (V) nerve tic or neuralgia. If the neuralgia persists uncontrolled for a period of months, the physician may be justified in assigning a percentage of impairment that is similar to trigeminal nerve impairment (use Table 13-11). Sensory impairments may contribute to difficulties with breathing, swallowing, speaking, and visceral functions.
+-- chars 3580 --
+13.4h Cranial Nerve XI—the Spinal Accessory Nerve
+This nerve assists the vagus nerve in supplying some of the muscles of the larynx and innervates the cervical parts of the sternocleidomastoid and trapezius muscles. Impairment of this nerve is judged according to the effects on swallowing and speech, which are considered in Chapter 11, Ear, Nose, Throat, and Related Structures. This nerve also can affect head turning and shoulder motion; related impairments are evaluated according to criteria in Guides Chapters 15, The Spine, and 16, The Upper Extremities.
+
+13.4i Cranial Nerve XII—the Hypoglossal Nerve
+This is a motor nerve that innervates the musculature of the tongue. Unilateral loss of function is not considered to be impairment. Bilateral loss may result in impaired swallowing, breathing, and speech articulation (see Table 13-14). Speech articulation and swallowing are considered in Chapter 11.
+
+13.5 Criteria for Rating Impairments of Station, Gait, and Movement Disorders
+13.5a Station and Gait Disorders
+Problems maintaining balance and a stable gait can develop from a CNS or peripheral neurologic impairment. On physical examination, the physician may observe loss of equal arm or leg movement, falling or staggering to one or the other side, inability to control starting or stopping, and arrhythmic body or extremity movements. Increased tone in the lower extremities from a CNS lesion such as traumatic
+
+brain injury, stroke, or multiple sclerosis may result in a spastic paraparesis or spasticity in one limb.
+Loss of station or Romberg sign (falling with eyes closed) may indicate dysfunction in the peripheral nerves or their ascending pathways to the brain.
+Peripheral neuropathy, identified by examination and electrodiagnostic tests, is frequently associated with complaints of imbalance or stumbling, since information from sensory receptors is altered.
+
+Impairment ratings for station and gait disorders are determined according to the effect on ambulation (see Table 13-15). Other anatomic or functional changes from other body systems, such as the musculoskeletal system, are combined with the neurologic assessment for station and gait.
+
+13.5b Movement Disorders
+Movement disturbances resulting from cerebral dysfunction are impairments that may affect activities of daily living. Mild tics may have no impact on daily activities, while other involuntary movements, such as tremors (resting, postural, and intention), chorea, athetosis, hemiballismus, and dystonia tone may prevent meaningful use of the extremity. Besides abnormal movements, difficulty with coordination for dexterous or precise movements may interfere with activity; these difficulties can develop from lesions in the basal ganglia or cerebellum. Coordinated movements include gait that may manifest as ataxia requiring use of an ancillary device. Movement disorders, therefore, are assessed for their interference with ADL as described in Tables 13-15, 13-16, and 13-17. For movement disorders affecting the lower extremities, use the station and gait section.
+-- chars 3118 --
+13.6 Criteria for Rating Impairments of Upper Extremities Related to Central Impairment
+The basic tasks of everyday living depend on dexterous use of the dominant upper extremity. Loss of use of that extremity results, in most instances, in greater impairment than would be the case with impairment of the limb on the nondominant side.
+Tables 13-16 and 13-17 are used to rate upper extremity dysfunction from any lesion in the brain. Use these tables for rating upper extremity dysfunction, manifested by weakness, tremor, or pain, that affects ADL. The upper extremity impairment
+may result from, but is not limited to, traumatic
+
+brain injury, stroke, neurodegenerative diseases (eg, Parkinson’s disease, progressive supranuclear palsy), multiple sclerosis, and sequelae of CNS infection.
+
+When the spinal cord disorder affects both upper extremities, the individual’s impairment is greater than indicated by a simple combination of impairments of the dominant and nondominant extremities. For these cases, Chapter 15, which covers neurologic impairment from spinal cord disorders, and other sections in this chapter should be used.
+
+The impairment ratings given in Tables 13-16 and 13-17 are determined from neurologic examination of motor strength, coordination, and dexterity.
+Functional activities such as buttoning a shirt, lacing shoes, writing, and performing a pegboard task can assess abilities needed for daily activities.
+
+Impairments resulting from spinal cord injuries and other adverse conditions include those relating to station and gait, use of the upper extremities, respiration, urinary bladder function, anorectal function, sexual function, and pain.
+
+Sensory disturbances, including the loss of sense of touch, sense of pain, temperature perception, and sense of vibration and joint position, and paresthesias, dysesthesias, and phantom limb sensations may indicate spinal cord dysfunction. Autonomic system disorders, including disturbances in sweating patterns, regulation of circulation, and regulation of temperature, may occur. Impairment is determined according to the amount of functional impairment and the level of involvement.
+
+When an individual with a spinal cord injury has impairments of several functions or systems, for instance, those of station and gait (Table 13-15), as with hemiparesis and ataxia; of dexterity in using the upper extremity (Tables 13-16 and 13-17); and of bladder, bowel, or sexual functioning, the Combined Values Chart (p. 604) should be used to combine the whole person impairment estimates for the several functions.
+
+Accompanying disorders, such as trophic lesions, urinary calculi, osteoporosis, nutritional disturbances, infections, and reactive psychological states, may occur. The degree to which any of these conditions augments spinal cord impairment should be based on the criteria given in the Guides chapters dealing with those disorders.
+
+13.7a Respiratory System Neurologic Impairments
+Neurologic impairment of one’s ability to breathe is considered in Table 13-18 only in terms of neurologic limitations. Other aspects of respiratory function are covered in Chapter 5, The Respiratory System.
+-- chars 3192 --
+13.7 b Urinary System Neurologic Impairments
+The ability to control bladder emptying provides the criterion for evaluating permanent bladder impairment resulting from spinal cord and central nervous system disorders (see Table 13-19). Documentation by cystometric or other tests may be necessary.
+
+When evaluating impairments of the bladder, the physician also must consider the status of the upper urinary tract. Refer to Chapter 7, The Urinary and Reproductive Systems, and apply the Combined Values Chart (p. 604) if impairments of several organ systems are present.
+
+13.7c Anorectal System Neurologic Impairments
+The ability to control emptying provides the criterion for evaluating permanent impairment of the anus and rectum due to spinal cord or other neurologic dysfunction (see Table 13-20).
+
+13.7d Sexual System Neurologic Impairments
+Awareness and capability of having an orgasm are the criteria for evaluating permanent impairment of sexual functioning that may result from spinal cord or other neurologic system disorders (see Table 13-21). The individual’s previous sexual functioning should be considered by the physician; age is only one criterion for evaluating previous sexual functioning.
+Adjust for age according to criteria outlined in Chapter 7, The Urinary and Reproductive Systems.
+
+13.8 Criteria for Rating Impairments Related to Chronic Pain
+Impairment due primarily to intractable pain may greatly influence an individual’s ability to function. Psychological factors can influence the degree and perception of pain: different individuals in similar circumstances may be impaired by pain to different degrees. A chronic pain syndrome may follow thalamic lesions, but this is rare. Chronic pain in this section covers the diagnoses of causalgia, posttraumatic neuralgia, and reflex sympathetic dystrophy. The new term complex regional pain syndrome, type I and type II, is not used here since it does not represent a single diagnostic criterion.16
+
+Causalgia is burning pain that develops in a distal extremity following trauma to a peripheral nerve. The burning pain is triggered by movement, light mechanical stimuli to the skin, and strong emotion. Other features include distal extremity swelling and skin that is smooth, mottled, cold, and sweaty.
+Sympathetic block frequently relieves the pain. In posttraumatic neuralgia, the burning pain in the distribution of a nerve does not have the other clinical features and does not spread.
+
+Reflex sympathetic dystrophy (RSD) occurs without known nerve lesions and is precipitated by minor soft tissue trauma. Burning spontaneous pain and stimulus-evoked pain are most pronounced in the
+
+distal limb (allodynia, hyperpathia, and hyperalgesia). The affected limb is usually warmer acutely (less than 6 months) and then is colder. It is now generally believed that a central nervous system abnormality is present based on the autonomic changes of abnormal sweating and skin blood flow. The acute distal swelling usually responds to sympathetic block. In the chronic stage, trophic changes include alteration in nail and hair growth, thin shiny skin, osteoporosis, and restriction of passive movement.
+-- chars 3215 --
+Postural or action tremor is not uncommon, while an associated movement disorder is relatively rare.
+
+To rate these conditions for impairment, diagnosis is key and is based on clinical criteria. Besides the clinical findings previously described, a three-phase bone scan may show increased uptake in the acute and subacute periods. This study is known to have low sensitivity, 50%,17 and therefore cannot be used as a required criterion for the diagnosis. Plain x-rays may show patchy demineralization, particularly in a periarticular distribution, within months of the onset of RSD. Altered blood flow by laser Doppler flowmetry and abnormal function in the sudomotor reflex also support the diagnosis. It is difficult to examine individuals who are experiencing these symptoms; therefore, once the criteria for the diagnosis have been met, the impact on ADL is determined.
+
+To rate an impairment for causalgia, posttraumatic neuralgia, and RSD in an upper extremity, use Table 13-22. If a lower extremity needs to be rated for casualgia, posttraumatic neuralgia, or RSD, use
+the station and gait impairment criteria given in Table 13-15.
+
+13.9 Criteria for Rating Impairments of the Peripheral Nervous System, Neuromuscular Junction, and Muscular System
+Evaluating the peripheral nervous system requires documentation of the extent of loss of function due to sensory deficit, pain, or discomfort; loss of muscular strength and control of specific muscles or groups of muscles; and alteration of autonomic nervous system (ANS) control. Documentation of these deficiencies should include, if possible, descriptions of the abnormal finding on examinations of the spinal root(s), portion of the plexus, and/or peripheral nerve(s) that are involved. The mechanism or cause
+
+of the abnormality assists in determining the impairment duration and probable prognosis. Ancillary testing by neuroimaging (CT scans, MRIs, radiographs) and physiologic (EMG, nerve conduction velocity [NCV], and evoked responses) tests, may assist in reaching final conclusions.
+
+Neurologic evaluation of pain is based first on the individual’s description of the character, location, intensity, duration, and persistence of the discomfort and on verification of the anatomic distribution of the neurologic defect. A description of the ways and the degrees to which the pain interferes with the individual’s performance of activities of daily living and the factors that augment the discomfort should be included. Anatomic descriptions should be made according to the usual distributions of the roots, plexuses, and nerves of the nervous system when the distal digital nerves are being evaluated, especially in the hand, as indicated in Chapters 15 and 16.
+
+Grading procedures for sensory and motor impairments in single distal digital nerves of the hand are found in Chapter 16, The Upper Extremities. For evaluations of neurologic problems of the peripheral neuromuscular system, the standard techniques of neurologic examination are used (see Tables 13-23 and 13-24). The muscle strength grading system (Table 13-24) is similar to the system recommended by the Medical Research Council of the United Kingdom. Involvement of peripheral nerves or roots may lead to paralysis or weakness of the muscles supplied by them, as well as to characteristic sensory changes. The system of the Medical Research Council18 is the one recommended in the Guides for evaluating muscle function and testing impairments (Table 13-23). In this system, movement of the part is tested against the examiner’s resistance plus gravity, without the effect of gravity, against gravity, and for slight or no movement. The contralateral extremity is tested also, and the results are compared with those in the affected limb.
+-- chars 3781 --
+Symptoms of sensory deficits and pain in peripheral nerves as described in Chapter 16, The Upper Extremities, include anesthesia, hypesthesia, dysesthesia, paresthesia, hyperesthesia, cold intolerance, and an intense, burning pain. Sensory dysfunction associated with peripheral nerve disorders is evaluated according to the following criteria: (1) How does the pain or sensory deficit interfere with the individual’s performance of daily activities? (2) To what extent does the pain or sensory deficit follow the defined anatomic pathways of the root, plexus, or peripheral nerve? (3) To what extent does the description of the
+
+pain or sensory deficit indicate that it is caused by a peripheral nerve abnormality? (4) To what extent does the pain or sensory deficit correspond to other disturbances of the involved nerve structure? Only persistent pain or discomfort that leads to permanent loss of function, in spite of maximum effort toward medical rehabilitation and allowing an optimal period of time for physiologic adjustment, should be evaluated as a permanent impairment. Pain that does not meet more than one of the above criteria is not considered to be within the scope of this section.
+
+Pain is defined in Chapter 18 as “an unpleasant sensory and emotional experience associated with actual or potential tissue damage or described in terms of such damage.” Pain is a subjective symptom and is difficult to evaluate, but its presence, anatomic background, and intensity may be verified with a thorough examination. Chronic pain for causalgia, posttraumatic neuralgia, and RSD is evaluated in Table 13-22.
+
+Motivation and malingering as they may relate to the presence or absence of an impairment or a supposed impairment are considered in Chapter 14, Mental and Behavioral Disorders.
+
+Sensory dysfunction, to be rated, must be considered permanent. The methodology used for spinal nerves, brachial plexus, and individual nerves is described below. Terms used to describe sensory impairment that may not be readily apparent to all readers are defined. Sensation refers to the sensory perception of the primary sensory modalities, pain, heat, cold, and touch, those involved in protective sensation.
+Sensibility refers to the discriminative features of sensation such as graphesthesia, stereognosis, or two-point discrimination. The issue of sensibility is important to the normal function of the hand. This is
+why sensory loss in the digits is focused on impaired two-point discrimination (see Table 16-10).
+
+Grading procedures for sensory and/or motor impairments in all peripheral nerves (except sensory loss in the digits (Table 16-10) is found in Tables 13-23 and 13-24. The maximum impairment for spinal roots, brachial plexus, and individual nerves is noted under the respective sections below.
+
+13.9a Roots of Spinal Nerves
+Spinal nerves are evaluated by loss of function in the peripheral nerve that receives contribution from the involved spinal root. If two or more spinal roots are involved, the increased loss of function from the contribution of two spinal roots to a peripheral nerve
+-- chars 3121 --
+necessitates that the impairment be rated according to the brachial plexus (see Section 13.8b).
+
+Table 16-13 provides the maximum upper extremity impairment due to unilateral sensory or motor deficits of individual spinal roots C5 through T1. Once the sensory deficit or pain is estimated according to
+Table 13-23 and motor deficit according to 13-24, these percent deficits in the upper extremity are multiplied by the respective maximum sensory and/or motor impairments of the spinal nerve in question, Table 16-18. The sensory and motor impairments are combined using the Combined Values Chart, p. 604, for the total upper extremity impairment, which is then converted to whole person impairment (Table 16-3). If deficits are bilateral, the whole person impairment is found for each extremity and then combined using the Combined Values Chart.
+
+For the spinal roots in the lower extremity, L3 through S1, use Table 15-18 to determine the maximum lower
+
+extremity impairment due to unilateral sensory or motor deficits. Follow the same procedure already outlined for the upper extremity with regard to grading the impairment; use Tables 13-23 and
+13-24, then multiply by the maximum loss of function for the nerve root in question and combine sensory and motor impairment and convert to whole person impairment.
+
+13.9b Brachial Plexus
+The anatomy of the brachial plexus and clinical presentation resulting from lesions that involve the upper and lower trunk are presented in Section 16.5b. Table 16-14 provides the maximum impairment due to unilateral sensory or motor deficits of the brachial plexus by the entire brachial plexus and the upper, middle, and lower trunks. If there is partial recovery, individual muscles are graded according to Table
+13-24. This value is multiplied by the maximum upper extremity impairment for the nerve innervating
+
+the muscle listed in Table 16-15. Results from all the muscles are combined using the Combined Values Chart, p. 604, and the total upper extremity impairment converted to a whole person impairment, Table 16-3. A very useful diagram that demonstrates the motor innervation of all muscles in the upper extremity by spinal roots, peripheral nerve, and anatomical proximal-distal location in the upper extremity is found on Figure 16-47.
+
+13.9 c Peripheral Nerve Impairments
+This section is used to rate sensory and motor impairments from individual nerve lesions or multiple nerve disorders such as polyneuropathy or mononeuritis multiplex. Grading procedures for sensory and motor impairments resulting from peripheral nerve disorders in the upper and lower extremities are found in Tables 13-23 and 13-24.
+This percent impairment is multiplied by the appropriate maximum loss of function for the nerve in
+
+question due to sensory deficit and pain or motor deficit, Table 16-15 for the upper extremity and Table 17-37 for the lower extremity. Sensory and motor impairments of the upper extremity are combined using the Combined Values Chart, page 604. The result is converted to a whole person impairment, Table 16-3.
+-- chars 3111 --
+If multiple nerves are involved in one extremity, the same procedure is followed for each nerve. Once the sensory and motor impairments for each nerve have been combined using the Combined Values Chart, all the nerves rated in one extremity are combined, again using the Combined Values Chart to determine the total impairment in the affected limb. If more than one limb is involved, each total extremity impairment is converted to a whole person impairment (Table 16-3), and these values are again combined using the Combined Values Chart.
+
+Method:
+1. Loss of motor function in the distal muscles of the tibial nerve and peroneal nerve in the feet. The maximum motor loss (Table 17-37) for the medial plantar is 2% whole person impairment and for the lateral plantar is 2% whole person impairment ? 25% = grade 4 motor loss (Table 13-24) = 1% for the medial plantar and 1% for the lateral plantar. The maximum motor loss (Table 17-37) for the peroneal nerve in the foot of 5% whole person impairment (5% maximum motor loss is attributed to the foot since the entire common peroneal motor impairment is 15% in Table 17-37) ? 25% = grade 4 motor loss (Table 13-24) = 1%. The total motor impairment in the distal muscles of one lower extremity is 1% and 1% and 1% = 3% whole person impairment.
+2. Loss of function due to sensory involvement of
+the medial and lateral plantar nerves, sural nerve, and superficial peroneal nerves. The maximum sensory loss (Table 17-37) is 2% for the medial plantar and 2% for the lateral plantar is 2% ? 40% = class 4 sensory loss (Table 13-23) = 1% for the medial plantar and 1% for the lateral plantar. The maximum sensory loss (Table 17-37) for the sural nerve is 1% ? 40%
+= class 4 sensory loss (Table 13-23) = 0.4%, which is equal to 0% for the sural nerve. The maximum sensory loss (Table 17-37) for the superficial peroneal nerve is 2% ? 40% = class 4 sensory loss (Table 13-24) = 1% for the superficial peroneal nerve. The total sensory impairment in the foot is 1% and 1% + 0% and 1% = 3% whole person impairment (see the Combined Values Chart, p. 604).
+3.
+Loss of motor function in the hand from median and ulnar nerve dysfunction. The maximum motor loss for the median nerve is 10% (Table 16-15) ? 15% from grade 4 motor loss
+(Table 13-24) = 1.5% or 2% of the upper extremity impairment. The maximum motor loss for the ulnar nerve is 35% (Table 16-15) ? 15% from grade 4 motor loss (Table 13-24) = 5%. The total motor impairment in the hand is 2% and 5% = 7% whole person impairment (see the Combined Values Chart, p. 604).
+4. Loss of sensory function in the hand from median and ulnar nerve dysfunction. The maximum sensory loss for the median nerve of 38% (Table 16-15) ? 15% from class 3 sensory loss (Table 13-23) = 6% of the upper extremity or 4% whole person impairment (Table 16-3). The maximum sensory loss for the ulnar nerve of 7% (Table 16-15) ? 15% from class 3 sensory loss (Table 13-23) = 1% of the upper extremity or 1% whole person impairment. The total sensory impairment in the hand is 4% and 1% = 5% whole person impairment.
+-- chars 3126 --
+5. Using the Combined Values Chart (p. 604), the motor and sensory impairment for the foot is 3% and 3% = 6% whole person impairment. The motor and sensory impairment in the hand is 7% and 5% = 12% whole person impairment. Since a sensorimotor polyneuropathy is a symmetric lesion, the 6% and 12% = 17% for one side is doubled to 17% and 17% = 31% whole person impairment.
+
+13.9d Neuromuscular Impairments Neuromuscular impairment as present in longstanding myasthenia gravis or myasthenic syndromes is accompanied by proximal weakness; impairment is rated by the impact on activities of daily living.
+For the lower extremities, station and gait are rated as described in activities of Table 13-15. The upper extremities are rated using Tables 13-16 and
+13-17, which provide criteria for functional loss in one or both upper extremities.
+
+13.9e Muscular Impairments
+This is a varied group of disorders that includes muscular dystrophy, metabolic myopathy, abnormal potassium metabolism and muscle disease, endocrine myopathies, and inflammatory muscle disease. The unifying clinical feature is proximal weakness that, in some cases, may involve the neck and face. The proximal weakness is best rated by its effect on the activities of daily living. See Table 13-15 for the lower extremities and Tables 13-16 and 13-17 for functional loss in one or both upper extremities.
+
+Neuromuscular and muscular impairments for the lower extremities are rated using Tables 17-6 and 17-8 (Chapter 17). Also, Table 13-15 is useful when gait is the most significant impairment from the neuromuscular or muscular disorder.
+
+13.9f The Autonomic Nervous System
+The autonomic nervous system (ANS) influences the functioning of many organ systems; thus, failure of the system can increase impairment. Neurologic conditions that have ANS involvement include polyneuropathy of various causes, familial dysautonomia, Landry-Guillain-Barré syndrome, syringomyelia, porphyria, cord and brain tumors, and myelopathy.
+
+Lack of control of blood pressure, body thermal regulation, and bladder and bowel elimination are prominent signs of ANS failure. Impairments related to transient loss of awareness or consciousness after a period of cerebral ischemia may be due to various mechanisms, including orthostasis, reflex actions, or cardiopulmonary disorders, and may be estimated by means of Table 13-2. Referring to other Guides chapters also may be necessary to estimate the magnitudes of the impairments (Chapters 3 through 5).
+
+Impairments of spinal nerves, roots, plexuses, or peripheral nerves by various diseases or injuries may be partial or complete, unilateral or bilateral, related to motor or sensory functions, with or without pain. Each of these attributes or characteristics should be evaluated. When there is bilateral involvement, the two unilateral impairments should be determined; then the Combined Values Chart (p. 604) should be used to estimate whole person impairment.
+-- chars 3013 --
+13.10 Nervous System Impairment Evaluation Summary
+See Table 13-25 for an evaluation summary for the assessment of nervous system impairments.
