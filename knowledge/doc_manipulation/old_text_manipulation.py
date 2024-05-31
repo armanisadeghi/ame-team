@@ -1,7 +1,7 @@
 import re
 import json
-from common.utils.my_utils import pretty_print_data
-from knowledgebase.utils.add_data import DataManager
+# from common.utils.my_utils import pretty_print_data
+# from knowledgebase.utils.add_data import DataManager
 
 def remove_references_original(file_path):
     def is_reference_start(line):
@@ -167,7 +167,7 @@ def organize_chapter_sections(document):
         line = lines[i]
         if line.startswith('====='):  # Start of a new chapter section
             chapter_line = lines[i + 1]  # Assuming the next line is the chapter line
-            main_title = lines[i + 3].strip()  # Assuming the main title is 2 lines down from the chapter line
+            main_title = lines[i + 4].strip()  # Assuming the main title is 2 lines down from the chapter line
 
             # Append the reformatted chapter header
             organized_lines.append(line)  # Keep the "=====" line
@@ -339,7 +339,7 @@ def extract_short_sections(text, line_count, char_count):
             if section_char_count < char_count:
                 extracted_section = "\n".join(section_lines)
                 extracted_sections.append(extracted_section)
-                print(f"--------------------\n{extracted_section}\n--------------------")
+                # print(f"--------------------\n{extracted_section}\n--------------------")
                 section_lines = []
                 section_char_count = 0
             else:
@@ -865,47 +865,51 @@ def remove_pattern_and_line_from_file(input_file_path, output_file_path, pattern
 
 
 if __name__ == '__main__':
-    file_path = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text.txt")
-    file_path_1 = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text_1.txt")
+    import os
+    file_path = os.path.join(os.getcwd(),"data","ama_raw_text.txt")
+    file_path_1 = os.path.join(os.getcwd(),"data","text_1.txt")
     file_path_2 = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text_2.txt")
     reference_file = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\references.txt")  # Live
     file_path_3 = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text_3.txt")
     file_path_4 = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text_4.txt")
     file_path_5 = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text_5.txt")
     examples_file = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\examples.txt")  # Live
-    file_path_6 = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text_6.txt")  # Live
+    file_path_6 = os.path.join(os.getcwd(),"data","text_6.txt")
     file_path_7 = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text_7.txt")
     low_char_count_text = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\low_char_count_text.txt")
     file_path_8 = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text_8.txt")
     file_path_9 = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text_9.txt")
     file_path_10 = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text_10.txt")
     file_path_11 = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text_11.txt")
-    file_path_12 = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text_12.txt")
+    file_path_12 = os.path.join(os.getcwd(),"data","text_12.txt")
     index_text = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\index_text.txt")
     glossary_text = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\glossary_text.txt")
     remaining_tables = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\remaining_tables.txt")
     extracted_text = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\extracted_text.txt")  # Live
 
-    # original_document = get_original_text(file_path_12)
+    original_document = get_original_text(file_path)
 
     # Step 1: remove excessive blank lines
-    # cleaned_document = clean_blank_lines(original_document, 2)
+    cleaned_document = clean_blank_lines(original_document,1)
 
+    # print(cleaned_document)
     # Step 2: Normalize chapter headers
-    # updated_document = normalize_chapter_headers(original_document)
+
+    updated_document = normalize_chapter_headers(cleaned_document)
 
     # Step 3: Extract references and update document
-    # references, updated_document = extract_references_and_update_document(original_document)
+    references, updated_document = extract_references_and_update_document(updated_document)
     # write_replace_file(reference_file, references)
 
+
     # Step 4: Organize chapter sections
-    # updated_document = organize_chapter_sections(original_document)
+    updated_document = organize_chapter_sections(updated_document)
 
     # Step 5: Wrap and clean examples
-    # updated_document = mark_examples(original_document)
+    updated_document = mark_examples(updated_document)
 
     # Step 6: Extract and remove known examples
-    # updated_document, examples = extract_and_remove_examples(original_document)
+    updated_document, examples = extract_and_remove_examples(updated_document)
 
     # Write the cleaned document to a new file
     # write_replace_file(file_path_6, updated_document)
@@ -917,17 +921,20 @@ if __name__ == '__main__':
     # Step 7: Extract sections with low text content (Did it again towards the end) - 25 lines, 100 characters first time. - second time 8/50, third time 5/14
     line_count = 5
     char_count = 14
-    # extracted_sections_str, remaining_text_str = extract_short_sections(original_document, line_count, char_count)
+    extracted_sections_str, remaining_text_str = extract_short_sections(updated_document, 8, 50)
+    # print(extracted_sections_str)
+
     # add_text(low_char_count_text, extracted_sections_str)
     # write_replace_file(file_path_11, remaining_text_str)
 
     # Step 8: Eliminate extra empty lines
-    # updated_document = eliminate_extra_empty_lines(original_document)
+    updated_document = eliminate_extra_empty_lines(remaining_text_str)
 
     line_starts_with = 'Index'
     location = 'before'
     text_to_add = '-------- INDEX START -------'
-    # updated_document = add_dynamic_marker(original_document, line_starts_with, location, text_to_add)
+    updated_document = add_dynamic_marker(updated_document, line_starts_with, location, text_to_add)
+
     # write_replace_file(file_path_9, updated_document)
 
     # start_marker = '---- GLOSSARY START----'
@@ -939,7 +946,7 @@ if __name__ == '__main__':
     # updated_text = handle_text_starting_with_tab_indent(original_document)
 
     # Identify Introduction
-    # updated_text = add_dynamic_marker(original_document, "Introduction", location="before", text_to_add="-------- INTRODUCTION START -------")
+    updated_text = add_dynamic_marker(updated_document, "Introduction", location="before", text_to_add="-------- INTRODUCTION START -------")
 
     # Replace tabs with newlines
     # updated_text = convert_tabs_to_newlines(original_document)
@@ -971,7 +978,8 @@ if __name__ == '__main__':
     # write_replace_file(file_path_10, updated_text)
 
     # Remove pattern and numbers
-    # updated_text = remove_pattern_and_numbers(original_document)
+    updated_text = remove_pattern_and_numbers(updated_document)
+
 
     # updated_text = clean_blank_lines(original_document, 1)
     # write_replace_file(file_path_12, updated_text)

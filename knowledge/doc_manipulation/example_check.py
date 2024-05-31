@@ -826,7 +826,7 @@ def insert_breaks(input_file_path, output_file_path):
 
 
 if __name__ == "__main__":
-    #results = mark_examples(text)
-    results = insert_breaks(text_2)
+    results = mark_examples(text_1)
+    # results = insert_breaks(text_2)
 
     print(results)

@@ -75,42 +75,61 @@ class OutputClassifier(Processor):
         for line in lines:
             category = self.classify_line(line)
             if self.clean_text:
-                line = self.text_cleaner(category, line)
+                line = self.text_cleaner(line)  # Category removed from arg
             classified_lines.append((category, line))
 
         return classified_lines
 
-    def text_cleaner(self, category, line):
+    def markdown_to_text(self, markdown_string):
+        """
+        Convert a Markdown string to plain text.
 
-        # TODO: This was added by Armani for demonstration purposes, but we know it's not ideal because it is removing text from anywhere, including the middle, which we don't want to do.
+        :param markdown_string: str, a string formatted in Markdown
+        :return: str, the plain text representation of the input Markdown string
+        """
+        # Remove headers
+        markdown_string = re.sub(r'^\#{1,6}\s*', '', markdown_string, flags=re.MULTILINE)
+
+        # Remove emphasis
+        markdown_string = re.sub(r'(\*|_){1,2}([^*_]+)(\*|_){1,2}', r'\2', markdown_string)
+
+        # Remove inline code
+        markdown_string = re.sub(r'`([^`]+)`', r'\1', markdown_string)
+
+        # Remove code blocks
+        markdown_string = re.sub(r'```[\s\S]*?```', '', markdown_string)
+
+        # Remove blockquotes
+        markdown_string = re.sub(r'^\>+\s*', '', markdown_string, flags=re.MULTILINE)
+
+        # Remove links but keep the text
+        markdown_string = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', markdown_string)
+
+        # Remove images but keep the alt text
+        markdown_string = re.sub(r'!\[([^\]]*)\]\([^\)]+\)', r'\1', markdown_string)
+
+        # Remove horizontal rules
+        markdown_string = re.sub(r'\n-{3,}\n', '\n', markdown_string)
+
+        # Remove unordered lists
+        markdown_string = re.sub(r'^\s*[\*\+\-]\s+', '', markdown_string, flags=re.MULTILINE)
+
+        # Remove ordered lists
+        markdown_string = re.sub(r'^\s*\d+\.\s+', '', markdown_string, flags=re.MULTILINE)
+
+        return markdown_string.strip()
+
+    def text_cleaner(self, line):
+        # TODO: This was added by Armani for demonstration purposes, but we know it's not ideal because it is removing text from anywhere,
+        #  including the middle, which we don't want to do.
         # It would be a very quick fix to look specifically and remove starting text and ending text that meet these requirements.
 
-        clean_text = line
-        if category == 'header':
-            clean_text = line.replace('#', '').strip()
-        elif category == 'bold_text':
-            clean_text = line.replace('**', '').strip()
-        elif category == 'italic_text':
-            clean_text = line.replace('__', '').strip()
-        elif category == 'bullet':
-            clean_text = line.replace('- ', '').strip()
-            clean_text = clean_text.replace('**', '').strip()
-        elif category == 'sub_bullet':
-            clean_text = line.replace(' -', '').strip()
-        elif category == 'numbered_list':
-            clean_text = line.replace('\d+\.', '').strip()
-            clean_text = clean_text.replace('**', '').strip()
-        elif category == 'entry_and_value':
-            clean_text = line.split(':', 1)[1].strip()
-        elif category == 'header_text':
-            clean_text = line.split(':', 1)[1].strip()
-        elif category == 'other_text':
-            clean_text = clean_text.replace('**', '').strip()
-            clean_text = clean_text.replace('#', '').strip()
+        # TODO: Fixed/Completed
+        # Comments by Jatin : I added a markdown_to_text function above , we can just get the cleaned line by calling it
 
-            clean_text = clean_text.strip()
-
-        return clean_text
+        text_to_be_cleaned = line
+        cleaned_text = self.markdown_to_text(text_to_be_cleaned)
+        return cleaned_text
 
     def split_text_sections_and_identify_line_types(self, text):
         lines = text.strip().split('\n')
@@ -270,31 +289,31 @@ async def get_classify_markdown_section_list(text_data):
 
 
 async def main(text_data):
-
-    clean_text = True  # Turn this to false to get the old functionality back - NEW FUNCTIONALITY
+    clean_text = False  # Turn this to false to get the old functionality back - NEW FUNCTIONALITY
 
     classifiers = OutputClassifier()
 
     classified_sections = classifiers.classify_output_details(text_data, clean_text=clean_text)
     pretty_print(classified_sections)
 
-    print("\nCategorized sections:")
-    for count, (section_type, section) in enumerate(classified_sections, start=1):
-        print(f"{count}. {section_type}")
-
-    print("\n========================== Content =========================:")
-    for section_type, section in classified_sections:
-        print(f"\n----- {section_type} -----")
-        for category, line in section:
-            print(f"{line}")
+    # Commented by Jatin
+    # print("\nCategorized sections:")
+    # for count, (section_type, section) in enumerate(classified_sections, start=1):
+    #     print(f"{count}. {section_type}")
+    #
+    # print("\n========================== Content =========================:")
+    # for section_type, section in classified_sections:
+    #     print(f"\n----- {section_type} -----")
+    #     for category, line in section:
+    #         print(f"{line}")
 
 
 if __name__ == "__main__":
     import asyncio
 
     sample_data = get_sample_data(app_name="automation_matrix",
-                                  data_name="markdown_content",
-                                  sub_app="ama_ai_output_samples",
+                                  data_name="sample_9",
+                                  sub_app="sample_openai_responses",
                                   )
 
     asyncio.run(main(sample_data))
