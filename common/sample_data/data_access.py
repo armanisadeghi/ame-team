@@ -41,9 +41,10 @@ def load_data_from_json(path, key=None):
     return data.get(key) if key else data
 
 
-def load_data_from_text(path):
+def load_data_from_text(path, encoding='utf-8'):
     """Read and return content from a text file."""
-    with open(path, 'r') as file:
+    "Change by Jatin: I added a default encoding."
+    with open(path, 'r', encoding=encoding) as file:
         return file.read()
 
 

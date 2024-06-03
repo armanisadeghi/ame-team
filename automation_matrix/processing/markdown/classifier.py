@@ -312,8 +312,8 @@ if __name__ == "__main__":
     import asyncio
 
     sample_data = get_sample_data(app_name="automation_matrix",
-                                  data_name="sample_9",
-                                  sub_app="sample_openai_responses",
+                                  data_name="ama_raw",
+                                  sub_app="ama_raw",
                                   )
 
     asyncio.run(main(sample_data))
