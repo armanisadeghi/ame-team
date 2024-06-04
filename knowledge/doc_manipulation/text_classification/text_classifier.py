@@ -259,55 +259,55 @@ class TextManipulation:
             for condition in conditions:
 
                 if condition.get('metric') == "startswith":
-                    return line_obj.line.startswith(condition.get('value'))
+                    return line_obj.get('line').startswith(condition.get('value'))
 
                 elif condition.get('metric') == "contains":
-                    return condition.get('value') in line_obj.line
+                    return condition.get('value') in line_obj.get('line')
 
                 elif condition.get('metric') == "has_url":
-                    return line_obj.has_urls
+                    return line_obj.get('has_urls') == condition.get('value')
 
                 elif condition.get('metric') == "has_emails":
-                    return line_obj.has_emails
+                    return line_obj.get('has_emails') == condition.get('value')
 
                 elif condition.get('metric') == "starts_with_special_char":
-                    return line_obj.starts_with_special_char
+                    return line_obj.get('starts_with_special_char') == condition.get('value')
 
                 elif condition.get('metric') == "ends_with_digit":
-                    return line_obj.ends_with_digit
+                    return line_obj.get('ends_with_digit') == condition.get('value')
 
                 elif condition.get('metric') == "starts_with_digit":
-                    return line_obj.starts_with_digit
+                    return line_obj.get('starts_with_digit') == condition.get('value')
 
                 elif condition.get('metric') == "ends_with_special_char":
-                    return line_obj.ends_with_special_char
+                    return line_obj.get('ends_with_special_char') == condition.get('value')
 
                 elif condition.get('metric') == "indentation_level":
-                    return line_obj.indentation_level == condition.get('value')
+                    return line_obj.get('indentation_level') == condition.get('value')
 
                 elif condition.get('metric') == "uppercase":
-                    return line_obj.uppercase
+                    return line_obj.get('uppercase') == condition.get('value')
 
                 elif condition.get('metric') == "lowercase":
-                    return line_obj.lowercase
+                    return line_obj.get('lowercase') == condition.get('value')
 
                 elif condition.get('metric') == "mixed_case":
-                    return line_obj.mixed_case
+                    return line_obj.get('mixed_case') == condition.get('value')
 
                 elif condition.get('metric') == "numerical_content":
-                    return line_obj.numerical_content
+                    return line_obj.get('numerical_content') == condition.get('value')
 
                 elif condition.get('metric') == "numeric_sum":
-                    return line_obj.numeric_sum == condition.get('value')
+                    return line_obj.get('numeric_sum') == condition.get('value')
 
                 elif condition.get('metric') == "punctuation_count":
-                    return line_obj.punctuation_count == condition.get('value')
+                    return line_obj.get('punctuation_count') == condition.get('value')
 
                 elif condition.get('metric') == "unique_words":
-                    return line_obj.unique_words == condition.get('value')
+                    return line_obj.get('unique_words') == condition.get('value')
 
                 elif condition.get('metric') == "has_hashtags":
-                    return line_obj.has_hashtags
+                    return line_obj.get('has_hashtags') == condition.get('value')
 
                 elif condition.get('metric') == "shortest_word":
                     return line_obj.shortest_word == condition.get('value')
@@ -387,17 +387,19 @@ class TextManipulation:
 
         return document
 
-    def get_line_index_by_identifier(self, line_identifier: dict, after_line: int) -> int:
+    def filter_lines_index_by_identifier(self, line_identifier: dict, after_line: int) -> int:
         """
+        This is a utility for just searching lines with an identifier, with their indexes. This can be used on the frontend too
+
         :param line_identifier: A basic identifier
         :param after_line: Line index, incase to check after a particular line
         :return: index of the line
         """
 
-    def get_lines_by_document(self, document: str, doc_keywords= None):
+    def get_lines_by_document(self, document: str, doc_keywords=None):
         classifier = TextAnalyzer(document, doc_keywords)
 
-        analysis = analyzer.get_analysis()
+        analysis = classifier.get_analysis()
 
         lines = analysis.get('lines')
 
@@ -405,46 +407,114 @@ class TextManipulation:
 
     def add_dynamic_markers_single_line(self, document: str, line_identifier: dict,
                                         start_marker_lines: list[str],
-                                        start_marker_location: str,
-                                        end_marker_lines: list[str],
-                                        end_marker_location: str):
+                                        end_marker_lines: list[str], ):
+
         """
         This function targets to capture a **single line** around start and end marker
-        Comments by Jatin: The intention behind making was , sometimes a single line needs to be wrapped with start and end markers.
-                            Example : Wrapping chapter headers in step 2
         """
 
         lines = self.get_lines_by_document(document)
-        doc_lines = document.split('\n')
+        updated_doc_list = []
 
         for line_obj in lines:
-            line_number = line_obj.get('line_number')
-            line_index = line_number - 1
+            line_content = line_obj.get('line')
 
             if self.line_qualifies_check(line_obj, line_identifier):
-                new_list = doc_lines[:line_index] + start_marker_lines + doc_lines[line_index:]
+                updated_doc_list.extend(start_marker_lines)
+                updated_doc_list.append(line_content)
+                updated_doc_list.extend(end_marker_lines)
+            else:
+                updated_doc_list.append(line_content)
 
+        return '\n'.join(updated_doc_list)
 
-
-
-
-
-
-    def add_dynamic_markers_multiline(self, document: str, start_line_identifier: dict, end_line_identifier: dict,
-                                      add_endmarker_after_lines: int,
-                                      start_marker: str, end_marker: str):
+    def add_dynamic_markers_multiline(self,
+                                      document: str,
+                                      start_line_identifier: dict,
+                                      end_line_identifier: dict,
+                                      start_marker_list: list[str],
+                                      end_marker_list: list[str],
+                                      start_marker_position='before',
+                                      end_marker_position='after',
+                                      max_lines_if_not_found=10,
+                                      max_lookup_for_end_identifier=10) -> str:
         """
-        This function targets to capture a **multiline content** around start and end marker
+        This function wraps multiline content with start and end markers based on specified identifiers.
         """
-        pass
+        lines = self.get_lines_by_document(document)
+        updated_doc_list = []
+        skip_until_index = 0
 
-    def get_content_between_markers(self, start_identifier: list[str], end_identifier: list[str]):
-        pass
+        def add_markers(line_content, markers, position):
+            if position == 'before':
+                return markers + [line_content]
+            else:
+                return [line_content] + markers
 
-    def get_content_between_markers_after_excluding(self, start_identifier: list[str], end_identifier: list[str]):
-        pass
+        for idx, line_obj in enumerate(lines):
+            if idx < skip_until_index:
+                continue
 
+            line_content = line_obj.get('line')
+            line_index = line_obj.get('line_number') - 1
 
+            if self.line_qualifies_check(line_obj, start_line_identifier):
+                section_lines = []
+                end_found = False
+
+                for lookahead_idx in range(line_index + 1,
+                                           min(line_index + max_lookup_for_end_identifier + 1, len(lines))):
+                    section_lines.append(lines[lookahead_idx].get('line'))
+
+                    if self.line_qualifies_check(lines[lookahead_idx], end_line_identifier):
+                        end_found = True
+                        skip_until_index = lookahead_idx + 1
+                        break
+
+                if not end_found:
+                    section_lines = section_lines[:max_lines_if_not_found]
+                    skip_until_index = line_index + max_lines_if_not_found
+
+                updated_doc_list.extend(add_markers(line_content, start_marker_list, start_marker_position))
+                updated_doc_list.extend(section_lines[:-1])
+                updated_doc_list.extend(add_markers(section_lines[-1], end_marker_list, end_marker_position))
+
+            else:
+                updated_doc_list.append(line_content)
+
+        return '\n'.join(updated_doc_list)
+
+    def extract_between_markers(self, text, start_marker, end_marker):
+        lines = text.split('\n')
+        in_extraction = False  # Flag to indicate whether currently in an extraction section
+        extracted_sections = []  # List to store the extracted sections
+        remaining_lines = []  # List to store lines not within the extracted sections
+
+        current_section = []  # Temporarily stores lines of the current extracted section
+
+        for line in lines:
+            if start_marker in line:  # Check for the start marker
+                in_extraction = True
+                current_section.append(line)  # Include the start marker line in the section
+                continue  # Skip adding this line to the remaining_lines
+
+            if end_marker in line and in_extraction:  # Check for the end marker
+                current_section.append(line)  # Include the end marker line in the section
+                extracted_sections.append('\n'.join(current_section))  # Add the completed section to the list
+                current_section = []  # Reset the current section for the next extraction
+                in_extraction = False  # Reset the extraction flag
+                continue  # Skip adding this line to the remaining_lines
+
+            if in_extraction:
+                current_section.append(line)  # Add lines between the markers to the current section
+            else:
+                remaining_lines.append(line)  # Add lines outside the markers to the remaining text
+
+        # Combine the extracted sections and remaining lines back into strings
+        extracted_text = '\n\n'.join(extracted_sections)  # Separate different sections by an empty line
+        remaining_text = '\n'.join(remaining_lines)
+
+        return extracted_text, remaining_text
 
 
 if __name__ == "__main__":
@@ -452,16 +522,27 @@ if __name__ == "__main__":
     with open(r'chapter_text_19.txt', 'r', encoding='utf-8') as file:
         text = file.read()
 
-    keywords = ["Measurement", "Rotation", "example"]
-    analyzer = TextAnalyzer(text, keywords)
-    analysis = analyzer.get_analysis()
+    obj = TextManipulation("None")
+    identifier = {
+        "AND": [{"metric": "starts_with_digit", "value": True}]
+    }
+    identifier2 = {
+        "AND": [{"metric": "contains", "value": ""}]
+    }
+
+    updated_doc = obj.add_dynamic_markers_multiline(text, identifier, identifier2, ['---start---'], ['---end---'], )
+    update_doc = obj.extract_between_markers(updated_doc, '---start---', '---end---')
+    print(update_doc)
+    # keywords = ["Measurement", "Rotation", "example"]
+    # analyzer = TextAnalyzer(text, keywords)
+    # analysis = analyzer.get_analysis()
 
     # Print analysis of the first few lines for demonstration
-    for item in analysis["lines"][:1]:
-        pretty_print(item)
-
-    # Print metadata
-    pretty_print(analysis['metadata'], title="Metadata")
+    # for item in analysis["lines"][:1]:
+    #     pretty_print(item)
+    #
+    # # Print metadata
+    # pretty_print(analysis['metadata'], title="Metadata")
 
     # Print the full classification
     # pretty_print(analysis)
