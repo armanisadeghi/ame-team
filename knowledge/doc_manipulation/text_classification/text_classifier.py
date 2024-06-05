@@ -10,6 +10,8 @@ def clean_text(text: str) -> str:
     return cleaned_text
 
 
+
+# Remaining to add markdown content detection. Code is ready but need to test it thoroughly before pushing it.
 class LineClassifier:
     def __init__(self, line: str, line_number: int, previous_line: Optional[str] = None,
                  next_line: Optional[str] = None, keywords: Optional[List[str]] = None):
@@ -202,7 +204,9 @@ class TextAnalyzer:
         }
 
 
-# This is incomplete for now
+# have to add more features
+# pending features like , check_after_strip in line_qualifies_check, and case_sensitivity too
+
 class TextManipulation:
     """
     A text manipulation toolkit.
@@ -239,9 +243,7 @@ class TextManipulation:
             }
     """
 
-    def __init__(self, document: str):
-        self.document = document
-        self.updated_document = document
+    def __init__(self):
         self.text_cleaning_replacements = \
             {
                 # Replace specific Unicode punctuation with ASCII equivalents
@@ -258,8 +260,15 @@ class TextManipulation:
         def match_conditions(line_obj, conditions):
             for condition in conditions:
 
+                # there is a better way to handle this , I have this in mind:
+                # We can maintain a json for these metrics , we can directly name the metrics in identifiers as the attributes in the LineClassifier.
+                # Please donot consider this as final code. This may get 100s of conditions , so its better to just maintain a json which will be handy in managing frontend part too.
                 if condition.get('metric') == "startswith":
                     return line_obj.get('line').startswith(condition.get('value'))
+
+                elif condition.get('metric') == 'has_markdown':
+                    # Logic here for markdown detection , to be pushed later.
+                    return True
 
                 elif condition.get('metric') == "contains":
                     return condition.get('value') in line_obj.get('line')
@@ -484,8 +493,8 @@ class TextManipulation:
 
         return '\n'.join(updated_doc_list)
 
-    def extract_between_markers(self, text, start_marker, end_marker):
-        lines = text.split('\n')
+    def extract_between_markers(self, document: str, start_marker: str, end_marker: str, content=True):
+        lines = self.get_lines_by_document(document)
         in_extraction = False  # Flag to indicate whether currently in an extraction section
         extracted_sections = []  # List to store the extracted sections
         remaining_lines = []  # List to store lines not within the extracted sections
@@ -493,28 +502,113 @@ class TextManipulation:
         current_section = []  # Temporarily stores lines of the current extracted section
 
         for line in lines:
-            if start_marker in line:  # Check for the start marker
+            if start_marker in line.get('line'):  # Check for the start marker
                 in_extraction = True
-                current_section.append(line)  # Include the start marker line in the section
+                current_section.append(line.get('line'))  # Include the start marker line in the section
                 continue  # Skip adding this line to the remaining_lines
 
-            if end_marker in line and in_extraction:  # Check for the end marker
-                current_section.append(line)  # Include the end marker line in the section
+            if end_marker in line.get('line') and in_extraction:  # Check for the end marker
+                current_section.append(line.get('line'))  # Include the end marker line in the section
                 extracted_sections.append('\n'.join(current_section))  # Add the completed section to the list
                 current_section = []  # Reset the current section for the next extraction
                 in_extraction = False  # Reset the extraction flag
                 continue  # Skip adding this line to the remaining_lines
 
             if in_extraction:
-                current_section.append(line)  # Add lines between the markers to the current section
+                current_section.append(line.get('line'))  # Add lines between the markers to the current section
             else:
-                remaining_lines.append(line)  # Add lines outside the markers to the remaining text
+                remaining_lines.append(line.get('line'))  # Add lines outside the markers to the remaining text
 
         # Combine the extracted sections and remaining lines back into strings
         extracted_text = '\n\n'.join(extracted_sections)  # Separate different sections by an empty line
         remaining_text = '\n'.join(remaining_lines)
 
-        return extracted_text, remaining_text
+        if content:
+            return remaining_text
+        else:
+            return extracted_text
+
+    def replace_items(self, document: str, replacements: list[dict], line_identifier = None):
+        """Use by_line = False, if you need to replace items in the whole document.
+        Examples of replacements : [{ pattern : None , text : "Something", replacement: "Not something"},
+                                    { pattern : r'\\.exe' , text : None, replacement: ".py"},
+                                    { pattern : r'The US Navy has \\.\\d+' , text : "Confidential Data", replacement: "[REDACTED]"}]
+        """
+
+        def do_replacement(replacement_config: list[dict], text_data: str):
+            updated_text = text_data
+
+            for replacement in replacement_config:
+                pattern = replacement.get('pattern')
+                search_text = replacement.get('text')
+                replacement_text = replacement.get('replacement')
+
+                if pattern:
+                    updated_text = re.sub(pattern, replacement_text, updated_text)
+
+                if search_text and search_text in text_data:
+                    updated_text = updated_text.replace(search_text, replacement_text)
+
+            return updated_text
+
+        if line_identifier is not None:
+            updated_doc_list = []
+            lines = self.get_lines_by_document(document)
+
+            for line in lines:
+                line_content = line.get('line')
+                if self.line_qualifies_check(line, line_identifier):
+                    line_content = do_replacement(replacements, line_content)
+
+                updated_doc_list.append(line_content)
+
+            return '\n'.join(updated_doc_list)
+        else:
+            return do_replacement(replacements, document)
+
+    def extract_short_sections(self, document: str, line_count: int, char_count: int, content= True):
+        lines = self.get_lines_by_document(document)
+        extracted_sections = []
+        remaining_text = []
+        section_lines = []
+        section_char_count = 0
+
+        for i, line in enumerate(lines):
+            section_lines.append(line.get('line'))
+            section_char_count += len(line.get('line'))
+
+            if len(section_lines) == line_count:
+                if section_char_count < char_count:
+                    extracted_section = "\n".join(section_lines)
+                    extracted_sections.append(extracted_section)
+
+                    section_lines = []
+                    section_char_count = 0
+                else:
+                    moved_line = section_lines.pop(0)
+                    remaining_text.append(moved_line)
+                    section_char_count -= len(moved_line)
+
+            if i == len(lines) - 1:
+                remaining_text.extend(section_lines)
+
+        extracted_sections_str = "\n\n".join(extracted_sections)
+        remaining_text_str = "\n".join(remaining_text)
+
+        if content:
+            return remaining_text_str
+        else:
+            return extracted_sections_str
+
+    def format_and_join_lines(self, primary_line_identifier, line_to_join_index, line_to_join_identifier=None):
+        # Pending to add in codebase. Code is done , but needs testing. Not including it for now.
+        pass
+
+
+    # To be pushed
+    def break_text(self):
+        # Pending function
+        pass
 
 
 if __name__ == "__main__":
@@ -522,17 +616,20 @@ if __name__ == "__main__":
     with open(r'chapter_text_19.txt', 'r', encoding='utf-8') as file:
         text = file.read()
 
-    obj = TextManipulation("None")
+    obj = TextManipulation()
     identifier = {
         "AND": [{"metric": "starts_with_digit", "value": True}]
     }
     identifier2 = {
-        "AND": [{"metric": "contains", "value": ""}]
+        "AND": [{"metric": "contains", "value": "h"}]
     }
 
-    updated_doc = obj.add_dynamic_markers_multiline(text, identifier, identifier2, ['---start---'], ['---end---'], )
-    update_doc = obj.extract_between_markers(updated_doc, '---start---', '---end---')
-    print(update_doc)
+    # updated_doc = obj.add_dynamic_markers_multiline(text, identifier, identifier2, ['---start---'], ['---end---'], )
+    # updated_doc = obj.extract_between_markers(updated_doc, '---start---', '---end---', content=False)
+    # updated_doc = obj.replace_items(updated_doc, [{'pattern': r'---(\w+)---', 'replacement':'[REDACTED]', 'text': 'Record movements'}])
+
+    # print(updated_doc)
+
     # keywords = ["Measurement", "Rotation", "example"]
     # analyzer = TextAnalyzer(text, keywords)
     # analysis = analyzer.get_analysis()
