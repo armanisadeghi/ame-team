@@ -282,12 +282,6 @@ class TextManipulation:
 
     def line_qualifies_check(self, line: LineClassifier, line_identifier: dict) -> bool:
 
-        def compare_integer_values(line_obj, condition):
-            pass
-
-        def compare_string_values(line_obj, condition):
-            pass
-
         def match_conditions(line_obj, conditions):
             for condition in conditions:
 
