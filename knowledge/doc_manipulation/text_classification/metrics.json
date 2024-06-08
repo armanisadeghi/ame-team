@@ -1,0 +1,100 @@
+[
+    {
+        "metrics": {
+            "startswith": [
+                "case_sensitive",
+                "strip",
+                "equals"
+            ],
+            "endswith": [
+                "case_sensitive",
+                "strip",
+                "equals"
+            ],
+            "contains_regex_pattern": [
+                "equals"
+            ],
+            "has_date_time": [
+                "equals"
+            ],
+            "has_markdown": [
+                "equals"
+            ],
+            "contains": [
+                "case_sensitive",
+                "strip",
+                "equals"
+            ],
+            "has_url": [
+                "equals"
+            ],
+            "has_emails": [
+                "equals"
+            ],
+            "starts_with_special_char": [
+                "equals"
+            ],
+            "ends_with_digit": [
+                "equals"
+            ],
+            "starts_with_digit": [
+                "equals"
+            ],
+            "ends_with_special_char": [
+                "equals"
+            ],
+            "indentation_level": [
+                "greater_than",
+                "less_than",
+                "equals"
+            ],
+            "uppercase": [
+                "equals"
+            ],
+            "lowercase": [
+                "equals"
+            ],
+            "mixed_case": [
+                "equals"
+            ],
+            "numerical_content": [
+                "equals"
+            ],
+            "numeric_sum": [
+                "greater_than",
+                "less_than",
+                "equals"
+            ],
+            "punctuation_count": [
+                "greater_than",
+                "less_than",
+                "equals"
+            ],
+            "unique_words": [
+                "greater_than",
+                "less_than",
+                "equals"
+            ],
+            "has_hashtags": [
+                "equals"
+            ],
+            "shortest_word": [
+                "case_sensitive",
+                "equals"
+            ],
+            "longest_word": [
+                "case_sensitive",
+                "equals"
+            ]
+        }
+    },
+    {
+        "params": {
+            "case_sensitive": "bool",
+            "equals": "Any",
+            "greater_than": "int",
+            "less_than": "int",
+            "strip": "bool"
+        }
+    }
+]

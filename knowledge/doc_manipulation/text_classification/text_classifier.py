@@ -10,7 +10,6 @@ def clean_text(text: str) -> str:
     return cleaned_text
 
 
-
 # Remaining to add markdown content detection. Code is ready but need to test it thoroughly before pushing it.
 class LineClassifier:
     def __init__(self, line: str, line_number: int, previous_line: Optional[str] = None,
@@ -56,6 +55,9 @@ class LineClassifier:
 
         # Keyword analysis
         self.keyword_analysis = self.analyze_keywords()
+
+        # Markdown
+        self.has_markdown = self.contains_markdown()
 
     def contains_dates_times(self):
         """Checks if the text contains dates or times."""
@@ -106,6 +108,26 @@ class LineClassifier:
             return round(sum(len(word) for word in self.line.split()) / len(self.line))
         return 0.0
 
+    def contains_markdown(self):
+        markdown_patterns = [
+            r'^(#{1,6})\s(.+)$',  # Headers
+            r'^(\*|\+|\-|\d+\.)\s(.+)$',  # Lists
+            r'^\>\s(.+)$',  # Blockquotes
+            r'```[\s\S]*?```',  # Code blocks
+            r'`[^`]+`',  # Inline code
+            r'(\*\*|__)(.*?)\1',  # Bold text
+            r'(\*|_)(.*?)\1',  # Italic text
+            r'\[([^\]]+)\]\(([^\)]+)\)',  # Links
+            r'\!\[([^\]]*)\]\(([^\)]+)\)',  # Images
+            r'^(\-{3,}|\*{3,})$',  # Horizontal rules
+            r'^\|(.+)\|$',  # Tables
+            r'~~(.*?)~~'  # Strikethrough
+        ]
+        combined_pattern = re.compile('|'.join(markdown_patterns), re.MULTILINE)
+        if combined_pattern.search(self.line):
+            return True
+        return False
+
     def count_sentences(self) -> int:
         # Maybe incorrect in some cases but will give a rough idea
         return sum(self.line.count(p) for p in '.!?')
@@ -154,7 +176,9 @@ class LineClassifier:
             "keyword_analysis": self.keyword_analysis,
             "has_urls": self.has_urls,
             "has_emails": self.has_emails,
+            "has_date_time": self.has_dates,
             "has_hashtags": self.has_hashtags,
+            "has_markdown": self.has_markdown,
             "shortest_word": self.shortest_word,
             "longest_word": self.longest_word,
             "average_word_length": self.average_word_length
@@ -257,72 +281,162 @@ class TextManipulation:
             }
 
     def line_qualifies_check(self, line: LineClassifier, line_identifier: dict) -> bool:
+
+        def compare_integer_values(line_obj, condition):
+            pass
+
+        def compare_string_values(line_obj, condition):
+            pass
+
         def match_conditions(line_obj, conditions):
             for condition in conditions:
 
-                # there is a better way to handle this , I have this in mind:
-                # We can maintain a json for these metrics , we can directly name the metrics in identifiers as the attributes in the LineClassifier.
-                # Please donot consider this as final code. This may get 100s of conditions , so its better to just maintain a json which will be handy in managing frontend part too.
                 if condition.get('metric') == "startswith":
-                    return line_obj.get('line').startswith(condition.get('value'))
+                    text_to_match = line_obj.get('line')
+                    value_to_match = condition.get('equals')
+
+                    if condition.get('strip'):
+                        text_to_match = text_to_match.strip()
+                    if condition.get('case_sensitive'):
+                        text_to_match = text_to_match.upper()
+                        value_to_match = value_to_match.upper()
+
+                    return text_to_match.startswith(value_to_match)
+
+                elif condition.get('metric') == 'endswith':
+                    text_to_match = line_obj.get('line')
+                    value_to_match = condition.get('equals')
+
+                    if condition.get('strip'):
+                        text_to_match = text_to_match.strip()
+                    if condition.get('case_sensitive'):
+                        text_to_match = text_to_match.upper()
+                        value_to_match = value_to_match.upper()
+
+                    return text_to_match.endswith(value_to_match)
 
                 elif condition.get('metric') == 'has_markdown':
-                    # Logic here for markdown detection , to be pushed later.
-                    return True
+                    return line_obj.get('has_markdown') == condition.get('equals')
+
+                elif condition.get('metric') == 'contains_regex_pattern':
+                    text_to_match = line_obj.get('line')
+                    pattern = condition.get('equals')
+
+                    if re.search(pattern, text_to_match):
+                        return True
+                    return False
 
                 elif condition.get('metric') == "contains":
-                    return condition.get('value') in line_obj.get('line')
+                    text_to_match = line_obj.get('line')
+                    value_to_match = condition.get('equals')
+
+                    if condition.get('strip'):
+                        text_to_match = text_to_match.strip()
+                    if condition.get('case_sensitive'):
+                        text_to_match = text_to_match.upper()
+                        value_to_match = value_to_match.upper()
+
+                    return value_to_match in text_to_match
 
                 elif condition.get('metric') == "has_url":
-                    return line_obj.get('has_urls') == condition.get('value')
+                    return line_obj.get('has_urls') == condition.get('equals')
 
                 elif condition.get('metric') == "has_emails":
-                    return line_obj.get('has_emails') == condition.get('value')
+                    return line_obj.get('has_emails') == condition.get('equals')
+
+                elif condition.get('metric') == "has_date_time":
+                    return line_obj.get('has_date_time') == condition.get('equals')
 
                 elif condition.get('metric') == "starts_with_special_char":
-                    return line_obj.get('starts_with_special_char') == condition.get('value')
+                    return line_obj.get('starts_with_special_char') == condition.get('equals')
 
                 elif condition.get('metric') == "ends_with_digit":
-                    return line_obj.get('ends_with_digit') == condition.get('value')
+                    return line_obj.get('ends_with_digit') == condition.get('equals')
 
                 elif condition.get('metric') == "starts_with_digit":
-                    return line_obj.get('starts_with_digit') == condition.get('value')
+                    return line_obj.get('starts_with_digit') == condition.get('equals')
 
                 elif condition.get('metric') == "ends_with_special_char":
-                    return line_obj.get('ends_with_special_char') == condition.get('value')
+                    return line_obj.get('ends_with_special_char') == condition.get('equals')
 
                 elif condition.get('metric') == "indentation_level":
-                    return line_obj.get('indentation_level') == condition.get('value')
+                    indentation_level = line_obj.get('indentation_level')
+
+                    if condition.get('equals'):
+                        return indentation_level == condition.get('equals')
+
+                    elif condition.get('greater_than'):
+                        return indentation_level > condition.get('greater_than')
+
+                    elif condition.get('less_than'):
+                        return indentation_level < condition.get('less_than')
 
                 elif condition.get('metric') == "uppercase":
-                    return line_obj.get('uppercase') == condition.get('value')
+                    return line_obj.get('uppercase') == condition.get('equals')
 
                 elif condition.get('metric') == "lowercase":
-                    return line_obj.get('lowercase') == condition.get('value')
+                    return line_obj.get('lowercase') == condition.get('equals')
 
                 elif condition.get('metric') == "mixed_case":
-                    return line_obj.get('mixed_case') == condition.get('value')
+                    return line_obj.get('mixed_case') == condition.get('equals')
 
                 elif condition.get('metric') == "numerical_content":
-                    return line_obj.get('numerical_content') == condition.get('value')
+                    return line_obj.get('numerical_content') == condition.get('equals')
 
                 elif condition.get('metric') == "numeric_sum":
-                    return line_obj.get('numeric_sum') == condition.get('value')
+                    numeric_sum = line_obj.get('numeric_sum')
+
+                    if condition.get('equals'):
+                        return numeric_sum == condition.get('equals')
+
+                    elif condition.get('greater_than'):
+                        return numeric_sum > condition.get('greater_than')
+
+                    elif condition.get('less_than'):
+                        return numeric_sum < condition.get('less_than')
 
                 elif condition.get('metric') == "punctuation_count":
-                    return line_obj.get('punctuation_count') == condition.get('value')
+                    punctuation_count = line_obj.get('punctuation_count')
+
+                    if condition.get('equals'):
+                        return punctuation_count == condition.get('equals')
+
+                    elif condition.get('greater_than'):
+                        return punctuation_count > condition.get('greater_than')
+
+                    elif condition.get('less_than'):
+                        return punctuation_count < condition.get('less_than')
 
                 elif condition.get('metric') == "unique_words":
-                    return line_obj.get('unique_words') == condition.get('value')
+                    unique_words = line_obj.get('unique_words')
+
+                    if condition.get('equals'):
+                        return unique_words == condition.get('equals')
+
+                    elif condition.get('greater_than'):
+                        return unique_words > condition.get('greater_than')
+
+                    elif condition.get('less_than'):
+                        return unique_words < condition.get('less_than')
 
                 elif condition.get('metric') == "has_hashtags":
-                    return line_obj.get('has_hashtags') == condition.get('value')
+                    return line_obj.get('has_hashtags') == condition.get('equals')
 
                 elif condition.get('metric') == "shortest_word":
-                    return line_obj.shortest_word == condition.get('value')
+                    value_to_match = condition.get('equals')
+                    text_to_match = line_obj.get('shortest_word')
+                    if condition.get('case_sensitive'):
+                        value_to_match = value_to_match.upper()
+                        text_to_match = text_to_match.upper()
+                    return text_to_match == value_to_match
 
                 elif condition.get('metric') == "longest_word":
-                    return line_obj.longest_word == condition.get('value')
+                    value_to_match = condition.get('equals')
+                    text_to_match = line_obj.get('longest_word')
+                    if condition.get('case_sensitive'):
+                        value_to_match = value_to_match.upper()
+                        text_to_match = text_to_match.upper()
+                    return text_to_match == value_to_match
 
             # Incase the metric is not identified in the if else ladder, then just return False, means condition is not satisfied
             return False
@@ -370,7 +484,7 @@ class TextManipulation:
 
         return '\n'.join(cleaned_lines)
 
-    def clean_document(self, document: str, replacements):
+    def clean_document(self, document: str, replacements=None):
         """
         Cleans the input text by replacing certain Unicode characters with their ASCII equivalents
         and removing non-ASCII characters.
@@ -396,14 +510,24 @@ class TextManipulation:
 
         return document
 
-    def filter_lines_index_by_identifier(self, line_identifier: dict, after_line: int) -> int:
-        """
-        This is a utility for just searching lines with an identifier, with their indexes. This can be used on the frontend too
+    def filter_lines(self, document: str, line_identifier: dict) -> list[LineClassifier]:
 
-        :param line_identifier: A basic identifier
-        :param after_line: Line index, incase to check after a particular line
-        :return: index of the line
-        """
+        lines = self.get_lines_by_document(document)
+        filtered_lines = []
+        for line in lines:
+            if self.line_qualifies_check(line, line_identifier):
+                filtered_lines.append(line)
+
+        return filtered_lines
+
+    def filter_lines_by_regex(self, document: str, pattern) -> list[LineClassifier]:
+        lines = self.get_lines_by_document(document)
+        results = []
+        for line in lines:
+            line_content = line.get('line')
+            if re.search(pattern, line_content):
+                results.append(line)
+        return results
 
     def get_lines_by_document(self, document: str, doc_keywords=None):
         classifier = TextAnalyzer(document, doc_keywords)
@@ -528,7 +652,7 @@ class TextManipulation:
         else:
             return extracted_text
 
-    def replace_items(self, document: str, replacements: list[dict], line_identifier = None):
+    def replace_items(self, document: str, replacements: list[dict], line_identifier=None):
         """Use by_line = False, if you need to replace items in the whole document.
         Examples of replacements : [{ pattern : None , text : "Something", replacement: "Not something"},
                                     { pattern : r'\\.exe' , text : None, replacement: ".py"},
@@ -566,7 +690,7 @@ class TextManipulation:
         else:
             return do_replacement(replacements, document)
 
-    def extract_short_sections(self, document: str, line_count: int, char_count: int, content= True):
+    def extract_short_sections(self, document: str, line_count: int, char_count: int, content=True):
         lines = self.get_lines_by_document(document)
         extracted_sections = []
         remaining_text = []
@@ -600,15 +724,87 @@ class TextManipulation:
         else:
             return extracted_sections_str
 
-    def format_and_join_lines(self, primary_line_identifier, line_to_join_index, line_to_join_identifier=None):
-        # Pending to add in codebase. Code is done , but needs testing. Not including it for now.
-        pass
+    def join_lines(self,
+                   document: str,
+                   primary_line_identifier,
+                   distance_from_primary_identifier=None,
+                   location="after",
+                   remove_secondary_line=False,
+                   separator=' ',
+                   line_to_join_identifier=None):
+        """
+        :param document: The document string to process
+        :param primary_line_identifier: Identifier for primary lines
+        :param distance_from_primary_identifier: Distance from the primary line to join another line
+        :param location: 'after' or 'before', indicating the relative position of the line to join
+        :param remove_secondary_line: Boolean indicating whether to remove the secondary line after joining
+        :param separator: The separator to use when joining lines
+        :param line_to_join_identifier: Identifier for secondary lines to join
+        :return: The formatted document as a string
+        """
+        updated_doc_lines = []
+        check_after_index = 0
+
+        lines = self.get_lines_by_document(document)
+
+        for idx, line in enumerate(lines):
+            if idx < check_after_index:
+                continue
+
+            if self.line_qualifies_check(line, primary_line_identifier):  # Detected a primary line
+
+                if location == "after":
+                    lookup_lines = lines[idx + 1:]
+                else:
+                    lookup_lines = lines[:idx]
+
+                # If we have an identifier for the secondary line
+                if line_to_join_identifier:
+                    for lookahead_idx, lookahead_line in enumerate(lookup_lines):
+                        if self.line_qualifies_check(lookahead_line, line_to_join_identifier):  # Secondary line found
+                            updated_doc_lines.append(f"{line.get('line')}{separator}{lookahead_line.get('line')}")
+                            check_after_index = idx + lookahead_idx + 1 if location == "after" else idx
+                            if remove_secondary_line:
+                                del lines[idx + lookahead_idx + 1]
+                            break
+                # If we don't have the identifier, use index-based joining
+                else:
+                    if location == "after":
+                        join_idx = idx + distance_from_primary_identifier + 1
+                    else:
+                        join_idx = idx - distance_from_primary_identifier
+
+                    if 0 <= join_idx < len(lines):
+                        join_line = lines[join_idx]
+                        updated_doc_lines.append(f"{line.get('line')}{separator}{join_line.get('line')}")
+                        if remove_secondary_line:
+                            del lines[join_idx]
+                        check_after_index = max(check_after_index, idx + 1) if location == "after" else idx
+                    else:
+                        updated_doc_lines.append(line.get('line'))
+            else:
+                updated_doc_lines.append(line.get('line'))
+
+        return '\n'.join(updated_doc_lines)
 
 
-    # To be pushed
-    def break_text(self):
-        # Pending function
-        pass
+def process_steps(cleaning_steps, document):
+    processor = TextManipulation()
+    updated_document = document
+
+    for step_info in cleaning_steps:
+        step_name = step_info.get("step")
+        kwargs = step_info.get("kwargs", {})
+
+        # Class called `TextManipulation` with methods matching the step names
+        if hasattr(processor, step_name):
+            # Get the method from the class
+            method = getattr(processor, step_name)
+
+            # Call the method with the provided keyword arguments
+            updated_document = method(document=updated_document, **kwargs)
+
+    return updated_document
 
 
 if __name__ == "__main__":
@@ -617,16 +813,28 @@ if __name__ == "__main__":
         text = file.read()
 
     obj = TextManipulation()
+
     identifier = {
-        "AND": [{"metric": "starts_with_digit", "value": True}]
+        "AND": [{"metric": "starts_with_digit", "equals": True}]
     }
     identifier2 = {
-        "AND": [{"metric": "contains", "value": "h"}]
+        "AND": [{"metric": "contains", "equals": "abduction, adduction, elevation, depression"}]
     }
+
+    steps = [
+        {"step": "clean_document", "kwargs": {}},
+        {"step": "limit_consecutive_empty_lines", "kwargs": {'max_empty_lines': 0}},
+    ]
+
+    updated_document = process_steps(steps, document=text)
+
+    print(updated_document)
 
     # updated_doc = obj.add_dynamic_markers_multiline(text, identifier, identifier2, ['---start---'], ['---end---'], )
     # updated_doc = obj.extract_between_markers(updated_doc, '---start---', '---end---', content=False)
     # updated_doc = obj.replace_items(updated_doc, [{'pattern': r'---(\w+)---', 'replacement':'[REDACTED]', 'text': 'Record movements'}])
+    # updated_doc = obj.join_lines(text, identifier, None, line_to_join_identifier=identifier2,
+    #                                         remove_secondary_line=True)
 
     # print(updated_doc)
 
