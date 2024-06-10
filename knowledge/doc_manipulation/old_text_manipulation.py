@@ -882,34 +882,35 @@ if __name__ == '__main__':
     file_path_10 = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text_10.txt")
     file_path_11 = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\text_11.txt")
     file_path_12 = os.path.join(os.getcwd(),"data","text_12.txt")
+    file_path_14 = os.path.join(os.getcwd(), "data", "text_14.txt")
     index_text = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\index_text.txt")
     glossary_text = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\glossary_text.txt")
     remaining_tables = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\remaining_tables.txt")
     extracted_text = (r"D:\OneDrive\dev\PycharmProjects\aidream\common\utils\doc_manipulation\data\extracted_text.txt")  # Live
 
-    original_document = get_original_text(file_path)
+    # original_document = get_original_text(file_path)
 
     # Step 1: remove excessive blank lines
-    cleaned_document = clean_blank_lines(original_document,1)
+    # cleaned_document = clean_blank_lines(original_document,1)
 
     # print(cleaned_document)
     # Step 2: Normalize chapter headers
 
-    updated_document = normalize_chapter_headers(cleaned_document)
+    # updated_document = normalize_chapter_headers(cleaned_document)
 
     # Step 3: Extract references and update document
-    references, updated_document = extract_references_and_update_document(updated_document)
+    # references, updated_document = extract_references_and_update_document(updated_document)
     # write_replace_file(reference_file, references)
 
 
     # Step 4: Organize chapter sections
-    updated_document = organize_chapter_sections(updated_document)
+    # updated_document = organize_chapter_sections(updated_document)
 
     # Step 5: Wrap and clean examples
-    updated_document = mark_examples(updated_document)
+    # updated_document = mark_examples(updated_document)
 
     # Step 6: Extract and remove known examples
-    updated_document, examples = extract_and_remove_examples(updated_document)
+    # updated_document, examples = extract_and_remove_examples(updated_document)
 
     # Write the cleaned document to a new file
     # write_replace_file(file_path_6, updated_document)
@@ -921,19 +922,19 @@ if __name__ == '__main__':
     # Step 7: Extract sections with low text content (Did it again towards the end) - 25 lines, 100 characters first time. - second time 8/50, third time 5/14
     line_count = 5
     char_count = 14
-    extracted_sections_str, remaining_text_str = extract_short_sections(updated_document, 8, 50)
+    # extracted_sections_str, remaining_text_str = extract_short_sections(updated_document, 8, 50)
     # print(extracted_sections_str)
 
     # add_text(low_char_count_text, extracted_sections_str)
     # write_replace_file(file_path_11, remaining_text_str)
 
     # Step 8: Eliminate extra empty lines
-    updated_document = eliminate_extra_empty_lines(remaining_text_str)
+    # updated_document = eliminate_extra_empty_lines(remaining_text_str)
 
     line_starts_with = 'Index'
     location = 'before'
     text_to_add = '-------- INDEX START -------'
-    updated_document = add_dynamic_marker(updated_document, line_starts_with, location, text_to_add)
+    # updated_document = add_dynamic_marker(updated_document, line_starts_with, location, text_to_add)
 
     # write_replace_file(file_path_9, updated_document)
 
@@ -946,7 +947,7 @@ if __name__ == '__main__':
     # updated_text = handle_text_starting_with_tab_indent(original_document)
 
     # Identify Introduction
-    updated_text = add_dynamic_marker(updated_document, "Introduction", location="before", text_to_add="-------- INTRODUCTION START -------")
+    # updated_text = add_dynamic_marker(updated_document, "Introduction", location="before", text_to_add="-------- INTRODUCTION START -------")
 
     # Replace tabs with newlines
     # updated_text = convert_tabs_to_newlines(original_document)
@@ -978,7 +979,7 @@ if __name__ == '__main__':
     # write_replace_file(file_path_10, updated_text)
 
     # Remove pattern and numbers
-    updated_text = remove_pattern_and_numbers(updated_document)
+    # updated_text = remove_pattern_and_numbers(updated_document)
 
 
     # updated_text = clean_blank_lines(original_document, 1)
@@ -999,7 +1000,7 @@ if __name__ == '__main__':
     #path_to_source = r"/knowledgebase/utils/doc_manipulation/data/chapters/full_text.txt"
     #marker_text = '================================================================================'
     #new_file_name = r"chapter_text"
-    # split_text_by_marker(path_to_source, marker_text, new_file_name)
+    # split_text_by_marker(file_path_14, "--break--", 'new_file_name.txt')
 
     #final_path = r"/knowledgebase/utils/doc_manipulation/data/text_14.txt"
     #text = get_original_text(final_path)

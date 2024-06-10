@@ -85,6 +85,31 @@
             "longest_word": [
                 "case_sensitive",
                 "equals"
+            ],
+            "char_count": [
+                "greater_than",
+                "less_than",
+                "equals"
+            ],
+            "word_count": [
+                "greater_than",
+                "less_than",
+                "equals"
+            ],
+            "sentence_count": [
+                "greater_than",
+                "less_than",
+                "equals"
+            ],
+            "line_length": [
+                "greater_than",
+                "less_than",
+                "equals"
+            ],
+            "average_word_length": [
+                "greater_than",
+                "less_than",
+                "equals"
             ]
         }
     },
