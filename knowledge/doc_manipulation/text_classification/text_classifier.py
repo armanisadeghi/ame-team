@@ -1,7 +1,52 @@
+import multidict
 from common import pretty_print
 import re
 from collections import Counter, defaultdict
 from typing import List, Dict, Optional
+from difflib import SequenceMatcher
+from automation_matrix.processing.markdown.classifier import OutputClassifier
+
+
+class TextSimilarity:
+
+    def similarity_between_two(self,
+                               s1: str,
+                               s2: str) -> float:
+        """
+        Calculates the similarity ratio between two strings using SequenceMatcher from difflib.
+
+        Parameters:
+        - s1 (str): First string for comparison.
+        - s2 (str): Second string for comparison.
+
+        Returns:
+        - float: Similarity ratio between 0.0 and 1.0, where higher values indicate greater similarity.
+        """
+        matcher = SequenceMatcher(None, s1, s2)
+
+        return round(matcher.ratio(), 2)
+
+    def multi_similarity(self,
+                         s1: str,
+                         string_list: list,
+                         fetch_string_func=None):
+        """
+        Calculates similarity ratios for a list of strings compared to a reference string and sorts them in descending order.
+
+        Parameters:
+        - str1 (str): The reference string.
+        - str_list (list of str): The list of strings to compare with str1.
+
+        Returns:
+        - list of tuple: List of tuples, each containing a string from str_list and its similarity ratio, sorted by similarity ratio in descending order.
+        """
+
+        similarities = [
+            (s, self.similarity_between_two(s1, fetch_string_func(s) if fetch_string_func else s))
+            for s in string_list
+        ]
+        similarities.sort(key=lambda x: x[1], reverse=True)
+        return similarities
 
 
 def clean_text(text: str) -> str:
@@ -10,7 +55,100 @@ def clean_text(text: str) -> str:
     return cleaned_text
 
 
-# Remaining to add markdown content detection. Code is ready but need to test it thoroughly before pushing it.
+class LineIdentifier:
+    """
+    Example of a metric list:
+
+        metrics = [
+            ('metric1', {'option1': 'value1'}),
+            ('metric2', {'option2': 'value2'}),
+            ('metric3', {'option3': 'value3'}),
+        ]
+
+    **"AND": "Used for ensuring all conditions are true",**
+
+    **"NOT": "Used for ensuring the condition is false",**
+
+    **"OR": "Used for ensuring at least one condition is true",**
+
+    **"XOR": "Used for ensuring exactly one condition is true",**
+
+    **"NAND": "Used for ensuring not all conditions are true",**
+
+    **"NOR": "Used for ensuring all conditions are false",**
+
+    **"XNOR": "Used for ensuring conditions are either all true or all false",**
+
+    **"IMPLICATION": "Used for ensuring if the first condition is true, the second must be true",**
+
+    **"BICONDITIONAL": "Used for ensuring conditions are both true or both false"**
+    """
+
+    def __init__(self):
+        self.identifier = defaultdict()
+        self.idx = None
+        self.groups_meanings = {
+            "AND": "Used for ensuring all conditions are true",
+            "NOT": "Used for ensuring the condition is false",
+            "OR": "Used for ensuring at least one condition is true",
+            "XOR": "Used for ensuring exactly one condition is true",
+            "NAND": "Used for ensuring not all conditions are true",
+            "NOR": "Used for ensuring all conditions are false",
+            "XNOR": "Used for ensuring conditions are either all true or all false",
+            "IMPLICATION": "Used for ensuring if the first condition is true, the second must be true",
+            "BICONDITIONAL": "Used for ensuring conditions are both true or both false"
+        }
+
+    def _add_group(self, metric_group_type: str, metrics: list):
+
+        if not hasattr(self, 'idx') or self.idx is None:
+            self.idx = 0
+
+        # Initialize the identifier at the current index
+        self.identifier[self.idx] = {
+            'type': metric_group_type,
+            'metrics': [{'metric': name, **options} for name, options in metrics]
+        }
+
+        # Increment the index for the next group
+        self.idx += 1
+
+    def ADD_AND(self, metrics):
+        self._add_group(metric_group_type="AND", metrics=metrics)
+
+    def ADD_NOT(self, metrics):
+        self._add_group(metric_group_type="NOT", metrics=metrics)
+
+    def ADD_OR(self, metrics):
+        self._add_group(metric_group_type="OR", metrics=metrics)
+
+    def ADD_XOR(self, metrics):
+        self._add_group(metric_group_type="XOR", metrics=metrics)
+
+    def ADD_NAND(self, metrics):
+        self._add_group(metric_group_type="NAND", metrics=metrics)
+
+    def ADD_NOR(self, metrics):
+        self._add_group(metric_group_type="NOR", metrics=metrics)
+
+    def ADD_XNOR(self, metrics):
+        self._add_group(metric_group_type="XNOR", metrics=metrics)
+
+    def ADD_IMPLICATION(self, metrics):
+        if len(metrics) < 2:
+            return
+        self._add_group(metric_group_type="IMPLICATION", metrics=metrics[:1])
+
+    def ADD_BICONDITIONAL(self, metrics):
+        if len(metrics) < 2:
+            return
+        self._add_group(metric_group_type="BICONDITIONAL", metrics=metrics[:1])
+
+    def reset_identifier(self):
+        self.idx = None
+        self.identifier = defaultdict()
+
+
 class LineClassifier:
     def __init__(self, line: str, line_number: int, previous_line: Optional[str] = None,
                  next_line: Optional[str] = None, keywords: Optional[List[str]] = None):
@@ -194,12 +332,24 @@ class TextAnalyzer:
         self.metadata = self.compute_metadata()
         self.analysis = self.analyze_text()
 
+    def get_markdown_compatibility(self):
+        classifier = OutputClassifier()
+        sections = classifier.classify_output_details(self.text, clean_text=False)
+        valid_section_count = 0
+        # is_markdown = False
+        for section_type, section_data in sections:
+            if section_type != "plain_text":
+                # is_markdown = True
+                valid_section_count += 1
+
+        return valid_section_count
+
     def compute_metadata(self) -> Dict:
         total_lines = len(self.lines)
         total_chars = sum(len(line) for line in self.lines)
         total_words = sum(len(line.split()) for line in self.lines)
         total_sentences = sum(sum(line.count(p) for p in '.!?') for line in self.lines)
-
+        is_markdown, total_markdown_sections = self.get_markdown_compatibility()
         keyword_counts = {keyword: 0 for keyword in self.keywords}
         for line in self.lines:
             for keyword in self.keywords:
@@ -211,6 +361,7 @@ class TextAnalyzer:
             "total_characters": total_chars,
             "total_words": total_words,
             "total_sentences": total_sentences,
+            "total_markdown_sections": total_markdown_sections
         }
 
     def analyze_text(self) -> List[Dict]:
@@ -236,36 +387,41 @@ class TextManipulation:
     **Things to know before use:**
 
     - **Identifiers** :
-        An identifier is a structured label or name used to uniquely identify entities such as variables, objects, records, or functions within a given context.
-        It enables the organization, reference, and manipulation of data consistently and coherently within a system.
+        An identifier is a structured label or name used to uniquely identify lines within a given context.
+        It enables the  reference, and manipulation of data consistently and coherently within a system.
 
-        The identifier structure often includes conditions that determine the validity or selection criteria of the entities it represents.
-        These conditions can be combined using logical operations:
-
-        - **AND**: Combines multiple conditions, all of which must be true for the identifier to be valid. Used when every specified criterion needs to be satisfied.
-        - **OR**: Combines multiple conditions, any one of which must be true for the identifier to be valid. Used when any one of several criteria being satisfied is sufficient.
-        - **NOT**: Negates a condition, requiring it to be false for the identifier to be valid. Used to exclude entities that meet specific criteria.
-
-        This logical structuring allows for flexible and precise control over the identification and selection of entities within the system.
+        This logical structuring allows for flexible and precise control over the identification and selection of lines within the system.
 
         Example for an identifier:
             identifier = {
-                "AND": [
-                    {"metric": "startswith", "equals": "Fuel", "case_sensitive": True},
-                    {"metric": "contains", "equals": "diesel", "case_sensitive": True},
-                    {"metric": "has_url", "equals": True}
-                ],
-                "OR": [
-                    {"metric": "starts_with_special_char", "equals": True},
-                    {"metric": "ends_with_digit", "equals": True},
-                ],
-                "NOT": [
-                    {"metric": "contains", "equals": "test", "case_sensitive": True},
-                ]
-            }
+                        0: {
+                            "type": "AND",
+                            "metrics": [
+                                {"metric": "startswith", "equals": "Fuel", "case_sensitive": True},
+                                {"metric": "contains", "equals": "diesel", "case_sensitive": True},
+                                {"metric": "has_url", "equals": True}
+                            ]
+                        },
+                        1: {
+                            "type": "OR",
+                            "metrics": [
+                                {"metric": "starts_with_special_char", "equals": True},
+                                {"metric": "ends_with_digit", "equals": True}
+                            ]
+                        },
+                        2: {
+                            "type": "NOT",
+                            "metrics": [
+                                {"metric": "contains", "equals": "test", "case_sensitive": True}
+                            ]
+                        }
+                    }
+
+        Or use LineIdentifier class to build an identifier.
     """
 
     def __init__(self):
+        self.by_similarity = TextSimilarity()
         self.text_cleaning_replacements = \
             {
                 # Replace specific Unicode punctuation with ASCII equivalents
@@ -281,6 +437,19 @@ class TextManipulation:
     def line_qualifies_check(self,
                              line: LineClassifier,
                              line_identifier: dict) -> bool:
+        """
+        Checks if a line object qualifies based on conditions and metrics defined in the identifier object.
+
+        This function takes a line object and an identifier object, and evaluates whether the line meets the conditions
+        and metrics specified in the identifier for qualification.
+
+        Parameters:
+        - line (object): The line object to be evaluated.
+        - line_identifier (object): The identifier object containing conditions and metrics for qualification.
+
+        Returns:
+        - bool: True if the line qualifies the identifier check, False otherwise.
+        """
 
         def int_comparison(compare_with, condition):
             if condition.get('equals'):
@@ -443,6 +612,12 @@ class TextManipulation:
 
                     return line_obj.get('is_digit_and_spaces') == condition.get('equals')
 
+                elif condition.get('metric') == 'text_similarity_score':
+                    line_content = line_obj.get('line')
+                    text_to_match = condition.get('equals')
+                    score = self.by_similarity.similarity_between_two(text_to_match, line_content)
+                    return int_comparison(score, condition)
+
             # Incase the metric is not identified in the if else ladder, then just return False, means condition is not satisfied
             return False
 
@@ -555,7 +730,20 @@ class TextManipulation:
     def filter_lines(self,
                      document: str,
                      line_identifier: dict) -> list[LineClassifier]:
+        """
+        Filters lines in a document based on a Line Identifier  and returns a list of line objects.
 
+        This utility function searches through each line in the `document` and checks if the line qualifies
+        the identifier check. If a line matches, it is included in the list of line objects returned.
+
+        Parameters:
+        - document (str): The text document to filter lines from.
+        - line_identifier (dict): The Line identifier used to match lines.
+
+        Returns:
+        - list: A list of line objects that match the identifier pattern. Each line object typically contains
+          information such as line content, line number, etc.
+        """
         lines = self.get_lines_by_document(document)
         filtered_lines = []
         for line in lines:
@@ -567,6 +755,21 @@ class TextManipulation:
     def filter_lines_by_regex(self,
                               document: str,
                               pattern) -> list[LineClassifier]:
+        """
+        Filters lines in a document based on a regex pattern and returns a list of line objects.
+
+        This utility function searches through each line in the `document` and checks if the line content
+        matches the specified `pattern`. If a line matches, it is included in the list of line objects returned.
+
+        Parameters:
+        - document (str): The text document to filter lines from.
+        - pattern (str): The regex pattern used to match lines.
+
+        Returns:
+        - list: A list of line objects that match the regex pattern. Each line object typically contains
+          information such as line content, line number, etc.
+        """
+
         lines = self.get_lines_by_document(document)
         results = []
         for line in lines:
@@ -575,9 +778,32 @@ class TextManipulation:
                 results.append(line)
         return results
 
+    def filter_similar_lines(self,
+                             document: str,
+                             lookup_text: str,
+                             filter_identifier: dict = None,
+                             percentage: float = 0.5,
+                             ):
+
+        lines = self.get_lines_by_document(document)
+
+        if filter_identifier is not None:
+            lines = self.filter_lines(document, filter_identifier)
+
+        ranked_lines = self.by_similarity.multi_similarity(
+            lookup_text,
+            lines,
+            lambda x: x.get('line')
+        )
+
+        return [x for x, y in ranked_lines if y >= percentage]
+
     def get_lines_by_document(self,
                               document: str,
                               doc_keywords=None):
+        """
+        Utility function , to get line objects in supplied document
+        """
         classifier = TextAnalyzer(document, doc_keywords)
 
         analysis = classifier.get_analysis()
@@ -593,7 +819,19 @@ class TextManipulation:
                                end_marker_lines: list[str], ):
 
         """
-        This function targets to capture a **single line** around start and end marker
+        Captures a single line surrounded by start and end markers in a document.
+
+        This function identifies a line (`primary_line_identified_content`) using `line_identifier` and wraps it
+        with start and end marker lines (`start_marker_lines` and `end_marker_lines`).
+
+        Parameters:
+        - document (str): The text document where the line and markers are located.
+        - line_identifier (str): The identifier marking the line to capture.
+        - start_marker_lines (list): List of start marker lines to surround the identified line.
+        - end_marker_lines (list): List of end marker lines to surround the identified line.
+
+        Returns:
+        - str: The updated document with the identified line surrounded by start and end markers.
         """
 
         lines = self.get_lines_by_document(document)
@@ -617,6 +855,21 @@ class TextManipulation:
                                         marker_lines: list[str],
                                         location='before',
                                         ):
+        """
+        Adds marker lines before or after a specified identifier line in a document.
+
+        This function is useful for inserting marker lines (`marker_lines`) either before or after a line identified
+        by `line_identifier` within the `document`.
+
+        Parameters:
+        - document (str): The text document where marker lines will be added.
+        - line_identifier (str): The identifier marking the line where marker lines will be inserted.
+        - marker_lines (list): List of lines to insert as markers.
+        - location (str): Specifies whether to insert the `marker_lines` 'before' or 'after' the `line_identifier`.
+
+        Returns:
+        - str: The updated document with marker lines inserted before or after the identified line.
+        """
         lines = self.get_lines_by_document(document)
         updated_doc_list = []
         for line in lines:
@@ -641,9 +894,30 @@ class TextManipulation:
                                       start_marker_position='before',
                                       end_marker_position='after',
                                       max_lines_if_not_found=10,
-                                      max_lookup_for_end_identifier=100) -> str:
+                                      max_lookup_for_end_identifier=20) -> str:
         """
-        This function wraps multiline content with start and end markers based on specified identifiers.
+        Wraps content in a document with start and end markers based on specified identifiers and markers.
+
+        This function identifies a start line using `start_line_identifier`, then searches for an end line using
+        `end_line_identifier` within a limited number of lines (`max_lookup_for_end_identifier`). If the end line
+        is not found within this limit, a maximum number of lines (`max_lines_if_not_found`) is taken as the end.
+
+        Markers can be added to the start line (`start_marker_list`) or end line (`end_marker_list`) before or after
+        the positions specified (`start_marker_position`, `end_marker_position`).
+
+        Parameters:
+        - document (str): The text document to modify.
+        - start_line_identifier (str): The identifier marking the start line where content will be wrapped.
+        - end_line_identifier (str): The identifier marking the end line where content wrapping ends.
+        - start_marker_list (list): List of markers to add to the start line.
+        - end_marker_list (list): List of markers to add to the end line.
+        - start_marker_position (str): Position ('before' or 'after') to add start markers relative to the start line.
+        - end_marker_position (str): Position ('before' or 'after') to add end markers relative to the end line.
+        - max_lines_if_not_found (int): Maximum number of lines to take as the end if `end_line_identifier` is not found.
+        - max_lookup_for_end_identifier (int): Maximum number of lines to search for `end_line_identifier`.
+
+        Returns:
+        - str: The updated document with content wrapped between start and end markers.
         """
         lines = self.get_lines_by_document(document)
         updated_doc_list = []
@@ -694,6 +968,25 @@ class TextManipulation:
                                 end_marker: str,
                                 content=True):
 
+        """
+        Extracts content from a document based on specified start and end markers.
+
+        This function identifies lines containing the start and end markers, then extracts the content between
+        these lines. Note that the markers are simple strings and not regex patterns. For regex-based extraction,
+        use the `extract_between_identifiers` function.
+
+        Parameters:
+        - document (str): The text document to search within.
+        - start_marker (str): The string marking the beginning of the content to extract.
+        - end_marker (str): The string marking the end of the content to extract.
+        - content (bool): If True, returns the content found between the markers. If False, returns the document
+          without the content between the markers.
+
+        Returns:
+        - str: The extracted content between the start and end markers if `content` is True, otherwise the document
+          with the content between the markers removed.
+        """
+
         lines = self.get_lines_by_document(document)
         in_extraction = False  # Flag to indicate whether currently in an extraction section
         extracted_sections = []  # List to store the extracted sections
@@ -733,6 +1026,23 @@ class TextManipulation:
                                     start_identifier: dict,
                                     end_identifier: dict,
                                     content=True):
+        """
+        Extracts content from a document based on specified start and end identifiers.
+
+        This function searches the document for the given start and end identifiers and extracts the content
+        that lies between them.
+
+        Parameters:
+        - document (str): The text document to search within.
+        - start_identifier (str): The identifier marking the beginning of the content to extract.
+        - end_identifier (str): The identifier marking the end of the content to extract.
+        - content (bool): If True, returns the content found between the identifiers. If False, returns the
+          document without the content between the identifiers.
+
+        Returns:
+        - str: The extracted content between the start and end identifiers if `content` is True, otherwise
+          the document with the content between the identifiers removed.
+        """
 
         lines = self.get_lines_by_document(document)
         in_extraction = False  # Flag to indicate whether currently in an extraction section
@@ -772,10 +1082,31 @@ class TextManipulation:
                       document: str,
                       replacements: list[dict],
                       line_identifier=None):
-        """leave line identifier blank, if you need to replace items in the whole document.
-        Examples of replacements : [{ pattern : None , text : "Something", replacement: "Not something"},
-                                    { pattern : r'\\.exe' , text : None, replacement: ".py"},
-                                    { pattern : r'The US Navy has \\.\\d+' , text : "Confidential Data", replacement: "[REDACTED]"}]
+        """
+        Replaces specified items in a document based on given patterns and texts. If no line identifier is provided,
+        the replacements will apply to the entire document.
+
+        This function takes a list of replacements where each replacement specifies a pattern and/or text to be
+        replaced with a provided replacement string. The replacements can be performed based on regex patterns or
+        exact text matches.
+
+        Examples of replacements:
+        - `[{ pattern: None, text: "Something", replacement: "Not something" }]`: Replaces all occurrences of the exact text
+          "Something" with "Not something".
+        - `[{ pattern: r'\\.exe', text: None, replacement: ".py" }]`: Replaces all occurrences of text matching the regex
+          pattern `\\.exe` with ".py".
+        - `[{ pattern: r'The US Navy has \\.\\d+', text: "Confidential Data", replacement: "[REDACTED]" }]`: Replaces text
+          matching the regex pattern `The US Navy has \\.\\d+` and the exact text "Confidential Data" with "[REDACTED]".
+
+        Parameters:
+        - document (str): The text document where replacements will be performed.
+        - replacements (list): A list of dictionaries, each containing:
+          - pattern (str or None): A regex pattern to match text for replacement. If None, an exact text match is used.
+          - text (str or None): The exact text to match for replacement. If None, the pattern is used.
+          - replacement (str): The replacement text for matched patterns or exact text matches.
+
+        Returns:
+        - str: The updated document with specified replacements applied.
         """
 
         def do_replacement(replacement_config: list[dict], text_data: str):
@@ -813,10 +1144,27 @@ class TextManipulation:
                      document: str,
                      deletions: list[dict],
                      line_identifier=None):
-        """leave line identifier blank, if you need to delete items in the whole document.
-        Examples of deletions : [{ pattern : None , text : "Something"},
-                                 { pattern : r'\\.exe' , text : None},
-                                 { pattern : r'The US Navy has \\.\\d+' , text : "Confidential Data"}]
+        """
+        Deletes specified items from a document based on given patterns and texts. If no line identifier is provided,
+        the deletions will apply to the entire document.
+
+        This function takes a list of deletions where each deletion specifies a pattern and/or text to be removed
+        or replaced. The deletions can be performed based on regex patterns or exact text matches.
+
+        Examples of deletions:
+        - `[{ pattern: None, text: "Something" }]`: Deletes all occurrences of the exact text "Something".
+        - `[{ pattern: r'\\.exe', text: None }]`: Deletes all occurrences of text matching the regex pattern `\\.exe`.
+        - `[{ pattern: r'The US Navy has \\.\\d+', text: "Confidential Data" }]`: Replaces text matching the regex pattern
+          `The US Navy has \\.\\d+` with "Confidential Data".
+
+        Parameters:
+        - document (str): The text document where deletions will be performed.
+        - deletions (list): A list of dictionaries, each containing:
+          - pattern (str or None): A regex pattern to match text for deletion or replacement. If None, an exact text match is used.
+          - text (str or None): The exact text to delete, or the replacement text when used with a pattern. If None, matched text is deleted.
+
+        Returns:
+        - str: The updated document with specified deletions and replacements applied.
         """
 
         def should_delete_line(deletion_config: list[dict], text_data: str):
@@ -859,16 +1207,20 @@ class TextManipulation:
                                  action: str = "delete_line",
                                  **kwargs) -> str:
         """
-        Modifies lines surrounding a primary identifier line in a document.
-        Only perform three actions:
-        - replace_by_regex : requires pattern: str and replace_with: str
-        - replace_chars : requires character: str and replace_with: str
-        - delete_line
+        Modifies lines surrounding a primary identifier line in a document based on specified actions.
+
+        This function performs one of three actions (replace by regex, replace characters, or delete line) on lines
+        found within a specified range above or below a primary identifier line.
+
+        Only three actions are supported:
+        - replace_by_regex: Requires 'pattern' (str) and 'replace_with' (str).
+        - replace_chars: Requires 'character' (str) and 'replace_with' (str).
+        - delete_line: Deletes the discovered line.
 
         Parameters:
         document (str): The document to modify.
-        primary_line_identifier (dict): The identifier to find the primary line.
-        secondary_line_identifier (dict): The identifier to find lines to modify.
+        primary_line_identifier (dict): The identifier to locate the primary line.
+        secondary_line_identifier (dict): The identifier to locate lines to modify.
         discover_above_lines (int): Number of lines above the primary line to check.
         discover_below_lines (int): Number of lines below the primary line to check.
         action (str): The action to perform on discovered lines ('delete_line', 'replace_chars', 'replace_by_regex').
@@ -924,6 +1276,23 @@ class TextManipulation:
                                line_count: int,
                                char_count: int,
                                content=True):
+        """
+        Extracts short sections from a document based on line and character count criteria.
+
+        This method scans the document, grouping lines into sections of a specified number of lines (`line_count`).
+        If a section's total character count is less than the specified `char_count`, it is extracted and added
+        to the list of extracted sections. Remaining lines that do not meet the criteria are retained.
+
+        Parameters:
+        document (str): The text document to process.
+        line_count (int): The number of lines to group together as a section.
+        char_count (int): The maximum number of characters allowed in a section for it to be extracted.
+        content (bool): If True, returns the remaining text after extraction. If False, returns the extracted sections.
+
+        Returns:
+        str: The remaining text or the extracted sections, depending on the value of `content`.
+        """
+
         lines = self.get_lines_by_document(document)
         extracted_sections = []
         remaining_text = []
@@ -967,8 +1336,23 @@ class TextManipulation:
                                                    join_with: str = ' ',
                                                    strip_before_join: bool = True):
         """
-        pass
+        Joins two lines together in a document based on specified criteria.
+
+        This function merges a primary line with another line identified within a given distance and direction.
+        If a secondary identifier is not provided, the line at the specified distance is used as the secondary line.
+        Trailing spaces can be removed before joining, and the original lines can be kept or removed after merging.
+
+        :param document: The entire text document as a string.
+        :param primary_identifier: A unique identifier to locate the primary line to be joined.
+        :param secondary_identifier: A unique identifier for the secondary line. If not given, the line at the specified distance is used.
+        :param distance: The number of lines to look for the secondary line, excluding the primary line itself.
+        :param direction: Specifies the direction to look for the secondary line; 'up' for upwards and 'down' for downwards.
+        :param keep_line_after_moving: If True, retains the original lines in their positions after joining.
+        :param join_with: The character or string to use for joining the two lines. Default is a space character.
+        :param strip_before_join: If True, removes trailing spaces before joining the content of the lines.
+        :return: The updated document as a string.
         """
+
         check_after_index = 0
 
         lines = self.get_lines_by_document(document)
@@ -1035,6 +1419,23 @@ class TextManipulation:
                              keep_line_after_moving: bool = False,
                              join_with: str = ' ',
                              ):
+        """
+        Moves a specified line in a document either up or down by a given number of lines.
+
+        This function allows you to move a line identified by a unique line identifier a certain number of lines
+        upwards or downwards within a document. It can also strip trailing spaces before joining the content of lines
+        and decide whether to keep the moved line at its original position or remove it.
+
+        :param document: The entire text document as a string.
+        :param line_identifier: A unique identifier to locate the specific line to be moved.
+        :param distance: The number of lines to move the identified line, excluding the target line itself.
+        :param direction: Specifies the direction to move the line; 'up' for upwards and 'down' for downwards.
+        :param strip_before_join: If True, removes trailing spaces before joining the content of the lines.
+        :param keep_line_after_moving: If True, retains the original line in its position after moving.
+        :param join_with: The character or string to use for joining two lines. Default is a space character.
+        :return: The updated document as a string.
+        """
+
         lines = self.get_lines_by_document(document)
         check_after_index = 0
         for idx, line in enumerate(lines):
@@ -1187,100 +1588,6 @@ class TextManipulation:
         return updated_text
 
 
-class LineIdentifier:
-    """
-    Example of a metric list:
-
-        metrics = [
-            ('metric1', {'option1': 'value1'}),
-            ('metric2', {'option2': 'value2'}),
-            ('metric3', {'option3': 'value3'}),
-        ]
-
-    **"AND": "Used for ensuring all conditions are true",**
-
-    **"NOT": "Used for ensuring the condition is false",**
-
-    **"OR": "Used for ensuring at least one condition is true",**
-
-    **"XOR": "Used for ensuring exactly one condition is true",**
-
-    **"NAND": "Used for ensuring not all conditions are true",**
-
-    **"NOR": "Used for ensuring all conditions are false",**
-
-    **"XNOR": "Used for ensuring conditions are either all true or all false",**
-
-    **"IMPLICATION": "Used for ensuring if the first condition is true, the second must be true",**
-
-    **"BICONDITIONAL": "Used for ensuring conditions are both true or both false"**
-    """
-
-    def __init__(self):
-        self.identifier = defaultdict()
-        self.idx = None
-        self.groups_meanings = {
-            "AND": "Used for ensuring all conditions are true",
-            "NOT": "Used for ensuring the condition is false",
-            "OR": "Used for ensuring at least one condition is true",
-            "XOR": "Used for ensuring exactly one condition is true",
-            "NAND": "Used for ensuring not all conditions are true",
-            "NOR": "Used for ensuring all conditions are false",
-            "XNOR": "Used for ensuring conditions are either all true or all false",
-            "IMPLICATION": "Used for ensuring if the first condition is true, the second must be true",
-            "BICONDITIONAL": "Used for ensuring conditions are both true or both false"
-        }
-
-    def _add_group(self, metric_group_type: str, metrics: list):
-
-        if not hasattr(self, 'idx') or self.idx is None:
-            self.idx = 0
-
-        # Initialize the identifier at the current index
-        self.identifier[self.idx] = {
-            'type': metric_group_type,
-            'metrics': [{'metric': name, **options} for name, options in metrics]
-        }
-
-        # Increment the index for the next group
-        self.idx += 1
-
-    def ADD_AND(self, metrics):
-        self._add_group(metric_group_type="AND", metrics=metrics)
-
-    def ADD_NOT(self, metrics):
-        self._add_group(metric_group_type="NOT", metrics=metrics)
-
-    def ADD_OR(self, metrics):
-        self._add_group(metric_group_type="OR", metrics=metrics)
-
-    def ADD_XOR(self, metrics):
-        self._add_group(metric_group_type="XOR", metrics=metrics)
-
-    def ADD_NAND(self, metrics):
-        self._add_group(metric_group_type="NAND", metrics=metrics)
-
-    def ADD_NOR(self, metrics):
-        self._add_group(metric_group_type="NOR", metrics=metrics)
-
-    def ADD_XNOR(self, metrics):
-        self._add_group(metric_group_type="XNOR", metrics=metrics)
-
-    def ADD_IMPLICATION(self, metrics):
-        if len(metrics) < 2:
-            return
-        self._add_group(metric_group_type="IMPLICATION", metrics=metrics[:1])
-
-    def ADD_BICONDITIONAL(self, metrics):
-        if len(metrics) < 2:
-            return
-        self._add_group(metric_group_type="BICONDITIONAL", metrics=metrics[:1])
-
-    def reset_identifier(self):
-        self.idx = None
-        self.identifier = defaultdict()
-
-
 def process_steps(cleaning_steps, document):
     processor = TextManipulation()
     updated_document = document
@@ -1307,25 +1614,7 @@ if __name__ == "__main__":
 
     obj = TextManipulation()
 
-    # obj = LineIdentifier()
-    # obj.add_group("AND", [
-    #     ('startswith', {'case_sensitive': True, 'strip': True, 'equals': "Hello world"})
-    # ])
-    #
-    # obj.add_group("OR", [
-    #     ('contains', {'case_sensitive': False, 'strip': False, 'equals': "Python"}),
-    #     ('contains', {'case_sensitive': False, 'strip': False, 'equals': "Zebra"})
-    # ])
-    #
-    # obj.add_group("OR", [
-    #     ('contains', {'case_sensitive': False, 'strip': False, 'equals': "Animal"}),
-    #     ('contains', {'case_sensitive': False, 'strip': False, 'equals': "Snake"})
-    # ])
-    #
-    # obj.add_group("NOT", [
-    #     ('ends_with_special_char', {'equals': True}),
-    #     ('contains', {'case_sensitive': False, 'strip': False, 'equals': "Snake"})
-    # ])
+
 
     identifier1 = {0: {"type": "AND",
                        "metrics": [{"metric": "contains", "equals": "add"}]}

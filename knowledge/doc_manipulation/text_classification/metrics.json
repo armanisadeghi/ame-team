@@ -113,6 +113,11 @@
             ],
             "is_digit_and_spaces": [
                 "equals"
+            ],
+            "text_similarity_score": [
+                "equals",
+                "less_than",
+                "greater_than"
             ]
         }
     },
