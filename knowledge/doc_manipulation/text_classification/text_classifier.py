@@ -52,7 +52,7 @@ class LineClassifier:
         self.shortest_word = self.get_shortest_word()
         self.longest_word = self.get_longest_word()
         self.average_word_length = self.get_average_word_length()
-
+        self.is_digits_and_spaces = all(c.isdigit() or c.isspace() for c in line)
         # Keyword analysis
         self.keyword_analysis = self.analyze_keywords()
 
@@ -181,7 +181,8 @@ class LineClassifier:
             "has_markdown": self.has_markdown,
             "shortest_word": self.shortest_word,
             "longest_word": self.longest_word,
-            "average_word_length": self.average_word_length
+            "average_word_length": self.average_word_length,
+            "is_digit_and_spaces": self.is_digits_and_spaces
         }
 
 
@@ -325,7 +326,7 @@ class TextManipulation:
                     text_to_match = line_obj.get('line')
                     pattern = condition.get('equals')
 
-                    if re.search(pattern, text_to_match):
+                    if re.match(pattern, text_to_match):
                         return True
                     return False
 
@@ -438,6 +439,10 @@ class TextManipulation:
 
                     return int_comparison(average_word_length, condition)
 
+                elif condition.get('metric') == 'is_digit_and_spaces':
+
+                    return line_obj.get('is_digit_and_spaces') == condition.get('equals')
+
             # Incase the metric is not identified in the if else ladder, then just return False, means condition is not satisfied
             return False
 
@@ -448,7 +453,7 @@ class TextManipulation:
             # Check "AND" conditions: All conditions in the "AND" list must be true for the line to pass.
             # If the "AND" key is in the identifier and any condition in the "AND" list is false, skip this line.
 
-            if identifier_type == "AND" and not match_conditions(line, metrics):
+            if identifier_type == "AND" and not all(match_conditions(line, [metric]) for metric in metrics):
                 return False
 
             # Check "OR" conditions: At least one condition in the "OR" list must be true for the line to pass.
@@ -474,7 +479,8 @@ class TextManipulation:
                 return False
 
             # The XNOR operation is the negation of the XOR (Exclusive OR) operation. It returns True if both inputs are the same (both True or both False).
-            if identifier_type == "XNOR" and sum(match_conditions(line, [metric]) for metric in metrics) not in [0,len(metrics)]:
+            if identifier_type == "XNOR" and sum(match_conditions(line, [metric]) for metric in metrics) not in [0,
+                                                                                                                 len(metrics)]:
                 return False
 
             # The next two only excepts two metrics only.
@@ -635,7 +641,7 @@ class TextManipulation:
                                       start_marker_position='before',
                                       end_marker_position='after',
                                       max_lines_if_not_found=10,
-                                      max_lookup_for_end_identifier=10) -> str:
+                                      max_lookup_for_end_identifier=100) -> str:
         """
         This function wraps multiline content with start and end markers based on specified identifiers.
         """
@@ -703,6 +709,46 @@ class TextManipulation:
 
             if end_marker in line.get('line') and in_extraction:  # Check for the end marker
                 current_section.append(line.get('line'))  # Include the end marker line in the section
+                extracted_sections.append('\n'.join(current_section))  # Add the completed section to the list
+                current_section = []  # Reset the current section for the next extraction
+                in_extraction = False  # Reset the extraction flag
+                continue  # Skip adding this line to the remaining_lines
+
+            if in_extraction:
+                current_section.append(line.get('line'))  # Add lines between the markers to the current section
+            else:
+                remaining_lines.append(line.get('line'))  # Add lines outside the markers to the remaining text
+
+        # Combine the extracted sections and remaining lines back into strings
+        extracted_text = '\n\n'.join(extracted_sections)  # Separate different sections by an empty line
+        remaining_text = '\n'.join(remaining_lines)
+
+        if content:
+            return remaining_text
+        else:
+            return extracted_text
+
+    def extract_between_identifiers(self,
+                                    document: str,
+                                    start_identifier: dict,
+                                    end_identifier: dict,
+                                    content=True):
+
+        lines = self.get_lines_by_document(document)
+        in_extraction = False  # Flag to indicate whether currently in an extraction section
+        extracted_sections = []  # List to store the extracted sections
+        remaining_lines = []  # List to store lines not within the extracted sections
+
+        current_section = []  # Temporarily stores lines of the current extracted section
+
+        for line in lines:
+            if self.line_qualifies_check(line, start_identifier):
+                in_extraction = True
+                current_section.append(line.get('line'))  # Include the start identifier line in the section
+                continue  # Skip adding this line to the remaining_lines
+
+            if self.line_qualifies_check(line, end_identifier) and in_extraction:
+                current_section.append(line.get('line'))  # Include the end identifier line in the section
                 extracted_sections.append('\n'.join(current_section))  # Add the completed section to the list
                 current_section = []  # Reset the current section for the next extraction
                 in_extraction = False  # Reset the extraction flag
@@ -911,19 +957,18 @@ class TextManipulation:
         else:
             return extracted_sections_str
 
-    def shift_and_join_lines(self,
-                             document: str,
-                             primary_identifier: dict,
-                             secondary_identifier=None,
-                             distance: int = 2,
-                             direction: str = "up",
-                             keep_line_after_moving: bool = False,
-                             join_with: str = ' ',
-                             strip_before_join: bool = True):
+    def shift_and_join_lines_by_primary_identifier(self,
+                                                   document: str,
+                                                   primary_identifier: dict,
+                                                   secondary_identifier=None,
+                                                   distance: int = 2,
+                                                   direction: str = "up",
+                                                   keep_line_after_moving: bool = False,
+                                                   join_with: str = ' ',
+                                                   strip_before_join: bool = True):
         """
         pass
         """
-        updated_doc_lines = []
         check_after_index = 0
 
         lines = self.get_lines_by_document(document)
@@ -934,10 +979,12 @@ class TextManipulation:
 
             if self.line_qualifies_check(line, primary_identifier):  # Detected a primary line
 
-                if direction == "up":
-                    lookup_lines = lines[idx + 1:]
+                if direction == "down":
+                    lookup_lines = lines[
+                                   idx + 1: idx + distance + 1]  # As we want to look after the primary identifier
+                    # Look till the distance
                 else:
-                    lookup_lines = lines[:idx]
+                    lookup_lines = lines[max(0, idx - distance):idx]
 
                 # If we have an identifier for the secondary line
                 if secondary_identifier:
@@ -945,21 +992,21 @@ class TextManipulation:
                         if self.line_qualifies_check(lookahead_line, secondary_identifier):  # Secondary line found
 
                             if strip_before_join:
-                                updated_doc_lines.append(
-                                    f"{line.get('line').strip()}{join_with}{lookahead_line.get('line').strip()}")
+                                line[
+                                    'line'] = f"{line.get('line').strip()}{join_with}{lookahead_line.get('line').strip()}"
                             else:
-                                updated_doc_lines.append(f"{line.get('line')}{join_with}{lookahead_line.get('line')}")
+                                line['line'] = f"{line.get('line')}{join_with}{lookahead_line.get('line')}"
 
-                            check_after_index = idx + lookahead_idx + 1 if direction == "up" else idx
+                            check_after_index = idx + lookahead_idx + 1 if direction == "down" else idx
 
                             if not keep_line_after_moving:
-                                del lines[idx + lookahead_idx + 1]
+                                lines[idx + lookahead_idx + 1]['line'] = ''
                             break
 
                 # If we don't have the identifier, use index-based joining
                 else:
-                    if direction == "up":
-                        join_idx = idx + distance + 1
+                    if direction == "down":
+                        join_idx = idx + distance
                     else:
                         join_idx = idx - distance
 
@@ -967,20 +1014,53 @@ class TextManipulation:
                         join_line = lines[join_idx]
 
                         if strip_before_join:
-                            updated_doc_lines.append(
-                                f"{line.get('line').strip()}{join_with}{join_line.get('line').strip()}")
+                            line['line'] = f"{line.get('line').strip()}{join_with}{join_line.get('line').strip()}"
                         else:
-                            updated_doc_lines.append(f"{line.get('line')}{join_with}{join_line.get('line')}")
+                            line['line'] = f"{line.get('line')}{join_with}{join_line.get('line')}"
 
                         if not keep_line_after_moving:
-                            del lines[join_idx]
-                        check_after_index = max(check_after_index, idx + 1) if direction == "up" else idx
-                    else:
-                        updated_doc_lines.append(line.get('line'))
-            else:
-                updated_doc_lines.append(line.get('line'))
+                            lines[join_idx]['line'] = ''
+                        check_after_index = max(check_after_index, idx + 1) if direction == "down" else idx
+
+        updated_doc_lines = [x.get('line') for x in lines]
 
         return '\n'.join(updated_doc_lines)
+
+    def shift_and_join_lines(self,
+                             document: str,
+                             line_identifier: dict,
+                             distance: int,
+                             direction: str = 'up',
+                             strip_before_join: bool = True,
+                             keep_line_after_moving: bool = False,
+                             join_with: str = ' ',
+                             ):
+        lines = self.get_lines_by_document(document)
+        check_after_index = 0
+        for idx, line in enumerate(lines):
+            if idx < check_after_index:
+                continue
+
+            if self.line_qualifies_check(line, line_identifier):
+                if direction == "down":
+                    join_idx = idx + distance
+                else:
+                    join_idx = idx - distance
+
+                if 0 <= join_idx < len(lines):
+                    join_line = lines[join_idx]
+
+                    if strip_before_join:
+                        line['line'] = f"{join_line.get('line').strip()}{join_with}{line.get('line').strip()}"
+                    else:
+                        line['line'] = f"{join_line.get('line')}{join_with}{line.get('line')}"
+
+                    if not keep_line_after_moving:
+                        lines[join_idx]['line'] = ''
+
+                    check_after_index = max(check_after_index, idx + 1) if direction == "down" else idx
+
+        return '\n'.join([x.get('line') for x in lines])
 
     def insert_breaks(self,
                       document: str,
@@ -1108,30 +1188,50 @@ class TextManipulation:
 
 
 class LineIdentifier:
+    """
+    Example of a metric list:
+
+        metrics = [
+            ('metric1', {'option1': 'value1'}),
+            ('metric2', {'option2': 'value2'}),
+            ('metric3', {'option3': 'value3'}),
+        ]
+
+    **"AND": "Used for ensuring all conditions are true",**
+
+    **"NOT": "Used for ensuring the condition is false",**
+
+    **"OR": "Used for ensuring at least one condition is true",**
+
+    **"XOR": "Used for ensuring exactly one condition is true",**
+
+    **"NAND": "Used for ensuring not all conditions are true",**
+
+    **"NOR": "Used for ensuring all conditions are false",**
+
+    **"XNOR": "Used for ensuring conditions are either all true or all false",**
+
+    **"IMPLICATION": "Used for ensuring if the first condition is true, the second must be true",**
+
+    **"BICONDITIONAL": "Used for ensuring conditions are both true or both false"**
+    """
 
     def __init__(self):
         self.identifier = defaultdict()
         self.idx = None
+        self.groups_meanings = {
+            "AND": "Used for ensuring all conditions are true",
+            "NOT": "Used for ensuring the condition is false",
+            "OR": "Used for ensuring at least one condition is true",
+            "XOR": "Used for ensuring exactly one condition is true",
+            "NAND": "Used for ensuring not all conditions are true",
+            "NOR": "Used for ensuring all conditions are false",
+            "XNOR": "Used for ensuring conditions are either all true or all false",
+            "IMPLICATION": "Used for ensuring if the first condition is true, the second must be true",
+            "BICONDITIONAL": "Used for ensuring conditions are both true or both false"
+        }
 
-    def add_group(self, metric_group_type: str, metrics: list):
-        """
-        Adds a group of metrics to the identifier with the specified type.
-
-        Args:
-            metric_group_type (str): The type of the metric group (e.g., 'AND', 'OR', 'NOT').
-            metrics (list): A list of tuples where each tuple contains:
-                            - metric_name (str): The name of the metric.
-                            - kwargs (dict): A dictionary of metric options.
-
-        Example:
-            metrics = [
-                ('metric1', {'option1': 'value1'}),
-                ('metric2', {'option2': 'value2'}),
-                ('metric3', {'option3': 'value3'}),
-            ]
-
-            add_group('AND', metrics)
-        """
+    def _add_group(self, metric_group_type: str, metrics: list):
 
         if not hasattr(self, 'idx') or self.idx is None:
             self.idx = 0
@@ -1144,6 +1244,41 @@ class LineIdentifier:
 
         # Increment the index for the next group
         self.idx += 1
+
+    def ADD_AND(self, metrics):
+        self._add_group(metric_group_type="AND", metrics=metrics)
+
+    def ADD_NOT(self, metrics):
+        self._add_group(metric_group_type="NOT", metrics=metrics)
+
+    def ADD_OR(self, metrics):
+        self._add_group(metric_group_type="OR", metrics=metrics)
+
+    def ADD_XOR(self, metrics):
+        self._add_group(metric_group_type="XOR", metrics=metrics)
+
+    def ADD_NAND(self, metrics):
+        self._add_group(metric_group_type="NAND", metrics=metrics)
+
+    def ADD_NOR(self, metrics):
+        self._add_group(metric_group_type="NOR", metrics=metrics)
+
+    def ADD_XNOR(self, metrics):
+        self._add_group(metric_group_type="XNOR", metrics=metrics)
+
+    def ADD_IMPLICATION(self, metrics):
+        if len(metrics) < 2:
+            return
+        self._add_group(metric_group_type="IMPLICATION", metrics=metrics[:1])
+
+    def ADD_BICONDITIONAL(self, metrics):
+        if len(metrics) < 2:
+            return
+        self._add_group(metric_group_type="BICONDITIONAL", metrics=metrics[:1])
+
+    def reset_identifier(self):
+        self.idx = None
+        self.identifier = defaultdict()
 
 
 def process_steps(cleaning_steps, document):
@@ -1192,18 +1327,15 @@ if __name__ == "__main__":
     #     ('contains', {'case_sensitive': False, 'strip': False, 'equals': "Snake"})
     # ])
 
-
-
-    identifier1 = {0:{"type": "AND",
-                      "metrics": [{"metric": "contains", "equals": "add"}]}
-    }
-
-
+    identifier1 = {0: {"type": "AND",
+                       "metrics": [{"metric": "contains", "equals": "add"}]}
+                   }
 
     steps = [
         {"step": "clean_document", "kwargs": {}},
         {"step": "limit_consecutive_empty_lines", "kwargs": {'max_empty_lines': 2}},
-        {"step": "insert_breaks", "kwargs": {'primary_line_identifier': identifier1, 'ignore_start_pattern': r'\d', 'ignore_end_pattern': r'\.$'}},
+        {"step": "insert_breaks", "kwargs": {'primary_line_identifier': identifier1, 'ignore_start_pattern': r'\d',
+                                             'ignore_end_pattern': r'\.$'}},
     ]
 
     updated_document = process_steps(steps, document=text)

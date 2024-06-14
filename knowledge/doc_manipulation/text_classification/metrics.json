@@ -110,6 +110,9 @@
                 "greater_than",
                 "less_than",
                 "equals"
+            ],
+            "is_digit_and_spaces": [
+                "equals"
             ]
         }
     },
