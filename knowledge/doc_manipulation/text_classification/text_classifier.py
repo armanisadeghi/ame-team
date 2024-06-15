@@ -169,6 +169,12 @@ class LineClassifier:
         self.ends_with_digit = line[-1].isdigit() if line else False
         self.starts_with_special_char = not line[0].isalnum() if line else False
         self.ends_with_special_char = not line[-1].isalnum() if line else False
+        # Need to consider these cases too
+        self.starts_with_digit_after_striping = line[0].strip().isdigit() if line else False
+        self.ends_with_digit_after_striping = line[-1].strip().isdigit() if line else False
+        self.starts_with_special_char_after_striping = not line[0].strip().isalnum() if line else False
+        self.ends_with_special_char_after_striping = not line.strip()[-1].isalnum() if line else False
+
         self.indentation_level = len(line) - len(line.lstrip())
 
         # Content-based metrics
@@ -301,6 +307,12 @@ class LineClassifier:
             "ends_with_digit": self.ends_with_digit,
             "starts_with_special_char": self.starts_with_special_char,
             "ends_with_special_char": self.ends_with_special_char,
+
+            "starts_with_digit_after_striping": self.starts_with_digit_after_striping,
+            "ends_with_digit_after_striping": self.ends_with_digit_after_striping,
+            "starts_with_special_char_after_striping": self.starts_with_special_char_after_striping,
+            "ends_with_special_char_after_striping": self.ends_with_special_char_after_striping,
+
             "indentation_level": self.indentation_level,
             "uppercase": self.uppercase,
             "lowercase": self.lowercase,
@@ -336,20 +348,24 @@ class TextAnalyzer:
         classifier = OutputClassifier()
         sections = classifier.classify_output_details(self.text, clean_text=False)
         valid_section_count = 0
+        plain_text_sections = 0
         # is_markdown = False
         for section_type, section_data in sections:
             if section_type != "plain_text":
                 # is_markdown = True
                 valid_section_count += 1
+            else:
+                plain_text_sections += 1
 
-        return valid_section_count
+        return valid_section_count, plain_text_sections
 
     def compute_metadata(self) -> Dict:
         total_lines = len(self.lines)
         total_chars = sum(len(line) for line in self.lines)
         total_words = sum(len(line.split()) for line in self.lines)
         total_sentences = sum(sum(line.count(p) for p in '.!?') for line in self.lines)
-        is_markdown, total_markdown_sections = self.get_markdown_compatibility()
+        total_markdown_sections, plain_text_sections = self.get_markdown_compatibility()
+
         keyword_counts = {keyword: 0 for keyword in self.keywords}
         for line in self.lines:
             for keyword in self.keywords:
@@ -361,7 +377,13 @@ class TextAnalyzer:
             "total_characters": total_chars,
             "total_words": total_words,
             "total_sentences": total_sentences,
-            "total_markdown_sections": total_markdown_sections
+            "total_plain_text_sections": plain_text_sections,
+            "total_markdown_sections": total_markdown_sections,
+            # So it is good to consider total markdown sections instead of having something fixed called is_markdown_compatible,
+            # as even if there is a single markdown section present we don't want to reach the conclusion that the whole text doc is a markdown. It should be dynamically
+            # determined based on the total size and user preferences or some basic threshold.
+            # Or instead of having these, we can have a markdown to plain text ratio, which will help how much is plain text and markdown
+            "markdown_to_plain_text_ratio": round(total_markdown_sections / plain_text_sections, 2)
         }
 
     def analyze_text(self) -> List[Dict]:
@@ -436,7 +458,8 @@ class TextManipulation:
 
     def line_qualifies_check(self,
                              line: LineClassifier,
-                             line_identifier: dict) -> bool:
+                             line_identifier: dict,
+                             lines) -> bool:
         """
         Checks if a line object qualifies based on conditions and metrics defined in the identifier object.
 
@@ -463,6 +486,19 @@ class TextManipulation:
 
         def match_conditions(line_obj, conditions):
             for condition in conditions:
+
+                if condition.get('check_line'):  # Indicates this might be a previous / next line case
+                    next_line_obj, previous_line_obj = self.get_next_and_previous_line(lines, line_obj)
+                    if condition.get('check_line') == "previous":
+                        if previous_line_obj is None:
+                            return False  # if the condition is to match previous line, and it's not present
+                        line_obj = previous_line_obj
+                    elif condition.get('check_line') == "next":
+                        if next_line_obj is None:
+                            return False  # if the condition is to match next line, and it's not present
+                        line_obj = next_line_obj
+                    else:  # if it's not previous or next it has to be the line itself, i.e self
+                        line_obj = line_obj
 
                 if condition.get('metric') == "startswith":
                     text_to_match = line_obj.get('line')
@@ -520,6 +556,7 @@ class TextManipulation:
                 elif condition.get('metric') == "has_date_time":
                     return line_obj.get('has_date_time') == condition.get('equals')
 
+                # Before removing trailing spaces
                 elif condition.get('metric') == "starts_with_special_char":
                     return line_obj.get('starts_with_special_char') == condition.get('equals')
 
@@ -531,6 +568,19 @@ class TextManipulation:
 
                 elif condition.get('metric') == "ends_with_special_char":
                     return line_obj.get('ends_with_special_char') == condition.get('equals')
+
+                # After trailing spaces removed
+                elif condition.get('metric') == "starts_with_special_char_after_striping":
+                    return line_obj.get('starts_with_special_char_after_striping') == condition.get('equals')
+
+                elif condition.get('metric') == "ends_with_digit_after_striping":
+                    return line_obj.get('ends_with_digit_after_striping') == condition.get('equals')
+
+                elif condition.get('metric') == "starts_with_digit_after_striping":
+                    return line_obj.get('starts_with_digit_after_striping') == condition.get('equals')
+
+                elif condition.get('metric') == "ends_with_special_char_after_striping":
+                    return line_obj.get('ends_with_special_char_after_striping') == condition.get('equals')
 
                 elif condition.get('metric') == "indentation_level":
                     indentation_level = line_obj.get('indentation_level')
@@ -745,7 +795,7 @@ class TextManipulation:
         lines = self.get_lines_by_document(document)
         filtered_lines = []
         for line in lines:
-            if self.line_qualifies_check(line, line_identifier):
+            if self.line_qualifies_check(line, line_identifier, lines):
                 filtered_lines.append(line)
 
         return filtered_lines
@@ -810,6 +860,25 @@ class TextManipulation:
 
         return lines
 
+    def get_next_and_previous_line(self,
+                                   lines: list,
+                                   line_obj):
+        line_index = line_obj.get('line_number') - 1
+
+        # Calculate previous line index and handle boundary condition
+        if line_index > 0:
+            previous_line_obj = lines[line_index - 1]
+        else:
+            previous_line_obj = None
+
+        # Calculate next line index and handle boundary condition
+        if line_index < len(lines) - 1:
+            next_line_obj = lines[line_index + 1]
+        else:
+            next_line_obj = None
+
+        return previous_line_obj, next_line_obj
+
     def wrap_line_with_markers(self,
                                document: str,
                                line_identifier: dict,
@@ -838,7 +907,7 @@ class TextManipulation:
         for line_obj in lines:
             line_content = line_obj.get('line')
 
-            if self.line_qualifies_check(line_obj, line_identifier):
+            if self.line_qualifies_check(line_obj, line_identifier, lines):
                 updated_doc_list.extend(start_marker_lines)
                 updated_doc_list.append(line_content)
                 updated_doc_list.extend(end_marker_lines)
@@ -871,7 +940,7 @@ class TextManipulation:
         lines = self.get_lines_by_document(document)
         updated_doc_list = []
         for line in lines:
-            if self.line_qualifies_check(line, line_identifier):
+            if self.line_qualifies_check(line, line_identifier, lines):
                 if location == "before":
                     updated_doc_list.extend(marker_lines)
                     updated_doc_list.append(line.get('line'))
@@ -934,7 +1003,7 @@ class TextManipulation:
             line_content = line_obj.get('line')
             line_index = line_obj.get('line_number') - 1
 
-            if self.line_qualifies_check(line_obj, start_line_identifier):
+            if self.line_qualifies_check(line_obj, start_line_identifier, lines):
                 section_lines = []
                 end_found = False
 
@@ -942,7 +1011,7 @@ class TextManipulation:
                                            min(line_index + max_lookup_for_end_identifier + 1, len(lines))):
                     section_lines.append(lines[lookahead_idx].get('line'))
 
-                    if self.line_qualifies_check(lines[lookahead_idx], end_line_identifier):
+                    if self.line_qualifies_check(lines[lookahead_idx], end_line_identifier, lines):
                         end_found = True
                         skip_until_index = lookahead_idx + 1
                         break
@@ -1050,12 +1119,12 @@ class TextManipulation:
         current_section = []  # Temporarily stores lines of the current extracted section
 
         for line in lines:
-            if self.line_qualifies_check(line, start_identifier):
+            if self.line_qualifies_check(line, start_identifier, lines):
                 in_extraction = True
                 current_section.append(line.get('line'))  # Include the start identifier line in the section
                 continue  # Skip adding this line to the remaining_lines
 
-            if self.line_qualifies_check(line, end_identifier) and in_extraction:
+            if self.line_qualifies_check(line, end_identifier, lines) and in_extraction:
                 current_section.append(line.get('line'))  # Include the end identifier line in the section
                 extracted_sections.append('\n'.join(current_section))  # Add the completed section to the list
                 current_section = []  # Reset the current section for the next extraction
@@ -1129,7 +1198,7 @@ class TextManipulation:
 
             for line in lines:
                 line_content = line.get('line')
-                if self.line_qualifies_check(line, line_identifier):
+                if self.line_qualifies_check(line, line_identifier, lines):
                     line_content = do_replacement(replacements, line_content)
 
                 updated_doc_list.append(line_content)
@@ -1184,7 +1253,7 @@ class TextManipulation:
 
             for line in lines:
                 line_content = line.get('line')
-                if self.line_qualifies_check(line, line_identifier):
+                if self.line_qualifies_check(line, line_identifier, lines):
                     if not should_delete_line(deletions, line_content):
                         updated_doc_list.append(line_content)
                 else:
@@ -1247,13 +1316,13 @@ class TextManipulation:
         }
 
         for idx, line in enumerate(lines):
-            if self.line_qualifies_check(line, primary_line_identifier):
+            if self.line_qualifies_check(line, primary_line_identifier, lines):
                 # Check above lines
                 start_idx = max(0, idx - discover_above_lines)
                 above_lines = lines[start_idx:idx]
 
                 for i, above_line in enumerate(above_lines):
-                    if self.line_qualifies_check(above_line, secondary_line_identifier):
+                    if self.line_qualifies_check(above_line, secondary_line_identifier, lines):
                         if action in actions:
                             actions[action](above_line, **kwargs)
 
@@ -1262,7 +1331,7 @@ class TextManipulation:
                 below_lines = lines[idx + 1:end_idx]
 
                 for i, below_line in enumerate(below_lines):
-                    if self.line_qualifies_check(below_line, secondary_line_identifier):
+                    if self.line_qualifies_check(below_line, secondary_line_identifier, lines):
                         if action in actions:
                             actions[action](below_line, **kwargs)
 
@@ -1359,7 +1428,7 @@ class TextManipulation:
             if idx < check_after_index:
                 continue
 
-            if self.line_qualifies_check(line, primary_identifier):  # Detected a primary line
+            if self.line_qualifies_check(line, primary_identifier, lines):  # Detected a primary line
 
                 if direction == "down":
                     lookup_lines = lines[
@@ -1371,7 +1440,8 @@ class TextManipulation:
                 # If we have an identifier for the secondary line
                 if secondary_identifier:
                     for lookahead_idx, lookahead_line in enumerate(lookup_lines):
-                        if self.line_qualifies_check(lookahead_line, secondary_identifier):  # Secondary line found
+                        if self.line_qualifies_check(lookahead_line, secondary_identifier,
+                                                     lines):  # Secondary line found
 
                             if strip_before_join:
                                 line[
@@ -1440,7 +1510,7 @@ class TextManipulation:
             if idx < check_after_index:
                 continue
 
-            if self.line_qualifies_check(line, line_identifier):
+            if self.line_qualifies_check(line, line_identifier, lines):
                 if direction == "down":
                     join_idx = idx + distance
                 else:
@@ -1507,15 +1577,15 @@ class TextManipulation:
         for line in lines:
             line_content = line.get('line', '')
             if ignore_by_identifier:
-                if self.line_qualifies_check(line, ignore_start_identifier):
+                if self.line_qualifies_check(line, ignore_start_identifier, lines):
                     within_ignore_section = True
 
                 if within_ignore_section:
                     updated_doc_list.append(line_content)
-                    if self.line_qualifies_check(line, ignore_end_identifier):
+                    if self.line_qualifies_check(line, ignore_end_identifier, lines):
                         within_ignore_section = False
                 else:
-                    if self.line_qualifies_check(line, primary_line_identifier):
+                    if self.line_qualifies_check(line, primary_line_identifier, lines):
                         updated_doc_list.append(break_pattern)
                     updated_doc_list.append(line_content)
             else:
@@ -1527,7 +1597,7 @@ class TextManipulation:
                     if ignore_end_pattern.match(line_content.strip()):
                         within_ignore_section = False
                 else:
-                    if self.line_qualifies_check(line, primary_line_identifier):
+                    if self.line_qualifies_check(line, primary_line_identifier, lines):
                         updated_doc_list.append(break_pattern)
                     updated_doc_list.append(line_content)
 
@@ -1586,8 +1656,6 @@ class TextManipulation:
         return updated_text
 
 
-
-
 def process_steps(cleaning_steps, document):
     processor = TextManipulation()
     updated_document = document
@@ -1613,8 +1681,6 @@ if __name__ == "__main__":
         text = file.read()
 
     obj = TextManipulation()
-
-
 
     identifier1 = {0: {"type": "AND",
                        "metrics": [{"metric": "contains", "equals": "add"}]}

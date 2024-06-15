@@ -43,6 +43,18 @@
             "ends_with_special_char": [
                 "equals"
             ],
+            "starts_with_special_char_after_striping": [
+                "equals"
+            ],
+            "ends_with_digit_after_striping": [
+                "equals"
+            ],
+            "starts_with_digit_after_striping": [
+                "equals"
+            ],
+            "ends_with_special_char_after_striping": [
+                "equals"
+            ],
             "indentation_level": [
                 "greater_than",
                 "less_than",
@@ -129,7 +141,8 @@
             "greater_than": "int",
             "less_than": "int",
             "strip": "bool",
-            "text" : "str"
+            "text" : "string",
+            "line" : ["self", "previous", "next"]
         }
     }
 ]
