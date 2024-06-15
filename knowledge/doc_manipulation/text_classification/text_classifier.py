@@ -452,14 +452,14 @@ class TextManipulation:
         """
 
         def int_comparison(compare_with, condition):
-            if condition.get('equals'):
-                return compare_with == condition.get('equals')
-
-            elif condition.get('greater_than'):
+            if condition.get('greater_than'):
                 return compare_with > condition.get('greater_than')
 
             elif condition.get('less_than'):
                 return compare_with < condition.get('less_than')
+
+            elif condition.get('equals'):
+                return compare_with == condition.get('equals')
 
         def match_conditions(line_obj, conditions):
             for condition in conditions:
@@ -605,16 +605,14 @@ class TextManipulation:
 
                 elif condition.get('metric') == "average_word_length":
                     average_word_length = line_obj.get('average_word_length')
-
                     return int_comparison(average_word_length, condition)
 
                 elif condition.get('metric') == 'is_digit_and_spaces':
-
                     return line_obj.get('is_digit_and_spaces') == condition.get('equals')
 
                 elif condition.get('metric') == 'text_similarity_score':
                     line_content = line_obj.get('line')
-                    text_to_match = condition.get('equals')
+                    text_to_match = condition.get('text')
                     score = self.by_similarity.similarity_between_two(text_to_match, line_content)
                     return int_comparison(score, condition)
 
@@ -1586,6 +1584,8 @@ class TextManipulation:
         # print(f"Length of the longest section: {longest_section_length}")
 
         return updated_text
+
+
 
 
 def process_steps(cleaning_steps, document):

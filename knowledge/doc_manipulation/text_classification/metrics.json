@@ -117,7 +117,8 @@
             "text_similarity_score": [
                 "equals",
                 "less_than",
-                "greater_than"
+                "greater_than",
+                "text"
             ]
         }
     },
@@ -127,7 +128,8 @@
             "equals": "Any",
             "greater_than": "int",
             "less_than": "int",
-            "strip": "bool"
+            "strip": "bool",
+            "text" : "str"
         }
     }
 ]
