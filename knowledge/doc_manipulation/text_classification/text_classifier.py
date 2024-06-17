@@ -148,6 +148,41 @@ class LineIdentifier:
         self.idx = None
         self.identifier = defaultdict()
 
+    def _validate_identifier_structure(self, identifier):
+
+        if not isinstance(identifier, dict):
+            return False
+
+        if not all([isinstance(x, int) for x in identifier.keys()]):
+            return False
+
+        if not all([isinstance(x, dict) for x in identifier.values()]):
+            return False
+
+        if not all([x.get('type') in self.groups_meanings.keys() for x in identifier.values()]):
+            return False
+
+        if not all([isinstance(x.get('metrics'), list) for x in identifier.values()]):
+            return False
+
+        return True
+
+    def load_identifier_from_dict(self, identifier):
+        # Utility function to load identifier from db (possibly)
+
+        # Checking structure
+        if not self._validate_identifier_structure(identifier):
+            return False
+
+        self.reset_identifier()
+
+        for idx, idf in identifier.items():
+            metric_type = idf.get('type')
+            metrics = idf.get('metrics')
+            self._add_group(metric_group_type=metric_type, metrics=metrics)
+
+        return True
+
 
 class LineClassifier:
     def __init__(self, line: str, line_number: int, previous_line: Optional[str] = None,
@@ -400,6 +435,26 @@ class TextAnalyzer:
             "metadata": self.metadata,
             "lines": self.analysis
         }
+
+# Todo Modularlization pending
+class Metric:
+
+    def __int__(self, name, params):
+        self.name = name
+        self.params = params
+
+    def evaluate(self):
+        pass
+
+
+class Condition:
+    def __int__(self, condition_type: str, metrics:list[Metric]):
+        pass
+
+    def evaluate(self):
+        pass
+
+
 
 
 class TextManipulation:
