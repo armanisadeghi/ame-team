@@ -1,16 +1,37 @@
+import time
+
 import multidict
 from common import pretty_print
-import re
+import re, random, string, json
 from collections import Counter, defaultdict
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Any, Union, Literal
 from difflib import SequenceMatcher
 from automation_matrix.processing.markdown.classifier import OutputClassifier
+import functools
 
 
 def clean_text(text: str) -> str:
     # Remove special characters and keep only printable ASCII characters
     cleaned_text = re.sub(r'[^\x00-\x7F]+', ' ', text)
     return cleaned_text
+
+
+def get_next_and_previous_line(lines: list, line_obj):
+    line_index = line_obj.get('line_number') - 1
+
+    # Calculate previous line index and handle boundary condition
+    if line_index > 0:
+        previous_line_obj = lines[line_index - 1]
+    else:
+        previous_line_obj = None
+
+    # Calculate next line index and handle boundary condition
+    if line_index < len(lines) - 1:
+        next_line_obj = lines[line_index + 1]
+    else:
+        next_line_obj = None
+
+    return previous_line_obj, next_line_obj
 
 
 class TextSimilarity:
@@ -69,17 +90,19 @@ class LineClassifier:
         self.word_count = len(line.split())
         self.sentence_count = self.count_sentences()
         self.line_length = len(line)
+        self.is_blank = not bool(line.strip())  # bool returns false for a empty line and True for non empty line
 
         # Structural metrics
         self.starts_with_digit = line[0].isdigit() if line else False
         self.ends_with_digit = line[-1].isdigit() if line else False
         self.starts_with_special_char = not line[0].isalnum() if line else False
         self.ends_with_special_char = not line[-1].isalnum() if line else False
+
         # Need to consider these cases too
-        self.starts_with_digit_after_striping = line[0].strip().isdigit() if line else False
-        self.ends_with_digit_after_striping = line[-1].strip().isdigit() if line else False
-        self.starts_with_special_char_after_striping = not line[0].strip().isalnum() if line else False
-        self.ends_with_special_char_after_striping = not line.strip()[-1].isalnum() if line else False
+        self.starts_with_digit_after_striping = line.strip()[0].isdigit() if not self.is_blank else False
+        self.ends_with_digit_after_striping = line.strip()[-1].isdigit() if not self.is_blank else False
+        self.starts_with_special_char_after_striping = not line.strip()[0].isalnum() if not self.is_blank else False
+        self.ends_with_special_char_after_striping = not line.strip()[-1].isalnum() if not self.is_blank else False
 
         self.indentation_level = len(line) - len(line.lstrip())
 
@@ -140,14 +163,14 @@ class LineClassifier:
 
     def get_longest_word(self):
         """Finds the longest word in the text and its length."""
-        if self.line:
+        if not self.is_blank:
             longest = max(self.line.split(), key=len)
             return longest
         return ""
 
     def get_shortest_word(self):
         """Finds the shortest word in the text and its length."""
-        if self.line:
+        if not self.is_blank:
             shortest = min(self.line.split(), key=len)
             return shortest
         return ""
@@ -257,11 +280,11 @@ class TextAnalyzer:
         plain_text_sections = 0
         # is_markdown = False
         for section_type, section_data in sections:
-            if section_type != "plain_text":
+            if section_type == "plain_text" or section_type == 'other_section_type':
                 # is_markdown = True
-                valid_section_count += 1
-            else:
                 plain_text_sections += 1
+            else:
+                valid_section_count += 1
 
         return valid_section_count, plain_text_sections
 
@@ -289,7 +312,6 @@ class TextAnalyzer:
             # as even if there is a single markdown section present we don't want to reach the conclusion that the whole text doc is a markdown. It should be dynamically
             # determined based on the total size and user preferences or some basic threshold.
             # Or instead of having these, we can have a markdown to plain text ratio, which will help how much is plain text and markdown
-            "markdown_to_plain_text_ratio": round(total_markdown_sections / plain_text_sections, 2)
         }
 
     def analyze_text(self) -> List[Dict]:
@@ -310,9 +332,27 @@ class TextAnalyzer:
 
 class Metric:
 
-    def __init__(self, name, params):
+    def __init__(self, name=None, params=None):
         self.name = name
         self.params = params
+
+    def from_dict(self, metric_dict: dict):
+        """
+
+        :param metric_dict: eg: {metric: starts_with, case_sensitive: True, strip: True}
+        :return:
+        """
+        self.name = metric_dict.get('metric')
+        del metric_dict['metric']
+        self.params = metric_dict
+
+    def to_dict(self):
+        """
+        :return: eg: {metric: starts_with, case_sensitive: True, strip: True}
+        """
+        ret_obj = self.params
+        ret_obj['metric'] = self.name
+        return ret_obj
 
     def int_comparison(self, compare_with, condition):
         if condition.get('greater_than'):
@@ -345,8 +385,9 @@ class Metric:
 
     def evaluate(self, line_obj, lines):
 
+        # Checking what line it is for
         if self.params.get('check_line'):  # Indicates this might be a previous / next line case
-            next_line_obj, previous_line_obj = self.get_next_and_previous_line(lines, line_obj)
+            previous_line_obj, next_line_obj = self.get_next_and_previous_line(lines, line_obj)
             if self.params.get('check_line') == "previous":
                 if previous_line_obj is None:
                     return False  # if the condition is to match previous line, and it's not present
@@ -364,7 +405,7 @@ class Metric:
 
             if self.params.get('strip'):
                 text_to_match = text_to_match.strip()
-            if self.params.get('case_sensitive'):
+            if not self.params.get('case_sensitive'):
                 text_to_match = text_to_match.upper()
                 value_to_match = value_to_match.upper()
 
@@ -376,7 +417,7 @@ class Metric:
 
             if self.params.get('strip'):
                 text_to_match = text_to_match.strip()
-            if self.params.get('case_sensitive'):
+            if not self.params.get('case_sensitive'):
                 text_to_match = text_to_match.upper()
                 value_to_match = value_to_match.upper()
 
@@ -399,7 +440,7 @@ class Metric:
 
             if self.params.get('strip'):
                 text_to_match = text_to_match.strip()
-            if self.params.get('case_sensitive'):
+            if not self.params.get('case_sensitive'):
                 text_to_match = text_to_match.upper()
                 value_to_match = value_to_match.upper()
 
@@ -535,6 +576,89 @@ class Condition:
         self.condition_type = condition_type
         self.metrics = metrics
 
+    def cached_evaluation(self,
+                          line_obj,
+                          stored_evaluations: List[Dict[str, Any]],
+                          ):
+        """
+        This is for cached evaluations only, cached means using results from stored metric evaluations
+        :param line_obj: Line object
+        :param stored_evaluations: The stored evaluations
+        :return:
+
+        example of stored evaluations
+        stored_evaluations = {"metric1": [1,3,5], "metric2": [1,8,9], "metric3": [1,12, 13]}
+        metrics =  {metric1 : {metric: starts_with, equals: The e}...}
+        """
+
+        current_line_number = line_obj.get('line_number')
+        metric_evaluation_list = []
+
+        line_satisfies_all_metrics = True
+
+        for metric in self.metrics:
+            metric_found = False  # Metric does not exist in cache
+            for evaluation in stored_evaluations:
+                if evaluation.get('metric').to_dict() == metric.to_dict():
+                    metric_found = True  # Metric exist in cache
+                    if current_line_number not in evaluation.get('passed_lines'):
+                        line_satisfies_all_metrics = False
+
+            # Metric does not exist in cache, we cannot
+            if not metric_found:
+                line_satisfies_all_metrics = False
+
+            metric_evaluation_list.append(line_satisfies_all_metrics)
+
+        if self.condition_type == "AND" and not all(metric_evaluation_list):
+            return False
+
+        # Check "OR" conditions: At least one condition in the "OR" list must be true for the line to pass.
+        # If the "OR" key is in the identifier and none of the conditions in the "OR" list are true, skip this line.
+        if self.condition_type == "OR" and not any(metric_evaluation_list):
+            return False
+
+        # Check "NOT" conditions: All conditions in the "NOT" list must be false for the line to pass.
+        # If the "NOT" key is in the identifier and any condition in the "NOT" list is true, skip this line.
+        if self.condition_type == "NOT" and any(metric_evaluation_list):
+            return False
+
+        # Exclusive OR (Only one of the given conditions must be true)
+        if self.condition_type == "XOR" and sum(metric_evaluation_list) != 1:
+            return False
+
+        # The NAND operation is the negation of the AND operation. It returns True unless both inputs are True.
+        if self.condition_type == "NAND" and all(metric_evaluation_list):
+            return False
+
+        # The NOR operation is the negation of the OR operation. It returns True only if both inputs are False.
+        if self.condition_type == "NOR" and any(metric_evaluation_list):
+            return False
+
+        # The XNOR operation is the negation of the XOR (Exclusive OR) operation. It returns True if both inputs are the same (both True or both False).
+        if self.condition_type == "XNOR" and sum(metric_evaluation_list) not in [0, len(self.metrics)]:
+            return False
+
+        # The next two only excepts two metrics only.
+
+        if self.condition_type == "IMPLICATION":
+            # IMPLICATION expects two metrics, metrics[0] implies metrics[1]
+            A = metric_evaluation_list[0]
+            B = metric_evaluation_list[1]
+
+            if A and not B:  # If first metric is evaluated to True and second is not Implication is failed
+                return False
+
+        if self.condition_type == "BICONDITIONAL":
+            # BICONDITIONAL expects two metrics, metrics[0] iff metrics[1]
+            A = metric_evaluation_list[0]
+            B = metric_evaluation_list[1]
+
+            if A != B:
+                return False
+
+        return True
+
     def evaluate(self, line_obj, lines):
 
         if self.condition_type == "AND" and not all(metric.evaluate(line_obj, lines) for metric in self.metrics):
@@ -563,7 +687,8 @@ class Condition:
             return False
 
         # The XNOR operation is the negation of the XOR (Exclusive OR) operation. It returns True if both inputs are the same (both True or both False).
-        if self.condition_type == "XNOR" and sum(metric.evaluate(line_obj, lines) for metric in self.metrics) not in [0, len(self.metrics)]:
+        if self.condition_type == "XNOR" and sum(metric.evaluate(line_obj, lines) for metric in self.metrics) not in [0,
+                                                                                                                      len(self.metrics)]:
             return False
 
         # The next two only excepts two metrics only.
@@ -635,11 +760,19 @@ class LineIdentifier:
     def add_condition(self, condition: Condition):
         self.conditions.append(condition)
 
-    def evaluate(self, line_obj, lines):
-        for condition in self.conditions:
-            if not condition.evaluate(line_obj, lines):
-                return False
-        return True
+    def evaluate(self, line_obj, lines, use_saved_metrics=False, saved_metrics: List[Dict[str, Any]] = None):
+
+        if use_saved_metrics and saved_metrics is not None:
+            for condition in self.conditions:
+                if not condition.cached_evaluation(line_obj, saved_metrics):
+                    return False
+            return True
+        else:
+
+            for condition in self.conditions:
+                if not condition.evaluate(line_obj, lines):
+                    return False
+            return True
 
     def _add_condition(self, conditional: str, metrics: list):
         conditional_type = conditional
@@ -683,38 +816,62 @@ class LineIdentifier:
     def reset(self):
         self.conditions = []
 
-    # def _validate_identifier_structure(self, identifier):
-    #
-    #     if not isinstance(identifier, dict):
-    #         return False
-    #
-    #     if not all([isinstance(x, int) for x in identifier.keys()]):
-    #         return False
-    #
-    #     if not all([isinstance(x, dict) for x in identifier.values()]):
-    #         return False
-    #
-    #     if not all([x.get('type') in self.groups_meanings.keys() for x in identifier.values()]):
-    #         return False
-    #
-    #     if not all([isinstance(x.get('metrics'), list) for x in identifier.values()]):
-    #         return False
-    #
-    #     return True
+    def validate_structure_from_dict(self, identifier):
 
-    # def load_identifier_from_dict(self, identifier):
-    #     # Utility function to load identifier from db (possibly)
-    #
-    #     # Checking structure
-    #     if not self._validate_identifier_structure(identifier):
-    #         return False
-    #
-    #     for idx, idf in identifier.items():
-    #         metric_type = idf.get('type')
-    #         metrics = idf.get('metrics')
-    #         self._add_group(metric_group_type=metric_type, metrics=metrics)
-    #
-    #     return True
+        if not isinstance(identifier, dict):
+            return False
+
+        if not all([isinstance(x, str) and x.isdigit() for x in identifier.keys()]):
+            return False
+
+        if not all([isinstance(x, dict) for x in identifier.values()]):
+            return False
+
+        if not all([x.get('type') in self.groups_meanings.keys() for x in identifier.values()]):
+            return False
+
+        if not all([isinstance(x.get('metrics'), list) for x in identifier.values()]):
+            return False
+
+        return True
+
+    def from_dict(self, identifier: dict):
+        # Utility function to load identifier from db (possibly)
+
+        # Validating structure
+        if not self.validate_structure_from_dict(identifier):
+            return False
+
+        for _, idf in identifier.items():
+            metric_type = idf.get('type')
+            metrics = idf.get('metrics')
+
+            formatted_metrics = []
+            for metric in metrics:
+                formatted_metrics.append((metric.get('metric'), metric))
+
+            self._add_condition(metric_type, formatted_metrics)
+
+        return True
+
+    def to_dict(self):
+        structure = {}
+        for idx, condition in enumerate(self.conditions):
+            _type = condition.condition_type
+            _metrics = condition.metrics
+            _str_idx = str(idx)
+            structure[_str_idx] = {
+                "type": _type,
+                "metrics": []
+            }
+            for _metric in _metrics:
+                name, params = _metric.name, _metric.params
+
+                params['metric'] = name
+
+                structure[_str_idx]['metrics'].append(params)
+
+        return structure
 
 
 class TextManipulation:
@@ -774,7 +931,8 @@ class TextManipulation:
     def line_qualifies_check(self,
                              line_obj: LineClassifier,
                              line_identifier: LineIdentifier,
-                             lines) -> bool:
+                             lines,
+                             ) -> bool:
 
         return line_identifier.evaluate(line_obj, lines)
 
@@ -974,19 +1132,32 @@ class TextManipulation:
 
 
 class FindLines(TextManipulation):
-
     """
     This class is used for filtering and finding Line Objects by these ways:
      - Filtering By LineIdentifier
      - Filtering By Regex Pattern
      - Filtering By Text Similarity Score
     """
+
     def __init__(self):
         super().__init__()
 
+    def filter_lines_by_saved_metrics(self,
+                                      classified_lines: list,
+                                      line_identifier: LineIdentifier,
+                                      saved_metrics: List[Dict[str, Any]]) \
+            -> list[Dict]:
+
+        filtered_lines = []
+        for line in classified_lines:
+            if line_identifier.evaluate(line, classified_lines, use_saved_metrics=True, saved_metrics=saved_metrics):
+                filtered_lines.append(line)
+
+        return filtered_lines
+
     def filter_lines(self,
                      document: str,
-                     line_identifier: LineIdentifier) -> list[LineClassifier]:
+                     line_identifier: LineIdentifier) -> list[Dict]:
         """
         Filters lines in a document based on a Line Identifier  and returns a list of line objects.
 
@@ -1010,8 +1181,8 @@ class FindLines(TextManipulation):
         return filtered_lines
 
     def filter_lines_by_regex(self,
-                              document: str,
-                              pattern) -> list[LineClassifier]:
+                              document: Union[List, str],
+                              pattern) -> list[Dict]:
         """
         Filters lines in a document based on a regex pattern and returns a list of line objects.
 
@@ -1027,8 +1198,12 @@ class FindLines(TextManipulation):
           information such as line content, line number, etc.
         """
 
-        lines = self.get_lines_by_document(document)
+        if isinstance(document, list):
+            lines = document
+        else:
+            lines = self.get_lines_by_document(document)
         results = []
+
         for line in lines:
             line_content = line.get('line')
             if re.search(pattern, line_content):
@@ -1575,66 +1750,6 @@ class ExtractSection(TextManipulation):
         else:
             return extracted_text
 
-    def extract_section_blocks(self,
-                               document: str,
-                               identifiers: list[LineIdentifier],
-                               block_size: int = 5,
-                               overlap: bool = True
-                               ):
-        """
-        All identifiers should fall in each block of given size.
-        If the size is 5 , so it will look for presence of all identifiers within 5 lines
-
-        :param document: Document as string
-        :param identifiers: List of Identifiers
-        :param block_size: Lines within we have to find all the identifiers
-        :param overlap: To include the last line of the previous block or not
-        :return: Document containing blocks or the remaining content
-        """
-
-        def check_block_lines_for_identifiers(identifier_map: Dict[LineIdentifier, int], block_lines: list, all_lines: list):
-            for line_obj in block_lines:
-                for identifier, _ in identifier_map.items():
-                    if identifier.evaluate(line_obj, all_lines):
-                        identifier_map[identifier] += 1
-
-            return identifier_map
-
-        lines = self.get_lines_by_document(document)
-
-        detected_blocks = []
-        check_after_index = 0
-        for idx, line in enumerate(lines):
-
-            if idx < check_after_index:
-                continue
-
-            # Using sliding window approach
-            end_window_index = idx + block_size
-
-            window_block_lines = lines[idx: end_window_index]
-
-            idf_map = {x: 0 for x in identifiers}
-
-            matches_map = check_block_lines_for_identifiers(idf_map, window_block_lines, lines)
-
-            # TODO: By Jatin. At this point we can optimize it to detect partial matches ,
-            #  But I don't think it's necessary for now. Will add later if needed.
-            if 0 not in matches_map.values():  # Means each identifier is in the current window , at least for once
-                if overlap:
-                    check_after_index = end_window_index - 1
-                else:
-                    check_after_index = end_window_index  # Move past the current block to avoid overlap
-
-                detected_blocks.append({
-                    "line_numbers": [x.get('line_number') for x in window_block_lines],
-                    "line_indexes": [x.get('line_number') - 1 for x in window_block_lines],
-                    "block_content": '\n\n'.join([x.get('line') for x in window_block_lines]),
-                    "match": 100  # For 100% match
-                })
-
-        return detected_blocks
-
 
 class DynamicTextMarkers(TextManipulation):
 
@@ -1792,26 +1907,929 @@ class DynamicTextMarkers(TextManipulation):
         return '\n'.join(updated_doc_list)
 
 
-def process_steps(cleaning_steps, document):
-    processor = TextManipulation()
-    updated_document = document
+class FindSections(TextManipulation):
+    def __init__(self):
+        super().__init__()
 
-    for step_info in cleaning_steps:
-        step_name = step_info.get("step")
-        kwargs = step_info.get("kwargs", {})
+    def extract_section_blocks(self,
+                               document: str,
+                               identifiers: Dict[LineIdentifier, Dict[str, Any]],
+                               block_size: int = 5,
+                               overlap: bool = True,
+                               ):
 
-        # Class called `TextManipulation` with methods matching the step names
-        if hasattr(processor, step_name):
-            # Get the method from the class
-            method = getattr(processor, step_name)
+        """
+        All identifiers should fall in each block of given size.
+        If the size is 5 , so it will look for presence of all identifiers within 5 lines
 
-            # Call the method with the provided keyword arguments
-            updated_document = method(document=updated_document, **kwargs)
+        identifiers = {
 
-    return updated_document
+            idf1: {'optional': False, 'min': 1, 'max': 3},
+
+            idf2: {'optional': False, 'min': 1, 'max': 3},
+
+            idf3: {'optional': False, 'min': 1, 'max': 3},
+
+            idf4: {'optional': True, 'min': 1, 'max': 1}
+        }
+
+
+        :param document: Document as string
+        :param identifiers: List of Identifiers
+        :param block_size: Lines within we have to find all the identifiers
+        :param overlap: To include the last line of the previous block or not (In situations where one block starts after other)
+        :return: Document containing blocks or the remaining content
+        """
+
+        def check_block_lines_for_identifiers(identifier_map: Dict[LineIdentifier, int], block_lines: list,
+                                              all_lines: list):
+            for line_obj in block_lines:
+                for identifier, _ in identifier_map.items():
+                    if identifier.evaluate(line_obj, all_lines):
+                        identifier_map[identifier] += 1
+
+            return identifier_map
+
+        lines = self.get_lines_by_document(document)
+
+        detected_blocks = []
+        check_after_index = 0
+        for idx, line in enumerate(lines):
+
+            if idx < check_after_index:
+                continue
+
+            # Using sliding window approach
+            end_window_index = idx + block_size
+
+            window_block_lines = lines[idx: end_window_index]
+
+            idf_map = {x: 0 for x in identifiers.keys()}
+
+            matches_map = check_block_lines_for_identifiers(idf_map, window_block_lines, lines)
+
+            criteria_met = True
+            for idf_, cfg in identifiers.items():
+
+                freq_of_idf = matches_map[idf_]
+                is_optional = cfg.get('optional', False)  # False means that it is required
+
+                if not is_optional:
+                    if not cfg.get('min', 1) <= freq_of_idf <= cfg.get('max', float('inf')):
+                        criteria_met = False
+                        break
+                else:
+                    if not 0 <= freq_of_idf <= cfg.get('max', float('inf')):
+                        criteria_met = False
+                        break
+
+            if criteria_met:
+                if overlap:
+                    check_after_index = end_window_index - 1
+                else:
+                    check_after_index = end_window_index  # Move past the current block to avoid overlap
+
+                detected_blocks.append({
+                    "line_numbers": [x.get('line_number') for x in window_block_lines],
+                    "line_indexes": [x.get('line_number') - 1 for x in window_block_lines],
+                    "block_content": '\n\n'.join([x.get('line') for x in window_block_lines]),
+                })
+
+        return detected_blocks
+
+    def extract_section_lines_by_saved_metrics(self,
+                                                lines: list,
+                                                identifiers: Dict[LineIdentifier, Dict[str, Any]],
+                                                saved_metrics: list[Dict],
+                                                block_size: int = 5,
+                                                overlap: bool = True, ) -> list:
+
+        """
+        All identifiers should fall in each block of given size.
+        If the size is 5 , so it will look for presence of all identifiers within 5 lines
+
+        identifiers = {
+
+            idf1: {'optional': False, 'min': 1, 'max': 3},
+
+            idf2: {'optional': False, 'min': 1, 'max': 3},
+
+            idf3: {'optional': False, 'min': 1, 'max': 3},
+
+            idf4: {'optional': True, 'min': 1, 'max': 1}
+        }
+
+
+        :param saved_metrics:
+        :param lines: Classified lines as a list of line objects
+        :param identifiers: List of Identifiers
+        :param block_size: Lines within we have to find all the identifiers
+        :param overlap: To include the last line of the previous block or not (In situations where one block starts after other)
+        :return: Document containing blocks or the remaining content
+        """
+
+        def check_block_lines_for_identifiers(identifier_map: Dict[LineIdentifier, int], block_lines: list,
+                                              all_lines: list):
+            for line_obj in block_lines:
+                for identifier, _ in identifier_map.items():
+                    if identifier.evaluate(line_obj, all_lines, use_saved_metrics=True, saved_metrics=saved_metrics):
+                        identifier_map[identifier] += 1
+
+            return identifier_map
+
+        detected_blocks_lines = []
+        check_after_index = 0
+        first_line_number = lines[0].get('line_number') - 1 if len(lines) > 0 else 0
+
+        for idx, line in enumerate(lines, start=first_line_number):
+
+            if idx < check_after_index:
+                continue
+
+            # Using sliding window approach
+            end_window_index = idx + block_size
+
+            window_block_lines = lines[idx: end_window_index]
+
+            idf_map = {x: 0 for x in identifiers.keys()}
+
+            matches_map = check_block_lines_for_identifiers(idf_map, window_block_lines, lines)
+
+            criteria_met = True
+            for idf_, cfg in identifiers.items():
+
+                freq_of_idf = matches_map[idf_]
+                is_optional = cfg.get('optional', False)  # False means that it is required
+
+                if not is_optional:
+                    if not cfg.get('min', 1) <= freq_of_idf <= cfg.get('max', float('inf')):
+                        criteria_met = False
+                        break
+                else:
+                    if not 0 <= freq_of_idf <= cfg.get('max', float('inf')):
+                        criteria_met = False
+                        break
+
+            if criteria_met:
+                if overlap:
+                    check_after_index = end_window_index - 1
+                else:
+                    check_after_index = end_window_index  # Move past the current block to avoid overlap
+
+                detected_blocks_lines.append(window_block_lines)
+
+        return detected_blocks_lines
+
+    def extract_lines_between_markers(self,
+                                      lines: list,
+                                      start_marker: str,
+                                      end_marker: str,
+                              ):
+
+        in_extraction = False  # Flag to indicate whether currently in an extraction section
+        extracted_sections = []  # List to store the extracted sections
+
+        current_section = []  # Temporarily stores lines numbers of the current extracted section
+
+        for line in lines:
+            if start_marker in line.get('line'):  # Check for the start marker
+                in_extraction = True
+                current_section.append(line)  # Include the start marker line number in the section
+                continue
+
+            if end_marker in line.get('line') and in_extraction:  # Check for the end marker
+                current_section.append(line)  # Include the end marker line number in the section
+                extracted_sections.append(current_section)  # Add the completed section to the list
+                current_section = []  # Reset the current section for the next extraction
+                in_extraction = False  # Reset the extraction flag
+                continue
+
+            if in_extraction:
+                current_section.append(line)  # Add lines between the markers to the current section
+
+        return extracted_sections
+
+    def extract_lines_between_identifiers(self,
+                                          lines: list,
+                                          start_identifier: LineIdentifier,
+                                          end_identifier: LineIdentifier,
+                                          saved_metrics: list[Dict],
+                                          max_lookup: int = 20,
+                                          max_size: int = 20):
+        """
+        Extracts blocks of lines between start and end identifiers within a specified limit.
+
+        Args:
+            lines (list): List of line objects to search through.
+            start_identifier (LineIdentifier): Object to evaluate the start condition.
+            end_identifier (LineIdentifier): Object to evaluate the end condition.
+            saved_metrics (list[Dict]): List of saved metrics for evaluation.
+            max_lookup (int): Maximum number of lines to look ahead for the end identifier.
+            max_size (int): Maximum number of lines in a block if the end identifier is not found.
+
+        Returns:
+            list: A list of blocks, each containing lines between the start and end identifiers.
+        """
+
+        all_blocks = []
+        skip_until_index = 0
+
+        for idx, line_obj in enumerate(lines):
+            if idx < skip_until_index:
+                continue
+
+            line_content = line_obj.get('line')
+            line_index = line_obj.get('line_number') - 1
+
+            if start_identifier.evaluate(line_obj, lines, use_saved_metrics=True, saved_metrics=saved_metrics):
+                section_lines = []
+                end_found = False
+
+                for lookahead_idx in range(line_index + 1,
+                                           min(line_index + max_lookup + 1, len(lines))):
+                    section_lines.append(lines[lookahead_idx])
+
+                    if end_identifier.evaluate(lines[lookahead_idx],lines, use_saved_metrics=True, saved_metrics=saved_metrics):
+                        end_found = True
+                        skip_until_index = lookahead_idx + 1
+                        break
+
+                if not end_found:
+                    section_lines = section_lines[:max_size]
+                    skip_until_index = line_index + max_size
+
+                all_blocks.append([line_obj] + section_lines)
+
+        return all_blocks
+
+
+# Line Operations Specific Classes
+
+class Document:
+
+    def __init__(self, lines):
+        self.lines = lines
+
+    def get_text(self):
+        return "\n".join([x.get('line') for x in self.lines])
+
+    def from_lines(self, lines: list[str]):
+        doc = '\n'.join(lines)
+        classified_lines = TextAnalyzer(text=doc).get_analysis().get('lines')
+        self.lines = classified_lines
+
+
+class FindOperations:
+    """
+    Things that can be found possibly are:
+
+    Find Line Numbers with identifiers. Returns list of line numbers
+
+    Find Line Numbers with regex pattern. Returns list of line numbers
+
+    Find Line Numbers with text similarity. Returns list of line numbers
+
+    Find Block Sections with multiple identifiers. Return list of blocks
+
+    Find Content between Markers. Returns list of blocks
+
+    Find Content between Identifiers. Returns list of blocks
+    """
+
+    def __init__(self, classified_lines, saved_metrics):
+        self.lines = classified_lines
+        self.saved_metrics = saved_metrics
+
+    # Find Line Numbers with identifiers. Returns list of line numbers
+    def find_lines_by_identifier(self, identifier: LineIdentifier):
+        line_finder = FindLines()
+        line_objects = line_finder.filter_lines_by_saved_metrics(self.lines,
+                                                                 identifier,
+                                                                 self.saved_metrics)
+
+        # since we got list of classified, lines we will get the line number and return them
+
+        return [x['line_number'] for x in line_objects]
+
+    # Find Line Numbers with regex pattern. Returns list of line numbers
+    def find_lines_by_pattern(self, pattern):
+        line_finder = FindLines()
+        line_objects = line_finder.filter_lines_by_regex(self.lines, pattern)
+
+        # since we got list of classified, lines we will get the line number and return them
+
+        return [x['line_number'] for x in line_objects]
+
+    # Find Line Numbers with text similarity. Returns list of line numbers
+    def find_lines_by_similarity(self):
+        raise NotImplementedError("Not important for now.")
+
+    # Find Block Sections with multiple identifiers. Return list of blocks
+    def find_blocks_by_identifier(self, identifiers: dict[LineIdentifier, dict[str, Any]], size):
+        section_finder = FindSections()
+        detected_blocks = section_finder.extract_section_lines_by_saved_metrics(self.lines,
+                                                                                identifiers,
+                                                                                self.saved_metrics,
+                                                                                size)
+        # since detected blocks is List[List]. the inner list is a list of line objects of len: size
+        # We only need the line numbers ,so we take first line number and last number in a block
+        return [[block[0].get('line_number'), block[-1].get('line_number')] for block in detected_blocks]
+
+    # Find Content between Markers. Returns list of blocks
+    def find_blocks_between_markers(self, start_marker, end_marker):
+        section_finder = FindSections()
+        detected_blocks = section_finder.extract_lines_between_markers(self.lines, start_marker, end_marker)
+
+        # since detected blocks is List[List]. the inner list is a list of line objects of len: size
+        # We only need the line numbers ,so we take first line number and last number in a block
+        return [[block[0].get('line_number'), block[-1].get('line_number')] for block in detected_blocks]
+
+    # Find Content between Identifiers
+    def find_blocks_between_identifiers(self,
+                                        start_identifier,
+                                        end_identifier,
+                                        max_lookup: int = 20,
+                                        max_size: int = 20):
+        section_finder = FindSections()
+        detected_blocks = section_finder.extract_lines_between_identifiers(self.lines,
+                                                                           start_identifier,
+                                                                           end_identifier,
+                                                                           self.saved_metrics,
+                                                                           max_lookup,
+                                                                           max_size)
+
+        return [[block[0].get('line_number'), block[-1].get('line_number')] for block in detected_blocks]
+
+
+class LineOperations:
+
+    def __init__(self, lines):
+        self.classified_lines = lines
+
+    def add_line_before(self, text: str, line_numbers: List[int]):
+        new_lines = []
+
+        for num in line_numbers:
+            new_lines.append({
+                "line_number": num,
+                "position": "before",
+                "content": text,
+            })
+
+        return [{'new_lines': new_lines}]
+
+    def add_line_after(self, text: str, line_numbers: List[int]):
+        new_lines = []
+
+        for num in line_numbers:
+            new_lines.append({
+                "line_number": num,
+                "position": "after",
+                "content": text,
+            })
+
+        return[ {'new_lines': new_lines}]
+
+    def delete_line(self, line_numbers: list[int]):
+
+        delete_lines = []
+
+        for num in line_numbers:
+            delete_lines.append(num)
+
+        return[ {'delete_lines': delete_lines}]
+
+    def move_lines(self, line_numbers_map: List[Dict[Literal["to", "from"], int]], seperator: str = " "):
+        # Moving a line is basically  add_content_to_line operation and a delete operation
+
+        delete_lines = []
+        edit_lines = []
+
+        for line_map in line_numbers_map:
+            to_num = line_map.get('to')
+            from_num = line_map.get('from')
+            from_line = self.classified_lines[from_num + 1]
+
+            delete_lines.append(from_num)
+            edit_lines.append({
+                "line_number": to_num,
+                "add_content": f"{seperator}{from_line.get('line')}",
+            })
+
+        return [{"delete_lines": delete_lines}, {"edit_lines": edit_lines}]
+
+    def replace_regex(self, line_numbers: list[int], pattern, replace_with):
+        replace_lines = []
+
+        for num in line_numbers:
+            replace_lines.append({
+                "line_number": num,
+                "replace_pattern": pattern,
+                "with": replace_with
+            })
+
+        return[ {"edit_lines": replace_lines}]
+
+    def replace_characters(self, line_numbers: list[int], content, replace_with):
+        replace_lines = []
+
+        for num in line_numbers:
+            replace_lines.append({
+                "line_number": num,
+                "replace": content,
+                "with": replace_with
+            })
+
+        return[ {"edit_lines": replace_lines}]
+
+    def rewrite_line(self, line_numbers: list[int], content):
+        replace_lines = []
+
+        for num in line_numbers:
+            replace_lines.append({
+                "line_number": num,
+                "content": content,
+            })
+
+        return[ {"edit_lines": replace_lines}]
+
+    def add_content_to_line(self, line_numbers: list[int], content):
+        replace_lines = []
+
+        for num in line_numbers:
+            replace_lines.append({
+                "line_number": num,
+                "add_content": content,
+            })
+
+        return[ {"edit_lines": replace_lines}]
+
+
+def save_state(func):
+    @functools.wraps(func)
+    def wrapper(self, *args, **kwargs):
+        # Call the original function
+        result = func(self, *args, **kwargs)
+
+        # Call the `get_current_state` method to get the dictionary
+        state_dict = self.get_current_state()
+
+        # Ensure the result is a dictionary
+        if not isinstance(state_dict, dict):
+            raise ValueError("The return value of get_current_state must be a dictionary.")
+
+        # Save the dictionary to a JSON file
+        filename = 'state_store.json'
+        with open(filename, 'w') as f:
+            json.dump(state_dict, f, indent=4)
+
+        return result
+
+    return wrapper
+
+
+class ActionProcessor(TextManipulation):
+
+    def __init__(self, document: str):
+        super().__init__()
+        self.all_metrics: list = []
+        self.identifiers: List[Dict[str, Any]] = []
+
+        analyzer = TextAnalyzer(document)
+        self.metadata = analyzer.get_analysis()['metadata']
+        self.classified_lines = analyzer.get_analysis()['lines']
+
+        self.rounds = []
+        self.steps = []
+
+    def index_document(self,
+                       document: str,
+                       ):
+
+        lines = self.get_lines_by_document(document)
+
+        return lines
+
+    @save_state
+    def add_and_evaluate_metric(self,
+                                unique_name: str,
+                                metric: Union[Metric, Dict[str, Any]],
+                                ):
+
+        # Todo for Myself: Incase a new metric is added in middle of round ,
+        #  Do we need to reevaluate metrics for all rounds or no??
+
+        if not isinstance(metric, Metric) and isinstance(metric, dict):
+            metric_ = Metric()
+            metric_.from_dict(metric)
+        else:
+            metric_ = metric
+
+        metric_info = {
+            "unique_name": unique_name,
+            "metric": metric_,
+            "passed_lines": []
+        }
+
+        for idx, line in enumerate(self.classified_lines):
+            line_number = line.get('line_number')
+            line_number = int(line_number)
+
+            has_passed_evaluation = metric_.evaluate(line, self.classified_lines)
+
+            if has_passed_evaluation:
+                metric_info['passed_lines'].append(line_number)
+
+        self.all_metrics.append(metric_info)
+
+    @save_state
+    def add_and_store_identifier(self,
+                                 unique_name: str,
+                                 identifier_comments: str,
+                                 conditions: Union[List[Condition], Dict]):
+        """
+        Add identifiers by either creating a raw structure, or a list of condition objects
+
+        :param unique_name: Unique name for the identifier
+        :param identifier_comments: Tell what the identifier is used for
+        :param conditions: conditions for the identifier
+        :return:
+        """
+
+        if isinstance(conditions, Dict):
+            idf = LineIdentifier()
+            idf.from_dict(conditions)
+        else:
+            idf = LineIdentifier()
+            for condition in conditions:
+                idf.add_condition(condition)
+
+        if not any(unique_name == x.get('name') for x in self.identifiers):
+            self.identifiers.append({
+                "name": unique_name,
+                "comments": identifier_comments,
+                "identifier": idf
+            })
+        else:
+            random_name_extension = ''.join(random.choices(string.ascii_letters + string.digits, k=5))
+            unique_name = f"{unique_name}_{random_name_extension}"
+
+            self.identifiers.append({
+                "name": unique_name,
+                "comments": identifier_comments,
+                "identifier": idf
+            })
+
+    # Add rounds and steps
+    @save_state
+    def add_round(self, desc, id_):
+        if not self.steps:
+            return False
+
+        self.rounds.append(
+            {
+                "roundId": id_,
+                "description": desc,
+                "steps": self.steps,
+                "updated_metrics": [],
+                "edits": [],
+                "saves": [],
+            }
+        )
+        return True
+
+    def add_steps(self, operation, kwargs):
+        self.steps.append({
+            "action": operation,
+            "kwargs": kwargs
+        })
+
+    def add_saves(self, name, comments ,operation, kwargs):
+        # Ask whether to save the things like kwargs, and
+        if self.rounds:
+            # If there is only one round, use parent lines and metrics
+            if len(self.rounds) == 1:
+                classified_lines = self.classified_lines
+                metrics = self.all_metrics
+            else:  # there should be more than one round
+
+                # We are getting the second last round, because the doc to be edited in the current round is from the result of second last round
+                classified_lines = self.rounds[-2].get('updated_lines')
+                metrics = self.rounds[-2].get('updated_lines')
+
+            find_ops = FindOperations(classified_lines, metrics)
+
+            if getattr(find_ops, operation):
+                output = getattr(find_ops, operation)(**kwargs)
+
+                save_obj = {
+                    "name" : name,
+                    "comments": comments,
+                    "action": operation,
+                    # Do we have to save the things we search,
+                    # "kwargs": kwargs,
+
+                }
+                # Todo:
+
+                # if isinstance(output, list[list])
+
+    # Utility functions
+    def get_metric_evaluations(self) \
+            -> list[Dict]:
+        return self.convert_metrics()
+
+    def get_identifiers(self):
+
+        return self.convert_identifiers()
+
+    # Conversion functions for db/json friendly format
+    def convert_identifiers(self):
+        return_identifiers = []
+        for idf in self.identifiers:
+
+            return_identifiers.append({
+                "name": idf['name'],
+                "comments": idf['comments'],
+                "identifier": idf['identifier'].to_dict()
+            })
+
+        return return_identifiers
+
+    def convert_metrics(self):
+        return_metrics = []
+        for metric_info in self.all_metrics:
+
+            return_metrics.append({
+                "name": metric_info['unique_name'],
+                "metric": metric_info['metric'].to_dict(),
+                "passed_lines": metric_info['passed_lines']
+            })
+        return return_metrics
+
+    def normalize_rounds(self):
+        return_rounds = []
+        for round_ in self.rounds:
+            updated_metrics_after_round_processing = round_.get('updated_metrics')
+
+            updated_metrics = []
+
+            for metric_info in updated_metrics_after_round_processing:
+
+                updated_metrics.append({
+                    "name": metric_info['name'],
+                    "metric": metric_info['metric'].to_dict(),
+                    "passed_lines": metric_info['passed_lines']
+                })
+
+            return_rounds.append({
+
+                "roundId": round_.get('roundId'),
+                "description": round_.get('description'),
+                "steps": round_.get('steps'),
+                "updated_metrics": updated_metrics,
+                "updated_lines": round_.get('updated_lines'),
+                "edits": round_.get('edits'),
+                "saves": round_.get('saves'),
+            })
+
+        return return_rounds
+
+    # Get current state of the class
+    def get_current_state(self):
+        return {
+            "identifiers": self.convert_identifiers(),
+            "metrics": self.convert_metrics(),
+            "classified_lines": self.classified_lines,
+            "metadata": self.metadata,
+            "rounds": self.normalize_rounds()
+        }
+
+    # Load the stored state into the class.
+    def restore_state(self, config):
+        """Pending work."""
+        pass
+
+    # Processing Rounds, and edits in each round.
+    def process_edits(self, round_, classified_lines):
+        new_doc_lines = []
+        if not round_.get('edits'):
+            return classified_lines
+
+        for line in classified_lines:
+            line_number = line.get('line_number')
+            line_content = line.get('line')
+
+            line_edited= False
+
+            for edit in round_.get('edits'):
+
+                keys = list(edit.keys())
+                edit_type = keys[0]
+                edit_lines = edit[keys[0]]
+
+                # Incase new lines need to be added
+                if edit_type == "new_lines":
+                    for line_ in edit_lines:
+                        if line_.get('line_number') == line_number:
+                            pos = line_.get('position')
+                            content = line_.get('content')
+
+                            if pos == "after":
+                                new_doc_lines.append(line_content)
+                                new_doc_lines.append(content)
+
+                            elif pos == "before":
+                                new_doc_lines.append(content)
+                                new_doc_lines.append(line_content)
+                            line_edited = True
+
+                # Incase lines need to be deleted
+                elif edit_type == "delete_lines":
+                    if line_number in edit_lines:
+                        line_edited = True
+
+                # Incase lines need to be edited
+                elif edit_type == "edit_lines":
+                    for line_ in edit_lines:
+                        if line_.get('line_number') == line_number:
+                            content = line_.get('content')
+                            add_content = line_.get('add_content')
+                            replace_with = line_.get('with')
+                            replace_pattern = line_.get('replace_pattern')
+                            replace = line_.get('replace')
+
+                            if replace and replace_with:
+                                if replace in line_content:
+                                    line_content = line_content.replace(replace, replace_with)
+
+                                new_doc_lines.append(line_content)
+
+                            elif replace_pattern and replace_with:
+                                line_content = re.sub(replace_pattern, replace_with, line)
+                                new_doc_lines.append(line_content)
+
+                            elif content:
+                                new_doc_lines.append(content)
+
+                            elif add_content:
+                                new_doc_lines.append(f"{line_content}{add_content}")
+
+                            line_edited = True
+
+            if not line_edited:
+                new_doc_lines.append(line_content)
+        return new_doc_lines
+
+    @save_state
+    def process(self, repeat=False):
+        for idx, round_ in enumerate(self.rounds):
+            print(f"Processing round {round_.get('roundId')}: {round_.get('description')}")
+
+            if idx == 0:
+                classified_lines = self.classified_lines
+                saved_metrics = self.all_metrics
+            else:
+                classified_lines = self.rounds[idx - 1].get('updated_lines')
+                saved_metrics = self.rounds[idx - 1].get('updated_lines')
+
+            # If we haven't applied edits to the document for current round or repeat is True
+            if not (round_.get('updated_lines') and round_.get('updated_metrics')) or repeat:
+                # Resolving steps from LineOperations
+                for step in round_.get('steps'):
+                    kwargs = step.get('kwargs')
+                    lines_ops = LineOperations(classified_lines)
+
+                    if getattr(lines_ops, step.get('action')):
+                        output = getattr(lines_ops, step.get('action'))(**kwargs)
+                        print("Output from edit maker",output)
+                        if isinstance(output, list):
+                            round_['edits'].extend(output)
+
+                # Getting document after applying edits
+                updated_doc_lines = self.process_edits(round_, classified_lines)
+
+                # Updating classified lines
+
+                doc_ = Document(None)
+                doc_.from_lines(updated_doc_lines)
+
+                updated_lines = doc_.lines
+
+                # Updating metric evaluations
+                updated_metrics = []
+                for metric_obj in saved_metrics:
+                    update_obj = {
+                        "unique_name": None,
+                        "passed_lines" : [],
+                        "name": None
+                    }
+
+                    metric_name = metric_obj.get('unique_name')
+                    metric_ = metric_obj.get('metric')
+
+                    update_obj['metric'] = metric_
+                    update_obj['name'] = metric_name
+
+                    for line_obj in updated_lines:
+                        passes_metric_test = metric_.evaluate(line_obj, updated_lines)
+                        if passes_metric_test:
+                            update_obj['passed_lines'].append(line_obj.get('line_number'))
+
+                    updated_metrics.append(update_obj)
+
+                round_['updated_lines'] = updated_lines
+                round_['updated_metrics'] = updated_metrics
+
+            else:
+                print(f"Round already processed, skipping to next round.")
 
 
 if __name__ == "__main__":
+    with open('ama_raw_text.txt', encoding='utf-8') as f:
+        doc = f.read()
+
+    processor = ActionProcessor(doc)
+    processor.add_and_evaluate_metric("my metric", {'metric': 'starts_with', 'equals': r'Chapter '})
+    processor.add_and_evaluate_metric("my metric2", {'metric': 'ends_with_digit', 'equals': True})
+
+    processor.add_and_store_identifier("my idf", "nothing", {
+        "0": {
+            "type": "AND",
+            "metrics": [
+                {'metric': 'starts_with', 'equals': 'Chapter '},
+                {'metric': 'ends_with_digit', 'equals': True},
+            ]
+        }
+    })
+
+    processor.add_steps('add_line_before', {'line_numbers': [1], 'text': '-- chapter start --'})
+    processor.add_round("Add chapter start marker", 1)
+
+    processor.process()
+    #
+    # # print(processor.metric_passed_info)
+    # processor.create_and_store_identifier('startswith The e', 'does nothing', [Condition('AND', [Metric('starts_with', {'equals': 'The e', 'case_sensitive': False})])])
+    # print(processor.metric_passed_info)
+    # resp = processor.identifiers[0]['identifier'].evaluate(processor.classified_lines[5457-1], processor.classified_lines, use_saved_metrics=False, saved_metrics = processor.metric_passed_info)
+    # print(resp)
+    # pretty_print(processor.get_current_state())
+
+    # idf = LineIdentifier()
+
+    # Loading Identifier from a dict (from db)
+    # idf.from_dict({
+    #     0: {
+    #         "type": "AND",
+    #         "metrics": [
+    #             {"metric": 'startswith', 'equals': 'The'}
+    #         ]
+    #     },
+    #     1: {
+    #         "type": "OR",
+    #         "metrics": [
+    #             {"metric": 'endswith', 'equals': "dough"}
+    #         ]
+    #     },
+    #
+    # })
+
+    # Loading identifier from raw format
+    # processor.create_and_store_identifier("starter_line", "", {
+    #     0: {
+    #         "type": "AND",
+    #         "metrics": [
+    #             {"metric": 'startswith', 'equals': 'The'}
+    #         ]
+    #     },
+    #     1: {
+    #         "type": "OR",
+    #         "metrics": [
+    #             {"metric": 'endswith', 'equals': "dough"}
+    #         ]
+    #     },
+    #
+    # })
+
+    # Manual Way of Loading
+    # idf.add_condition(Condition(condition_type="AND", metrics=[
+    #                                     Metric(name="starts_with", params={'equals': "test",'case_sensitive': True, 'strip': True}),
+    #                                     Metric(name="ends_with", params={'equals': "test", 'case_sensitive': True, 'strip': True})
+    #                                     ]
+    #                             )
+    #                   )
+    # idf.ADD_AND([('starts_with', {'equals': "open", 'strip': True})])
+    #
+    # print(idf.to_dict())
+
+    # resp = idf.from_dict({0: {'type': 'AND', 'metrics': [{'equals': 'test', 'case_sensitive': True, 'strip': True, 'metric': 'starts_with'},
+    #                                               {'equals': 'test', 'case_sensitive': True, 'strip': True, 'metric': 'ends_with'}]},
+    #                1: {'type': 'AND', 'metrics': [{'equals': 'open', 'strip': True, 'metric': 'starts_with'}]}})
+    # if resp:
+    #     print(idf.conditions[0].metrics[0].name,idf.conditions[0].metrics[0].params )
+    #     print(idf.to_dict())
+    # else:
+    #     print("invalid identifier structure") # This will be printed as there are spelling mistakes in the structure.
 
     # keywords = ["Measurement", "Rotation", "example"]
     # analyzer = TextAnalyzer(text, keywords)
