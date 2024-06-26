@@ -2588,7 +2588,7 @@ class ActionProcessor(TextManipulation):
                 "description": round_.get('description'),
                 "steps": round_.get('steps'),
                 "updated_metrics": updated_metrics,
-                "updated_lines": round_.get('updated_lines'),
+                "updated_lines": [x.get('line') for x in round_.get('updated_lines')] if round_.get('updated_lines') else None,
                 "edits": round_.get('edits'),
                 "saves": round_.get('saves'),
             })
@@ -2600,7 +2600,7 @@ class ActionProcessor(TextManipulation):
         return {
             "identifiers": self.convert_identifiers(),
             "metrics": self.convert_metrics(),
-            "classified_lines": self.classified_lines,
+            "classified_lines": [x.get('line') for x in self.classified_lines],
             "metadata": self.metadata,
             "rounds": self.normalize_rounds()
         }
@@ -2749,10 +2749,14 @@ if __name__ == "__main__":
     with open('ama_raw_text.txt', encoding='utf-8') as f:
         doc = f.read()
 
+    # Uploading , ad this is indexing
     processor = ActionProcessor(doc)
+
+    # steps 2 user look for things
     processor.add_and_evaluate_metric("my metric", {'metric': 'starts_with', 'equals': r'Chapter '})
     processor.add_and_evaluate_metric("my metric2", {'metric': 'ends_with_digit', 'equals': True})
 
+    # step 3 : Builds , identifier &
     processor.add_and_store_identifier("my idf", "nothing", {
         "0": {
             "type": "AND",
@@ -2763,7 +2767,9 @@ if __name__ == "__main__":
         }
     })
 
-    processor.add_steps('add_line_before', {'line_numbers': [1], 'text': '-- chapter start --'})
+    processor.add_steps('add_line_before', {'line_numbers': [1, 100, 200], 'text': '-- chapter start --'})
+    processor.add_steps('add_line_after', {'line_numbers': [1, 100, 200], 'text': '-- chapter end --'})
+
     processor.add_round("Add chapter start marker", 1)
 
     processor.process()

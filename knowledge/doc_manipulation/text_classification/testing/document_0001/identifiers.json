@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Identify Chapter start",
+        "comments": "comments",
+        "identifier": {
+            "0": {
+                "type": "AND",
+                "metrics": [
+                    1,
+                    2
+                ]
+            }
+        }
+    },
+
+    {
+        "name": "Identify Example start",
+        "comments": "comments",
+        "identifier": {
+            "0": {
+                "type": "OR",
+                "metrics": [
+                    1,
+                    2
+                ]
+            }
+        }
+    }
+]

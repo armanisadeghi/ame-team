@@ -1,0 +1,40 @@
+[
+    {
+        "new_lines": [
+            {
+                "line_number": 1,
+                "position": "before",
+                "content": "-- chapter start --"
+            },
+            {
+                "line_number": 100,
+                "position": "before",
+                "content": "-- chapter start --"
+            },
+            {
+                "line_number": 200,
+                "position": "before",
+                "content": "-- chapter start --"
+            }
+        ]
+    },
+    {
+        "new_lines": [
+            {
+                "line_number": 1,
+                "position": "after",
+                "content": "-- chapter end --"
+            },
+            {
+                "line_number": 100,
+                "position": "after",
+                "content": "-- chapter end --"
+            },
+            {
+                "line_number": 200,
+                "position": "after",
+                "content": "-- chapter end --"
+            }
+        ]
+    }
+]
