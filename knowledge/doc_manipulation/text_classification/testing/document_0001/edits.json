@@ -1,40 +1,24 @@
 [
-    {
-        "new_lines": [
-            {
-                "line_number": 1,
-                "position": "before",
-                "content": "-- chapter start --"
-            },
-            {
-                "line_number": 100,
-                "position": "before",
-                "content": "-- chapter start --"
-            },
-            {
-                "line_number": 200,
-                "position": "before",
-                "content": "-- chapter start --"
+        {
+            "action": "add_line_before",
+            "kwargs": {
+                "line_numbers": [
+                    1,
+                    100,
+                    200
+                ],
+                "text": "-- chapter start --"
             }
-        ]
-    },
-    {
-        "new_lines": [
-            {
-                "line_number": 1,
-                "position": "after",
-                "content": "-- chapter end --"
-            },
-            {
-                "line_number": 100,
-                "position": "after",
-                "content": "-- chapter end --"
-            },
-            {
-                "line_number": 200,
-                "position": "after",
-                "content": "-- chapter end --"
+        },
+        {
+            "action": "add_line_after",
+            "kwargs": {
+                "line_numbers": [
+                    1,
+                    100,
+                    200
+                ],
+                "text": "-- chapter end --"
             }
-        ]
-    }
+        }
 ]

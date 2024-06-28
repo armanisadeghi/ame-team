@@ -1,13 +1,14 @@
 import time
-
 import multidict
 from common import pretty_print
-import re, random, string, json
+import re, random, string, json, copy, uuid
 from collections import Counter, defaultdict
-from typing import List, Dict, Optional, Any, Union, Literal
+from typing import List, Dict, Optional, Any, Union, Literal, Type, get_type_hints
 from difflib import SequenceMatcher
 from automation_matrix.processing.markdown.classifier import OutputClassifier
 import functools
+import inspect
+from collections import OrderedDict
 
 
 def clean_text(text: str) -> str:
@@ -1998,11 +1999,11 @@ class FindSections(TextManipulation):
         return detected_blocks
 
     def extract_section_lines_by_saved_metrics(self,
-                                                lines: list,
-                                                identifiers: Dict[LineIdentifier, Dict[str, Any]],
-                                                saved_metrics: list[Dict],
-                                                block_size: int = 5,
-                                                overlap: bool = True, ) -> list:
+                                               lines: list,
+                                               identifiers: Dict[LineIdentifier, Dict[str, Any]],
+                                               saved_metrics: list[Dict],
+                                               block_size: int = 5,
+                                               overlap: bool = True, ) -> list:
 
         """
         All identifiers should fall in each block of given size.
@@ -2084,7 +2085,7 @@ class FindSections(TextManipulation):
                                       lines: list,
                                       start_marker: str,
                                       end_marker: str,
-                              ):
+                                      ):
 
         in_extraction = False  # Flag to indicate whether currently in an extraction section
         extracted_sections = []  # List to store the extracted sections
@@ -2149,7 +2150,8 @@ class FindSections(TextManipulation):
                                            min(line_index + max_lookup + 1, len(lines))):
                     section_lines.append(lines[lookahead_idx])
 
-                    if end_identifier.evaluate(lines[lookahead_idx],lines, use_saved_metrics=True, saved_metrics=saved_metrics):
+                    if end_identifier.evaluate(lines[lookahead_idx], lines, use_saved_metrics=True,
+                                               saved_metrics=saved_metrics):
                         end_found = True
                         skip_until_index = lookahead_idx + 1
                         break
@@ -2167,7 +2169,7 @@ class FindSections(TextManipulation):
 
 class Document:
 
-    def __init__(self, lines):
+    def __init__(self, lines=None):
         self.lines = lines
 
     def get_text(self):
@@ -2201,7 +2203,11 @@ class FindOperations:
         self.saved_metrics = saved_metrics
 
     # Find Line Numbers with identifiers. Returns list of line numbers
-    def find_lines_by_identifier(self, identifier: LineIdentifier):
+    def find_lines_by_identifier(self, identifiers: list[LineIdentifier]):
+        # Modified
+        # Since only one identifier is needed here, so we will take the first one
+        identifier = identifiers[0]
+
         line_finder = FindLines()
         line_objects = line_finder.filter_lines_by_saved_metrics(self.lines,
                                                                  identifier,
@@ -2225,8 +2231,12 @@ class FindOperations:
         raise NotImplementedError("Not important for now.")
 
     # Find Block Sections with multiple identifiers. Return list of blocks
-    def find_blocks_by_identifier(self, identifiers: dict[LineIdentifier, dict[str, Any]], size):
+    def find_blocks_by_identifier(self, identifiers: list[LineIdentifier], config: List[dict[str, Any]], size: int):
+        # Modified
         section_finder = FindSections()
+        # Converting to `extract_section_lines_by_saved_metrics` friendly format
+        identifiers = {identifiers[i]: config[i] for i in range(len(identifiers))}
+
         detected_blocks = section_finder.extract_section_lines_by_saved_metrics(self.lines,
                                                                                 identifiers,
                                                                                 self.saved_metrics,
@@ -2246,10 +2256,13 @@ class FindOperations:
 
     # Find Content between Identifiers
     def find_blocks_between_identifiers(self,
-                                        start_identifier,
-                                        end_identifier,
+                                        identifiers: list[LineIdentifier],
                                         max_lookup: int = 20,
                                         max_size: int = 20):
+        # Modified
+        start_identifier = identifiers[0]
+        end_identifier = identifiers[1]
+
         section_finder = FindSections()
         detected_blocks = section_finder.extract_lines_between_identifiers(self.lines,
                                                                            start_identifier,
@@ -2288,7 +2301,7 @@ class LineOperations:
                 "content": text,
             })
 
-        return[ {'new_lines': new_lines}]
+        return [{'new_lines': new_lines}]
 
     def delete_line(self, line_numbers: list[int]):
 
@@ -2297,7 +2310,7 @@ class LineOperations:
         for num in line_numbers:
             delete_lines.append(num)
 
-        return[ {'delete_lines': delete_lines}]
+        return [{'delete_lines': delete_lines}]
 
     def move_lines(self, line_numbers_map: List[Dict[Literal["to", "from"], int]], seperator: str = " "):
         # Moving a line is basically  add_content_to_line operation and a delete operation
@@ -2308,7 +2321,7 @@ class LineOperations:
         for line_map in line_numbers_map:
             to_num = line_map.get('to')
             from_num = line_map.get('from')
-            from_line = self.classified_lines[from_num + 1]
+            from_line = self.classified_lines[from_num - 1]
 
             delete_lines.append(from_num)
             edit_lines.append({
@@ -2328,7 +2341,7 @@ class LineOperations:
                 "with": replace_with
             })
 
-        return[ {"edit_lines": replace_lines}]
+        return [{"edit_lines": replace_lines}]
 
     def replace_characters(self, line_numbers: list[int], content, replace_with):
         replace_lines = []
@@ -2340,7 +2353,7 @@ class LineOperations:
                 "with": replace_with
             })
 
-        return[ {"edit_lines": replace_lines}]
+        return [{"edit_lines": replace_lines}]
 
     def rewrite_line(self, line_numbers: list[int], content):
         replace_lines = []
@@ -2351,7 +2364,7 @@ class LineOperations:
                 "content": content,
             })
 
-        return[ {"edit_lines": replace_lines}]
+        return [{"edit_lines": replace_lines}]
 
     def add_content_to_line(self, line_numbers: list[int], content):
         replace_lines = []
@@ -2362,7 +2375,7 @@ class LineOperations:
                 "add_content": content,
             })
 
-        return[ {"edit_lines": replace_lines}]
+        return [{"edit_lines": replace_lines}]
 
 
 def save_state(func):
@@ -2386,6 +2399,23 @@ def save_state(func):
         return result
 
     return wrapper
+
+
+def find_operation_requires_identifiers(find_obj, action: str) -> bool:
+    if not hasattr(find_obj, action):
+        return False
+
+    method = getattr(find_obj, action)
+
+    if not inspect.isfunction(method) and not inspect.ismethod(method):
+        return False
+
+    type_hints = get_type_hints(method)
+
+    for param, hint in type_hints.items():
+        if hint == list[LineIdentifier]:
+            return True
+    return False
 
 
 class ActionProcessor(TextManipulation):
@@ -2504,7 +2534,7 @@ class ActionProcessor(TextManipulation):
             "kwargs": kwargs
         })
 
-    def add_saves(self, name, comments ,operation, kwargs):
+    def add_saves(self, name, comments, operation, kwargs):
         # Ask whether to save the things like kwargs, and
         if self.rounds:
             # If there is only one round, use parent lines and metrics
@@ -2523,7 +2553,7 @@ class ActionProcessor(TextManipulation):
                 output = getattr(find_ops, operation)(**kwargs)
 
                 save_obj = {
-                    "name" : name,
+                    "name": name,
                     "comments": comments,
                     "action": operation,
                     # Do we have to save the things we search,
@@ -2547,7 +2577,6 @@ class ActionProcessor(TextManipulation):
     def convert_identifiers(self):
         return_identifiers = []
         for idf in self.identifiers:
-
             return_identifiers.append({
                 "name": idf['name'],
                 "comments": idf['comments'],
@@ -2559,7 +2588,6 @@ class ActionProcessor(TextManipulation):
     def convert_metrics(self):
         return_metrics = []
         for metric_info in self.all_metrics:
-
             return_metrics.append({
                 "name": metric_info['unique_name'],
                 "metric": metric_info['metric'].to_dict(),
@@ -2575,7 +2603,6 @@ class ActionProcessor(TextManipulation):
             updated_metrics = []
 
             for metric_info in updated_metrics_after_round_processing:
-
                 updated_metrics.append({
                     "name": metric_info['name'],
                     "metric": metric_info['metric'].to_dict(),
@@ -2588,7 +2615,8 @@ class ActionProcessor(TextManipulation):
                 "description": round_.get('description'),
                 "steps": round_.get('steps'),
                 "updated_metrics": updated_metrics,
-                "updated_lines": [x.get('line') for x in round_.get('updated_lines')] if round_.get('updated_lines') else None,
+                "updated_lines": [x.get('line') for x in round_.get('updated_lines')] if round_.get(
+                    'updated_lines') else None,
                 "edits": round_.get('edits'),
                 "saves": round_.get('saves'),
             })
@@ -2620,7 +2648,7 @@ class ActionProcessor(TextManipulation):
             line_number = line.get('line_number')
             line_content = line.get('line')
 
-            line_edited= False
+            line_edited = False
 
             for edit in round_.get('edits'):
 
@@ -2636,7 +2664,7 @@ class ActionProcessor(TextManipulation):
                             content = line_.get('content')
 
                             if pos == "after":
-                                new_doc_lines.append(line_content)
+                                # new_doc_lines.append(line_content)
                                 new_doc_lines.append(content)
 
                             elif pos == "before":
@@ -2702,7 +2730,7 @@ class ActionProcessor(TextManipulation):
 
                     if getattr(lines_ops, step.get('action')):
                         output = getattr(lines_ops, step.get('action'))(**kwargs)
-                        print("Output from edit maker",output)
+                        print("Output from edit maker", output)
                         if isinstance(output, list):
                             round_['edits'].extend(output)
 
@@ -2721,7 +2749,7 @@ class ActionProcessor(TextManipulation):
                 for metric_obj in saved_metrics:
                     update_obj = {
                         "unique_name": None,
-                        "passed_lines" : [],
+                        "passed_lines": [],
                         "name": None
                     }
 
@@ -2745,35 +2773,448 @@ class ActionProcessor(TextManipulation):
                 print(f"Round already processed, skipping to next round.")
 
 
+with open('all_metrics.json') as f:
+    metric_list = json.loads(f.read())
+
+
+def generate_random_key():
+    return uuid.uuid4().hex
+
+
+def save_state_by_array(func):
+    @functools.wraps(func)
+    def wrapper(self, *args, **kwargs):
+        # Call the original function
+        result = func(self, *args, **kwargs)
+
+        # Call the `get_current_state` method to get the dictionary
+        state_dict = self.get_state()
+
+        # Save the dictionary to a JSON file
+        filename = 'state_store_array.json'
+        with open(filename, 'w') as f:
+            json.dump(state_dict, f, indent=4)
+
+        return result
+
+    return wrapper
+
+
+class Node:
+    def __init__(self, line_number, content):
+        self.line_number = line_number
+        self.content = content
+        self.prev = None
+        self.next = None
+
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+        self.line_map = {}
+
+    def append(self, line_number, content):
+        new_node = Node(line_number, content)
+        self.line_map[line_number] = new_node
+        if not self.head:
+            self.head = self.tail = new_node
+        else:
+            self.tail.next = new_node
+            new_node.prev = self.tail
+            self.tail = new_node
+
+    def insert_before(self, line_number, content):
+        if line_number not in self.line_map:
+            return
+        existing_node = self.line_map[line_number]
+        new_node = Node(f"new_{generate_random_key()}", content)
+        new_node.next = existing_node
+        new_node.prev = existing_node.prev
+        if existing_node.prev:
+            existing_node.prev.next = new_node
+        existing_node.prev = new_node
+        if existing_node == self.head:
+            self.head = new_node
+
+    def insert_after(self, line_number, content):
+        if line_number not in self.line_map:
+            return
+        existing_node = self.line_map[line_number]
+        new_node = Node(f"new_{generate_random_key()}", content)
+        new_node.prev = existing_node
+        new_node.next = existing_node.next
+        if existing_node.next:
+            existing_node.next.prev = new_node
+        existing_node.next = new_node
+        if existing_node == self.tail:
+            self.tail = new_node
+
+    def edit_line(self, line_number, content):
+        if line_number not in self.line_map:
+            return
+        node = self.line_map[line_number]
+        node.content = content
+
+    def get_lines(self):
+        return_obj = {}
+        current = self.head
+        while current:
+            return_obj[current.line_number] = current.content
+            current = current.next
+
+        return return_obj
+
+
+class ActionProcessorJson:
+    def __init__(self, document_lines):
+
+        self.lines = self.get_lines(document_lines)
+        self.metric_list = metric_list
+        self.document_lines = document_lines
+        self.added_metrics = []
+        self.metric_results = []
+        self.identifiers = []
+        self.searches = []
+        self.steps = []
+        self.updated_document_lines = []
+
+    def get_lines(self, doc_line_list):
+        doc_ = Document()
+        doc_.from_lines(doc_line_list)
+        return doc_.lines
+
+    def get_saved_metrics(self):
+        saved_metrics = []
+        for results in self.metric_results:
+            metric_index = results.get('added_metric')
+            passed_lines = results.get('lines')
+            metric_dict = self.eval_incoming_metric(self.added_metrics[metric_index])
+
+            metric_obj = Metric()
+            metric_obj.from_dict(metric_dict)
+
+            saved_metrics.append({
+                "metric": metric_obj,
+                "passed_lines": passed_lines
+            })
+        return saved_metrics
+
+    def eval_incoming_metric(self, metric_structure):
+        # Expects a structure like :
+        # {
+        #     "metric_index" : 0,
+        #     "parameters": {
+        #         "equals": "Somethings",
+        #         "case_sensitive": True
+        #     }
+        # }
+        metric_index = metric_structure["metric_index"]
+        metric_name = self.metric_list[metric_index]
+        parameters = metric_structure["parameters"]
+
+        metric_dict = {
+            "metric": metric_name,
+            **parameters
+        }
+
+        # Returns something like this
+        # {"metric": 'starts_with', 'case_sensitive': True, 'equals': "Somethings"}
+        return metric_dict
+
+    @save_state_by_array
+    def handle_incoming_metric(self, metric_structure):
+        dict_metric = self.eval_incoming_metric(metric_structure)
+
+        self.added_metrics.append(metric_structure)
+
+        total_added_metrics = len(self.added_metrics)
+
+        metric_store_index = total_added_metrics - 1
+
+        # Metric evaluation
+        metric_obj = Metric()
+        metric_obj.from_dict(dict_metric)
+
+        passed_lines = []
+        for line in self.lines:
+            line_passes_test = metric_obj.evaluate(line, self.lines)
+
+            if line_passes_test:
+                passed_lines.append(line.get('line_number'))
+
+        self.metric_results.append({
+            "added_metric": metric_store_index,
+            "lines": passed_lines
+        })
+
+    def eval_incoming_identifier(self, identifier_structure):
+        for k, v in identifier_structure.items():
+            metric_indices = v.get('metrics')
+            v['metrics'] = []
+
+            for m in metric_indices:
+                v['metrics'].append(self.eval_incoming_metric(self.added_metrics[m]))
+
+        return identifier_structure
+
+    @save_state_by_array
+    def handle_incoming_identifier(self, identifier_structure):
+        self.identifiers.append(identifier_structure)
+
+    @save_state_by_array
+    def process_search(self, search_structure):
+        todo_action = search_structure.get('action')
+        kwargs = search_structure.get('kwargs')
+        name = search_structure.get('name', None)
+
+        find_ops = FindOperations(self.lines, self.get_saved_metrics())
+
+        if find_operation_requires_identifiers(find_ops, todo_action):
+            # Create a deep copy of kwargs to avoid modifying the original
+            kwargs_copy = copy.deepcopy(kwargs)
+            identifier_indices = kwargs_copy.get('identifiers', [])
+
+            identifiers = [
+                self.eval_incoming_identifier(copy.deepcopy(self.identifiers[i]))
+                for i in identifier_indices
+            ]
+
+            identifiers_obj_list = []
+
+            for idf_dict in identifiers:
+                idf_obj = LineIdentifier()
+                idf_obj.from_dict(idf_dict)
+                identifiers_obj_list.append(idf_obj)
+
+            kwargs_copy['identifiers'] = identifiers_obj_list
+
+            output = getattr(find_ops, todo_action)(**kwargs_copy)
+        else:
+            output = getattr(find_ops, todo_action)(**kwargs)
+
+        self.searches.append({
+            "name": name,
+            "action": todo_action,
+            "kwargs": search_structure.get('kwargs'),
+            "output": output  # Output generally will be list[int] or list[list[int, int]]
+        })
+
+    @save_state_by_array
+    def process_steps(self, edit_structure):
+        action = edit_structure.get('action')
+        kwargs = edit_structure.get('kwargs')
+
+        # This uses the LineOperations Class
+        # The LineOperations class just returns a bunch of add, delete, edit set of instructions
+        # We are not using the class now, for now just storing the steps
+        self.steps.append({
+            "action": action,
+            "kwargs": kwargs
+        })
+
+    def process_by_edits(self, edits: list):
+
+        doc_ = LinkedList()
+
+        for idx, line in enumerate(self.document_lines, start=1):
+            doc_.append(idx, line)
+
+        delete_lines = []
+
+        # Line map helps create a structure like this
+        # {
+        #     "1": "Content",
+        #     "2": "Content",
+        #     "3": "Content",
+        #     "4": "Content",
+        #     "5": "Content",
+        #     "6": "Content",
+        #     "7": "Content",
+        #     "8": "Content",
+        #     "9": "Content",
+        #     "10": "Content"
+        # }
+
+        # If we want to create the edits, we just do this. This way we do not edit the keys. But have to keep the order of the edits in order.
+        # {
+        #     "1": "Content",
+        #     "2": "Content",
+        #     "rand_co299fna": "--added content--",
+        #     "3": "Content",
+        #     "4": "Content",
+        #     "rand_co29r292": "--added content--",
+        #     "5": "Content",
+        #     "6": "Content",
+        #     "7": "Content",
+        #     "8": "Content",
+        #     "rand_co29839": "--added content--",
+        #     "9": "Content",
+        #     "10": "Content"
+        # }
+
+        for edit in edits:
+            keys = list(edit.keys())  # Get the type of edit and the value
+            edit_type = keys[0]
+            edit_lines = edit[keys[0]]
+
+            # Incase new lines need to be added, we want to add line with random keys either above or down in order of the edit,
+            if edit_type == "new_lines":
+                for line in edit_lines:
+                    if line['position'] == "before":
+                        doc_.insert_before(line['line_number'], line['content'])
+                    elif line['position'] == "after":
+                        doc_.insert_after(line['line_number'], line['content'])
+
+            # Incase lines need to be deleted
+            elif edit_type == "delete_lines":
+                delete_lines.extend(edit_lines)
+
+            # Incase lines need to be edited
+            elif edit_type == "edit_lines":
+                for line_ in edit_lines:
+                    line_number = line_.get('line_number')
+                    line_content = self.document_lines[line_number - 1]
+                    content = line_.get('content')
+                    add_content = line_.get('add_content')
+                    replace_with = line_.get('with')
+                    replace_pattern = line_.get('replace_pattern')
+                    replace = line_.get('replace')
+
+                    if replace and replace_with:
+                        if replace in line_content:
+                            line_content = line_content.replace(replace, replace_with)
+                            doc_.edit_line(line_number, line_content)
+
+                    elif replace_pattern and replace_with:
+                        line_content = re.sub(replace_pattern, replace_with, line_content)
+                        doc_.edit_line(line_number, line_content)
+
+                    elif content:
+                        doc_.edit_line(line_number, content)
+
+                    elif add_content:
+                        doc_.edit_line(line_number, f"{line_content}{add_content}")
+
+        return [val for num, val in doc_.get_lines().items() if num not in delete_lines]
+
+    def get_snapshot(self, step_index: int):
+        steps_to_process = self.steps[0: step_index + 1]
+        edits = []
+
+        for step in steps_to_process:
+            kwargs = step.get('kwargs')
+            lines_ops = LineOperations(self.lines)
+
+            if getattr(lines_ops, step.get('action')):
+                output = getattr(lines_ops, step.get('action'))(**kwargs)
+                print("Output from edit maker", output)
+                if isinstance(output, list):
+                    edits.extend(output)
+
+        output = self.process_by_edits(edits)
+        with open(f'output_{step_index}.json', 'w') as f:
+            f.write(json.dumps(output))
+        return output
+
+    def process(self):
+        processed_lines = self.get_snapshot(len(self.steps))
+        return processed_lines
+
+    def get_state(self):
+        return {
+            "added_metrics": self.added_metrics,
+            "metric_results": self.metric_results,
+            "identifiers": self.identifiers,
+            "steps": self.steps,
+            "searches": self.searches,
+
+        }
+
+    def load_from_state(self, config):
+        self.steps = config.get('steps')
+        self.added_metrics = config.get('added_metrics')
+        self.metric_results = config.get('metric_results')
+        self.identifiers = config.get('identifiers')
+        self.searches = config.get('searches')
+
+
 if __name__ == "__main__":
     with open('ama_raw_text.txt', encoding='utf-8') as f:
         doc = f.read()
 
-    # Uploading , ad this is indexing
-    processor = ActionProcessor(doc)
+    doc_lines = doc.split('\n')[:500]
 
-    # steps 2 user look for things
-    processor.add_and_evaluate_metric("my metric", {'metric': 'starts_with', 'equals': r'Chapter '})
-    processor.add_and_evaluate_metric("my metric2", {'metric': 'ends_with_digit', 'equals': True})
+    processor = ActionProcessorJson(doc_lines)
 
-    # step 3 : Builds , identifier &
-    processor.add_and_store_identifier("my idf", "nothing", {
+    processor.handle_incoming_metric({"metric_index": 0, "parameters": {"case_sensitive": True, "equals": "Chapter"}})
+    processor.handle_incoming_metric({"metric_index": 9, "parameters": {"equals": True}})
+
+    processor.handle_incoming_metric({"metric_index": 27, "parameters": {"less_than": 1}})
+
+
+    processor.handle_incoming_identifier({
         "0": {
             "type": "AND",
-            "metrics": [
-                {'metric': 'starts_with', 'equals': 'Chapter '},
-                {'metric': 'ends_with_digit', 'equals': True},
-            ]
+            "metrics": [0, 1]
         }
     })
 
-    processor.add_steps('add_line_before', {'line_numbers': [1, 100, 200], 'text': '-- chapter start --'})
-    processor.add_steps('add_line_after', {'line_numbers': [1, 100, 200], 'text': '-- chapter end --'})
+    processor.handle_incoming_identifier({
+        "0": {
+            "type": "AND",
+            "metrics": [2]
+        }
+    })
 
-    processor.add_round("Add chapter start marker", 1)
+    processor.process_search({
+        "action": "find_lines_by_identifier",
+        "kwargs": {
+            "identifiers": [0]
+        }
+    })
+
+    processor.process_search({
+        "action": "find_blocks_by_identifier",
+        "kwargs": {
+            "identifiers": [1],
+            "config" : [{'optional': False, 'min': 4}],
+            "size": 4
+        }
+    })
+
+    processor.process_steps(
+        {"action": "add_line_before", "kwargs": {"line_numbers": processor.searches[0].get('output'), "text": "--start chapter--"}})
+
+    processor.process_steps(
+        {"action": "add_line_after",
+         "kwargs": {"line_numbers": processor.searches[0].get('output'), "text": "--end chapter--"}})
+
+    # processor.process_steps(
+    #     {"action": "delete_line",
+    #      "kwargs": {"line_numbers": [y for x in processor.searches[1].get('output') for y in range(x[0], x[1])]}})
+
+    # processor.process_steps(
+    #     {
+    #         "action": 'rewrite_line',
+    #         "kwargs": {"line_numbers": [y for x in processor.searches[1].get('output') for y in range(x[0], x[1])], "content": "empty_text"}
+    #     }
+    # )
+
+    processor.process_steps(
+        {
+            "action": 'move_lines',
+            'kwargs': {
+                "line_numbers_map": [{"to":1, "from": 500}]
+            }
+        }
+    )
 
     processor.process()
-    #
+    processor.get_snapshot(0)
+    processor.get_snapshot(1)
+    processor.get_snapshot(2)
+
     # # print(processor.metric_passed_info)
     # processor.create_and_store_identifier('startswith The e', 'does nothing', [Condition('AND', [Metric('starts_with', {'equals': 'The e', 'case_sensitive': False})])])
     # print(processor.metric_passed_info)
