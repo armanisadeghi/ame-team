@@ -3190,9 +3190,9 @@ if __name__ == "__main__":
         {"action": "add_line_after",
          "kwargs": {"line_numbers": processor.searches[0].get('output'), "text": "--end chapter--"}})
 
-    # processor.process_steps(
-    #     {"action": "delete_line",
-    #      "kwargs": {"line_numbers": [y for x in processor.searches[1].get('output') for y in range(x[0], x[1])]}})
+    processor.process_steps(
+        {"action": "delete_line",
+         "kwargs": {"line_numbers": [y for x in processor.searches[1].get('output') for y in range(x[0], x[1])]}})
 
     # processor.process_steps(
     #     {
@@ -3201,14 +3201,14 @@ if __name__ == "__main__":
     #     }
     # )
 
-    processor.process_steps(
-        {
-            "action": 'move_lines',
-            'kwargs': {
-                "line_numbers_map": [{"to":1, "from": 500}]
-            }
-        }
-    )
+    # processor.process_steps(
+    #     {
+    #         "action": 'move_lines',
+    #         'kwargs': {
+    #             "line_numbers_map": [{"to":1, "from": 500}]
+    #         }
+    #     }
+    # )
 
     processor.process()
     processor.get_snapshot(0)
