@@ -1,7 +1,0 @@
-[
-  "starts_with",
-  "ends_with",
-  "contains_regex_pattern",
-  "contains",
-  "unique_words"
-]
